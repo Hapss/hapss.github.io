@@ -23,7 +23,7 @@
     "speaker": "Мэй Хокушин",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 1.png",
-    "dim_override": "left",
+    "dim_override": "right",
     "text": "Неужели я... потерпела поражение...? Хе-хе-хе, наконец-то я пала! После стольких лет скитаний! Сегодня я, практикующая «стиль одного меча: Полярная звезда», наконец-то узнала, что есть мастера, которым я не ровня. Моё желание сбылось... Кха, кха!"
   },
   {
@@ -37,7 +37,7 @@
     "speaker": "Мэй Хокушин",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 1.png",
-    "dim_override": "left",
+    "dim_override": "right",
     "text": "Я Хокушин Мэй... ронин. Судя по твоему наряду, ты родом из другой страны. Могу я узнать, как тебя зовут?"
   },
   {
@@ -51,7 +51,7 @@
     "speaker": "Мэй Хокушин",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 1.png",
-    "dim_override": "left",
+    "dim_override": "right",
     "text": "Вот как... Я запомнила твоё имя. Тогда даруй мне быструю смерть!"
   },
   {
@@ -65,7 +65,7 @@
     "speaker": "Мэй Хокушин",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 1.png",
-    "dim_override": "left",
+    "dim_override": "right",
     "text": "Да, оборви мою жизнь и подари мне идеальный конец."
   },
   {
@@ -86,7 +86,7 @@
     "speaker": "Мэй Хокушин",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 1.png",
-    "dim_override": "left",
+    "dim_override": "right",
     "text": "О чём ты?"
   },
   {
