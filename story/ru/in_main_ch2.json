@@ -1,0 +1,208 @@
+{
+    "dialogue": [
+       { 
+            "text": "Эта история записана в пыльных старинных книгах.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center",
+            "background": "inbg_stage2.png"
+        },
+        { 
+            "text": "Бессмертная, пришедшая из Шэньчжоу, пересекла хаотичный мир,\nувидела взлёты и падения в жизни и посетовала на то,\nчто мёртвые подобны пыли в вихре жизненных перипетий.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        { 
+            "text": "Воительница, блуждающая по Дальнему Востоку, ступающая по полям, усеянным трупами,\nуничтожающая все следы жизни, со смехом заявляющая, что праведность\nна небесах и на земле так же распространена, как грязь.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        { 
+            "text": "Две души, чьи пути пересеклись, сблизились благодаря боевым искусствам,\nобъединив усилия, чтобы выследить зло, распространяющееся по всему миру.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        { 
+            "text": "И теперь, в этой бедной деревне, забытой\nвсеми, тень Хоукая начала распространяться...",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        { 
+            "text": "Поздняя ночь. Синано. Святилище деревни Яэ.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        {
+    "speaker": "Яэ Сакура",
+    "text": "Мне жаль... Рин... Я больше не могу быть лучшей жрицей храма в твоём сердце.",
+    "sprite_right": "Sakura.png"
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Ибо какой бы набожной я ни была... боги никогда не услышат моих мольб о божественном наказании этих грешников.",
+    "sprite_right": "Sakura.png"
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Поэтому только я могу отомстить за тебя... Я сама... стану богом, чтобы судить тех, кто причинил тебе вред!",
+    "sprite_right": "Sakura.png"
+  },
+  {
+    "text": "Дух, дух, дух, дух! (шаги)",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "???",
+    "text": "Сакура!",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "...",
+    "sprite_right": "Sakura.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Фух... Фух... Наконец-то... догнала...",
+    "sprite_left": "Kallen 9.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Каллен...",
+    "sprite_left": "Kallen 9.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Сакура... остановись... твоё тело заражено Хоукаем... это не то, чего ты на самом деле хочешь!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я понимаю твою вину перед сестрой, но резня и разрушение не принесут искупления! Они также не могут вернуть мёртвых, ты должна знать это лучше, чем кто-либо другой!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ты, должно быть, всё ещё чувствуешь себя потерянной! Доверься мне! Позволь мне помочь тебе!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Потеряна? Нет... Я никогда не была потерянной. С самого начала я так и не простила тех, кто убил Рин... Каллен, благодаря тебе я нашла то, чем действительно должна заниматься!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "В твоих руках же... «Божественная коробка»!? Сакура... неужели ты...",
+    "sprite_left": "Kallen 7.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Каллен... Какие пути мы можем выбрать в этом хаотичном и неупорядоченном мире? Пережив бесчисленные разлуки и смерти, я всё ещё не нашла способа сбежать.",
+    "sprite_left": "Kallen 7.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Ненависть, печаль, отчаяние, сожаление. Эти мучительные слова — всё, что всегда сопровождает меня... Мы все слишком слабы и просто плывём по течению хаоса этого неспокойного века.",
+    "sprite_left": "Kallen 7.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Только когда ты предстала передо мной с этим, я поняла: поскольку я не могла выбрать свой собственный путь, мне оставалось лишь разорвать всё собственными силами!",
+    "sprite_left": "Kallen 7.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Оно всё время взывало ко мне... Именно это придало мне решимости. Оно даст мне силу отомстить, исполнит мои желания и поможет мне вернуть Рин из ледяного ада ко мне... Только тогда я смогу найти смысл своего существования.",
+    "sprite_left": "Kallen 7.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Сакура... Мне жаль. Именно из-за того, что я привезла «Божественную коробку» на эту землю, произошла эта серия трагедий...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Это из-за меня тебе пришлось пережить такие болезненные события...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Сакура... Я буду сражаться бок о бок с тобой! Я помогу тебе победить Хоукай внутри тебя и избавлю от ненависти! Поэтому, пожалуйста, верь в меня! Не неси это бремя в одиночку!",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Ха-ха-ха... Какая самонадеянная дура. Ты действительно веришь, что сможешь выстоять против Хоукая в одиночку?",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "БУМ!!!"
+  },
+  {
+    "speaker": "Лиса",
+    "text": "Ву-у-у...",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Fox 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Что за чертовщина!?",
+    "sprite_left": "Kallen 7.png",
+    "sprite_right": "Fox 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Каллен... Позволь мне развеять твои наивные иллюзии и показать тебе истинное лицо этого жестокого мира!",
+    "sprite_left": "Kallen 7.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Лиса",
+    "text": "Гр-р-р-р!!!",
+    "sprite_left": "Kallen 7.png",
+    "sprite_right": "Fox 2.png",
+    "dim_override": "left"
+  }
+    ]
+}
