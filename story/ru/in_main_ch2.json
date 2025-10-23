@@ -2176,6 +2176,204 @@
   },
   {
     "text": "......"
+  },
+  {
+    "text": "Бэнг!"
+  },
+  {
+    "text": "Бум!!!"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Хигокумару！！",
+    "sprite_left": "Sakura.png"
+  },
+  {
+    "speaker": "Лиса",
+    "text": "Гр-р-р!!!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Fox 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Прочь с моего пути.",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Бум!!!"
+  },
+  {
+    "speaker": "Лиса",
+    "text": "Гр!!!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Fox 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Хмпф... Похоже, я всё-таки недооценила тебя. Ты действительно можешь противостоять силе богов, кто же ты такая?",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Командир военных рыцарей Зофия. Та, что убьёт тебя.",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Бум!!!"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Хмпф! Думаешь можешь убить меня одной лишь человеческой силой? Это не более чем фантазия глупца!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Щёлк!!!"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Ну, вот и всё.",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Это ты о своей жизни?",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Бум!!!"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Что?! Невозможно... Этот удар точно пришёлся в жизненно важную точку. Как ты можешь стоять на ногах?!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Пока бушует война, я никогда не сдамся...",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Ибо я — война!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Умри, Яэ Сакура!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Зофия! Остановись!!",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Мисс Каллен, ты наконец пришла.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Зофия! Отдай Яэ! Её сознание всё ещё живёт в её теле! Хоукай наверняка ещё не поглотил её полностью! Пожалуйста, дай мне шанс пробудить её!",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Моя единственная цель — божественная коробка; её жизнь меня не волнуют.",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Зофия! Пожалуйста! Помнишь, как мы впервые встретились? Тебя поглотил Хоукай, но ты всё равно нашла в себе силы вернуться! Пожалуйста, поверь мне!",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Всё, что тебе нужно, это божественная коробка, верно? Я обещаю тебе! Просто верни Яэ! Я обязательно отдам тебе божественную коробку и больше не буду убегать! Всё это — мой грех! Я вернусь с тобой в Шиксал, чтобы понести заслуженное наказание!",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Пожалуйста... пожалуйста, дайте мне ещё один шанс!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Позволь мне стать твоим противником. Если ты победишь меня, то сможешь делать с Каллен и Яэ Сакурой всё, что пожелаешь. Но во время этой битвы я прошу тебя не вмешиваться в их дела.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "...Хорошо, я согласна.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хорошо, Хокушин Мэй, иди помоги Каллен.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Эй! Военный рыцарь! Тебе лучше молиться, чтобы с тобой ничего не случилось, ты выбрала самого неподходящего противника.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Вот как... Тогда посмотрим, как долго она продержится под моим клинком.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
   }
         ]
 }
