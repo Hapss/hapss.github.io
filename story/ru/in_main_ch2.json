@@ -789,6 +789,156 @@
   },
   {
     "text": "......"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Жрица и дух лисы. Какая знакомая история.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "О чём ты?",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ничего особенного. По пути в деревню Яэ мы встретили ещё одну жрицу, в которую вселился дух лисы. Она умерла в столь юном возрасте.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ого...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Мисс Каллен, только благодаря твоей стойкости мы смогли выбраться оттуда раньше. Когда мы встретили ту жрицу по имени Шион, она тоже была тяжело ранена. Ты должна понимать, что даже после того, как Бессмертная потратила на неё все свои силы, она не смогла вытащить её с того света. Она была совершенно опустошена.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Пусть это останется в прошлом. Всё, что я могу сделать, так это утешить усопших.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Да, так от чего же нас могут защитить все эти святилища, разбросанные по горам и полям? В конце концов, всё сводится к тому, что люди достигают целей своими силами.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Жертвоприношения и молитвы по своей сути являются выражением стремления человечества к лучшей жизни. В Шэньчжоу жители деревни в определённые дни собираются у святилищ, чтобы помолиться и попросить о хорошей погоде и богатом урожае в наступающем году. Такое духовное утешение — естественный человеческий инстинкт.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Это всего лишь небеса, которые сжалились над нами и послали нам росу, но люди принимают это за божественное благословение. Считать такое природное явление более важным, чем сама жизнь, для меня это не более чем шутка.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "В конечном счёте, настоящие виновники — это невежественные и жадные люди, которые прикрываются божественным статусом исключительно ради собственной выгоды. Когда дело доходит до жизни и смерти, они без колебаний убивают даже самих богов.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Вот почему произошло столько человеческих трагедий. Нет, скорее, фарсов.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Мисс Каллен, а ты так не думаешь?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Человеческие представления о божествах сильно различаются. Хотя я и не одобряю подход деревни Яэ, я могу его понять.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Хах...",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я монахиня, и эту роль можно сравнить с ролью европейского жреца. Как и они, мы молимся о божественном спасении и о том, чтобы наша вера даровала благословения всему сущему. В наш век свирепствующего Хоукая убеждённость и вера стали как никогда важны.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Итак, мисс Каллен, получила ли ты какую-либо награду за свою веру?",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Нет, я никогда ничего не просила взамен... Пока я могу уничтожать Хоукай, это лучший ответ, который я могу дать божеству, в которое верю.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Что ж, похоже, я всё ещё не могу постичь это чувство, называемое верой.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Одна — Бессмертная, которая отдаёт всё тем, кто в неё верит. Другая — мисс Каллен, которая охотно жертвует всем ради своего божества. Но я не испытываю неприязни к людям, которые так преданно следуют своей вере.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Тогда я сделаю мой клинок своей верой. Пока я могу стоять на своём в этот абсурдный век хаоса, это и есть та награда, которую я ищу.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "......"
   }
         ]
 }
