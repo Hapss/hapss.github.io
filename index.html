@@ -1167,97 +1167,97 @@
             const newRightSpriteFile = step.sprite_right || null;
             const newCenterSpriteFile = step.sprite_centre || null; // НОВОЕ
 
-            // Сброс затемнения
+            // Сброс затемнения перед расстановкой
             spriteLeftElement.classList.remove('dimmed-sprite');
             spriteRightElement.classList.remove('dimmed-sprite');
             spriteCenterElement.classList.remove('dimmed-sprite');
 
+            // --- A. Центральный Спрайт ---
             if (newCenterSpriteFile) {
-                // --- A. Центральный Спрайт (Имеет приоритет) ---
                 const url = spritePath(newCenterSpriteFile);
                 if (currentCenterSpriteFile !== newCenterSpriteFile) {
                     loadSprite(url, spriteCenterElement, spriteCenterContainer);
                     currentCenterSpriteFile = newCenterSpriteFile;
                 } else {
-                    spriteCenterContainer.classList.remove('hidden');
+                    spriteCenterContainer.classList.remove('hidden'); // Убедимся, что видим, если имя не менялось
                 }
-                
-                // Скрываем левый и правый
-                spriteLeftContainer.classList.add('hidden');
-                spriteRightContainer.classList.add('hidden');
-                currentLeftSpriteFile = null;
-                currentRightSpriteFile = null;
-
             } else {
-                // --- B. Левый и Правый Спрайты (Работают, если нет центрального) ---
-                spriteCenterContainer.classList.add('hidden');
-                spriteCenterElement.src = ''; 
-                currentCenterSpriteFile = null;
-
-                // Левый Спрайт
-                if (newLeftSpriteFile) {
-                    const url = spritePath(newLeftSpriteFile);
-                    if (currentLeftSpriteFile !== newLeftSpriteFile) {
-                        loadSprite(url, spriteLeftElement, spriteLeftContainer);
-                        currentLeftSpriteFile = newLeftSpriteFile;
-                    } else {
-                        spriteLeftContainer.classList.remove('hidden');
-                    }
-                } else {
-                    spriteLeftContainer.classList.add('hidden');
-                    spriteLeftElement.src = ''; 
-                    currentLeftSpriteFile = null;
-                }
-
-                // Правый Спрайт
-                if (newRightSpriteFile) {
-                     const url = spritePath(newRightSpriteFile);
-                    if (currentRightSpriteFile !== newRightSpriteFile) {
-                        loadSprite(url, spriteRightElement, spriteRightContainer);
-                        currentRightSpriteFile = newRightSpriteFile;
-                    } else {
-                        spriteRightContainer.classList.remove('hidden');
-                    }
-                } else {
-                    spriteRightContainer.classList.add('hidden');
-                    spriteRightElement.src = ''; 
-                    currentRightSpriteFile = null;
-                }
+                spriteCenterContainer.classList.add('hidden'); // Скрываем, если не указан
+                // currentCenterSpriteFile = null; // Не сбрасываем здесь, чтобы не загружать заново, если вернется
             }
             
-            // --- C. Логика Затемнения (Применяется *после* расстановки) ---
+            // --- B. Левый Спрайт (Показываем, только если НЕТ центрального) ---
+            if (!newCenterSpriteFile && newLeftSpriteFile) {
+                const url = spritePath(newLeftSpriteFile);
+                if (currentLeftSpriteFile !== newLeftSpriteFile) {
+                    loadSprite(url, spriteLeftElement, spriteLeftContainer);
+                    currentLeftSpriteFile = newLeftSpriteFile;
+                } else {
+                    spriteLeftContainer.classList.remove('hidden');
+                }
+            } else {
+                spriteLeftContainer.classList.add('hidden'); // Скрываем, если есть центральный или не указан левый
+                 // currentLeftSpriteFile = null;
+            }
+
+            // --- C. Правый Спрайт (Показываем, только если НЕТ центрального) ---
+             if (!newCenterSpriteFile && newRightSpriteFile) {
+                const url = spritePath(newRightSpriteFile);
+                if (currentRightSpriteFile !== newRightSpriteFile) {
+                    loadSprite(url, spriteRightElement, spriteRightContainer);
+                    currentRightSpriteFile = newRightSpriteFile;
+                } else {
+                    spriteRightContainer.classList.remove('hidden');
+                }
+            } else {
+                spriteRightContainer.classList.add('hidden'); // Скрываем, если есть центральный или не указан правый
+                // currentRightSpriteFile = null;
+            }
             
-            let dimTarget = 'none'; 
+            // --- D. Логика Затемнения (Применяется *после* расстановки) ---
+            
+            let dimTargets = new Set(); // Используем Set для удобства
             const speakerPos = step.position ? step.position.toLowerCase() : null;
             
             if (step.dim_override && !isFullText) { 
-                const overrideValue = step.dim_override.toLowerCase();
+                const overrideValue = step.dim_override.toLowerCase().replace(/\s/g, ''); // Убираем пробелы
 
                 if (overrideValue === 'auto' && step.speaker && speakerPos) {
-                    if (speakerPos === 'left') dimTarget = 'right';
-                    else if (speakerPos === 'right') dimTarget = 'left';
-                    else if (speakerPos === 'center') dimTarget = 'both_sides'; // 'both_sides' затемняет левый и правый
-                } else if (['left', 'right', 'center', 'both', 'none'].includes(overrideValue)) { 
-                    dimTarget = overrideValue;
+                    if (speakerPos === 'left') dimTargets.add('center').add('right');
+                    else if (speakerPos === 'right') dimTargets.add('center').add('left');
+                    else if (speakerPos === 'center') dimTargets.add('left').add('right');
+                } else if (overrideValue === 'all') {
+                    dimTargets.add('left').add('center').add('right');
+                } else if (overrideValue === 'both') { // Совместимость
+                    dimTargets.add('left').add('right');
+                } else if (overrideValue !== 'none') {
+                    // Разбираем строку с позициями через запятую
+                    overrideValue.split(',').forEach(pos => {
+                        if (['left', 'center', 'right'].includes(pos)) {
+                            dimTargets.add(pos);
+                        }
+                    });
                 }
+                 // Если 'none', dimTargets останется пустым
             }
 
-            // --- 4. Применение затемнения к видимым спрайтам ---
+            // --- E. Применение затемнения к видимым спрайтам ---
             if (!isFullText) {
                 // Затемнение левого
-                if ((dimTarget === 'left' || dimTarget === 'both' || dimTarget === 'both_sides') && !spriteLeftContainer.classList.contains('hidden')) {
+                if (dimTargets.has('left') && !spriteLeftContainer.classList.contains('hidden')) {
                     spriteLeftElement.classList.add('dimmed-sprite');
                 }
-                // Затемнение правого
-                if ((dimTarget === 'right' || dimTarget === 'both' || dimTarget === 'both_sides') && !spriteRightContainer.classList.contains('hidden')) {
-                    spriteRightElement.classList.add('dimmed-sprite');
-                }
                 // Затемнение центрального
-                if ((dimTarget === 'center' || dimTarget === 'both') && !spriteCenterContainer.classList.contains('hidden')) {
+                if (dimTargets.has('center') && !spriteCenterContainer.classList.contains('hidden')) {
                     spriteCenterElement.classList.add('dimmed-sprite');
+                }
+                // Затемнение правого
+                if (dimTargets.has('right') && !spriteRightContainer.classList.contains('hidden')) {
+                    spriteRightElement.classList.add('dimmed-sprite');
                 }
             }
 
+            // --- 5. Рендеринг Текста ---
             if (isFullText) {
                 fullCurrentText.innerHTML = processTextForBreaks(step.text);
                 
@@ -1285,6 +1285,7 @@
                 currentText.innerHTML = processTextForBreaks(step.text);
             }
             
+            // 6. Обновление Истории
             if (isHistoryVisible) {
                 renderHistory();
             }
@@ -1356,19 +1357,28 @@
             currentDialogueIndex = 0;
             dialogueIsLoaded = true;
             
+            // Сброс состояния для чистой загрузки главы
             currentBackgroundUrl = null;
             currentLeftSpriteFile = null;
             currentRightSpriteFile = null;
-            currentCenterSpriteFile = null; // НОВОЕ: Сброс
+            currentCenterSpriteFile = null; 
             elements.spriteLeftContainer.classList.add('hidden');
             elements.spriteRightContainer.classList.add('hidden');
-            elements.spriteCenterContainer.classList.add('hidden'); // НОВОЕ: Сброс
+            elements.spriteCenterContainer.classList.add('hidden'); 
             elements.spriteLeftElement.src = '';
             elements.spriteRightElement.src = '';
-            elements.spriteCenterElement.src = ''; // НОВОЕ: Сброс
+            elements.spriteCenterElement.src = ''; 
             elements.fullDialogueBox.classList.add('hidden'); 
+            // Сброс фона на дефолтный цвет
+            const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
+            elements.bgLayer1.style.backgroundImage = 'none';
+            elements.bgLayer1.style.backgroundColor = themeBgColor;
+            elements.bgLayer1.style.opacity = '1';
+            elements.bgLayer2.style.opacity = '0';
+            activeBgLayer = 1;
+            currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
 
-            renderDialogueStep(); 
+            renderDialogueStep(); // Первый рендер
 
             chapterLoadOverlay.classList.add('hidden');
             loadText.textContent = i18n.ru.loadedText;
@@ -1413,12 +1423,6 @@
             const currentType = typeSelect.value;
             typeSelect.innerHTML = ''; // Очистка перед добавлением
 
-            // УДАЛЕНО: Дефолтная опция с плейсхолдером
-            // const defaultOption = document.createElement('option');
-            // defaultOption.value = "";
-            // defaultOption.textContent = `--- ${text.placeholderSelectType} ---`;
-            // typeSelect.appendChild(defaultOption);
-
             for (const key in STORY_GROUPS) {
                 const option = document.createElement('option');
                 option.value = key;
@@ -1428,9 +1432,6 @@
                 }
                 typeSelect.appendChild(option);
             }
-            // Если после добавления опций ничего не выбрано (например, при первой загрузке),
-            // можно опционально добавить пустую первую опцию или выбрать первую реальную.
-            // Пока оставляем так: будет выбрана первая опция из списка.
              if (!currentType && typeSelect.options.length > 0) {
                  typeSelect.selectedIndex = 0; // Выбираем первую опцию, если ничего не было выбрано
              }
@@ -1453,12 +1454,6 @@
 
             if (typeKey === 'main') {
                 arcContainer.classList.remove('hidden');
-                
-                // УДАЛЕНО: Дефолтная опция с плейсхолдером
-                // const defaultOption = document.createElement('option');
-                // defaultOption.value = "";
-                // defaultOption.textContent = `--- ${i18n.ru.labelArc} ---`; 
-                // arcSelect.appendChild(defaultOption);
                 
                 let arcFound = false;
                 for (const key in MAIN_STORY_ARCS) {
@@ -1495,28 +1490,23 @@
             select.disabled = true; 
             select.value = ""; 
             
-            // Если метаданные не загружены, ничего не делаем, селект останется пустым и disabled
             if (!window.storyMetadata) {
                 enableLoadButton();
                 return;
             }
             
-            // Если тип или арка (для main) не выбраны, ничего не делаем
             if (!typeKey || (typeKey === 'main' && !arcKey)) { 
                  enableLoadButton();
                  return;
             }
             
             const storyGroup = STORY_GROUPS[typeKey];
-            if (!storyGroup) { // На всякий случай
+            if (!storyGroup) { 
                  enableLoadButton();
                  return;
             }
             
             let targetPrefix = (typeKey === 'main') ? `${arcKey}_main_` : storyGroup.prefix; 
-
-            // УДАЛЕНО: Дефолтная опция с плейсхолдером
-            // select.innerHTML = `<option value="">--- ${i18n.ru.labelChapter} ---</option>`;
 
             let chapterFound = false;
             
@@ -1540,7 +1530,6 @@
                 }
             }
             
-            // Активируем селект, только если найдены главы
             select.disabled = !chapterFound;
             if (!currentChapterKey && select.options.length > 0) {
                 select.selectedIndex = 0; // Выбираем первую главу, если ничего не было выбрано
@@ -1553,12 +1542,10 @@
              updateArcAndChapterUI(); 
              const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
              applyTheme(currentTheme);
-             // Убедимся, что при инициализации кнопка Загрузить правильно заблокирована/разблокирована
              enableLoadButton();
         }
 
         function enableLoadButton() {
-            // Кнопка активна только если выбрана глава
             const storyId = elements.chapterSelect.value;
             elements.loadButton.disabled = !storyId; 
         }
@@ -1589,7 +1576,6 @@
 
             for (let i = 0; i <= currentDialogueIndex; i++) {
                 const step = currentDialogue[i];
-                // Пропускаем шаги без текста И фона (кроме самого первого)
                 if (!step.text && !step.background && i !== 0) continue; 
                 
                 const isCurrent = (i === currentDialogueIndex);
@@ -1617,13 +1603,7 @@
                     toggleHistory(); 
                 };
 
-                // Отображаем имя спикера, если оно есть
                 let speakerNameText = step.speaker || '';
-                
-                // УДАЛЕНО: Плейсхолдер [Повествование]
-                // if (step.text_style === 'full' && !speakerNameText) {
-                //     speakerNameText = i18n.ru.narrativePlaceholder;
-                // }
                 
                 if (speakerNameText) {
                     const speakerName = document.createElement('p');
@@ -1636,12 +1616,7 @@
                 const textContent = document.createElement('p');
                 textContent.className = 'text-sm leading-snug';
                 
-                // Отображаем текст или стартовое сообщение
                 let displayText = step.text;
-                // УДАЛЕНО: Плейсхолдер [Сцена: ...]
-                // if (!displayText && step.background) {
-                //     displayText = `[${i18n.ru.scenePlaceholder}${step.background}]`;
-                // } else 
                 if (!displayText && i === 0) {
                     displayText = i18n.ru.startOfStory;
                 }
