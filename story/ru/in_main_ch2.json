@@ -398,7 +398,223 @@
   },
   {
     "text": "......"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Ложись, я нанесу лекарство.",
+    "sprite_left": "Fuka 5.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "М-м...",
+    "sprite_left": "Kallen 3.png"
+  },
+  {
+    "text": "Шу-шу-шу..."
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ой-ой-ой!! Ай-ай-ай!!",
+    "sprite_left": "Kallen 10.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Конечно же... Сакура нежнее будет...",
+    "sprite_left": "Kallen 2.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Ты ещё не представилась. Могу я спросить, как мне к тебе обращаться?",
+    "sprite_left": "Fuka 5.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Упс! Извините! Я немного увлеклась... Меня зовут Каллен Каслана. Зовите меня просто Каллен.",
+    "sprite_left": "Kallen 2.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каслана...",
+    "sprite_left": "Fuka 2.png"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Какое необычное имя. Судя по твоей внешности, ты вряд ли из страны восходящего Солнца. Я слышала истории о светловолосых и голубоглазых иностранцах в столице. Может, ты одна из них?",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Хм... Моя родина находится далеко отсюда, и чтобы добраться до него, нужно плыть несколько месяцев.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Месяцы! Значит, мир за пределами Японии такой огромный!?",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Я всегда думала, что Шэньчжоу, где обитает Бессмертная, пересёкшая море, находится достаточно далеко. О Бессмертная, знаешь ли ты, что за пределами Шэньчжоу есть и другие места?",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Просторы неба и земли охватывают всё сущее; пересекающиеся морские пути не могут быть полностью охвачены ни вами, ни мной за один взгляд. Но если я не ошибаюсь, Каллен родом с континента под названием Европа.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ты проделала весь этот путь до Японии из места, о котором я никогда не слышала. Что же привело тебя сюда? Может быть, ты, как и я, ищешь самого сильного?",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен, помимо этих ножевых ранений, у тебя есть несколько недавно заживших шрамов... Похоже, они могли быть оставлены огнестрельным оружием?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Если быть до конца честной, то это раны, которые я получила, пока была в бегах...",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "В бегах?",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Извините... Это долгая история, и в связи с текущим положением дел с Хоукаем сейчас действительно не самое подходящее время для подробностей.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Всё хорошо, ты права.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хорошо, рана перевязана и больше не представляет серьёзной опасности. Однако тебе следует избегать физических нагрузок. Хотя травма не угрожает жизни, она всё же довольно серьёзная.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Благодарю...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "В таком случае давайте отправляться. Я не буду расспрашивать о твоём происхождении, но прошу рассказать мне правду о Хоукае.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Хм, я понимаю... Давайте обсудим это по дороге. Нам пора выдвигаться.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хорошо.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Пожалуйста, подождите минутку, я схожу за оружием.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Эй!",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Бж-ж————!"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Этот массивный железный кол на самом деле твоё оружие!? Я думала, это какой-то артефакт для запечатывания демонов в этом святилище!",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Госпожа Мэй права. Это Клятва Иуды — оружие, которое я использую против Хоукая.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Приношу свои извинения... Я не ожидала, что ты владеешь боевыми искусствами, юная леди. Ты не так проста.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Вот как? Я уже привыкла.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Теперь, когда мы готовы, пойдёмте. Область Хоукая продолжает расширяться. Нам нужно как можно скорее найти источник.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Угу.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "......"
   }
-
         ]
 }
