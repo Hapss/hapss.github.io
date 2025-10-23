@@ -1634,6 +1634,170 @@
   },
   {
     "text": "......"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Фука, благодаря твоим наставлениям я укрепилась в своей решимости.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Действительно, каждое твоё движение в точности соответствует описанию мисс Мэй, как у бессмертного мудреца... Ты всегда безмятежна и спокойна, как будто ничто не может поколебать твою решимость.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Я просто выполняю свой долг.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Кажется, мисс Фука тоже много раз сражалась с Хоукаем? Я мало что знаю о Шэньчжоу, в какой форме там появляется Хоукай? И как ваша организация с ним справляется? Я смиренно прошу госпожу Фуку просветить меня.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хочешь использовать это как руководство по борьбе с Хоукаем на твоей родине?",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Да... По всей Европе Хоукай, известный как Чёрная смерть, унёс сотни тысяч жизней, и мы бессильны перед ним. Так скажите мне! Есть ли способ полностью уничтожить Хоукай? Достаточно даже малейшего проблеска надежды!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Уничтожить Хоукай... С того дня, как я впервые выступила против него, и до сегодняшнего дня прошло бесконечное количество времени. Я уже не помню, как долго я сражалась... и кто был рядом со мной в бою... Я лишь продолжаю двигаться вперёд, продолжаю бороться. Но даже несмотря на это, Хоукай и не думает сдаваться.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Мало того, это путешествие заставило меня осознать, что за пределами Шэньчжоу бесчисленные места, где я никогда не бывала, опустошены Хоукаем.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Так что даже так называемая «бессмертная» мало что может сделать...",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ох, вот как...",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Но раз уж ты хочешь узнать о Хоукае Шэньчжоу, я расскажу всё, что знаю.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Существа, которых вы называете зверями Хоукая, в Шэньчжоу известны под другим именем: дикие чудовища или дикие боги.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "И самым колоссальным из диких богов, насколько я помню, был зверь по имени Чиё.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Тогда...",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Fuka 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Тогда......",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Fuka 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хм!",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Фука! Что такое?",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ваше Бессмертное Превосходительство живёт уже больше тысячи лет; возможно, Вы просто забыли об этом.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Я в порядке... просто есть то, о чём я предпочла бы не говорить.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "В таком случае я не настаиваю.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Верно, Каллен. Ты скоро поймёшь, когда сразишься с этим демоническим лисом. Лучше один раз увидеть, чем сто раз услышать.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Хм, ты права. С мисс Фукой на нашей стороне спокойнее.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я буду сражаться изо всех сил, лишь бы спасти Сакуру!",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "......"
   }
         ]
 }
