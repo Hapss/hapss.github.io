@@ -40,28 +40,24 @@
         {
     "speaker": "Яэ Сакура",
     "text": "Мне жаль... Рин... Я больше не могу быть лучшей жрицей храма в твоём сердце.",
-    "sprite_right": "Sakura.png"
+    "sprite_centre": "Sakura.png"
   },
   {
     "speaker": "Яэ Сакура",
     "text": "Ибо какой бы набожной я ни была... боги никогда не услышат моих мольб о божественном наказании этих грешников.",
-    "sprite_right": "Sakura.png"
+    "sprite_centre": "Sakura.png"
   },
   {
     "speaker": "Яэ Сакура",
     "text": "Поэтому только я могу отомстить за тебя... Я сама... стану богом, чтобы судить тех, кто причинил тебе вред!",
-    "sprite_right": "Sakura.png"
+    "sprite_centre": "Sakura.png"
   },
   {
-    "text": "Дух, дух, дух, дух! (шаги)",
-    "sprite_right": "Sakura.png",
-    "dim_override": "right"
+    "text": "Дух, дух, дух, дух! (шаги)"
   },
   {
     "speaker": "???",
-    "text": "Сакура!",
-    "sprite_right": "Sakura.png",
-    "dim_override": "right"
+    "text": "Сакура!"
   },
   {
     "speaker": "Яэ Сакура",
