@@ -18,7 +18,7 @@
   {
     "speaker": "Зеле",
     "text": "Нельзя!",
-    "sprite_centre": "Seele 13.png"
+    "sprite_center": "Seele 13.png"
   },
   {
     "text": "Девушка уже понимала: эксперимент провалился."
@@ -26,7 +26,7 @@
   {
     "speaker": "Зеле",
     "text": "Нельзя... умереть здесь...",
-    "sprite_centre": "Seele 13.png"
+    "sprite_center": "Seele 13.png"
   },
   {
     "text": "Всё, что она делала, было лишь предсмертной агонией."
@@ -46,7 +46,7 @@
   {
     "speaker": "Зеле",
     "text": "Сестрица Броня... Бро...ня...",
-    "sprite_centre": "Seele 13.png"
+    "sprite_center": "Seele 13.png"
   },
   {
     "text": "В конце концов, у неё не осталось даже сил позвать имя того, кого она любила."
@@ -70,7 +70,7 @@
     "audio": "seelesister.ogg",
     "speaker": "Зеле",
     "text": "Где ты, сестрица Броня?",
-    "sprite_centre": "Seele 14.png"
+    "sprite_center": "Seele 14.png"
   },
   {
     "audio": null,
