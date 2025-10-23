@@ -7,7 +7,8 @@
            "full_text_align": "center",
             "background": "inbg_stage2.png"
         },
-        {
+        [
+  {
     "text": "Деревня Яэ. Периферия."
   },
   {
@@ -24,113 +25,131 @@
     "speaker": "Фука",
     "text": "Если ты, занимаясь боевыми искусствами, не можешь вынести таких трудностей, значит, ты недостаточно тренируешься.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Я бы предпочла не оттачивать этот конкретный навык... Ух... Я больше никогда в жизни не хочу оседлать этого хищника...",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "right"
   },
   {
     "speaker": "Цзинвэй",
     "text": "Пьё! Пьё!!",
-    "sprite_centre": "Jingwei.png"
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 3.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Ой! Не подходи ближе! Я оговорилась!",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Цзинвэй, я понимаю. Просто успокойся.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
     "speaker": "Цзинвэй",
     "text": "Пьё...",
-    "sprite_centre": "Jingwei.png"
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "В чём дело? Разве он не дуется на меня?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Цзинвэй предупреждает меня, что впереди мощная аура Хоукая... Скорее всего, мы ищем именно это место.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Та деревня вдалеке? Может быть, это та самая деревня Яэ... Я не чувствую Хоукай, но запах крови несёт за версту. Похоже, на неё действительно напала какая-то демоническая лиса?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "В любом случае ситуация в той деревне критическая. Поторопись и садись, нам нужно немедленно отправиться им на помощь.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 6.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Ой! Я только-только пришла в себя, я не сяду обратно на птицу! Достопочтенная Бессмертная, Вы же не можете пренебрегать чужими жизнями ради справедливости?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 6.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Хорошо, раз так, то ты останешься здесь. Впереди бушует Хоукай, и я опасаюсь, что Хоукай внутри тебя может пробудиться и снова начать действовать.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Ого! Значит, Ваше Бессмертие намерено оставить меня здесь, чтобы наказать зло и поощерить добродетель? А ты не боишься, что я уйду, не сказав ни слова?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Если бы ты хотела уйти, то зачем ждать столь долго? Подожди меня здесь, не подходи к той деревне. Цзинвэй, пойдём.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 4.png",
     "dim_override": "left"
   },
   {
     "speaker": "Цзинвэй",
     "text": "Пьё, пьё, пьё!!",
-    "sprite_centre": "Jingwei.png"
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 4.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Эй! Погоди!",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 4.png",
     "dim_override": "right"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Хмпф! Ты правда думаешь, что я твоя слуга? Оставаться здесь? Что ж, я пойду, если должна! Если я не могу на птицу сесть, то разве я не могу просто идти на своих двоих?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 4.png",
     "dim_override": "right"
   },
   {
@@ -139,140 +158,148 @@
   {
     "speaker": "Фука",
     "text": "Хоукай здесь оказался серьёзнее, чем мы ожидали. Я и представить себе не могла, что в этом отдалённом регионе произойдёт такая разрушительная аномалия.",
-    "sprite_right": "Fuka 1.png"
+    "sprite_right": "Fuka 5.png"
   },
   {
     "speaker": "Фука",
     "text": "Похоже, мы опоздали...",
-    "sprite_right": "Fuka 1.png"
+    "sprite_right": "Fuka 3.png"
   },
   {
     "speaker": "Цзинвэй",
     "text": "Пьё, пьё!",
-    "sprite_centre": "Jingwei.png"
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 3.png"
   },
   {
     "speaker": "Фука",
     "text": "Спасибо, Цзинвэй... Я понимаю. Сейчас не время падать духом. Мы должны как можно скорее найти первопричину появления Хоукая, чтобы предотвратить усугубление катастрофы.",
-    "sprite_right": "Fuka 1.png"
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 6.png"
   },
   {
     "speaker": "Цзинвэй",
     "text": "Пьё~",
-    "sprite_centre": "Jingwei.png"
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 6.png"
   },
   {
     "speaker": "Фука",
     "text": "Хоукай здесь весьма необычен... Судя по повреждениям деревенских построек, они не были нанесены человеческими руками. Однако у каждого жителя деревни есть ножевые ранения, большинство из которых смертельны и наносятся одним ударом. Убийца, должно быть, очень искусный мастер боевых искусств.",
-    "sprite_right": "Fuka 1.png"
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png"
   },
   {
     "speaker": "Фука",
     "text": "Если так называемая демоническая лиса — это дикий зверь, порождённый Хоукаем... то могут ли быть люди, которые манипулируют им из-за кулис...? Похоже, нам нужно тщательно это расследовать.",
-    "sprite_right": "Fuka 1.png"
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Фух... Фух.. Наконец-то догнала...",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Так ты и правда пошла за нами.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "О, так ты это предвидела?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
-    "text": "Ты сам себе хозяйка, я не могу контролировать, куда ты идёшь. Раз уж ты здесь, будь осторожна.",
+    "text": "Ты сама себе хозяйка, я не могу контролировать, куда ты идёшь. Раз уж ты здесь, будь осторожна.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
     "speaker": "Фука",
     "text": "Хоукай внутри тебя всё ещё нестабилен. Если что-то пойдёт не так, даже если ты будешь сопротивляться, я попрошу Цзинвэя забрать тебя.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Да, да, да... Ваше Бессмертное Превосходительство действительно мелочное... Обладая такой огромной властью, Вы постоянно придираетесь к пустякам.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "По пути я не встретила ни демонов, ни монстров, кроме этих разрушающихся руин и нескольких трупов. Посмотри на меня: я в полном порядке, верно же?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_centre": "Jingwei.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Цзинвэй",
     "text": "Пьё, пьё, пьё!!",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_centre": "Jingwei.png",
-    "sprite_right": "Fuka 1.png"
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Ой! Что не так с этой птицей!? Я всего лишь сказала пару слов о твоём хозяине, а ты уже расстроился?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_centre": "Jingwei.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Близ святилища.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_centre": "Jingwei.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 2.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Что?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_centre": "Jingwei.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 2.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Цзинвэй сказал, что возле святилища чувствуется запах живых. Пойдём.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_centre": "Jingwei.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 6.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Ваше Бессмертие... вы действительно понимаете язык птиц, да...",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_centre": "Jingwei.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_center": "Jingwei.png",
+    "sprite_right": "Fuka 6.png",
     "dim_override": "right"
   },
   {
-    "text": "...",
-    "sprite_left": "Hokushin Mei 1.png",
-    "sprite_centre": "Jingwei.png",
-    "sprite_right": "Fuka 1.png"
+    "text": "..."
   },
   {
     "text": "Скрип———"
@@ -280,140 +307,138 @@
   {
     "speaker": "Каллен",
     "text": "Кха... Сакура... это ты?..",
-    "sprite_left": "Kallen 1.png"
+    "sprite_left": "Kallen 2.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Я и представить себе не могла, что здесь действительно есть выжившие. Вся деревня разрушена, но это святилище осталось нетронутым. Неужели оно действительно находится под божественной защитой?",
-    "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
-    "dim_override": "right"
+    "sprite_left": "Hokushin Mei 1.png"
   },
   {
     "speaker": "Каллен",
     "text": "Ух... Кто вы!?",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
-    "dim_override": "right"
+    "sprite_left": "Kallen 9.png"
   },
   {
     "speaker": "Фука",
     "text": "У тебя серьёзные травмы. Не пытайся передвигаться самостоятельно.",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_left": "Kallen 9.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Меня зовут Хокушин Мэй, а это Фука, Бессмертная из Шэньчжоу.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Каллен",
     "text": "Шэньчжоу?..",
     "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Тебе очень повезло, мисс, что ты встретила этого живого бодхисаттву, которая спасает всех существ. Если бы ты столкнулась с бандитом, который воспользовался бы хаосом, у тебя были бы огромные проблемы.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "У меня есть лекарство. Оно может немного пощипывать, так что потерпи немного.",
     "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
     "speaker": "Каллен",
     "text": "Оставьте меня в покое... Убирайтесь отсюда все!",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Ножевые ранения на твоём теле идентичны тем, что были у жителей деревни снаружи. Ты знаешь, где находится виновник всего этого? Пожалуйста, скажи мне.",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
     "speaker": "Каллен",
     "text": "Убийца... Нет... Сакура не убийца! Она не собиралась этого делать... Она сделала это из-за Хоукая...",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Хоукай... Значит, ты знаешь о его существовании? Могу я узнать, кто ты?",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "left"
   },
   {
     "speaker": "Каллен",
     "text": "Сейчас не время для этого. Я должна немедленно догнать Сакуру... иначе она попадёт во власть Хоукая и совершит ещё большую ошибку!",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "right"
   },
   {
     "speaker": "Каллен",
     "text": "Гах!!",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_left": "Kallen 9.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "right"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Если ты готова выбросить на помойку жизнь, которую с таким трудом спасли, отдай её мне. Если ты хочешь покончить со всем этим, мой клинок тебе поможет.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_right": "Fuka 3.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
     "text": "Не перенапрягайся. Моя цель – уничтожить Хоукай. Раз ты понимаешь, что такое Хоукай, то должна осознавать, что обычные люди не могут с ним бороться. Особенно сейчас, когда ты так сильно ранена. Пожалуйста, доверься мне.",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_left": "Kallen 9.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Бессмертная перед тобой отлично справляется с укрощением Хоукая, на этот раз ты точно обратилась по адресу.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Каллен",
     "text": "Выйти невредимым из напряжённой схватки с Хоукаем... похоже, вы действительно не обычные люди. Я и представить себе не могла, что помимо Шиксала есть и другие, кто сражается с Хоукаем.",
     "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Каллен",
     "text": "Мне так жаль, что я втянула вас в эту катастрофу... Пожалуйста, помогите мне спасти Сакуру... Её телом управляет Хоукай, заставляя её совершать эти жестокие поступки...",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
   {
     "speaker": "Фука",
-    "text": "Всё, что связано с Хоукаем, входит в мою компетенцию. Даже без просьбы я лично разберусь с этой катастрофой.",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Fuka 1.png",
+    "text": "Всё, что связано с Хоукай, входит в мою компетенцию. Даже без просьбы я лично разберусь с этой катастрофой.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   }
+]
+
         ]
 }
