@@ -2011,6 +2011,171 @@
   },
   {
     "text": "......"
+  },
+  {
+    "text": "Бум一一一!!"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Эй! Что за шум на другой стороне горы? Неужели рыцарский орден столкнулся с Яэ Сакурой?!",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Сакура!",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Будьте уверены, Цзинвэй следит за ходом сражения. Пока что Яэ Сакура в безопасности.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Но с военными рыцарями не так-то просто справиться — это самая сильная боевая единица в Шиксале! И Зофия тоже не обычный противник. Как командир военных рыцарей, она обладает одной из лучших способностей в Шиксале.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Я чувствовала, что от этой молодой женщины исходит сила, но ещё больше моё внимание привлекло оружие в её руке.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Это символ военного рыцаря — оружие, которым могут владеть только самые могущественные из них. Легенда гласит, что оно способно управлять пламенем и одним взмахом превращать врагов в пепел.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Не так уж страшно! Когда она только что дрался со мной, ничего такого не было!",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Зофия тогда не использовала всю свою силу. Если бы она захотела, у нас, скорее всего, вообще не было бы шанса сбежать.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Хочешь сказать, что она намеренно отпустила нас?",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ну... потому что она знает, что я не брошу Сакуру.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Какие именно отношения связывают тебя с этим военным рыцарем? Насколько я могу судить, она относится к тебе с большим уважением.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Зофия — это девочка, которую я привезла из города, опустошённого Хоукаем. Хотя в тот момент выражение её лица было пугающим, она сильный, добрый и хороший ребёнок.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Я так не считаю, она больше похожа на хладнокровного палача!",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Это потому, что она должна была подчиниться приказу Шиксала. Я думаю, Шиксал отправил её сюда, чтобы проверить её верность, у неё не было выбора.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Похоже, этот твой Шиксал и правда беспокойное место. Но раз ты так восторженно отзываешься об этом военном рыцаре, мне ещё больше хочется сразиться с ней!",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хокушин Мэй, позволь мне немного побыть её соперником.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Что!? Бессмертная! Это просто нечестно!",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Это для твоего же блага. Помимо этого огромного меча, в этой девушке есть кое-что ещё, что меня беспокоит. Мне нужно самой проверить свои подозрения.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Тогда... с кем мне сражаться?",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Защити Каллен, когда она приблизится к Яэ Сакуре. Военные рыцари наверняка сделают всё возможное, чтобы остановить Каллен. В таком случае ты сможешь сражаться так, как считаешь нужным.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ха-ха... Что ж, надеюсь, этот отряд военных рыцарей такой же грозный, как утверждает Каллен. Тогда я наконец-то смогу как следует размяться!",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен, я оставляю на тебе Яэ Сакуру. Я сделаю всё возможное, чтобы выиграть для тебя время.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Да! Я обязательно верну Сакуру в сознание!",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "......"
   }
         ]
 }
