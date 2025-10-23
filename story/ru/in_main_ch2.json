@@ -1798,6 +1798,219 @@
   },
   {
     "text": "......"
+  },
+  {
+    "speaker": "Рин",
+    "text": "Хе-хе~ Хе-хе~"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Что такое, Рин?",
+    "sprite_left": "Rin 4.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рин",
+    "text": "Моя сестра собирается стать жрицей?",
+    "sprite_left": "Rin 1.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Хм, но мне как-то не хочется соглашаться.",
+    "sprite_left": "Rin 1.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рин",
+    "text": "Это из-за Рин...? Не волнуйся, сестрёнка. С телом Рин всё в порядке.",
+    "sprite_left": "Rin 3.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Что ж, даже если твоя сестра станет жрицей, я всё равно буду заботиться о Рин и играть с тобой всё время~",
+    "sprite_left": "Rin 3.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рин",
+    "text": "Правда?! Это потрясающе! Мне не терпится увидеть тебя в образе жрицы, сестрёнка. Ты точно станешь лучшей жрицей на свете!",
+    "sprite_left": "Rin 4.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рин",
+    "text": "А-а~ Я не могу дождаться завтрашнего дня, чтобы увидеть церемонию посвящения моей сестры в жрицы...",
+    "sprite_left": "Rin 1.png",
+    "sprite_right": "Sakura.png",
+    "dim_override": "right"
+  },
+  {
+    
+    "text": "..."
+  },
+  {
+    
+    "text": "..."
+  },
+  {
+    
+    "text": "Вуш!!"
+  },
+  {
+    
+    "text": "Свуш, свуш, свуш, свуш, свуш, свуш, свуш!!!!!"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Остался последний.",
+    "sprite_right": "Sakura.png"
+  },
+  {
+    "text": "Не... не убивай меня!!! Пожалуйста, не убивай меня!!"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Не убивать... но проявил ли ты хоть каплю милосердия к Рин тогда?!",
+    "sprite_left": "Sakura.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Какая божественная воля? В этом мире нет богов! Увы, я осознала эту истину слишком поздно, иначе Рин не умерла бы.",
+    "sprite_left": "Sakura.png"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Вы заплатите за все грехи вашими жизнями. Пришло время свести счёты. Съешь его!!",
+    "sprite_left": "Sakura.png"
+  },
+  {
+    "text": "Гр-р-р!"
+  },
+  {
+    "text": "Не-е-е-е-е-ет!"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Ха-а... Ха-а...",
+    "sprite_left": "Sakura.png"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Рин... Твоя сестра отомстила за тебя... Каждый грешник в деревне Яэ заплатит за тебя своей жизнью...",
+    "sprite_left": "Sakura.png"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Хе-хе-хе... Ха-ха-ха!!!",
+    "sprite_left": "Sakura.png"
+  },
+  {
+
+    "text": "Строй готов! Военные рыцари! В атаку!"
+  },
+  {
+    
+    "text": "Бум一一一!!"
+  },
+  {
+    "speaker": "Лиса",
+    "text": "Гр-р-р!!!",
+    "sprite_right": "Fox 2.png"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Кто вы, чёрт подери!?",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Fox 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Яэ Сакура, отдай божественную коробку.",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Хе-хе-хе... Судя по твоему наряду, ты здесь, чтобы забрать Каллен, я полагаю. Ты должна поблагодарить её от моего имени. Если бы она не принесла эту коробку, я был бы обречена доживать свои дни в этом ужасном мире! В маске! Скрывая внутреннюю ярость!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Благодаря этой коробке я нашла себя настоящую... и поняла силу богов!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Хватит болтать. Я здесь не для того, чтобы слушать твои истории.",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Военные рыцари, уничтожьте этого зверя Хоукая.",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Как прикажете!"
+  },
+  {
+    "speaker": "Лиса",
+    "text": "Гр-р-р!!!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Fox 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Наглая! Как ты смеешь осквернять божественное творение!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Fox 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Твой так называемый боги ничтожен. Для Шиксала есть только один истинный бог.",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "А бог, о котором ты говоришь, не что иное, как мерзавец Хоукая.",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Сакура",
+    "text": "Ха-ха-ха... Посмотрим, кто на самом деле заслуживает благосклонности богов!",
+    "sprite_left": "Sakura.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Бум————!!!!"
+  },
+  {
+    "text": "......"
   }
         ]
 }
