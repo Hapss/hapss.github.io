@@ -939,6 +939,487 @@
   },
   {
     "text": "......"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Пятна крови здесь свежие, вероятно, их оставили недавно. Сакура, должно быть, преследует убегающих жителей деревни... Неужели она действительно собирается выследить и убить их всех...",
+    "sprite_left": "Kallen 4.png"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё, пьё, пьё!",
+    "sprite_centre": "Jingwei.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ого! Что это за гигантская птица?! Может, это новорождённый зверь Хоукая?!",
+    "sprite_left": "Kallen 4.png"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Госпожа Каллен, не стоит беспокоиться. Сначала я тоже подумала, что это какое-то чудовище, но на самом деле это просто питомец Бессмертной.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё! Пьё!",
+    "sprite_centre": "Jingwei.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен, Цзинвэй заметил впереди гигантскую лису, на спине которой сидит девушка с волосами цвета сакуры. Должно быть, это та самая Яэ, о которой ты говорила.",
+    "sprite_left": "Fuka 5.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Отлично! Раз так, давайте поторопимся и догоним их!",
+    "sprite_left": "Kallen 3.png"
+  },
+  {
+    "text": "Дух... Дух... Дух..."
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Подождите... Шаги... Их много. Сюда приближается группа людей.",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хм, я тоже заметила. Они идут очень уверенно. Должно быть, это хорошо обученное подразделение.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Может быть, это армия какого-нибудь даймё из близлежащих земель?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Дух... Дух... Дух..."
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Нет... это не солдаты с Дальнего Востока. Это звук скрежета тяжёлых доспехов... это силы, которые преследовали меня всю дорогу из Европы!",
+    "sprite_left": "Kallen 1.png"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Что?",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Нет времени объяснять! Если они нас поймают, у нас будут большие проблемы! Пойдёмте!",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Почему мы бежим? Неужели эти преследователи настолько грозны? Даже если это так, смогут ли они сравниться в силе с Бессмертной?",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен, в этом нет смысла. Мы окружены.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Чёрт... Похоже, они всё это время готовили здесь засаду... Сакура была прямо передо мной!",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Военные рыцари под командованием Рыцарей Апокалипсиса выполняют приказы!"
+  },
+  {
+    "text": "Шиксал призвал нас—"
+  },
+  {
+    "text": "бороться за выживание человечества.!"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Военные рыцари? Что это за ребята, чёрт возьми?",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "???",
+    "text": "Мисс Каллен, я наконец-то нашла тебя."
+  },
+  {
+    "speaker": "Каллен",
+    "text": "!?",
+    "sprite_left": "Kallen 5.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Зофия... Почему ты здесь...",
+    "sprite_left": "Kallen 2.png"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Господин Епископ утомился преследовать тебя. Эти простые солдаты тебе не ровня, поэтому я здесь.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Неужели так необходимо заходить так далеко... Разве военные рыцари не должны быть главной силой в борьбе с Хоукаем? А что, если Хоукай появится в Европе, пока вы все будете на Дальнем Востоке!",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Это дела Шиксала, а не мои.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Мисс Каллен, это последнее предупреждение. Отдайте «божественную коробку», и я обеспечу твоё безопасное возвращение в Европу.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "В противном случае... Боюсь, мне придётся быть грубой.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ух ты, кажется, в последнее время в Японии становится всё интереснее. После встречи с Бессмертной с Востока я столкнулась с целой кучей иностранцев. В последнее время мне невероятно везёт.",
+    "sprite_right": "Hokushin Mei 1.png",
+    "sprite_left": "Kallen 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Мэй! Что ты делаешь!?",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Отойди в сторону. Тебя это не касается. Если ты вмешаешься, мы будем стрелять на поражение.",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ха-ха... какое отношение... Я тоже терпеть не могу спорить с людьми. Раз так, то решено.",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Давай! Жизнь или смерть не имеют значения! Важны только победа или поражение!",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "text": "БУМ!!!"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Гха! Что происходит с этим клинком... Почему из его лезвия вырывается такое обжигающее пламя!",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Этот клинок излучает ауру Хоукая... Хокушин Мэй! Немедленно отступай!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Хе-хе... Боюсь, я не могу согласиться! С тех пор как я столкнулась с такими грозными противниками, только смерть может сломить мой боевой дух!",
+    "sprite_right": "Hokushin Mei 1.png",
+    "sprite_left": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Бэнг!!"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Это всё, что могут предложить воины Дальнего Востока?",
+    "sprite_right": "Zofia.png"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Хмпф! А как насчёт такого!",
+    "sprite_right": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "Вуш!!",
+    "sprite_right": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "Щёлк!",
+    "sprite_right": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Как такое возможно... ты поймала мой клинок одной рукой!",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Скучный трюк.",
+    "sprite_right": "Zofia.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Быстро, с дороги!",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "БУМ!!!!",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Гха!!",
+    "sprite_right": "Hokushin Mei 1.png",
+    "sprite_left": "Kallen 10.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Мэй!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Хе-хе... хе-хе-хе... я просто не могу сдержаться!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Действительно, борьба с сильнейшими — это главная цель моей жизни!!",
+    "sprite_left": "Hokushin Mei 3.png",
+    "sprite_right": "Kallen 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Беда...",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Гляди!!",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хокушин Мэй, достаточно.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Отпусти меня!! Ты, высокомерная сука! Если я умру, тебе больше не придётся беспокоиться о том, что во мне Хоукай, верно? Что ж, тогда я продолжу сражаться! Я убью эту девушку!",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Вы двое идите вместе, не теряйте времени даром.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Зофия! Прекрати немедленно! Я твоя цель! Они тут ни при чём!",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Мисс Каллен, моё требование простое: отдай «божественную коробку», и я их отпущу.",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Божественная коробка... в данный момент не находится у меня.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "......И где же тогда?",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Пожалуйста, дайте мне ещё немного времени! Я достану Божественную коробку! А потом вы можете делать со мной всё, что захотите: убить меня, пытать!",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Прости, но я не могу принять твоё предложение. Просто скажите мне, где находится божественная коробка, и я заберу её сама.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Нет!",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Мисс Каллен, пожалуйста, взгляни правде в глаза. Чего ты можешь добиться в своём нынешнем плачевном состоянии? Избавь себя от этих ненужных страданий.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Тем не менее я должна остановить её сама! Всё это моих рук дело! Поэтому я должна положить этому конец!",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Неужели... Как жаль... Рыцари, схватите мисс Каллен.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+
+    "text": "Так точно!!"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё, пьё, пьё!!!",
+    "sprite_centre": "Jingwei.png"
+  },
+  {
+
+    "text": "Ого! Что это за огромный зверь?! Может это зверь Хоукая?!"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен, Хокушин Мэй! Сюда!",
+    "sprite_left": "Fuka 5.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Хорошо! Поняла!",
+    "sprite_left": "Kallen 1.png"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Прекрати! Я лучше умру, чем буду сидеть на этой штуке!!",
+    "sprite_right": "Hokushin Mei 1.png",
+    "sprite_left": "Kallen 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Цзинвэй! Погнали!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё, пьё, пьё!",
+    "sprite_centre": "Jingwei.png"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "...",
+    "sprite_right": "Zofia.png"
+  },
+  {
+
+    "text": "Поторопитесь и догоните их! Не дайте им уйти!"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Не нужно их преследовать. Как продвигается расследование в отношении того зверя Хоукая в деревне Яэ?",
+    "sprite_right": "Zofia.png"
+  },
+  {
+
+    "text": "Докладываем командиру: мы определили местоположение зверя Хоукая и готовы атаковать в любой момент!"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Пойдёмте. Божественная коробка в руках той жрицы.",
+    "sprite_right": "Zofia.png"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Как только мы её убьём, наверняка появится Каллен...",
+    "sprite_right": "Zofia.png"
+  },
+  {
+    "text": "......"
   }
         ]
 }
