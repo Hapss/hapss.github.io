@@ -37,15 +37,12 @@
   {
     "speaker": "Цзинвэй",
     "text": "Пьё! Пьё!!",
-    "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
-    "sprite_right": "Fuka 3.png"
+    "sprite_center": "Jingwei.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Ой! Не подходи ближе! Я оговорилась!",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 3.png",
     "dim_override": "right"
   },
@@ -53,22 +50,18 @@
     "speaker": "Фука",
     "text": "Цзинвэй, я понимаю. Просто успокойся.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
     "speaker": "Цзинвэй",
     "text": "Пьё...",
-    "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
-    "sprite_right": "Fuka 5.png"
+    "sprite_center": "Jingwei.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "В чём дело? Разве он не дуется на меня?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
@@ -76,7 +69,6 @@
     "speaker": "Фука",
     "text": "Цзинвэй предупреждает меня, что впереди мощная аура Хоукая... Скорее всего, мы ищем именно это место.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
@@ -84,7 +76,6 @@
     "speaker": "Мэй Хокушин",
     "text": "Та деревня вдалеке? Может быть, это та самая деревня Яэ... Я не чувствую Хоукай, но запах крови несёт за версту. Похоже, на неё действительно напала какая-то демоническая лиса?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 5.png",
     "dim_override": "right"
   },
@@ -92,7 +83,6 @@
     "speaker": "Фука",
     "text": "В любом случае ситуация в той деревне критическая. Поторопись и садись, нам нужно немедленно отправиться им на помощь.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 6.png",
     "dim_override": "left"
   },
@@ -100,7 +90,6 @@
     "speaker": "Мэй Хокушин",
     "text": "Ой! Я только-только пришла в себя, я не сяду обратно на птицу! Достопочтенная Бессмертная, Вы же не можете пренебрегать чужими жизнями ради справедливости?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 6.png",
     "dim_override": "right"
   },
@@ -108,7 +97,6 @@
     "speaker": "Фука",
     "text": "Хорошо, раз так, то ты останешься здесь. Впереди бушует Хоукай, и я опасаюсь, что Хоукай внутри тебя может пробудиться и снова начать действовать.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 3.png",
     "dim_override": "left"
   },
@@ -116,7 +104,6 @@
     "speaker": "Мэй Хокушин",
     "text": "Ого! Значит, Ваше Бессмертие намерено оставить меня здесь, чтобы наказать зло и поощерить добродетель? А ты не боишься, что я уйду, не сказав ни слова?",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 3.png",
     "dim_override": "right"
   },
@@ -124,32 +111,23 @@
     "speaker": "Фука",
     "text": "Если бы ты хотела уйти, то зачем ждать столь долго? Подожди меня здесь, не подходи к той деревне. Цзинвэй, пойдём.",
     "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 4.png",
     "dim_override": "left"
   },
   {
     "speaker": "Цзинвэй",
     "text": "Пьё, пьё, пьё!!",
-    "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
-    "sprite_right": "Fuka 4.png"
+    "sprite_center": "Jingwei.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Эй! Погоди!",
-    "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
-    "sprite_right": "Fuka 4.png",
-    "dim_override": "right"
+    "sprite_left": "Hokushin Mei 1.png"
   },
   {
     "speaker": "Мэй Хокушин",
     "text": "Хмпф! Ты правда думаешь, что я твоя слуга? Оставаться здесь? Что ж, я пойду, если должна! Если я не могу на птицу сесть, то разве я не могу просто идти на своих двоих?",
-    "sprite_left": "Hokushin Mei 1.png",
-    "sprite_center": "Jingwei.png",
-    "sprite_right": "Fuka 4.png",
-    "dim_override": "right"
+    "sprite_left": "Hokushin Mei 1.png"
   },
   {
     "text": "......"
@@ -167,13 +145,11 @@
   {
     "speaker": "Цзинвэй",
     "text": "Пьё, пьё!",
-    "sprite_center": "Jingwei.png",
-    "sprite_right": "Fuka 3.png"
+    "sprite_center": "Jingwei.png"
   },
   {
     "speaker": "Фука",
     "text": "Спасибо, Цзинвэй... Я понимаю. Сейчас не время падать духом. Мы должны как можно скорее найти первопричину появления Хоукая, чтобы предотвратить усугубление катастрофы.",
-    "sprite_center": "Jingwei.png",
     "sprite_right": "Fuka 6.png"
   },
   {
