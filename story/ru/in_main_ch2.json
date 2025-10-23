@@ -1420,6 +1420,220 @@
   },
   {
     "text": "......"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Отпусти меня! Быстрее отпусти меня! Дай мне спуститься!!",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Цзинвэй, приземляйся. Мы уже должны были избавиться от них.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё! Пьё!!",
+    "sprite_centre": "Jingwei.png"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Фука! Зачем ты меня остановила?!",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Эти войска состоят из людей; нам не нужно с ними сражаться.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Если не хочешь, то и не дерись! Какое мне до этого дело? Не навязывай мне свои святые идеалы!",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Если Хоукай внутри тебя пробудится снова, это будет моя вина.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ты!",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Вы... Мне правда очень жаль. Это всё из-за меня...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен, раз так, то теперь ты готова рассказать нам правду?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Какова первопричина этого Хоукая и как он связан с тобой?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Простите... Я не рассказал вам обо всём этом раньше именно для того, чтобы уберечь от опасности.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Потому что, если тайна божественной коробки будет раскрыта... даже вы станете мишенью для рыцарей...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Так что же представляет собой эта так называемая «божественная коробка», ставшая причиной череды бедствий?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ладно, раз уж до этого дошло, я больше не буду скрывать.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я пришла из европейской организации Шиксал, у которой самая грозная военная сила на континенте. Имея такую мощь, Шиксал ведёт нескончаемую войну против Хоукая.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Будучи членом Шиксала, я всегда считала себя на стороне справедливости, пока появление божественной коробки не заставило меня усомниться в этой организации...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Но я не могу объяснить, что из себя представляет божественная коробка на самом деле. Я была лишь свидетелем той трагедии, которую она вызвала. Это была вовсе не божественная сила... а обитавший в нём Хоукай! В ходе отвратительного эксперимента он превратил людей в чудовищ.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я не могу смириться с тем, что Шиксал совершил такой жестокий поступок. Останься она в Европе, это наверняка привело бы к непредвиденным последствиям! Вот почему я украла его, бежала с ним из Европы и села на торговое судно, направлявшееся к далёким берегам, чтобы увезти его подальше от моей родины!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Но Шиксал не оставил меня... Они послали бесчисленное множество преследователей, чтобы безжалостно выследить меня... Измученная, я наконец добралась до деревни Яэ... Меня спасла Сакура, благодаря которой я до сих пор жива.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Но Божественная коробка, которую я принесла, уничтожила всё... Сокрытый в нём Хоукай постепенно завладевал сознанием Сакуры... В конце концов, он не только погубил деревню Яэ, но и заставил вас двоих подвергнуться опасности, чтобы помочь мне...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мне жаль... Это всё моя вина... Простите меня...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Кажется, теперь всё встало на свои места. Хоукай, за которым я гналась всю дорогу из Шэньчжоу, похоже, появился из той божественной коробки.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен, тебе не нужно винить себя. Всё происходит не просто так. Раз уж так вышло, всё, что мы можем сделать, так это направить её к правильному решению.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Сейчас мы только можем остановить распространение Хоукая. Не только ради деревни Яэ, но и ради мира на этой земле.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "М-гм...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Угх... После всего этого мы всё равно возвращаемся к этой коробке? Раз этот так называемый рыцарский орден хочет её заполучить, нам просто придётся сразиться с ними!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хокушин Мэй права: возможно, рыцарский орден тоже обнаружил корень Хоукая. Чтобы избежать конфликта, мы должны добраться туда раньше них.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ни за что! Они и пальцем не тронут Сакуру!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Просто чтобы ты знала! Если начнётся очередная драка, даже не смей пытаться меня остановить!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "......"
   }
         ]
 }
