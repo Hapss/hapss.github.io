@@ -7,7 +7,6 @@
            "full_text_align": "center",
             "background": "inbg_stage2.png"
         },
-        [
   {
     "text": "Деревня Яэ. Периферия."
   },
@@ -438,7 +437,6 @@
     "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   }
-]
 
         ]
 }
