@@ -2374,6 +2374,9 @@
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Zofia.png",
     "dim_override": "left"
+  },
+  {
+    "text": "......"
   }
         ]
 }
