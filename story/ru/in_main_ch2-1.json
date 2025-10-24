@@ -1,0 +1,251 @@
+{
+    "dialogue": [
+       { 
+            "text": "Эта история записана в древних, покрытых пылью текстах.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center",
+            "background": "black.png"
+        },
+        { 
+            "text": "Бессмертная, пришедшая из Шэньчжоу, пересекла хаотичный мир,\nувидела взлёты и падения в жизни и посетовала на то,\nчто мёртвые подобны пыли в вихре жизненных перипетий.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        { 
+            "text": "Воительница, блуждающая по Дальнему Востоку, ступающая по полям,\nусеянным трупами, уничтожающая все следы жизни, со смехом заявляющая,\nчто праведность на небесах и на земле так же распространена, как грязь.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        { 
+            "text": "Две души, чьи пути пересеклись, сблизились благодаря боевым искусствам,\nобъединив усилия, чтобы выследить зло, распространяющееся по всему миру.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        { 
+            "text": "И вот теперь они пересекли океан и достигли берегов Европы...",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        { 
+            "text": "Европа. Порт Шиксала.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center"
+        },
+        {
+    "speaker": "Зофия",
+    "text": "Бросайте якорь, готовьтесь к швартовке!",
+    "sprite_left": "Fuka 1.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "———Бух."
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Уй, уй, уй, уй!!"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Эта... эта шаткая лодка наконец-то остановилась... У меня чуть желудок не вывернуло наизнанку... Угх!",
+    "sprite_left": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Мэй, пожалуйста, подожди ещё немного. Мы скоро пришвартуемся.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Kallen 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Если мастер боевых искусств не может справиться даже с такой бурей, то, похоже, тебе нужно ещё больше тренироваться.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Kallen 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "О-откуда мне было знать, что морской путь окажется таким коварным? Если бы я знала, то, возможно, пережила бы на несколько дней меньше мучений, переправившись на этом хищнике...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Kallen 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё! Пьё!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "none"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ой! Не подходи, не подходи ближе! Я не говорила этого!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Kallen 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хотя Цзинвэй может пролететь тысячу миль за день, он не может обогнать мощные океанские течения. Если мы не найдём места для отдыха в пути, то оба погибнем под волнами.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Kallen 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ай, не важно, не важно. Дай мне ещё немного отдохнуть... Угх!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Kallen 2.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Топ, топ, топ."
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Два человека. Похоже, за мной приехали.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен, что теперь с тобой будет?",
+    "sprite_left": "Fuka 1.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я нарушила доктрину и предала Шиксал; Церковь так просто меня не отпустит...",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Но, как бы то ни было, это грех, который я совершила сама. Я полностью готова принять последствия, мисс Фука, тебе не о чем беспокоиться.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Вот как... Я надеюсь, что Шиксал сможет отличить правильное от неправильного и вынесет справедливый вердикт.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Топ, топ, топ."
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Мисс, нам поручено взять заключённого под стражу.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Корпусу военных рыцарей под командованием Рыцаря Апокалипсиса было поручено задержать преступника Каллен Каслану и вернуть украденную священную реликвию.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Молодцы! Стража! Отведите этих людей в темницу в ожидании суда!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "!?",
+    "sprite_left": "Kallen 9.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Эй! Я просто плыла на этом корабле, почему вы меня арестовываете?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Вы подозреваетесь в государственной измене. Немедленно прекратите сопротивление и сдавайтесь!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Подождите минутку! Зофия, разве мы не договорились, что они не имеют ко мне никакого отношения?",
+    "sprite_left": "Kallen 8.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Моя единственная задача — доставить тебя в Европу; действия Шиксала меня не касаются.",
+    "sprite_left": "Kallen 8.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "..!?",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Как смеешь! Я, Хокушин Мэй, не позволю так со мной обращаться— тьфу!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Чёрт... Почему всё закружилось...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Стража, схватите их всех!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "none"
+  },
+  {
+    "text": "Да!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "none"
+  }
+        ]
+}
