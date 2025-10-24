@@ -1804,7 +1804,7 @@
     "text": "Хе-хе~ Хе-хе~"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Что такое, Рин?",
     "sprite_left": "Rin 4.png",
     "sprite_right": "Sakura.png",
@@ -1818,7 +1818,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Хм, но мне как-то не хочется соглашаться.",
     "sprite_left": "Rin 1.png",
     "sprite_right": "Sakura.png",
@@ -1832,7 +1832,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Что ж, даже если твоя сестра станет жрицей, я всё равно буду заботиться о Рин и играть с тобой всё время~",
     "sprite_left": "Rin 3.png",
     "sprite_right": "Sakura.png",
@@ -1869,7 +1869,7 @@
     "text": "Свуш, свуш, свуш, свуш, свуш, свуш, свуш!!!!!"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Остался последний.",
     "sprite_right": "Sakura.png"
   },
@@ -1877,18 +1877,18 @@
     "text": "Не... не убивай меня!!! Пожалуйста, не убивай меня!!"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Не убивать... но проявил ли ты хоть каплю милосердия к Рин тогда?!",
     "sprite_left": "Sakura.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Какая божественная воля? В этом мире нет богов! Увы, я осознала эту истину слишком поздно, иначе Рин не умерла бы.",
     "sprite_left": "Sakura.png"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Вы заплатите за все грехи вашими жизнями. Пришло время свести счёты. Съешь его!!",
     "sprite_left": "Sakura.png"
   },
@@ -1899,17 +1899,17 @@
     "text": "Не-е-е-е-е-ет!"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Ха-а... Ха-а...",
     "sprite_left": "Sakura.png"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Рин... Твоя сестра отомстила за тебя... Каждый грешник в деревне Яэ заплатит за тебя своей жизнью...",
     "sprite_left": "Sakura.png"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Хе-хе-хе... Ха-ха-ха!!!",
     "sprite_left": "Sakura.png"
   },
@@ -1927,7 +1927,7 @@
     "sprite_right": "Fox 2.png"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Кто вы, чёрт подери!?",
     "sprite_left": "Sakura.png",
     "sprite_right": "Fox 2.png",
@@ -1941,14 +1941,14 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Хе-хе-хе... Судя по твоему наряду, ты здесь, чтобы забрать Каллен, я полагаю. Ты должна поблагодарить её от моего имени. Если бы она не принесла эту коробку, я был бы обречена доживать свои дни в этом ужасном мире! В маске! Скрывая внутреннюю ярость!",
     "sprite_left": "Sakura.png",
     "sprite_right": "Zofia.png",
     "dim_override": "right"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Благодаря этой коробке я нашла себя настоящую... и поняла силу богов!",
     "sprite_left": "Sakura.png",
     "sprite_right": "Zofia.png",
@@ -1979,7 +1979,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Наглая! Как ты смеешь осквернять божественное творение!",
     "sprite_left": "Sakura.png",
     "sprite_right": "Fox 2.png",
@@ -2000,7 +2000,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Ха-ха-ха... Посмотрим, кто на самом деле заслуживает благосклонности богов!",
     "sprite_left": "Sakura.png",
     "sprite_right": "Zofia.png",
@@ -2184,7 +2184,7 @@
     "text": "Бум!!!"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Хигокумару！！",
     "sprite_left": "Sakura.png"
   },
@@ -2213,7 +2213,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Хмпф... Похоже, я всё-таки недооценила тебя. Ты действительно можешь противостоять силе богов, кто же ты такая?",
     "sprite_left": "Sakura.png",
     "sprite_right": "Zofia.png",
@@ -2230,7 +2230,7 @@
     "text": "Бум!!!"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Хмпф! Думаешь можешь убить меня одной лишь человеческой силой? Это не более чем фантазия глупца!",
     "sprite_left": "Sakura.png",
     "sprite_right": "Zofia.png",
@@ -2240,7 +2240,7 @@
     "text": "Щёлк!!!"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Ну, вот и всё.",
     "sprite_left": "Sakura.png",
     "sprite_right": "Zofia.png",
@@ -2257,7 +2257,7 @@
     "text": "Бум!!!"
   },
   {
-    "speaker": "Сакура",
+    "speaker": "Яэ Сакура",
     "text": "Что?! Невозможно... Этот удар точно пришёлся в жизненно важную точку. Как ты можешь стоять на ногах?!",
     "sprite_left": "Sakura.png",
     "sprite_right": "Zofia.png",
@@ -2486,6 +2486,658 @@
     "text_style": "full",
     "full_text_size": "lg",
     "full_text_align": "center"
+  },
+  { 
+    "text": "[color=#FFC3CE]......[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "[color=#FFC3CE]Прощай... Каллен...[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center",
+    "background": "whitish.png"
+  },
+  { 
+    "text": "......",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center",
+    "background": "black.png"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "text": "Ты плачешь?"
+  },
+  {
+    "text": "Даже после бесчисленных циклов перерождения... ты остаёшься такой же трусливой..."
+  },
+  {
+    "text": "Боишься потерять... боишься боли... боишься видеть её печаль..."
+  },
+  {
+    "text": "Ты всё ещё погрязаешь в собственном горе, не в силах выбраться..."
+  },
+  {
+    "text": "И не способна вызвать сочувствие."
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Кто ты?..",
+    "sprite_centre": "Sakura.png"
+  },
+  {
+    "text": "Я — это ты..."
+  },
+  {
+    "text": "Та ты, которая когда-то упустила всё..."
+  },
+  {
+    "text": "Та ты, которая любила её до потери пульса, но не осмеливалась сделать шаг навстречу..."
+  },
+  {
+    "text": "Та ты, которая могла бы взяться с ней за руки и прижаться к ней, но боялась прикоснуться к ней..."
+  },
+  {
+    "text": "Та ты, которая могла бы вечно стоять на страже с непоколебимой решимостью... но спустя пять веков смогла лишь увядать в одиночестве..."
+  },
+  {
+    "text": "Я — это ты."
+  },
+  {
+    "text": "Та, кто когда-то потеряла всё..."
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Но... я не знаю, что делать. Если результат нельзя изменить... тогда какой смысл сейчас освобождаться от этих оков?",
+    "sprite_centre": "Sakura.png"
+  },
+  {
+    "text": "Ты не божество, откуда тебе знать, что результат нельзя изменить?"
+  },
+  {
+    "text": "Даже если бы ты стала божеством, изменился бы от этого результат?"
+  },
+  {
+    "text": "В конечном счёте всё решают не божества, а ты сама."
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Я сама...",
+    "sprite_centre": "Sakura.png"
+  },
+  {
+    "text": "Именно так, так что дай мне ответ."
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Мой ответ...",
+    "sprite_centre": "Sakura.png"
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Я хочу быть с Каллен... Я хочу, чтобы она была рядом со мной...",
+    "sprite_centre": "Sakura.png"
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Я хочу, чтобы она ела онигири, которые я готовлю! Я хочу, чтобы она рассказывала мне истории о своём родном городе! Я хочу ещё раз посмотреть, как цветёт сакура!",
+    "sprite_centre": "Sakura.png"
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "Я хочу!!",
+    "sprite_centre": "Sakura.png"
+  },
+  {
+    "text": "Тогда протяни руку... В этот раз ни за что не отпускай."
+  },
+  {
+    "speaker": "Яэ Сакура",
+    "text": "М-гм.",
+    "sprite_centre": "Sakura.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Сакура... Прости меня... Мне так жаль... Я всё равно не смогла тебя спасти!!",
+    "sprite_left": "Kallen 2.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Сакура———!!!",
+    "sprite_left": "Kallen 9.png"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Эй! Каллен! Посмотри на тело Яэ. Кажется, от него исходит луч света!",
+    "sprite_left": "Kallen 9.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Это... Сэссё-сэки?",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Это... ответ, который оставила мне Яэ Сакура?",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "У... у-у-у...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Сакура... Я услышала тебя... Я услышала твой голос!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Спасибо тебе, спасибо, что наконец-то рассказала мне, что у тебя на сердце...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я буду ждать тебя! Я обязательно буду ждать тебя!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Сколько бы раз мы ни расставались при жизни и после смерти, мы обязательно встретимся снова!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мы... дали обещание...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Война—— Поток!!",
+    "sprite_right": "Zofia.png",
+    "background": "inbg_stage2.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Удар в один цунь: Прояснение!!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Грохот!!!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Zofia.png"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "...",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Я и представить себе не могла, что кто-то сможет довести меня до такого состояния в бою. Похоже, поездка на Дальний Восток всё-таки была не напрасной.",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "И ты одна из немногих людей, которых я встречала в своей жизни и которые могли бы обменяться со мной более чем десятью ударами.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Хе-хе-хе... Ха-ха-ха-ха!! Никогда не думала, что мне придётся так выложиться. Хоть бы сказала, как тебя зовут, прежде чем умрёшь!",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Гора Тайсюй, Фука. Но, похоже, тебе не придётся заходить далеко, ведь наша битва уже закончилась.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Зофия! Мисс Фука! Остановитесь!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "...Значит, мисс Каллен действительно добилась того, чего не смогла я.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я уже получила божественную коробку! Пожалуйста, прекратите сражение.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Ладно, похоже, я упустила свой шанс продемонстрировать свою силу. Я получила божественную коробку, мисс Каллен. В таком случае, пожалуйста, возвращайся со мной.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Подожди! Перед этим, не могла бы ты помочь мне закончить кое-что?",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Хорошо.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+
+    "text": "..."
+  },
+  {
+
+    "text": "......"
+  },
+  {
+    "text": "Три дня спустя.",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  {
+    "text": "Бух!"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ай, ай, ай, ай... Кто, чёрт возьми, так сильно меня ударил?!",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Ты наконец проснулась?",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "А, Бессмертная? Что... я делаю, лёжа на могиле?",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Никто тебя не бил, ты сама туда завалилась. Я видела, как ты крепко спала, подложив под голову могилу, поэтому не стала тебя будить.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "А... Теперь я вспомнила. На ремонт кладбища ушло целых три дня. Теперь жители деревни Яэ могут наконец упокоиться с миром, верно?",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Это также поможет тебе накопить хорошую карму и искупить прошлые проступки.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Ах да! А что насчёт надгробия на могиле Яэ Сакуры?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен похоронила её под цветущей сакурой на горе, где также находилась могила её сестры. Своего рода воссоединение сестёр.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Так она и правда умерла?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Жизнь и смерть непредсказуемы и находятся за пределами нашего понимания. Сэссё-сэки, оставленный Яэ Сакурой, не является ли он по-своему ещё одной формой возрождения?",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Какая новая жизнь... Можно ли считать камни живыми?",
+    "sprite_left": "Fuka 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Всё в этом мире подвергается реинкарнации. Кто знает, может быть, в прошлой жизни ты была камнем.",
+    "sprite_left": "Fuka 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Бессмертная, я вижу, тебя становится всё труднее понять.",
+    "sprite_left": "Fuka 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Что ж... неважно. После всей этой шумихи всё наконец-то разрешилось. Неужели Япония теперь будет избавлена от страданий, вызванных Хоукаем?",
+    "sprite_left": "Fuka 4.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Кто знает? Время летит подобно стреле, и никто не может предсказать, что ждёт нас впереди. Даже бессмертные не застрахованы от этого.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Хе-хе, похоже, Бессмертная полностью приняла свой титул.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Полагаю, это единственное, что я вынесла из поездки в Японию.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Где Каллен? Куда она ушла?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Быть может прощается с Яэ Сакурой.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "О чём вы?",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Мисс Каллен, уже закончила?",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Что ж, я оставил сэссё-сэки под цветущей сакурой. Я пообещала Сакуре, что если когда-нибудь вернусь сюда, то останусь с ней навсегда.",
+    "sprite_left": "Kallen 6.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Неужели... В таком случае нам тоже пора идти.",
+    "sprite_left": "Kallen 6.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ой, прости, что заставил вас так долго ждать.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Фука, мисс Мэй, я глубоко признательна вам за помощь. Если наши пути снова пересекутся в будущем, мы встретимся ещё раз. Спасибо вам.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Что ж, полагаю, на этом мы с вами расстанемся.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "До встречи.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Мисс Каллен, корабль готов. Пожалуйста, поднимайся на борт.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Увы, она ушла. Похоже, мне придётся вернуться к своим прежним скитаниям. Если подумать о мастерах, с которыми я познакомилась в последнее время, то оставаться в Японии было бы невыносимо скучно.",
+    "sprite_right": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Кстати, почему бы тебе не отправить меня в Шэньчжоу, Бессмертная? С таким могущественным существом, как ты, там наверняка полно скрытых талантов!",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Кто сказал, что я возвращаюсь в Шэньчжоу?",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "А? Нет? Тогда куда ты направляешься?",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Где бы ни был Хоукай, я буду там. Разве ты не слышала, что сказала Каллен? Хоукай сейчас бушует по всей Европе, и я также должна выяснить, как появилась эта божественная коробка.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Так ты собираешься в Европу!? А! Но, Бессмертная, разве не говорили, что Европа находится за тысячи миль отсюда, за морем? Как мы туда доберёмся? Мы что, должны...",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Конечно же мы отправимся туда на Цзинвэй.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "...",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Есть другой способ: если ты отправишься за ними сейчас, то ещё можешь успеть.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "О! Понятно! Случайная встреча — это сама судьба. Подвезти меня не составит труда! Я сейчас вернусь!",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хорошо. Цзинвэй, полетели.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Hokushin Mei 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё, пьё, пьё!!!"
+  },
+  {
+    "text": "Десять минут спустя.",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  {
+
+    "text": "Не мешайте нам, иначе будете жестоко наказаны!"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Это возмутительно! Если бы я не была категорически против лететь на этой чёртовой птице, стала бы я умолять тебя? Не испытывай судьбу! Ты вынуждаешь меня!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Из-за чего весь этот шум?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Леди София, этот человек отказывается следовать нашим словам и настаивает на том, чтобы вернуться с нами в Европу."
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Вот как? Тогда возьмите её с собой.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "О? Так с тобой легко договориться?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Приведите её сюда. Она была осквернена Хоукаем. Арестуйте её и отправьте в Шиксал.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Эй! Что ты делаешь? Разве ты не сказала, что возьмёшь меня с собой?!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Зофия",
+    "text": "Как я могу взять тебя с собой без веской причины? Раз уж ты сама напросилась, не вини меня в том, что я воспользовалась ситуацией.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Мэй Хокушин",
+    "text": "Эй!! Бессмертная!! Ваше превосходительство Бессмертная!! Спаси меня, помоги мне!!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Ваше превосходительство Бессмертная——!!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Zofia.png"
   }
         ]
 }
