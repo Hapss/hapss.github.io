@@ -612,9 +612,10 @@
         let isHistoryVisible = false; 
         let activeBgLayer = 1; // 1 or 2
         
-        let currentLeftSpriteFile = null;
-        let currentRightSpriteFile = null;
-        let currentCenterSpriteFile = null; // НОВОЕ: Для центрального спрайта
+        // Переменные для хранения *последнего указанного* имени файла для каждой позиции
+        let lastSpecifiedLeftSprite = null;
+        let lastSpecifiedRightSprite = null;
+        let lastSpecifiedCenterSprite = null;
         
         let preloadedAssets = {}; 
 
@@ -631,17 +632,12 @@
                 loadText: "Загрузить", loadingText: "Загрузка...", loadedText: "Загружено", 
                 errorLoading: "Повтор", endOfStory: "Конец истории!",
                 startOfStory: "Это начало истории.", 
-                // placeholderMetadata: "--- Метаданные не загружены ---", // УДАЛЕНО
-                // placeholderSelectArc: "--- Выберите Арку ---", // УДАЛЕНО
                 errorFetchMetadataStrict: "Критическая ошибка: не удалось загрузить метаданные глав. Файл story/story_metadata.json отсутствует или недоступен.",
                 errorChapterNotFound: "Файл главы не найден.",
                 errorJsonSyntax: "Критическая ошибка JSON: проверьте структуру JSON главы (лишние запятые/скобки)!",
                 errorRender: (msg) => `Критическая ошибка рендеринга: ${msg}. Проверьте структуру данных!`, 
                 themeDark: "Темная", themeLight: "Светлая",
                 historyTitle: "История диалогов", historyButton: "История", historyEmpty: "История пуста.",
-                // placeholderSelectType: "--- Выберите тип сюжета ---", // УДАЛЕНО
-                // narrativePlaceholder: "[Повествование]", // УДАЛЕНО
-                // scenePlaceholder: "Сцена: " // УДАЛЕНО
             }
         };
 
@@ -675,8 +671,6 @@
             return promise;
         }
 
-        // Эта функция больше не нужна для предзагрузки "следующего" шага,
-        // так как мы загружаем всю главу сразу. Но она безвредна.
         async function preloadAssets(index) {
             if (index < 0 || index >= currentDialogue.length) return Promise.resolve([]);
             
@@ -698,7 +692,6 @@
                 loadPromises.push(loadImage(spriteUrl).catch(() => null));
             }
 
-            // НОВОЕ: Предзагрузка центрального спрайта
             if (step.sprite_centre) {
                 const spriteUrl = spritePath(step.sprite_centre);
                 loadPromises.push(loadImage(spriteUrl).catch(() => null));
@@ -708,7 +701,7 @@
         }
 
         // ====================================================================
-        // === НОВЫЕ ФУНКЦИИ УПРАВЛЕНИЯ АУДИО ===
+        // === УПРАВЛЕНИЕ АУДИО ===
         // ====================================================================
         
         const ICONS = {
@@ -1017,7 +1010,6 @@
         // ====================================================================
         
         async function fetchChapterMetadata() {
-            // УДАЛЕНА заглушка
             try {
                 const response = await fetch(CONFIG.PATHS.METADATA_FILE); 
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -1026,8 +1018,7 @@
                 
             } catch (error) {
                 console.error(`[Metadata] Критическая ошибка: Не удалось загрузить ${CONFIG.PATHS.METADATA_FILE}.`, error);
-                // Оставляем window.storyMetadata = null;
-                alertMessage(i18n.ru.errorFetchMetadataStrict); // Показываем сообщение об ошибке
+                alertMessage(i18n.ru.errorFetchMetadataStrict); 
             }
         }
 
@@ -1128,9 +1119,30 @@
             }
         }
         
+        // Обрабатывает \n -> <br>
         function processTextForBreaks(text) {
             if (!text) return "";
             return text.replace(/\n/g, '<br>');
+        }
+
+        // --- НОВАЯ ФУНКЦИЯ для парсинга цветного текста ---
+        function parseColoredText(text) {
+            if (!text) return "";
+            // Заменяет [color=...]...[/color] теги на стилизованные span
+            // Базовая валидация: разрешены hex (#rrggbb, #rgb) или слова (a-z)
+            return text.replace(/\[color=([#\w]+)](.*?)\[\/color]/gi, (match, color, innerText) => {
+                // Очень базовая проверка формата цвета (hex или слово)
+                if (/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3}|[a-zA-Z]+)$/.test(color)) {
+                     // Убедимся, что цвет начинается с #, если это hex и знака # нет
+                     let finalColor = color;
+                     if (!color.startsWith('#') && /^[a-fA-F0-9]+$/.test(color)) {
+                         finalColor = '#' + color;
+                     }
+                    return `<span style="color: ${finalColor};">${innerText}</span>`;
+                }
+                // Если формат цвета невалидный, возвращаем текст без стилизации
+                return innerText; 
+            });
         }
 
 
@@ -1138,7 +1150,7 @@
             const { dialogueWrapper, spriteLeftContainer, spriteRightContainer, 
                     spriteLeftElement, spriteRightElement, currentSpeaker, currentText, speakerNameContainer,
                     fullDialogueBox, fullDialogueContent, fullCurrentText,
-                    spriteCenterContainer, spriteCenterElement // НОВОЕ: Добавлено
+                    spriteCenterContainer, spriteCenterElement 
                 } = elements;
 
             if (!dialogueIsLoaded || currentDialogue.length === 0) {
@@ -1165,53 +1177,63 @@
             
             const newLeftSpriteFile = step.sprite_left || null;
             const newRightSpriteFile = step.sprite_right || null;
-            const newCenterSpriteFile = step.sprite_centre || null; // НОВОЕ
+            const newCenterSpriteFile = step.sprite_centre || null;
 
             // Сброс затемнения перед расстановкой
             spriteLeftElement.classList.remove('dimmed-sprite');
             spriteRightElement.classList.remove('dimmed-sprite');
             spriteCenterElement.classList.remove('dimmed-sprite');
 
+             // Обновляем последние *указанные* файлы (важно для восстановления видимости)
+            if (newLeftSpriteFile) lastSpecifiedLeftSprite = newLeftSpriteFile;
+            if (newRightSpriteFile) lastSpecifiedRightSprite = newRightSpriteFile;
+            if (newCenterSpriteFile) lastSpecifiedCenterSprite = newCenterSpriteFile;
+
+
             // --- A. Центральный Спрайт ---
             if (newCenterSpriteFile) {
                 const url = spritePath(newCenterSpriteFile);
-                if (currentCenterSpriteFile !== newCenterSpriteFile) {
-                    loadSprite(url, spriteCenterElement, spriteCenterContainer);
-                    currentCenterSpriteFile = newCenterSpriteFile;
+                // Загружаем, только если имя файла изменилось
+                if (elements.spriteCenterElement.currentSrc?.endsWith(encodeURIComponent(newCenterSpriteFile)) === false) {
+                     loadSprite(url, spriteCenterElement, spriteCenterContainer);
                 } else {
-                    spriteCenterContainer.classList.remove('hidden'); // Убедимся, что видим, если имя не менялось
+                     spriteCenterContainer.classList.remove('hidden'); // Показать, если тот же
                 }
+                 // Скрываем боковые контейнеры, когда центральный активен
+                spriteLeftContainer.classList.add('hidden');
+                spriteRightContainer.classList.add('hidden');
             } else {
-                spriteCenterContainer.classList.add('hidden'); // Скрываем, если не указан
-                // currentCenterSpriteFile = null; // Не сбрасываем здесь, чтобы не загружать заново, если вернется
-            }
-            
-            // --- B. Левый Спрайт (Показываем, только если НЕТ центрального) ---
-            if (!newCenterSpriteFile && newLeftSpriteFile) {
-                const url = spritePath(newLeftSpriteFile);
-                if (currentLeftSpriteFile !== newLeftSpriteFile) {
-                    loadSprite(url, spriteLeftElement, spriteLeftContainer);
-                    currentLeftSpriteFile = newLeftSpriteFile;
-                } else {
-                    spriteLeftContainer.classList.remove('hidden');
-                }
-            } else {
-                spriteLeftContainer.classList.add('hidden'); // Скрываем, если есть центральный или не указан левый
-                 // currentLeftSpriteFile = null;
-            }
+                 spriteCenterContainer.classList.add('hidden'); // Скрываем центральный, если не указан
 
-            // --- C. Правый Спрайт (Показываем, только если НЕТ центрального) ---
-             if (!newCenterSpriteFile && newRightSpriteFile) {
-                const url = spritePath(newRightSpriteFile);
-                if (currentRightSpriteFile !== newRightSpriteFile) {
-                    loadSprite(url, spriteRightElement, spriteRightContainer);
-                    currentRightSpriteFile = newRightSpriteFile;
+                // --- B & C. Левый и Правый Спрайты (Работают, если нет центрального) ---
+                // Используем lastSpecified..., чтобы знать, нужно ли их вообще показывать
+                const leftToShow = newLeftSpriteFile || lastSpecifiedLeftSprite;
+                const rightToShow = newRightSpriteFile || lastSpecifiedRightSprite;
+
+                // Левый Спрайт
+                if (leftToShow) {
+                     const url = spritePath(leftToShow);
+                     // Загружаем, если имя изменилось ИЛИ если спрайт сейчас скрыт, но должен быть (восстановление)
+                    if (elements.spriteLeftElement.currentSrc?.endsWith(encodeURIComponent(leftToShow)) === false || spriteLeftContainer.classList.contains('hidden')) {
+                         loadSprite(url, spriteLeftElement, spriteLeftContainer);
+                     } else {
+                         spriteLeftContainer.classList.remove('hidden');
+                     }
                 } else {
-                    spriteRightContainer.classList.remove('hidden');
+                    spriteLeftContainer.classList.add('hidden'); // Скрываем, если не указан ни сейчас, ни раньше
                 }
-            } else {
-                spriteRightContainer.classList.add('hidden'); // Скрываем, если есть центральный или не указан правый
-                // currentRightSpriteFile = null;
+
+                // Правый Спрайт
+                 if (rightToShow) {
+                     const url = spritePath(rightToShow);
+                     if (elements.spriteRightElement.currentSrc?.endsWith(encodeURIComponent(rightToShow)) === false || spriteRightContainer.classList.contains('hidden')) {
+                         loadSprite(url, spriteRightElement, spriteRightContainer);
+                     } else {
+                         spriteRightContainer.classList.remove('hidden');
+                     }
+                } else {
+                    spriteRightContainer.classList.add('hidden'); // Скрываем, если не указан
+                }
             }
             
             // --- D. Логика Затемнения (Применяется *после* расстановки) ---
@@ -1223,12 +1245,13 @@
                 const overrideValue = step.dim_override.toLowerCase().replace(/\s/g, ''); // Убираем пробелы
 
                 if (overrideValue === 'auto' && step.speaker && speakerPos) {
+                    // Автоматическое затемнение: затемняем НЕ говорящих
                     if (speakerPos === 'left') dimTargets.add('center').add('right');
                     else if (speakerPos === 'right') dimTargets.add('center').add('left');
                     else if (speakerPos === 'center') dimTargets.add('left').add('right');
                 } else if (overrideValue === 'all') {
                     dimTargets.add('left').add('center').add('right');
-                } else if (overrideValue === 'both') { // Совместимость
+                } else if (overrideValue === 'both') { // Совместимость + синоним left,right
                     dimTargets.add('left').add('right');
                 } else if (overrideValue !== 'none') {
                     // Разбираем строку с позициями через запятую
@@ -1257,9 +1280,9 @@
                 }
             }
 
-            // --- 5. Рендеринг Текста ---
+            // --- 5. Рендеринг Текста (с парсингом цвета) ---
             if (isFullText) {
-                fullCurrentText.innerHTML = processTextForBreaks(step.text);
+                fullCurrentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
                 
                 const size = step.full_text_size || 'md';
                 fullCurrentText.className = 'leading-relaxed transition-opacity duration-300'; // Сброс классов
@@ -1282,7 +1305,7 @@
                     speakerNameContainer.classList.add('hidden');
                 }
                 
-                currentText.innerHTML = processTextForBreaks(step.text);
+                currentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
             }
             
             // 6. Обновление Истории
@@ -1328,12 +1351,11 @@
                     if (step.background) uniqueUrls.add(CONFIG.PATHS.BACKGROUND_BASE + encodeURIComponent(step.background));
                     if (step.sprite_left) uniqueUrls.add(spritePath(step.sprite_left));
                     if (step.sprite_right) uniqueUrls.add(spritePath(step.sprite_right));
-                    if (step.sprite_centre) uniqueUrls.add(spritePath(step.sprite_centre)); // НОВОЕ: Сбор центральных спрайтов
+                    if (step.sprite_centre) uniqueUrls.add(spritePath(step.sprite_centre)); 
                 }
                 return Array.from(uniqueUrls);
             })();
 
-            // --- Шаг 4: Возврат к пакетной загрузке для стабильности ---
             const totalToLoad = urlsToLoad.length;
             chapterLoadProgress.textContent = `(0/${totalToLoad})`;
 
@@ -1359,9 +1381,9 @@
             
             // Сброс состояния для чистой загрузки главы
             currentBackgroundUrl = null;
-            currentLeftSpriteFile = null;
-            currentRightSpriteFile = null;
-            currentCenterSpriteFile = null; 
+            lastSpecifiedLeftSprite = null; // Сброс последних указанных спрайтов
+            lastSpecifiedRightSprite = null;
+            lastSpecifiedCenterSprite = null;
             elements.spriteLeftContainer.classList.add('hidden');
             elements.spriteRightContainer.classList.add('hidden');
             elements.spriteCenterContainer.classList.add('hidden'); 
@@ -1621,7 +1643,8 @@
                     displayText = i18n.ru.startOfStory;
                 }
                 
-                textContent.textContent = displayText || ''; 
+                // Используем parseColoredText и для истории, чтобы цвета отображались
+                textContent.innerHTML = parseColoredText(displayText || ''); 
                 historyItem.appendChild(textContent);
 
                 fragment.appendChild(historyItem);
