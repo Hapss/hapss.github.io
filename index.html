@@ -39,6 +39,7 @@
         /* ==================================================================== */
         .light-theme {
             --color-bg-darkest: #D7DDEA;  
+            --color-bg-dialogue: #466098;
             --color-bg-main: #F2F4F8;    
             --color-bg-medium: #E4E8F1;   
             
@@ -53,6 +54,7 @@
             /* Текст */
             --color-text-primary: #1f2937; 
             --color-text-secondary: #6b7280; 
+            --color-text-vn: #e5e7eb;
             
             /* Синий акцент для имени */
             --color-speaker-name: #1d4ed8; 
@@ -82,7 +84,7 @@
             background-color: var(--color-bg-main); 
             opacity: 0.9;
             backdrop-filter: blur(4px);
-            color: var(--color-text-primary);
+            color: var(--color-text-vn);
             border: 1px solid var(--color-bg-medium); 
         }
         
@@ -171,7 +173,7 @@
             right: 0;
             bottom: 0;
             z-index: 30; /* Выше спрайтов, ниже заголовка */
-            background-color: var(--color-bg-darkest);
+            background-color: var(--color-bg-dialogue);
             opacity: 0.95; /* Небольшая прозрачность */
             transition: opacity 0.3s ease;
         }
