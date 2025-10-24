@@ -612,10 +612,10 @@
         let isHistoryVisible = false; 
         let activeBgLayer = 1; // 1 or 2
         
-        // Переменные для хранения *последнего указанного* имени файла для каждой позиции
-        let lastSpecifiedLeftSprite = null;
-        let lastSpecifiedRightSprite = null;
-        let lastSpecifiedCenterSprite = null;
+        // Удалены переменные lastSpecified... - они больше не нужны
+        // let lastSpecifiedLeftSprite = null;
+        // let lastSpecifiedRightSprite = null;
+        // let lastSpecifiedCenterSprite = null;
         
         let preloadedAssets = {}; 
 
@@ -1184,56 +1184,41 @@
             spriteRightElement.classList.remove('dimmed-sprite');
             spriteCenterElement.classList.remove('dimmed-sprite');
 
-             // Обновляем последние *указанные* файлы (важно для восстановления видимости)
-            if (newLeftSpriteFile) lastSpecifiedLeftSprite = newLeftSpriteFile;
-            if (newRightSpriteFile) lastSpecifiedRightSprite = newRightSpriteFile;
-            if (newCenterSpriteFile) lastSpecifiedCenterSprite = newCenterSpriteFile;
-
-
-            // --- A. Центральный Спрайт ---
+            // --- Логика отображения/скрытия ---
+            // Центральный
             if (newCenterSpriteFile) {
                 const url = spritePath(newCenterSpriteFile);
-                // Загружаем, только если имя файла изменилось
                 if (elements.spriteCenterElement.currentSrc?.endsWith(encodeURIComponent(newCenterSpriteFile)) === false) {
                      loadSprite(url, spriteCenterElement, spriteCenterContainer);
                 } else {
-                     spriteCenterContainer.classList.remove('hidden'); // Показать, если тот же
+                     spriteCenterContainer.classList.remove('hidden');
                 }
-                 // Скрываем боковые контейнеры, когда центральный активен
-                spriteLeftContainer.classList.add('hidden');
-                spriteRightContainer.classList.add('hidden');
             } else {
-                 spriteCenterContainer.classList.add('hidden'); // Скрываем центральный, если не указан
+                 spriteCenterContainer.classList.add('hidden'); 
+            }
 
-                // --- B & C. Левый и Правый Спрайты (Работают, если нет центрального) ---
-                // Используем lastSpecified..., чтобы знать, нужно ли их вообще показывать
-                const leftToShow = newLeftSpriteFile || lastSpecifiedLeftSprite;
-                const rightToShow = newRightSpriteFile || lastSpecifiedRightSprite;
-
-                // Левый Спрайт
-                if (leftToShow) {
-                     const url = spritePath(leftToShow);
-                     // Загружаем, если имя изменилось ИЛИ если спрайт сейчас скрыт, но должен быть (восстановление)
-                    if (elements.spriteLeftElement.currentSrc?.endsWith(encodeURIComponent(leftToShow)) === false || spriteLeftContainer.classList.contains('hidden')) {
-                         loadSprite(url, spriteLeftElement, spriteLeftContainer);
-                     } else {
-                         spriteLeftContainer.classList.remove('hidden');
-                     }
-                } else {
-                    spriteLeftContainer.classList.add('hidden'); // Скрываем, если не указан ни сейчас, ни раньше
-                }
-
-                // Правый Спрайт
-                 if (rightToShow) {
-                     const url = spritePath(rightToShow);
-                     if (elements.spriteRightElement.currentSrc?.endsWith(encodeURIComponent(rightToShow)) === false || spriteRightContainer.classList.contains('hidden')) {
-                         loadSprite(url, spriteRightElement, spriteRightContainer);
-                     } else {
-                         spriteRightContainer.classList.remove('hidden');
-                     }
-                } else {
-                    spriteRightContainer.classList.add('hidden'); // Скрываем, если не указан
-                }
+            // Левый (показываем ТОЛЬКО если НЕТ центрального)
+            if (!newCenterSpriteFile && newLeftSpriteFile) {
+                 const url = spritePath(newLeftSpriteFile);
+                 if (elements.spriteLeftElement.currentSrc?.endsWith(encodeURIComponent(newLeftSpriteFile)) === false) {
+                     loadSprite(url, spriteLeftElement, spriteLeftContainer);
+                 } else {
+                     spriteLeftContainer.classList.remove('hidden');
+                 }
+            } else {
+                 spriteLeftContainer.classList.add('hidden'); 
+            }
+            
+            // Правый (показываем ТОЛЬКО если НЕТ центрального)
+             if (!newCenterSpriteFile && newRightSpriteFile) {
+                 const url = spritePath(newRightSpriteFile);
+                 if (elements.spriteRightElement.currentSrc?.endsWith(encodeURIComponent(newRightSpriteFile)) === false) {
+                     loadSprite(url, spriteRightElement, spriteRightContainer);
+                 } else {
+                     spriteRightContainer.classList.remove('hidden');
+                 }
+            } else {
+                 spriteRightContainer.classList.add('hidden'); 
             }
             
             // --- D. Логика Затемнения (Применяется *после* расстановки) ---
@@ -1381,13 +1366,11 @@
             
             // Сброс состояния для чистой загрузки главы
             currentBackgroundUrl = null;
-            lastSpecifiedLeftSprite = null; // Сброс последних указанных спрайтов
-            lastSpecifiedRightSprite = null;
-            lastSpecifiedCenterSprite = null;
+            // Сброс видимости спрайтов при загрузке новой главы
             elements.spriteLeftContainer.classList.add('hidden');
             elements.spriteRightContainer.classList.add('hidden');
             elements.spriteCenterContainer.classList.add('hidden'); 
-            elements.spriteLeftElement.src = '';
+            elements.spriteLeftElement.src = ''; // Очищаем src, чтобы триггернуть loadSprite
             elements.spriteRightElement.src = '';
             elements.spriteCenterElement.src = ''; 
             elements.fullDialogueBox.classList.add('hidden'); 
