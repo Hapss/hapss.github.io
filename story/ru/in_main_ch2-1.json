@@ -40,9 +40,8 @@
         {
     "speaker": "Зофия",
     "text": "Бросайте якорь, готовьтесь к швартовке!",
-    "sprite_left": "Fuka 1.png",
     "sprite_right": "Zofia.png",
-    "dim_override": "left"
+    "background": "inbg_stage3.png"
   },
   {
     "text": "———Бух."
