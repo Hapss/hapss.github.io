@@ -2377,6 +2377,115 @@
   },
   {
     "text": "......"
+  },
+  { 
+    "text": "Сакура... Ты меня слышишь?.. Сакура!",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center",
+    "background": "grey.png"
+  },
+  { 
+    "text": "[color=#FFC3CE]Что это... за место?..[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "Сакура... Я пришла забрать тебя домой... Сакура!",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "[color=#FFC3CE]Какой знакомый голос... Этот луч счета... Ты зовёшь меня... Каллен?[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "Я чувствую ледяное биение твоего сердца... Ты потеряла надежду на всё...\nНо, Сакура... Ты не одна... Потому что я рядом с тобой!",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "[color=#FFC3CE]Каллен... Я больше не могу... вернуться... Пожалуйста... не пытайся меня остановить...[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "[color=#FFC3CE]Я не хочу снова потерять самого важного человека в своей жизни...[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "Я не боюсь! Сакура! Даже если я потеряю всё, я буду защищать тебя!",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "Потому что я обещала тебе... Я обещала, что мы будем сражаться вместе!",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "Каким бы мрачным ни становился мир, даже если мы больше никогда не увидим свет...",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "Но пока ты рядом со мной! Мы обязательно найдём выход!",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "Найдём ту общую точку опоры, которая принадлежит нам!",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "[color=#FFC3CE]Каллен... почему... почему ты так далеко заходишь ради меня...[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "[color=#FFC3CE]Пожалуйста, уходи отсюда... Я не стою таких жертв...[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "Не... не сдавайся! Сакура! Пожалуйста! Не теряй надежды!",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "[color=#FFC3CE]Прости меня... Каллен... На этот раз я действительно очень устала...[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "[color=#FFC3CE]Пожалуйста, дай мне уснуть навсегда...[/color]",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
+  },
+  { 
+    "text": "Сакура... Нет... Нет... Вернись...",
+    "text_style": "full",
+    "full_text_size": "lg",
+    "full_text_align": "center"
   }
         ]
 }
