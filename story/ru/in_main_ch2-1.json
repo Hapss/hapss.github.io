@@ -47,11 +47,11 @@
     "text": "———Бух."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "Уй, уй, уй, уй!!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "Эта... эта шаткая лодка наконец-то остановилась... У меня чуть желудок не вывернуло наизнанку... Угх!",
     "sprite_left": "Hokushin Mei 2.png"
   },
@@ -70,7 +70,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "О-откуда мне было знать, что морской путь окажется таким коварным? Если бы я знала, то, возможно, пережила бы на несколько дней меньше мучений, переправившись на этом хищнике...",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Kallen 2.png",
@@ -83,7 +83,7 @@
     "sprite_right": "Jingwei.png"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "Ой! Не подходи, не подходи ближе! Я не говорила этого!",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Kallen 2.png",
@@ -97,7 +97,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "Ай, не важно, не важно. Дай мне ещё немного отдохнуть... Угх!",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Kallen 2.png",
@@ -186,7 +186,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "Эй! Я просто плыла на этом корабле, почему вы меня арестовываете?",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Zofia.png",
@@ -220,14 +220,14 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Мэй Хокушин",
-    "text": "Как смеешь! Я, Хокушин Мэй, не позволю так со мной обращаться— тьфу!",
+    "speaker": "Хокусин Мэй",
+    "text": "Как смеешь! Я, Хокусин Мэй, не позволю так со мной обращаться— тьфу!",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Zofia.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "Чёрт... Почему всё закружилось...",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Zofia.png",

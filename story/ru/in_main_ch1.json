@@ -8,7 +8,7 @@
             "background": "inbg_stage1.png"
         },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_left": "Hokushin Mei 1.png",
     "text": "Бха... Угх! Что... только что произошло..."
   },
@@ -20,7 +20,7 @@
     "text": "Уже проснулась? Прости, кажется, я была немного резка."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 1.png",
     "dim_override": "right",
@@ -34,11 +34,11 @@
     "text": "Всё ещё радуешься, даже после того, как получила травму? Какой странный человек... Неужели это из-за энергии Хоукая внутри?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 1.png",
     "dim_override": "right",
-    "text": "Я Хокушин Мэй... ронин. Судя по твоему наряду, ты родом из другой страны. Могу я узнать, как тебя зовут?"
+    "text": "Я Хокусин Мэй... ронин. Судя по твоему наряду, ты родом из другой страны. Могу я узнать, как тебя зовут?"
   },
   {
     "speaker": "Фука",
@@ -48,7 +48,7 @@
     "text": "Гора Тайсюй, Фука, Центральные равнины."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 1.png",
     "dim_override": "right",
@@ -62,7 +62,7 @@
     "text": "Смерть?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 1.png",
     "dim_override": "right",
@@ -83,7 +83,7 @@
     "text": "Неважно. Лишение тебя жизни не является моей целью. В тебе заключена злая сила, известная как Хоукай. Я пришла сюда по её запаху. Поскольку теперь она находится внутри тебя, я должна выполнить свою миссию."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 1.png",
     "dim_override": "right",
@@ -97,7 +97,7 @@
     "text": "Когда тобой овладевает жажда убийства, Хоукай внутри тебя начинает распространяться наружу. Это сила, которая несёт гибель всему живому и бедствия этой земле. Поэтому я должна запечатать её."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -111,14 +111,14 @@
     "text": "Это твоё оправдание для убийства живых? Каждое существо имеет право на существование. Никто не может произвольно отнимать чью-то жизнь. Чем сильнее человек, тем большую ответственность он несёт за соблюдение законов природы."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "Вам не следует так со мной разговаривать. Теперь я всего лишь странствующий ронин, а не даймё, управляющий провинцией или государством. Подобные академические вопросы меня не касаются."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -132,7 +132,7 @@
     "text": "Если это так, то разве ты не должна жить в достатке? Боевые искусства могут в полной мере раскрыть свой потенциал только при условии их передачи по наследству."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -146,7 +146,7 @@
     "text": "Остановись."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -160,14 +160,14 @@
     "text": "Ладно... Хорошо. Раз ты так решительно настроена умереть, то отдай свою жизнь в мои руки. Оставлять Хоукай внутри тебя без контроля слишком опасно. Пойдём со мной. Если ты не сможешь контролировать бедствие внутри себя, то я без колебаний убью тебя."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "Хе-хе... Ха-ха-ха! Как мило с твоей стороны! Мило, что в этом мире ещё остались такие глупцы, как ты!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -177,7 +177,7 @@
     "text": "......"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_left": "Hokushin Mei 2.png",
     "text": "Берегись!"
   },
@@ -194,14 +194,14 @@
     "text": "Сдавайся. С твоей нынешней силой ты не сможешь меня победить."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "Тц! Как и ожидалось, безупречно... Твоё мастерство поистине непостижимо."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -215,7 +215,7 @@
     "text": "Значит, ты наконец-то отказалась от своего желания умереть?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -229,7 +229,7 @@
     "text": "Я стремлюсь уничтожить только Хоукай. Пока он не поглощает твой разум, я не стану тебя убивать."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -243,7 +243,7 @@
     "text": "Вот как... Тогда давай пропустим часть с Хоукаем и начнём с тебя. Ты помнишь, что делала сегодня?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -257,7 +257,7 @@
     "text": "Нет, я говорю о твоих ощущениях. Когда ты убивала, было ли это действительно твоей волей или ты чувствовала, что тебя принуждает к этому какая-то другая сила?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -271,7 +271,7 @@
     "text": "Это первый признак того, что ты заражена Хоукаем. Пока что ты всё ещё чувствуешь, что твоими действиями руководит собственное сознание. Но как только ты будешь полностью поглощена, ты станешь марионеткой Хоукая: бездумной оболочкой, движимой лишь разрушением и убийством."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -285,7 +285,7 @@
     "text": "Мудра и бессмертна... В Шэньчжоу меня тоже часто называют «бессмертной», но для меня это всего лишь исполнение долга. Титулы мудреца, бессмертного или божественного существа — всего лишь ошибочная похвала."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -299,7 +299,7 @@
     "text": "Эх... ты и пяти предложений не можешь сказать, не упоминая смерть. Хотя сейчас нет способа полностью избавиться от Хоукая, он внутри тебя ещё не вырвался на свободу. Пока ты контролируешь своё убийственное намерение, ты можешь подавлять его силу."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -313,7 +313,7 @@
     "text": "Путь меча предназначен не только для сражений. Если ты применяешь его на пути добра, он также служит для самодисциплины. В конечном счёте всё зависит от твоей внутренней решимости."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -327,7 +327,7 @@
     "text": "Если тебе это поможет сдерживать себя, я всегда готова помочь."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -341,7 +341,7 @@
     "text": "Если ты не против... просто зови меня Фука."
         },
     {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -362,7 +362,7 @@
     "text": "Хоукай, исходящий от Шэньчжоу, гораздо сильнее того, что ты носишь в себе. Возможно, Хоукай внутри тебя возник из того же источника. Сейчас я ищу его истоки."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -376,7 +376,7 @@
     "text": "Во время твоих путешествий случались ли с тобой какие-то особенно странные или запоминающиеся происшествия?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -390,7 +390,7 @@
     "text": "Демонический зонтик?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 6.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -404,7 +404,7 @@
     "text": "Я и не думала, что ты будешь скорбеть по кому-то."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -418,7 +418,7 @@
     "text": "На данный момент однозначного ответа нет, но распространённость призрачных и сверхъестественных явлений в Шэньчжоу часто связывают с Хоукаем. Вероятно, здесь тоже есть сложная взаимосвязь."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -432,7 +432,7 @@
     "text": "Верно."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -446,7 +446,7 @@
     "text": "Меня никогда не интересовали дела мира, и я никогда не соперничала с другими. Я очень мало знаю о подобном."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -467,14 +467,14 @@
     "text": "Моей целью является не убийство, а защита."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "Кажется у тебя свои причины... Хорошо~ я не буду расспрашивать дальше."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -489,7 +489,7 @@
     "text": "Уже поздно, так что на сегодня заканчиваем. Посмотрю, нет ли поблизости дома, где можно переночевать."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -503,7 +503,7 @@
     "text": "...Я имела введу найти местных и расспросить их об этой местности. Им явно знать лучше."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -536,7 +536,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -563,7 +563,7 @@
     "text": "Кажется, эта белая лиса пытается нам что-то сказать..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -583,7 +583,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -603,7 +603,7 @@
     "text": "Кон, кон, кон!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_left": "Hokushin Mei 1.png",
     "text": "Горная тропа впереди, должно быть, ведёт к святилищу. Кто бы мог подумать, что в этих горах есть такое место? Похоже, Ваше Бессмертное Превосходительство может спокойно спать под крышей~"
   },
@@ -615,7 +615,7 @@
     "text": "Святилище... похоже на даосский храм? Похоже, в Японии тоже есть люди, которые верят в Бога. В эти неспокойные времена, пожалуй, только такие места могут помочь обрести покой и тишину, отбросив беспокойные мысли."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 1.png",
     "dim_override": "right",
@@ -642,21 +642,21 @@
     "text": "Этот звук... доносится со стороны святилища! Конечно же, лиса просит нас о помощи!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "Эй! Погоди!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "Ох... какая назойливая Бессмертная... Такими темпами мне придётся присоединиться к ней, чтобы совершать добрые дела и накапливать добродетель."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -756,24 +756,24 @@
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Shion 4.png",
     "dim_override": "left",
-    "text": "Хокушин Мэй! Эта девочка уже тяжело ранена, я её усмирю! Ты сдерживаешь бандитов позади нас, но не убивай их, а просто прогони!"
+    "text": "Хокусин Мэй! Эта девочка уже тяжело ранена, я её усмирю! Ты сдерживаешь бандитов позади нас, но не убивай их, а просто прогони!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "Не командуй мной!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "Хе-хе... Я никогда не изучала техники владения мечом, которые позволяют сохранить жизнь. Любой, кто осмелится выступить против меня..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -787,7 +787,7 @@
     "text": "Бегите! Бегите! Иначе умрёте!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_left": "Hokushin Mei 2.png",
     "text": "Ха-ха-ха... И это всё? Вы называете себя бандитами? В этом мире нет места таким слабакам, как вы!"
   },
@@ -805,7 +805,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -819,7 +819,7 @@
     "text": "Я же сказала не убивать их."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -847,14 +847,14 @@
     "text": "Спасибо вам! Спасибо, что спасли мне жизнь!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -903,7 +903,7 @@
     "text": "Кто знает, может, вы просто притворяетесь, что не знаете друг друга... Кха! Отец всегда говорил, что в этом мире человеческим сердцам нельзя доверять!!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -945,7 +945,7 @@
     "text": "..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -959,7 +959,7 @@
     "text": "Мы не можем сдаться! Должно быть что-то ещё..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -980,7 +980,7 @@
     "text": "Не говори и слова, держись!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1000,7 +1000,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1054,7 +1054,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1074,7 +1074,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1088,7 +1088,7 @@
     "text": "Я построю для неё могилу в этом святилище... Пусть она вернётся туда, где обитают её предки."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1098,7 +1098,7 @@
     "text": "......"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_left": "Hokushin Mei 2.png",
     "text": "Эй, мисс Бессмертная, что ты делаешь здесь, на холоде, глубокой ночью? Разве ты не говорила, что не хочешь ночевать под открытым небом?"
   },
@@ -1110,14 +1110,14 @@
     "text": "...Я и представить себе не могла, что за пределами Шэньчжоу мир окажется таким пустынным. Если так обстоят дела в Японии, то что же тогда в остальном огромном мире?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
     "text": "Бессмертные, в конце концов, всё ещё смертны; один человек не может спасти всех живых существ. Даже свяжи ты сегодня «кровожадных демонов» подобных мне, ты не смогла бы остановить этот хаос, эту вражду и разделение."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1131,7 +1131,7 @@
     "text": "Ты явно смотришь на вещи ясно. Я начинаю подозревать, что то, что скрыто внутри тебя, на самом деле не Хоукай..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 6.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1145,7 +1145,7 @@
     "text": "Хм, я и не ожидала, что помимо мастерства владения мечом ты ещё и красноречива."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1159,7 +1159,7 @@
     "text": "...Даже если я не смогу спасти всё человечество, я прошу лишь об одном: чтобы моя совесть была чиста. Что бы я ни увидела собственными глазами, я не буду стоять в стороне."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1173,7 +1173,7 @@
     "text": "Тогда ты не отличаешься, ведь ты ищешь смерти только для того, чтобы доказать, что ты самая сильная, верно? В конце концов, просто наши пути веры расходятся."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1195,7 +1195,7 @@
     "text": "Хоть это и обычная могила, я надеюсь, что Шион сможет беспрепятственно достичь просветления."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1209,7 +1209,7 @@
     "text": "Полагаю, я уже давно похолодела, став свидетелем стольких жизней и смертей..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1223,7 +1223,7 @@
     "text": "Как долго я живу... Достаточно долго, чтобы я уже не могла вспомнить, кто я такая."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1237,7 +1237,7 @@
     "text": "Вполне естественно, что ты не веришь, но в этом мире слишком много вещей, которые невозможно объяснить одним предложением. Возьмём, к примеру, Хоукай — даже после стольких лет службы стражем Шэньчжоу я всё ещё не могу объяснить, откуда он взялся."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1258,7 +1258,7 @@
     "text": "Что ещё важнее, так это защита искры человечества от Хоукая."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1272,7 +1272,7 @@
     "text": "Раньше были и другие, но сейчас осталась лишь я."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1286,7 +1286,7 @@
     "text": "Я не совсем помню... Те события давно канули в лету. Сейчас я знаю только то, что моя миссия — уничтожить Хоукай. Вот и всё."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1299,7 +1299,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 3.png",
     "dim_override": "right",
@@ -1312,7 +1312,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 3.png",
     "dim_override": "right",
@@ -1325,7 +1325,7 @@
     "text": "Кон... Кон..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "Ох... И чего эта лиса воет?.."
   },
   {
@@ -1333,7 +1333,7 @@
     "text": "Мэй, прошу, помоги мне..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "Эм... Ты... Шион?"
   },
   {
@@ -1341,7 +1341,7 @@
     "text": "Сестра... Я так полна ненависти... Я пока не хочу умирать. Я всё ещё хочу быть с божеством..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "text": "Мёртвых нельзя вернуть к жизни, поэтому тебе лучше отправиться в загробный мир и молиться о благоприятном знамении, чтобы ты могла переродиться раньше."
   },
   {
@@ -1355,7 +1355,7 @@
     "text": "Пожалуйста, помоги мне! Я знаю, что ты можешь это сделать!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_left": "Hokushin Mei 2.png",
     "text": "Ха... Значит, ты всё-таки не можешь забыть об этой обиде... Ладно, тогда я тебе помогу."
   },
@@ -1365,7 +1365,7 @@
     "text": "Нет... Просто дай мне силы, сестра... С остальным я справлюсь сама!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_left": "Hokushin Mei 2.png",
     "text": "Силу?.."
   },
@@ -1385,7 +1385,7 @@
     "text": "!?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1403,10 +1403,10 @@
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "left",
-    "text": "Хокушин Мэй! Проснись! Хоукай внутри тебя распространяется!"
+    "text": "Хокусин Мэй! Проснись! Хоукай внутри тебя распространяется!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1420,7 +1420,7 @@
     "text": "Точка схождения Хоукая... Неужели!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1447,7 +1447,7 @@
     "text": "Проклятые люди... Я никогда вас не прощу!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1461,7 +1461,7 @@
     "text": "Нет... эта девушка не воскресла. Её нынешнее тело всего лишь марионетка, управляемая Хоукаем. Истинный виновник — белая лиса у неё на руках."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1475,7 +1475,7 @@
     "text": "Лисы — настроенные с душами существа. Возможно, её обида пробудила в тебе Хоукай, из-за чего тот привязался к твоему телу... и теперь использует его, чтобы управлять телом этой девушки!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1495,7 +1495,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1509,7 +1509,7 @@
     "text": "Цель белой лисы — отомстить бандитам, живущим у подножия горы! Скорее, в погоню!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1519,7 +1519,7 @@
     "text": "......"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1533,7 +1533,7 @@
     "text": "Именно."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1547,7 +1547,7 @@
     "text": "Такие люди, как ты, заражённые Хоукаем, встречаются крайне редко. Обычные люди, вступившие в контакт с Хоукаем, немедленно умирают и превращаются в безмозглых зомби."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1561,7 +1561,7 @@
     "text": "Не обязательно. В архивах горы Тайсю также есть записи о людях, которые обрели огромную силу благодаря Хоукаю. Они даже полностью слились с ним, хотя за время моей службы в Шэньчжоу таких случаев ещё не было."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1575,7 +1575,7 @@
     "text": "Если этот день настанет, я без колебаний убью тебя. Потому что такое чудовище больше нельзя назвать «человеком»."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 3.png",
     "dim_override": "right",
@@ -1589,7 +1589,7 @@
     "text": "Так будет лучше. Как бы ни сложились для тебя обстоятельства, я сдержу своё обещание и лично освобожу тебя. Это последнее, что я могу сделать."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1603,7 +1603,7 @@
     "text": "Совсем нет..."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 3.png",
     "dim_override": "right",
@@ -1655,7 +1655,7 @@
     "text": "Неужели уже слишком поздно? Мы должны немедленно остановить её, пока она не продолжила свою кровавую бойню."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1669,7 +1669,7 @@
     "text": "Тогда просто оставайся здесь и не вмешивайся."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1696,7 +1696,7 @@
     "text": "Старшая сестра, ты тоже собираешься помешать моей мести?"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 5.png",
     "sprite_left": "Hokushin Mei 1.png",
     "dim_override": "right",
@@ -1858,7 +1858,7 @@
     "text": "Вот и хорошо."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1872,7 +1872,7 @@
     "text": "Какая разница, верю я или нет? Этот мир не изменится из-за меня одной. Всё, что я могу сделать, так это заставить людей поверить в то, что в этом мире ещё есть надежда."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1908,7 +1908,7 @@
     "text": "Деревня Яэ в Синано... Поняла."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 4.png",
     "sprite_left": "Hokushin Mei 3.png",
     "dim_override": "right",
@@ -1936,7 +1936,7 @@
     "text": "Пьё!!!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 4.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1950,7 +1950,7 @@
     "text": "Пока Цзинвэй рядом, до любого места можно добраться за день, каким бы длинным ни был путь."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 4.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1964,7 +1964,7 @@
     "text": "Раз ты знаешь дорогу, садись."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 4.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1985,7 +1985,7 @@
     "text": "Если ты скоро не сядешь, Цзинвэй разозлится."
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 3.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
@@ -1999,7 +1999,7 @@
     "text": "Пьё!!!"
   },
   {
-    "speaker": "Мэй Хокушин",
+    "speaker": "Хокусин Мэй",
     "sprite_right": "Fuka 2.png",
     "sprite_left": "Hokushin Mei 2.png",
     "dim_override": "right",
