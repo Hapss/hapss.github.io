@@ -80,8 +80,7 @@
     "speaker": "Цзинвэй",
     "text": "Пьё! Пьё!",
     "sprite_left": "Hokushin Mei 2.png",
-    "sprite_right": "Jingwei.png",
-    "dim_override": "none"
+    "sprite_right": "Jingwei.png"
   },
   {
     "speaker": "Мэй Хокушин",
@@ -237,14 +236,12 @@
   {
     "text": "Стража, схватите их всех!",
     "sprite_left": "Hokushin Mei 2.png",
-    "sprite_right": "Zofia.png",
-    "dim_override": "none"
+    "sprite_right": "Zofia.png"
   },
   {
     "text": "Да!",
     "sprite_left": "Hokushin Mei 2.png",
-    "sprite_right": "Zofia.png",
-    "dim_override": "none"
+    "sprite_right": "Zofia.png"
   }
         ]
 }
