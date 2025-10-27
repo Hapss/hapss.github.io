@@ -18,6 +18,7 @@
             --color-bg-darkest: #171c26; /* Для заголовка и истории */
             --color-bg-main: #1f2937;    /* Основной фон/элементы (VN Viewer default) */
             --color-bg-medium: #374151;  /* Панель управления/Фон элемента истории */
+            --color-bg-dialogue: #1f2937; /* Цвет фона диалогового окна */
             
             /* Акценты */
             --color-accent-primary: #0891b2; 
@@ -29,6 +30,7 @@
             /* Текст */
             --color-text-primary: #e5e7eb; 
             --color-text-secondary: #d1d5db; 
+            --color-text-vn: #e5e7eb; /* Цвет текста в диалоговом окне */
             
             /* Фиолетовый */
             --color-speaker-name: #ca7cfe; 
@@ -41,6 +43,7 @@
             --color-bg-darkest: #D7DDEA;  
             --color-bg-main: #F2F4F8;    
             --color-bg-medium: #E4E8F1;   
+            --color-bg-dialogue: #1f2937; /* Идентично темной теме */
             
             --color-accent-primary: #2563eb; 
             --color-accent-secondary: #1d4ed8; 
@@ -53,6 +56,7 @@
             /* Текст */
             --color-text-primary: #1f2937; 
             --color-text-secondary: #6b7280; 
+            --color-text-vn: #e5e7eb; /* Идентично темной теме */
             
             /* Синий акцент для имени */
             --color-speaker-name: #1d4ed8; 
@@ -79,15 +83,15 @@
         }
         
         .vn-overlay {
-            background-color: var(--color-bg-main); 
+            background-color: var(--color-bg-dialogue); 
             opacity: 0.9;
             backdrop-filter: blur(4px);
-            color: var(--color-text-primary);
+            color: var(--color-text-vn);
             border: 1px solid var(--color-bg-medium); 
         }
         
         .speaker-name {
-            background-color: var(--color-bg-main);
+            background-color: var(--color-bg-dialogue);
             color: var(--color-speaker-name); 
             padding: 4px 12px;
             border-top-left-radius: 8px;
@@ -171,7 +175,7 @@
             right: 0;
             bottom: 0;
             z-index: 30; /* Выше спрайтов, ниже заголовка */
-            background-color: var(--color-bg-darkest);
+            background-color: var(--color-bg-dialogue);
             opacity: 0.95; /* Небольшая прозрачность */
             transition: opacity 0.3s ease;
         }
@@ -180,6 +184,7 @@
         #fullDialogueContent {
             overflow-y: auto;
             padding: 2rem; /* Базовый отступ */
+             color: var(--color-text-vn); /* Применяем цвет текста VN */
             /* Кастомный Scrollbar */
             scrollbar-width: thin; /* Firefox */
         }
@@ -390,7 +395,7 @@
                 <!-- Регулятор громкости -->
                 <div id="volume-control-container" class="flex items-center space-x-2" style="background-color: var(--color-bg-medium); padding: 4px 8px; border-radius: 9999px;">
                     <button id="mute-button" onclick="toggleMute()" class="p-1 rounded-full transition-colors duration-150 hover:bg-[var(--color-bg-main)]">
-                        <svg id="volume-icon" class="w-5 h-5" fill="var(--color-text-primary)" viewBox="0 0 20 20">
+                        <svg id="volume-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> 
                             <!-- Path will be set by JS -->
                         </svg>
                     </button>
@@ -612,11 +617,6 @@
         let isHistoryVisible = false; 
         let activeBgLayer = 1; // 1 or 2
         
-        // Удалены переменные lastSpecified... - они больше не нужны
-        // let lastSpecifiedLeftSprite = null;
-        // let lastSpecifiedRightSprite = null;
-        // let lastSpecifiedCenterSprite = null;
-        
         let preloadedAssets = {}; 
 
         // === Новые переменные для аудио ===
@@ -704,10 +704,14 @@
         // === УПРАВЛЕНИЕ АУДИО ===
         // ====================================================================
         
+        // --- ОБНОВЛЕНО: Стандартные иконки громкости (Heroicons outline) ---
         const ICONS = {
-            volumeHigh: 'M5.041 1.48A.5.5 0 004 2v16a.5.5 0 00.959.224l4.158-6.237a.5.5 0 000-.448L4.959 1.776a.5.5 0 00-.918-.296zM10 4a1 1 0 011 1v10a1 1 0 11-2 0V5a1 1 0 011-1zm4 2a1 1 0 011 1v6a1 1 0 11-2 0V7a1 1 0 011-1z',
-            volumeLow: 'M5.041 1.48A.5.5 0 004 2v16a.5.5 0 00.959.224l4.158-6.237a.5.5 0 000-.448L4.959 1.776a.5.5 0 00-.918-.296zM11 5a1 1 0 00-1 1v8a1 1 0 102 0V6a1 1 0 00-1-1z',
-            volumeMuted: 'M4.959 1.776A.5.5 0 004 2v16a.5.5 0 00.959.224l4.158-6.237a.5.5 0 000-.448L4.959 1.776a.5.5 0 00-.918-.296zM13.646 13.646a.5.5 0 01-.708 0L10 10.707l-2.939 2.939a.5.5 0 01-.708-.708L9.293 10 6.354 7.061a.5.5 0 01.708-.708L10 9.293l2.939-2.94a.5.5 0 01.708.708L10.707 10l2.939 2.939a.5.5 0 010 .707z'
+            // Volume Up
+            volumeHigh: 'M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z',
+            // Volume Down
+            volumeLow: 'M13.536 12a3 3 0 01-4.243 0M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z',
+             // Volume Off
+            volumeMuted: 'M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z M17 14l-2-2m0 0l-2-2m2 2l2-2m-2 2l2 2'
         };
 
         function setVolume(level, save = true) {
@@ -727,6 +731,13 @@
 
         function updateVolumeIcon() {
             const iconPath = elements.volumeIcon.querySelector('path') || document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            // Установка атрибутов для иконок Heroicons (stroke, fill)
+            iconPath.setAttribute('stroke-linecap', 'round');
+            iconPath.setAttribute('stroke-linejoin', 'round');
+            iconPath.setAttribute('stroke-width', '2');
+            iconPath.setAttribute('fill', 'none'); // Outline icons usually don't have fill
+            iconPath.setAttribute('stroke', 'currentColor'); // Use text color for stroke
+
             if (isMuted || userVolume === 0) {
                 iconPath.setAttribute('d', ICONS.volumeMuted);
             } else if (userVolume < 0.5) {
@@ -735,7 +746,7 @@
                 iconPath.setAttribute('d', ICONS.volumeHigh);
             }
             if (!elements.volumeIcon.contains(iconPath)) {
-                elements.volumeIcon.innerHTML = '';
+                elements.volumeIcon.innerHTML = ''; // Очищаем перед добавлением нового path
                 elements.volumeIcon.appendChild(iconPath);
             }
         }
@@ -1173,7 +1184,7 @@
                 crossFadeBackground(step.background);
             }
 
-            // --- 3. Управление Спрайтами (Видимость и Загрузка) ---
+            // --- 3. Управление Спрайтами (Видимость и Загрузка) - ИСПРАВЛЕНО ---
             
             const newLeftSpriteFile = step.sprite_left || null;
             const newRightSpriteFile = step.sprite_right || null;
@@ -1188,37 +1199,26 @@
             // Центральный
             if (newCenterSpriteFile) {
                 const url = spritePath(newCenterSpriteFile);
-                if (elements.spriteCenterElement.currentSrc?.endsWith(encodeURIComponent(newCenterSpriteFile)) === false) {
-                     loadSprite(url, spriteCenterElement, spriteCenterContainer);
-                } else {
-                     spriteCenterContainer.classList.remove('hidden');
-                }
+                // Загружаем ИЛИ показываем, если уже загружен
+                loadSprite(url, spriteCenterElement, spriteCenterContainer);
             } else {
-                 spriteCenterContainer.classList.add('hidden'); 
+                 spriteCenterContainer.classList.add('hidden'); // Скрываем, если не указан
             }
 
             // Левый (показываем ТОЛЬКО если НЕТ центрального)
             if (!newCenterSpriteFile && newLeftSpriteFile) {
                  const url = spritePath(newLeftSpriteFile);
-                 if (elements.spriteLeftElement.currentSrc?.endsWith(encodeURIComponent(newLeftSpriteFile)) === false) {
-                     loadSprite(url, spriteLeftElement, spriteLeftContainer);
-                 } else {
-                     spriteLeftContainer.classList.remove('hidden');
-                 }
+                 loadSprite(url, spriteLeftElement, spriteLeftContainer);
             } else {
-                 spriteLeftContainer.classList.add('hidden'); 
+                 spriteLeftContainer.classList.add('hidden'); // Скрываем, если есть центральный ИЛИ левый не указан
             }
             
             // Правый (показываем ТОЛЬКО если НЕТ центрального)
              if (!newCenterSpriteFile && newRightSpriteFile) {
                  const url = spritePath(newRightSpriteFile);
-                 if (elements.spriteRightElement.currentSrc?.endsWith(encodeURIComponent(newRightSpriteFile)) === false) {
-                     loadSprite(url, spriteRightElement, spriteRightContainer);
-                 } else {
-                     spriteRightContainer.classList.remove('hidden');
-                 }
+                 loadSprite(url, spriteRightElement, spriteRightContainer);
             } else {
-                 spriteRightContainer.classList.add('hidden'); 
+                 spriteRightContainer.classList.add('hidden'); // Скрываем, если есть центральный ИЛИ правый не указан
             }
             
             // --- D. Логика Затемнения (Применяется *после* расстановки) ---
