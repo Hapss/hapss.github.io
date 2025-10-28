@@ -341,39 +341,6 @@
 </head>
 <body class="min-h-screen dark-theme">
     
-    <!-- Инициализация Firebase (оставлена для совместимости, но не используется) -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;
-        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-
-        if (firebaseConfig) {
-            try {
-                const app = initializeApp(firebaseConfig);
-                const auth = getAuth(app);
-                getFirestore(app);
-
-                async function authenticate() {
-                    try {
-                        if (initialAuthToken) {
-                            await signInWithCustomToken(auth, initialAuthToken);
-                        } else {
-                            await signInAnonymously(auth);
-                        }
-                    } catch (error) {
-                        console.error("[Firebase] Ошибка аутентификации:", error);
-                    }
-                }
-                authenticate();
-            } catch (e) {
-                console.error("[Firebase] Критическая ошибка инициализации:", e);
-            }
-        }
-    </script>
-    
     <!-- 1. Header Bar: Оптимизирован для мобильных -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 p-3 md:p-4 shadow-xl transition-colors duration-300" style="background-color: var(--color-bg-darkest);">
         <div class="flex flex-wrap justify-between items-center max-w-7xl mx-auto">
@@ -1199,7 +1166,6 @@
             // Центральный
             if (newCenterSpriteFile) {
                 const url = spritePath(newCenterSpriteFile);
-                // Загружаем ИЛИ показываем, если уже загружен
                 loadSprite(url, spriteCenterElement, spriteCenterContainer);
             } else {
                  spriteCenterContainer.classList.add('hidden'); // Скрываем, если не указан
@@ -1643,3 +1609,4 @@
     </script>
 </body>
 </html>
+
