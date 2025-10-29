@@ -475,6 +475,200 @@
     "speaker": "Рвай",
     "text": "Наше давнее желание — уничтожить Хоукай!",
     "sprite_right": "Rvy 2.png"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Номера с 101 по 110, выходите!"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Подождите! Моя дочь умирает, пожалуйста, заберите и её тоже!"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Оставайся на месте, твоя очередь ещё не пришла!"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Нет, нет! Моя дочь больше не может терпеть. Мне нужно увидеться с доктором Рвай! Она обещала спасти мою дочь!"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Тц, похоже, тебе жить надоело!"
+  },
+  {
+    "text": "Динь—— (блок)"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эй, приятель, как-то не похоже, что этим можно кого-то спасти.",
+    "sprite_left": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Ты... Что ты творишь!?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Бац!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Гха!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эй, скажи-ка, кто из этих людей Рвай?",
+    "sprite_left": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Н-никто, они помощники Рвай...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Мисс, пожалуйста, оставьте меня. Поторопитесь и позовите доктора Рвай, чтобы она спасла мою дочь!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Проснитесь! Эти люди вовсе не врачи. Вас всех обманули.",
+    "sprite_left": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Что...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Нет, это невозможно!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Хмпф, за свою жизнь я участвовала в бесчисленных битвах, а от этих птицеликих разит только смертью и кровью.",
+    "sprite_left": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Вы можете обмануть простой люд, но не меня!",
+    "sprite_left": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Эта девушка! Теперь я вспомнил: она была мастером боевых искусств с Дальнего Востока, которую схватили вместе с Каллен. Значит, она действительно в сговоре с этой предательницей!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Тц, маска спала...",
+    "sprite_left": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Грешница! Всё ещё думаешь о воровстве, строишь планы, как бы снова заполучить божественную коробку!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "А? Вот как тесен мир. Значит, эта странная штука всё-таки как-то связана с вами.",
+    "sprite_left": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "В таком случае позвольте мне сначала выбить зубы вашим врачам-шарлатанам, прежде чем мы перейдём к сути!",
+    "sprite_left": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хм...",
+    "sprite_left": "Fuka 3.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Энергия земли здесь действительно немного странная...",
+    "sprite_left": "Fuka 6.png"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё! Пьё!",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Цзинвэй, и ты заметил?",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хотя я почувствовала неладное, как только вошла, я и представить себе не могла, что под полом этой камеры будет такая мощная реакция энергии Хоукая.",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Кажется, это необходимо расследовать...",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Бз-з———",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Что это за запах!?",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Пошли, Цзинвэй. Кажется, божественная коробка где-то здесь.",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё! Пьё!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хокусин Мэй...",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "right"
   }
    ]
 }
