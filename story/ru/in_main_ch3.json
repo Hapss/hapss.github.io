@@ -669,6 +669,649 @@
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Jingwei.png",
     "dim_override": "right"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "text": "Хаотичное подземелье. Исследовательский институт чумы апокалипсиса."
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Фух, активация завершена.",
+    "sprite_right": "Rvy 1.png"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Похоже, что божественная коробка сработала на востоке, из-за чего энергия внутри неё начала рассеиваться. Её нужно как можно скорее пополнить.",
+    "sprite_right": "Rvy 1.png"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Затем просто установить сырьё...",
+    "sprite_right": "Rvy 1.png"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Странно, почему они до сих пор не вернулись, ведь прошло уже столько времени?",
+    "sprite_right": "Rvy 1.png"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Мисс Рвай! Заключённые сбежали!",
+    "sprite_right": "Rvy 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Гха!",
+    "sprite_right": "Rvy 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "!?",
+    "sprite_right": "Rvy 1.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "О, а это не та самая божественная коробка? Похоже, это ты всё затеяла.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Доктор Рвай, разве Вы не говорили, что можете нас спасти?!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 1.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Так много людей погибло, Вы должны нам всё объяснить!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 1.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Что за чертовщина происходит?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Мисс Рвай! Эта особа — сообщница Каллен. Она напала на нас и разрушила сборный пункт сырья!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "!?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Эти паразиты, словно призраки, не дают нам покоя и постоянно препятствуют осуществлению наших давних мечтаний...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Пф-ф, кого волнуют твои грёбаные мечты? Вам, ублюдкам, нужно же было так меня подставить. Раз уж я сегодня наткнулась на вас, я сведу с вами все счёты!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Ты... вообще осознаёшь что делаешь?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ты просто испорченная шарлатанка: притворяешься целителем, а обращаешься с людьми как с мусором. Не думай, что запах твоего тела может меня обмануть!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 6.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Ты...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Доктор-шарлатан, если ты действительно обладаешь такими навыками, я могу сохранить твою никчёмную жизнь. В противном случае...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 6.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Я просто сделаю то, что считаю верным!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 6.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Доктор Рвай, пожалуйста, скажите правду: куда делись те, кто выздоровел?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 6.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Этот человек утверждает, что Чёрная смерть неизлечима. Вы что, обманывали нас?!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 6.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Как жаль. Вы предпочитаете верить этому глубоко грешному еретику, а не верным последователям Бога?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Э?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Вы все — народ Божий. Как я могу вас обмануть?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Но мы этого не видели своими глазами...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Вы сами лучше всех знаете, насколько заразна Чёрная смерть, и именно поэтому я поместила вас всех на карантин. Разумеется, те, кто выздоровел, не должны снова контактировать с вами.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Бог понимает ваши страдания, поэтому Он поручил нам миссию по вашему исцелению. Хотя я всегда делала всё, что было в моих силах, чтобы как можно скорее воссоединить вас с вашими семьями, именно из-за этих еретиков нам постоянно мешали. Они не только затягивали ваше лечение, но и теперь пытаются обмануть вас, чтобы вы отвернулись от Божьего Евангелия.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Этот человек! Именно она вас обманула!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "В-верно, доктор Рвай — посланница богов, она бы не стала нас обманывать!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Если мы не верим даже в Бога, кто ещё может нас спасти?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эй, проснитесь, люди, в этом мире нет богов! Это всего лишь её софистика...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Заткнись! Еретичка! Мы больше не позволим тебе нас обманывать!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Мисс Рвай, мы молим Вас даровать нам божественное прощение!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Вы...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Хе-хе, хоть вы и ослушались божественной воли, пока вы готовы отказаться от своих заблуждений, милосердный Бог не будет держать на вас зла.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Чтобы вновь обрести Божье спасение, вам нужно искупить свои грехи!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Всем слушать мою команду! Взять эту еретичку!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Схватите её! Хватайте!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "!?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Что ж, похоже это и есть так называемая вера. Теперь я увидела...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Как же это глупо!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Мисс Рвай, эта преступница ведёт себя странно. Мы ей не ровня!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "Шиньк!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Гха!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ха! Как же хорошо избавиться от этой чёртовой бессмертной! Я уже сто лет так не разминалась!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Эта сила... Вот оно что. Ты заражена Хоукаем, не так ли?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "И что? Собираешься меня допросить?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Хе-хе, форма Хоукая на Дальнем Востоке действительно заслуживает внимания. Я сделаю исключение и позволю тебе увидеть своими глазами.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Наше великое творение!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Вуш———",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both",
+    "background": "red.png"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "А-а-а-а-а-а!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both",
+    "background": "inbg_stage3.png"
+  },
+  {
+    "speaker": "Пострадавший",
+    "text": "Больно! Как же это больно!!!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эта божественная коробка поглощает фиолетовый дым, исходящий от этих людей?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Верно, это энергия Хоукая, обитающая в телах жертв Чёрной смерти. Конечно же...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Ты не исключение!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Гха!?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Хе-хе, будь польщена, ты станешь нашим ценным исследовательским материалом.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Моё тело... я не чувствую сил...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "А-а-а-а!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "???",
+    "text": "...Хокусин Мэй!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "Бум!!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "!?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ты, высокомерная бессмертная... Разве ты не говорила, что никогда не придёшь, что бы ни случилось...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Тьфу, одна за другой... должен же быть предел тому, насколько нелепой может быть ситуация!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эй! Высокомерная бессмертная! Берегись этой божественной коробки, эти европейцы могут творить тёмную магию!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Божественная коробка... Вы так жестоко расправляетесь с Хоукаем. Неудивительно, что тела этих людей так сильно изуродованы.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Мы не имеем никакого отношения к Каллен. Немедленно отпусти этого ронина.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "О? Как удивительно, так легко увидела суть. Каллен не должна обладать такими знаниями.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Так не пойдёт. Хоукай с Дальнего Востока — ценный материал. Но если вы позволите мне изучать вас без сопротивления, я, возможно, подумаю о том, чтобы сохранить вам жизнь.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Боюсь, я не могу пойти тебе навстречу.",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Вот как? Тогда стань трупом, и я медленно тебя препарирую!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Божественная коробка!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Стиль Бессмертной: Ласточка Сезонов",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Грохот————",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Ни царапины? Как такое возможно!?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Цзинвэй, давай!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё!",
+    "sprite_left": "Jingwei.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "О...",
+    "sprite_left": "Hokishin Mei 1.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хокусин Мэй, ты в порядке?",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Да... в порядке...",
+    "sprite_left": "Hokishin Mei 1.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Как человек может обладать такой невероятной устойчивостью к Хоукаю... Кто ты такая, чёрт возьми!?",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Гора Тайсюань. Фука.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Отдай мне божественную коробку, и я не причиню тебе вреда.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Хм, много о себе возомнила. Думаешь, это всё, что нужно для победы?!",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Бз-з————",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "both",
+    "background": "whitish.png"
+  },
+  {
+    "text": "Гр-р!!!!",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "both",
+    "background": "inbg_stage3.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Это... труп, превращённый в зомби?",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Ха, живыми вы из этого подземелья не выйдете!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Не сбегай... Кха!",
+    "sprite_left": "Hokishin Mei 1.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хокусин Мэй!?",
+    "sprite_left": "Fuka 2.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "О нет, в тебе пробуждается Хоукай... Не двигайся. Я сейчас тебя вылечу.",
+    "sprite_left": "Fuka 6.png"
+  },
+  {
+    "text": "......"
   }
    ]
 }
