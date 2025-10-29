@@ -1562,11 +1562,11 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Отто",
+    "speaker": "Каллен",
     "text": "Отто, отойди!",
-    "sprite_left": "Kallen 1.png",
-    "sprite_right": "Otto 5.png",
-    "dim_override": "left"
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
   },
   {
     "text": "Бух————",
