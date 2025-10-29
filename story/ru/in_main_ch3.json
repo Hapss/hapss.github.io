@@ -2368,6 +2368,206 @@
     "speaker": "Рвай",
     "text": "Чёрт возьми, догоните их!!",
     "sprite_right": "Rvy 7.png"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "text": "Столица Шиксала. Внутри некоего безопасного дома."
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Фух... Фух...",
+    "sprite_left": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Фука, что именно...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Kallen 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хоукай в её теле, привлечённый божественной коробкой, теперь проявляет признаки возрождения. Хотя я подавила его ради неё, похоже, ей нужно отдохнуть несколько дней.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Kallen 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Не волнуйтесь и сосредоточьтесь на своём выздоровлении. Изначально это был безопасный дом, который я подготовил для спасения Каллен. Шиксал не знает о его существовании.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Спасибо за помощь, мистер. Я Фука с горы Тайсюань. Ситуация была критической. Могу я спросить, кто Вы такой?",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Я Отто Апокалипсис. Мисс Фука, нет нужды в формальностях.",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Апокалипсис...",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Верно. Возможно, вы слышали от Каллен, что Апокалипсис — фамилия епископа Шиксала.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "...",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Фука, пожалуйста, не волнуйся. Отто мой спутник, ты можешь ему доверять.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Kallen 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Я понимаю, если бы мистер Отто намеревался причинить нам вред, ему не нужно было бы ждать до сих пор. Я просто немного удивлена. Похоже, идеалы фракции Шиксала не так уж единообразны.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Kallen 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Ха-ха, теперь я понимаю, почему Каллен почитает тебя как бессмертную.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Otto 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Ты совершенно права. Хотя Шиксал — это организация, посвятившая себя борьбе с Хоукаем, как ты заметила, действия с божественной коробкой постепенно сошли с праведного пути.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Otto 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Хотя есть и такие, как Каллен, кто сомневается в том, что Шиксал в настоящее время обладает абсолютной властью в Европе, эти люди в конечном счёте...",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Понятно. Ситуация в Европе действительно превзошла мои ожидания. Похоже, эта работа не так проста, как я думала.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Нет, мисс Фука, пожалуйста, выслушай меня. Я знаю, что ты пришла за божественной коробкой, но она является краеугольным камнем нынешнего проекта Шиксала. Вдвоём вы не сможете изменить его ход.",
+    "sprite_left": "Otto 3.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Кроме того, ни одна из вас изначально не входила в планы Шиксала. Лучше убраться отсюда, пока есть возможность, пока всё не вышло из-под контроля.",
+    "sprite_left": "Otto 3.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Я буду регулярно приходить и приносить припасы. Как только всё уляжется, я найду способ вернуть вас на Дальний Восток.",
+    "sprite_left": "Otto 4.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Я понимаю, что ты имеешь ввиду, мистер Отто.",
+    "sprite_left": "Otto 4.png",
+    "sprite_right": "Fuka 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Но поскольку это касается Хоукая, это входит в мою компетенцию.",
+    "sprite_left": "Otto 4.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Божественная коробка — это угроза, которую невозможно контролировать. Если её не остановить, она неизбежно приведёт к новым бедствиям. Я вынуждена отклонить твоё предложение.",
+    "sprite_left": "Otto 4.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Ты всё равно хочешь в этом участвовать?",
+    "sprite_left": "Otto 3.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Мне жаль, но это моя миссия и моя ответственность.",
+    "sprite_left": "Otto 3.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "...",
+    "sprite_left": "Otto 2.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Ладно, похоже, мне не удастся переубедить тебя.",
+    "sprite_left": "Otto 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Но теперь, когда это произошло и ситуация всё ещё остаётся напряжённой, пожалуйста, оставайтесь дома в течение следующих нескольких дней.",
+    "sprite_left": "Otto 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Давайте обсудим это подробнее, когда мисс Мэй полностью поправится.",
+    "sprite_left": "Otto 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
   }
    ]
 }
