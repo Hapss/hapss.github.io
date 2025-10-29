@@ -1772,6 +1772,174 @@
   },
   {
     "text": "......"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ух... спустись... опусти меня...",
+    "sprite_left": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Фука",
+    "text": "У тебя серьёзные травмы. Не пытайся сейчас геройствовать. Просто оставайся на спине Цзинвэя.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Хм... Бессмертная, разве ты не говорила, что не придёшь, несмотря ни на что?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Я, конечно, соблюдаю законы человеческого общества, но вопросы, связанные с Хоукаем, это совсем другая история.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Хм, я же тебе говорила, этот так называемый Шиксал не сулит ничего хорошего...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хоукай в это подземелье — действительно серьёзная проблема. Я и представить себе не могла, что участие Шиксала в проблеме Хоукая превзойдёт все мои ожидания.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Если я не ошибаюсь, эта божественная коробка рано или поздно снова навлечёт беду...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Тогда поторопись и найди эту Рвай... С навыками Бессмертной зачистить это подземелье не составит труда...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Нет, хотя я бы хотела провести расследование как можно скорее, твои травмы требуют срочного лечения. Сначала нам нужно покинуть это место, а план мы составим позже.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ха! Намекаете, что я стала для Вас обузой, Ваше Бессмертие?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Именно.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Это возмутительно... Опусти меня! Я вернусь и перебью этих ублюдков... Кха!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Не геройствуй. Эта божественная коробка всё равно, что твой заклятый враг. Она может пробудить в тебе Хоукай, которого я подавила, поглотив его, поэтому ты так сильно ранен.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хоть я и спасла тебя в этот раз, я не могу гарантировать, что смогу спасти тебя и во второй раз.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Мне не нужна твоя помощь. Если бы я умерла, разве ты не смогла бы беспрепятственно выполнить свою так называемую праведную миссию?!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Я не хочу тратить на тебя время. Если ты не прислушаешься к моему предупреждению, я тебя вырублю.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ты!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Топ, топ, топ, топ, топ, топ————",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Фука",
+    "text": "!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Цзинвэй, опусти ронина!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Цзинвэй",
+    "text": "Пьё! Пьё!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ай-ай-ай! Ах ты трусливая! Не можешь победить меня в честном бою, поэтому пугаешь людей этой паршивой птицей!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Jingwei.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Нет, Хокусин Мэй, они догнали нас...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Fuka 6.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "......"
   }
    ]
 }
