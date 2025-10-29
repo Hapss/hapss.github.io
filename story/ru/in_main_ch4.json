@@ -468,6 +468,190 @@
   },
   {
     "text": "......"
+  },
+  {
+    "text": "Столица Шиксала, на улице в глухую ночь."
+  },
+  {
+    "text": "Огоньки, которые когда-то мерцали в темноте, начали гаснуть один за другим."
+  },
+  {
+    "text": "Там, где проходила Хокусин, захлопывались двери и запирались окна."
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Чёрт, я и не подозревала, что меня так загнали в угол.",
+    "sprite_center": "Hokushin Mei 1.png",
+    "audio": "BGM_078_KUKULKAN - Kukulkan.ogg"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Не то, что место найти для того, чтобы спрятаться, теперь я едва вижу дорогу впереди.",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эта ситуация должна быть идеальной для побега...",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "Бряц!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both",
+    "audio": "clang.ogg"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Чёрт возьми! Они действительно лучше сражаются в темноте!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "audio": null
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эй, вы кто такие, чёрт возьми?!",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "...",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "...",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ничего не скажешь? Ты меня недооцениваешь.",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "Молчаливая атака.",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "Бряц!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both",
+    "audio": "clang.ogg"
+  },
+  {
+    "text": "Бряц, бряц!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "Бряц, бряц, бряц, бряц!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Отвратительно...",
+    "sprite_center": "Hokushin Mei 1.png",
+    "audio": null
+  },
+  {
+    "text": "Нападения продолжали происходить из тени, но никого не было видно.",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Это чувство ничуть не уступает тем двум рыцарям.",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "И ещё более коварное!",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "«Приступайте к выполнению плана 21».",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "«Меняйте построение————».",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ну и морока!",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "Фигура покачнулась, и длинный меч из Страны Восходящего Солнца отразил тусклый лунный свет.",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "Внутри таилась жажда убийства, а тёмно-фиолетовый кончик отравленного кинжала был таким же коварным, как змеиный клык.",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "Бряц!",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "А ну выходи!",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "Бряц————",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Я вообще не могу их ударить и не могу сбежать. Так больше не может продолжаться.",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Если бы я могла просто вытащить их из тени, возможно, у меня был бы шанс.",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Но если эти люди действительно из рыцарей апокалипсиса...",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "Рука, сжимавшая клинок, дрожала.",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Какого чёрта, я...",
+    "sprite_center": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Может, это страх поражения?",
+    "sprite_center": "Hokushin Mei 1.png"
+  },
+  {
+    "text": "В оцепенении Мэй Хокусин увидела фигуру, от которой исходила мощная аура убийственного намерения.",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Чёрт!",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "Чёрт!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "both"
   }
   ]
 }
