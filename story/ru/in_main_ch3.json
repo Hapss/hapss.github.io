@@ -1312,6 +1312,466 @@
   },
   {
     "text": "......"
+  },
+  {
+    "text": "Шиксал. Хаотичное подземелье."
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Милосердный Господь, Всемогущий Господь, Каллен Каслана молится Тебе здесь."
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Где есть ненависть, посей любовь;",
+    "sprite_left": "Kallen 2.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Где есть боль, посейте прощение;",
+    "sprite_left": "Kallen 2.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Рассей Хоукай этого мира и защити свой народ.",
+    "sprite_left": "Kallen 2.png"
+  },
+  {
+    "text": "Лязг————",
+    "sprite_left": "Kallen 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "???",
+    "text": "Каллен, ты в порядке?",
+    "sprite_left": "Kallen 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Кто здесь?!",
+    "sprite_left": "Kallen 7.png"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Это я.",
+    "sprite_left": "Kallen 7.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Отто? Почему ты здесь?",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Я здесь, чтобы спасти тебя. Поговорим позже. А сейчас немедленно уходи отсюда вместе со мной.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Сенат вынес приговор. Вскоре тебя казнят за государственную измену.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Вот как...",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Спасибо тебе за доброту, Отто, но я не собираюсь противостоять Шиксалу.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Каллен? Но почему?",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Поскольку всё это бессмысленно, даже самые отдалённые уголки Востока за океаном не помогут сбежать от Шиксала.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Нет, поверь мне, я найду способ обелить твоё имя и восстановить тебя в Шиксале. Но сейчас нам нужно выиграть время!",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ты меня не понял. Шиксал больше не нуждается в моей защите. Я бессильна изменить этот извращённый мир. Даже когда я украла божественную коробку и сбежала на Дальний Восток, это привело лишь к ещё более разрушительной катастрофе.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Из-за меня погибло слишком много невинных людей. Это наказание, которого я заслуживаю.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Похоже, тебе пришлось многое пережить на Дальнем Востоке...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Отто, спасибо, что рисковал жизнью, чтобы спасти меня, но это мой грех, и я должна нести за него ответственность в одиночку.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Otto 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Тебя уже отвергли в церкви; с этого момента не связывайся со мной.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Ха-ха-ха... Я и представить себе не мог, что в твоих глазах я буду выглядеть трусом, который боится смерти.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Нет... Я просто не хочу, чтобы кто-то ещё страдал из-за меня...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "То есть ты просто хочешь вот так всё закончить?",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Хватит валять дурака, Каллен!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Как ты и сказала, Шиксал сбился с праведного пути, но именно поэтому его нужно исправить!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "На мой взгляд, кража божественной коробки — это призыв к переменам, ведь ты не единственная верующая, которая сомневается в божественном предназначении.",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Но твоя смерть станет лишь предупреждением для других, погасив искры подобных идеалов. Я ни за что не допущу этого!",
+    "sprite_left": "Kallen 2.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Отто, ты...",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Верно, слушай внимательно, Каллен. Я собираюсь исправить текущее положение дел.",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Если ты действительно раскаиваешься в совершённых грехах, то отдай свою жизнь в мои руки. Стань моим клинком и помоги мне исправить этот ужасный Шиксал!",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Каллен, жизнь — это твоё искупление!",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Жизнь... Хах.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Что это за шум? С кем ты разговариваешь?",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Отто, отойди!",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 5.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Бух————",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Гха!",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Наконец решил показаться.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ты так красиво об этом рассказываешь, но плана ведь нет. Если стража тебя поймает, твоя мечта изменить Шиксал рухнет уже завтра.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Значит, я могу считать это твоим ответом, мисс Каллен?",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мистер Отто, позволь мне сразу прояснить ситуацию: если из-за этого тебя обвинят в вероотступничестве, я не буду нести за это ответственность.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Ха-ха, я доведу дело до конца.",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "......",
+    "sprite_left": "Kallen 3.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Отто, какая судьба ждёт дальневосточного воина, которого вместе со мной арестовал Шиксал?",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Otto 1.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Тебе не о чем беспокоиться. В отчёте, представленном военными рыцарями, говорится лишь о том, что эти двое препятствовали выполнению служебных обязанностей. Их должны освободить в ближайшее время.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Неужели? Похоже, Зофия тоже многое скрыла о Дальнем Востоке. Надеюсь, они в целости и сохранности...",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Топ, топ, топ, топ, топ, топ—————",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Подожди, кто-то идёт.",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Эй! Ты нашёл тех преступниц?"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Пока нет, она уничтожила весь первый отряд!"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Чёрт возьми! Их всего двое! Мы ни в коем случае не должны позволить им уйти живыми!"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Да!"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Эти люди, носящие птичьи маски, члены рыцарей чумы? Что они здесь забыли?",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Возможно, ты не знала, но рыцари чумы проводили эксперимент с божественной коробкой прямо здесь.",
+    "sprite_left": "Kallen 1.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "С божественной коробкой? Что за чертовщина здесь происходит!?",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Это подземелье с самого начала было построено как прикрытие, якобы для заключения преступников, но на самом деле для того, чтобы у рыцарей чумы был постоянный приток подопытных.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Как только мы окажемся в безопасности, я тебе всё объясню. Когда я пришёл, мой информатор сказал мне, что преступники сбежали из тюрьмы. Хотя мы могли бы сбежать в этой суматохе, подкрепление Шиксала наверняка скоро прибудет. А пока нам нужно поторопиться и убраться отсюда.",
+    "sprite_left": "Kallen 4.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Сбежали...",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "О нет, Отто, я должна их догнать!",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Каллен? Я знаю, что ты связана с божественной коробкой, но сейчас мы не можем допустить никаких осложнений!",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Нет, всё совсем не так...",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Хотя это ещё нельзя утверждать наверняка... весьма вероятно, что преступница, о которой они говорят, никто иная, как мисс Фука.",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Ты о том мастере боевых искусств с Дальнего Востока?",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "М-м... На самом деле они здесь, чтобы исследовать божественную коробку. Хотя я неоднократно предупреждала их, чтобы они никогда не вступали в прямое противостояние с Шиксалом. Но если кто-то и осмелится поднять такой шум на территории Шиксала, то только они.",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Но...",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Отто",
+    "text": "Ладно, если это действительно так, то, возможно, всё вышло далеко за рамки того, что я мог себе представить...",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Otto 4.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "......"
   }
    ]
 }
