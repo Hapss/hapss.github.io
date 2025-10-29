@@ -1940,6 +1940,434 @@
   },
   {
     "text": "......"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Бессмертная, похоже, мы окружены.",
+    "sprite_left": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Дальше вам не пройти. Вы правда думаете, что сможете сбежать?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Хмпф, а кто сказал, что я убегаю? Я здесь, чтобы свести с тобой счёты.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эй, мисс Бессмертная, ты собираешься ввязываться в бой?",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "...",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Цзинвэй, присмотри за этим ронином и убедись, что она не отходит от меня.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Хе-хе, не стоит торопиться. Я ознакомилась с отчётом Зофии. Вы двое — воины, сражающиеся с Хоукаем на Дальнем Востоке. Учитывая это, я не думаю, что нам обязательно прибегать к сражению.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "О чём ты?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Возможно, вы неправильно понимаете наши действия из-за этой крысы Каллен, но миссия рыцарей чумы — раз и навсегда уничтожить Хоукай в этом мире.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Если вы решите отречься от тьмы и присоединиться к нам, я прощу тебе прошлые прегрешения. Твои выдающиеся способности, несомненно, помогут нам в осуществлении нашего давнего стремления — уничтожить Хоукай.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Пф, звучит лучше, чем есть на самом деле. Что ты можешь сказать в защиту этих невинных жертв Чёрной смерти?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Для изучения проявлений Хоукая в человеческом теле они являются незаменимыми объектами исследования.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Более того, жертвы чумы умерли бы от болезни, даже если бы за ними никто не ухаживал. Я просто нашла им хорошее применение.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Что ж, я считаю себя безжалостным злодеем, который убивает, не моргнув и глазом, но, должна признать, ты меня превзошла.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Не смей ставить себя в один ряд с нами, грубиянка. Рыцари чумы не участвуют в бессмысленных расправах. Даже после смерти жертвы Чёрной смерти становятся источниками Хоукая, продолжая осквернять мир. По этой причине мы должны полностью уничтожить Хоукай внутри них.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Вместо того чтобы позволить им умереть в муках, как паразитам, давайте сделаем их ступеньками для нашего великолепного творения.",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Ты о божественной коробке?",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "В отличие от этой грубиянки, ты, я полагаю, понимаешь предназначение божественной коробки.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Божественная коробка служит лишь вместилищем для Хоукая, не решая при этом никаких глубинных проблем. Когда концентрация Хоукая превысит критический порог, это приведёт к катастрофическим последствиям, подобным тем, что наблюдались на Дальнем Востоке.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Люди не могут легко контролировать Хоукай. Я советую вам сдаться, пока не поздно.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Тебе не стоит об этом беспокоиться. У рыцарей апокалипсиса есть специальные подразделения, занимающиеся запечатыванием Хоукая, но в настоящее время тебе не разрешается о них знать.",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Я спрошу тебя в последний раз: ты готова присоединиться к нам?",
+    "sprite_left": "Fuka 5.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Мне жаль, но моя миссия — защищать человечество от Хоукая. Я не могу оправдать ваши действия.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Неужели? Похоже, негодяи однажды — негодяй навсегда.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Rvy 3.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Я действительно переоценила вас, ребята!",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Гр-р-р————",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "both",
+    "audio": "roar.ogg"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Звери Хоукая? Какого чёрта ты...",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right",
+    "audio": null
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Это экспериментальные образцы, разработанные нами, а также одно из наших достижений в области контроля над Хоукаем.",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Кстати, как бы много их ни было, я хотела бы посмотреть, как долго вы сможете продержаться.",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "......",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "both"
+  },
+  {
+    "text": "Бум!!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Чёрт, они такие сильные...",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Это конец. Удар в один цунь: Просвет———",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Создание Хоукая",
+    "text": "Спа...си...те...",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Человек!?",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 7.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Хе-хе, почему ты остановилась?",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Ересь... Что именно вы натворили?",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Свуш!",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эй! Фука, ты чего медлишь? Эти ребята уже не люди!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Хе-хе, не волнуйся, скоро ты станешь такой же, как эти подопытные!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Создание Хоукая",
+    "text": "Гр-р-р!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both",
+    "audio": "roar.ogg"
+  },
+  {
+    "speaker": "???",
+    "text": "Мисс Фука!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both",
+    "audio": null
+  },
+  {
+    "text": "Бац———",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен?",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Ну что ж, все в сборе. Прямо как ловля целого гнезда воров. Отлично, отлично! Сегодня мы вас всех здесь и арестуем!",
+    "sprite_left": "Fuka 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Рвай... сволочь, ты хоть понимаешь, что делаешь!?",
+    "sprite_left": "Kallen 8.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Это уж точно. Если бы ты не украла божественную коробку, наше давнее желание уничтожить Хоукай было бы исполнено давным-давно. Зачем мне связываться с такой крысой, как ты?",
+    "sprite_left": "Kallen 8.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я видела, как ты создавала это чудовище Хоукая, заложив в его основу бесчисленное множество жизней. Конечно, я должна остановить тебя, демоница!",
+    "sprite_left": "Kallen 8.png",
+    "sprite_right": "Rvy 5.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Глупая! Божественная коробка может служить своему истинному предназначению только в наших руках. Хоукай с Дальнего Востока появился из-за твоего невежества! И ты действительно думаешь, что совершила нечто выдающееся!?",
+    "sprite_left": "Kallen 8.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Ты!",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Предатель учения Шиксала, раз тебя всё равно казнят, позволь мне ускорить твои похороны!",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "Бац!!!",
+    "sprite_left": "Kallen 5.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "both"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Такое количество... Эй, Фука! Если ты не собираешься драться, то просто уйди с дороги... Кха!!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Мэй, что с тобой?!",
+    "sprite_left": "Kallen 10.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Кха... Не обращай на меня внимания. Я сдеру с этой птицеликой шкуру заживо...",
+    "sprite_left": "Hokushin Mei 2.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Цзинвэй, хватай её.",
+    "sprite_left": "Fuka 3.png",
+    "sprite_right": "Rvy 4.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Удар в один цунь: Просветление!",
+    "sprite_left": "Fuka 2.png"
+  },
+  {
+    "text": "Бум!!!!!!!!",
+    "sprite_left": "Fuka 2.png",
+    "dim_override": "both",
+    "audio": "boom.ogg"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Каллен, ты знаешь, как отсюда выбраться?",
+    "sprite_left": "Fuka 6.png",
+    "audio": null
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Kallen 1.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Следуйте за мной! Мой напарник ждёт нас впереди.",
+    "sprite_left": "Fuka 6.png",
+    "sprite_right": "Kallen 5.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Солдат",
+    "text": "Мисс Рвай, преступники прорвали окружение!"
+  },
+  {
+    "speaker": "Рвай",
+    "text": "Чёрт возьми, догоните их!!",
+    "sprite_right": "Rvy 7.png"
   }
    ]
 }
