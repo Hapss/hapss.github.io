@@ -2119,15 +2119,14 @@
     "sprite_left": "Fuka 3.png",
     "sprite_right": "Rvy 4.png",
     "dim_override": "both",
-    "audio": "roar.ogg"
+    "sfx": "roar.ogg"
   },
   {
     "speaker": "Фука",
     "text": "Звери Хоукая? Какого чёрта ты...",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Rvy 4.png",
-    "dim_override": "right",
-    "audio": null
+    "dim_override": "right"
   },
   {
     "speaker": "Рвай",
@@ -2223,15 +2222,14 @@
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Rvy 5.png",
     "dim_override": "both",
-    "audio": "roar.ogg"
+    "sfx": "roar.ogg"
   },
   {
     "speaker": "???",
     "text": "Мисс Фука!",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Rvy 5.png",
-    "dim_override": "both",
-    "audio": null
+    "dim_override": "both"
   },
   {
     "text": "Бац———",
@@ -2338,13 +2336,12 @@
     "text": "Бум!!!!!!!!",
     "sprite_left": "Fuka 2.png",
     "dim_override": "both",
-    "audio": "boom.ogg"
+    "sfx": "boom.ogg"
   },
   {
     "speaker": "Фука",
     "text": "Каллен, ты знаешь, как отсюда выбраться?",
-    "sprite_left": "Fuka 6.png",
-    "audio": null
+    "sprite_left": "Fuka 6.png"
   },
   {
     "speaker": "Каллен",
