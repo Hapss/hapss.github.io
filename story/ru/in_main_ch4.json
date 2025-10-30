@@ -504,7 +504,7 @@
     "speaker": "Хокусин Мэй",
     "text": "Чёрт возьми! Они действительно лучше сражаются в темноте!",
     "sprite_center": "Hokushin Mei 2.png",
-    "audio": null
+    "audio": "BGM_078_KUKULKAN - Kukulkan.ogg"
   },
   {
     "speaker": "Хокусин Мэй",
@@ -551,7 +551,7 @@
     "speaker": "Хокусин Мэй",
     "text": "Отвратительно...",
     "sprite_center": "Hokushin Mei 1.png",
-    "audio": null
+    "audio": "BGM_078_KUKULKAN - Kukulkan.ogg"
   },
   {
     "text": "Нападения продолжали происходить из тени, но никого не было видно.",
@@ -652,6 +652,10 @@
     "text": "Чёрт!",
     "sprite_center": "Hokushin Mei 2.png",
     "dim_override": "both"
+  },
+  {
+    "text": "......",
+    "audio": null
   }
   ]
 }
