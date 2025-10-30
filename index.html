@@ -529,6 +529,8 @@
     <!-- Аудиоплееры для кроссфейда -->
     <audio id="audioPlayer1" loop></audio>
     <audio id="audioPlayer2" loop></audio>
+    <!-- НОВЫЙ: Плеер для SFX -->
+    <audio id="sfxPlayer"></audio>
 
 
     <script>
@@ -663,6 +665,7 @@
                 const spriteUrl = spritePath(step.sprite_centre);
                 loadPromises.push(loadImage(spriteUrl).catch(() => null));
             }
+            // SFX не добавляем в preloader, т.к. он основан на new Image()
 
             return Promise.all(loadPromises);
         }
@@ -687,6 +690,7 @@
 
             elements.audioPlayer1.volume = volumeLevel;
             elements.audioPlayer2.volume = volumeLevel;
+            elements.sfxPlayer.volume = volumeLevel; // <-- ДОБАВЛЕНО: Управление громкостью SFX
             elements.volumeSlider.value = userVolume;
 
             updateVolumeIcon();
@@ -800,6 +804,25 @@
                 }
             }
         }
+        
+        /**
+         * НОВАЯ ФУНКЦИЯ: Проигрывает_одноразовый_звуковой_эффект.
+         * @param {string} sfxFile - Имя_аудиофайла_эффекта.
+         */
+        function handleSfx(sfxFile) {
+            if (!sfxFile) return;
+
+            const { sfxPlayer } = elements;
+            const newSfxUrl = `${CONFIG.PATHS.AUDIO_BASE}${encodeURIComponent(sfxFile)}`;
+
+            // Устанавливаем_громкость_сразу_(на_случай,_если_она_менялась_глобально)
+            sfxPlayer.volume = isMuted ? 0 : userVolume;
+            sfxPlayer.src = newSfxUrl;
+            
+            sfxPlayer.play().catch(e => {
+                console.warn(`[SFX] Воспроизведение_эффекта_не_удалось: ${newSfxUrl}`, e);
+            });
+        }
 
 
         // ====================================================================
@@ -897,7 +920,7 @@
 
 
         // ====================================================================
-        // === ИНИЦИАЛИЗАЦИЯ ===
+        // === ИНИЦИЛИЗАЦИЯ ===
         // ====================================================================
         
         document.addEventListener('DOMContentLoaded', async () => {
@@ -949,6 +972,7 @@
             // --- Элементы управления аудио ---
             elements.audioPlayer1 = document.getElementById('audioPlayer1');
             elements.audioPlayer2 = document.getElementById('audioPlayer2');
+            elements.sfxPlayer = document.getElementById('sfxPlayer'); // <-- ДОБАВЛЕНО: Кэширование SFX плеера
             elements.volumeSlider = document.getElementById('volume-slider');
             elements.muteButton = document.getElementById('mute-button');
             elements.volumeIcon = document.getElementById('volume-icon');
@@ -1140,8 +1164,14 @@
             const step = currentDialogue[currentDialogueIndex];
             const isFullText = step.text_style === 'full';
             
+            // 1. Управление BGM (Фоновая музыка)
             if ('audio' in step) {
                 handleAudio(step.audio);
+            }
+            
+            // 2. Управление SFX (Звуковые эффекты)
+            if (step.sfx) {
+                handleSfx(step.sfx);
             }
 
             dialogueWrapper.classList.toggle('hidden', isFullText);
@@ -1267,11 +1297,16 @@
         
         async function updateStoryContent() {
             const fullStoryKey = elements.chapterSelect.value.trim();
-            const { loadButton, loadText, chapterLoadOverlay, chapterLoadProgress } = elements;
+            const { loadButton, loadText, chapterLoadOverlay, chapterLoadProgress, sfxPlayer } = elements;
 
             if (!fullStoryKey) return;
 
+            // Остановка BGM и SFX
             await handleAudio(null);
+            if (sfxPlayer && !sfxPlayer.paused) {
+                sfxPlayer.pause();
+                sfxPlayer.src = '';
+            }
 
             loadButton.disabled = true;
             loadText.textContent = i18n.ru.loadingText;
@@ -1296,6 +1331,7 @@
                 return;
             }
 
+            // --- Сбор Ассетов (Только Изображения) ---
             const urlsToLoad = (() => {
                 const uniqueUrls = new Set();
                 for (const step of chapterData.dialogue) {
@@ -1303,6 +1339,7 @@
                     if (step.sprite_left) uniqueUrls.add(spritePath(step.sprite_left));
                     if (step.sprite_right) uniqueUrls.add(spritePath(step.sprite_right));
                     if (step.sprite_centre) uniqueUrls.add(spritePath(step.sprite_centre)); 
+                    // SFX и Audio (BGM) не добавляются в preloader изображений
                 }
                 return Array.from(uniqueUrls);
             })();
