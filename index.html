@@ -529,8 +529,7 @@
     <!-- Аудиоплееры для кроссфейда -->
     <audio id="audioPlayer1" loop></audio>
     <audio id="audioPlayer2" loop></audio>
-    <!-- НОВЫЙ: Плеер для SFX -->
-    <audio id="sfxPlayer"></audio>
+    <!-- Плеер для SFX (sfxPlayer) удален. Эффекты будут создаваться динамически. -->
 
 
     <script>
@@ -640,6 +639,36 @@
             return promise;
         }
 
+        /**
+         * НОВАЯ ФУНКЦИЯ: Предзагрузчик для SFX.
+         * Использует new Audio() для кэширования аудиофайлов.
+         */
+        function preloadSfx(url) {
+            if (preloadedAssets[url]) {
+                return preloadedAssets[url];
+            }
+
+            const promise = new Promise((resolve, reject) => {
+                const audio = new Audio();
+                
+                // 'loadeddata' достаточно, чтобы браузер закэшировал файл.
+                audio.onloadeddata = () => {
+                    resolve(audio);
+                };
+                
+                audio.onerror = () => {
+                    console.warn(`[Preload SFX] Ошибка загрузки: ${url}`);
+                    reject(new Error(`Failed to load SFX: ${url}`)); 
+                };
+
+                audio.src = url; 
+                audio.load(); // Явно начинаем загрузку
+            });
+
+            preloadedAssets[url] = promise;
+            return promise;
+        }
+
         async function preloadAssets(index) {
             if (index < 0 || index >= currentDialogue.length) return Promise.resolve([]);
             
@@ -690,7 +719,7 @@
 
             elements.audioPlayer1.volume = volumeLevel;
             elements.audioPlayer2.volume = volumeLevel;
-            elements.sfxPlayer.volume = volumeLevel; // <-- ДОБАВЛЕНО: Управление громкостью SFX
+            // sfxPlayer.volume устанавливается динамически в handleSfx
             elements.volumeSlider.value = userVolume;
 
             updateVolumeIcon();
@@ -807,21 +836,41 @@
         
         /**
          * НОВАЯ ФУНКЦИЯ: Проигрывает_одноразовый_звуковой_эффект.
+         * Создает новый элемент Audio, чтобы не прерывать BGM.
          * @param {string} sfxFile - Имя_аудиофайла_эффекта.
          */
         function handleSfx(sfxFile) {
             if (!sfxFile) return;
 
-            const { sfxPlayer } = elements;
-            const newSfxUrl = `${CONFIG.PATHS.AUDIO_BASE}${encodeURIComponent(sfxFile)}`;
+            const sfxUrl = `${CONFIG.PATHS.AUDIO_BASE}${encodeURIComponent(sfxFile)}`;
 
-            // Устанавливаем_громкость_сразу_(на_случай,_если_она_менялась_глобально)
-            sfxPlayer.volume = isMuted ? 0 : userVolume;
-            sfxPlayer.src = newSfxUrl;
-            
-            sfxPlayer.play().catch(e => {
-                console.warn(`[SFX] Воспроизведение_эффекта_не_удалось: ${newSfxUrl}`, e);
-            });
+            // Функция для воспроизведения (будет вызвана немедленно)
+            const playSfx = () => {
+                const sfx = new Audio(sfxUrl); // Создаем новый, независимый элемент
+                sfx.volume = isMuted ? 0 : userVolume;
+                sfx.loop = false; // Явно отключаем луп (решение проблемы 2)
+                
+                sfx.play().catch(e => {
+                    // Ошибка может возникнуть, если пользователь не взаимодействовал со страницей
+                    // или если SFX слишком много (хотя маловероятно)
+                    console.warn(`[SFX] Воспроизведение_эффекта_не_удалось: ${sfxUrl}`, e);
+                });
+
+                // Элемент будет автоматически удален сборщиком мусора после воспроизведения
+            };
+
+            // Проверяем, был ли он предзагружен
+            if (preloadedAssets[sfxUrl]) {
+                // Ассет в кэше, играем немедленно
+                playSfx();
+            } else {
+                // Ассета нет в кэше (это не должно происходить, но на всякий случай)
+                // Все равно пытаемся проиграть. 
+                // Первый раз будет задержка, но мы запускаем предзагрузку на будущее.
+                console.warn(`[SFX] SFX не был предзагружен: ${sfxFile}. Запускаем предзагрузку.`);
+                preloadSfx(sfxUrl); // Запускаем фоновую загрузку на случай, если она не удалась
+                playSfx(); 
+            }
         }
 
 
@@ -972,7 +1021,7 @@
             // --- Элементы управления аудио ---
             elements.audioPlayer1 = document.getElementById('audioPlayer1');
             elements.audioPlayer2 = document.getElementById('audioPlayer2');
-            elements.sfxPlayer = document.getElementById('sfxPlayer'); // <-- ДОБАВЛЕНО: Кэширование SFX плеера
+            // sfxPlayer удален
             elements.volumeSlider = document.getElementById('volume-slider');
             elements.muteButton = document.getElementById('mute-button');
             elements.volumeIcon = document.getElementById('volume-icon');
@@ -1297,16 +1346,13 @@
         
         async function updateStoryContent() {
             const fullStoryKey = elements.chapterSelect.value.trim();
-            const { loadButton, loadText, chapterLoadOverlay, chapterLoadProgress, sfxPlayer } = elements;
+            const { loadButton, loadText, chapterLoadOverlay, chapterLoadProgress } = elements;
 
             if (!fullStoryKey) return;
 
-            // Остановка BGM и SFX
+            // Остановка BGM
             await handleAudio(null);
-            if (sfxPlayer && !sfxPlayer.paused) {
-                sfxPlayer.pause();
-                sfxPlayer.src = '';
-            }
+            // Остановка SFX больше не нужна, т.к. элементы временные
 
             loadButton.disabled = true;
             loadText.textContent = i18n.ru.loadingText;
@@ -1362,6 +1408,29 @@
                     chapterLoadProgress.textContent = `(${progress}/${totalToLoad})`;
                 }
             }
+
+            // --- НОВОЕ: Предзагрузка SFX ---
+            // Мы запускаем их асинхронно и не ждем завершения,
+            // чтобы не блокировать отображение главы.
+            // К моменту, когда SFX понадобится, он, вероятно, будет в кэше.
+            const sfxUrls = new Set();
+            for (const step of chapterData.dialogue) {
+                if (step.sfx) {
+                    sfxUrls.add(CONFIG.PATHS.AUDIO_BASE + encodeURIComponent(step.sfx));
+                }
+            }
+            
+            if (sfxUrls.size > 0) {
+                console.log(`[SFX Preload] Запуск предзагрузки для ${sfxUrls.size} SFX...`);
+                const sfxPromises = Array.from(sfxUrls).map(url => preloadSfx(url).catch(e => null));
+                
+                // Мы не используем await, чтобы не блокировать UI
+                Promise.allSettled(sfxPromises).then(results => {
+                    const loaded = results.filter(r => r.status === 'fulfilled').length;
+                    console.log(`[SFX Preload] Фоновая предзагрузка ${loaded}/${sfxUrls.size} SFX завершена.`);
+                });
+            }
+            // --- Конец блока SFX ---
 
             currentDialogue = chapterData.dialogue;
             currentDialogueIndex = 0;
