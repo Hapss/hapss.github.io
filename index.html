@@ -58,7 +58,6 @@
             --color-text-secondary: #6b7280; 
             --color-text-vn: #e5e7eb; /* Идентично темной теме */
             
-            /* Синий акцент для имени */
             --color-speaker-name: #ca7cfe; 
         }
 
@@ -526,10 +525,11 @@
         </div>
     </div>
 
-    <!-- Аудиоплееры для кроссфейда -->
-    <audio id="audioPlayer1" loop></audio>
-    <audio id="audioPlayer2" loop></audio>
-    <!-- Плеер для SFX (sfxPlayer) удален. Эффекты будут создаваться динамически. -->
+    <!-- 
+      АУДИОПЛЕЕРЫ УДАЛЕНЫ.
+      Все аудио (BGM и SFX) теперь будет управляться через Web Audio API,
+      чтобы предотвратить конфликты и прерывания.
+    -->
 
 
     <script>
@@ -588,7 +588,7 @@
         let preloadedAssets = {}; 
 
         // === Новые переменные для аудио ===
-        let activeAudioPlayer = 1;
+        let activeAudioPlayer = 1; // Эта_переменная_больше_не_используется_для_BGM
         let currentAudioUrl = null;
         let userVolume = 0.5; // Громкость по умолчанию
         let isMuted = false;
@@ -596,6 +596,10 @@
         // === НОВЫЕ ПЕРЕМЕННЫЕ: Web Audio API для SFX ===
         let audioContext = null; // Контекст Web Audio
         let sfxGainNode = null;  // Узел для контроля громкости ВСЕХ SFX
+        let bgmGainNode = null;  // НОВЫЙ УЗЕЛ для контроля громкости BGM
+        
+        let currentSfxSource = null; // НОВЫЙ: ссылка на текущий SFX для остановки
+        let currentBgmSource = null; // НОВЫЙ: ссылка на текущий BGM для остановки
 
         // УДАЛЕНЫ ПЛЕЙСХОЛДЕРЫ ИЗ i18n
         const i18n = {
@@ -644,10 +648,10 @@
         }
 
         /**
-         * ОБНОВЛЕНО: Предзагрузчик для SFX (теперь использует Web Audio API).
-         * Загружает аудио и декодирует его в AudioBuffer.
+         * ОБНОВЛЕНО: Переименовано с preloadSfx -> preloadAudioBuffer
+         * Загружает ЛЮБОЙ аудиофайл (BGM или SFX) и декодирует его в AudioBuffer.
          */
-        async function preloadSfx(url) {
+        async function preloadAudioBuffer(url) {
             if (preloadedAssets[url]) {
                 return preloadedAssets[url];
             }
@@ -655,7 +659,7 @@
             // Гарантируем, что_контекст_есть
             initAudioContext();
             if (!audioContext) {
-                console.warn("[Preload SFX] AudioContext не готов. SFX может_не_работать.");
+                console.warn("[Preload Audio] AudioContext не готов. Аудио может_не_работать.");
                 return Promise.reject(new Error("AudioContext not ready"));
             }
 
@@ -670,10 +674,10 @@
                     const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
                     return audioBuffer;
                 } catch (e) {
-                    console.warn(`[Preload SFX] Ошибка загрузки/декодирования: ${url}`, e);
+                    console.warn(`[Preload Audio] Ошибка загрузки/декодирования: ${url}`, e);
                     // Удаляем "сломанный" promise из кэша, чтобы можно было_попробовать_снова
                     delete preloadedAssets[url]; 
-                    throw new Error(`Failed to load/decode SFX: ${url}`);
+                    throw new Error(`Failed to load/decode Audio: ${url}`);
                 }
             })();
 
@@ -728,13 +732,17 @@
                     window.AudioContext = window.AudioContext || window.webkitAudioContext;
                     audioContext = new AudioContext();
                     
-                    // Создаем_основной_узел_усиления_для_SFX
+                    // --- Создаем микшер для SFX ---
                     sfxGainNode = audioContext.createGain();
-                    // Устанавливаем громкость SFX на основе текущих настроек
                     sfxGainNode.gain.value = isMuted ? 0 : userVolume;
-                    // Подключаем узел SFX к "колонке"
                     sfxGainNode.connect(audioContext.destination);
-                    console.log("[AudioContext] Web Audio API инициализирован.");
+
+                    // --- НОВОЕ: Создаем микшер для BGM ---
+                    bgmGainNode = audioContext.createGain();
+                    bgmGainNode.gain.value = isMuted ? 0 : userVolume;
+                    bgmGainNode.connect(audioContext.destination);
+
+                    console.log("[AudioContext] Web Audio API инициализирован (BGM + SFX).");
                 }
                 
                 // Возобновление_контекста, если он "завис" (требуется в Chrome/Safari)
@@ -762,13 +770,16 @@
             const volumeLevel = isMuted ? 0 : parseFloat(level);
             userVolume = parseFloat(level);
 
-            elements.audioPlayer1.volume = volumeLevel;
-            elements.audioPlayer2.volume = volumeLevel;
+            // УДАЛЕНЫ ссылки на audioPlayer1 и audioPlayer2
             
             // ОБНОВЛЕНО: Управление громкостью SFX через Web Audio
             if (sfxGainNode) {
-                // Плавное изменение громкости (предотвращает "щелчки")
                 sfxGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
+            }
+            
+            // НОВОЕ: Управление громкостью BGM через Web Audio
+            if (bgmGainNode) {
+                bgmGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
             }
             
             elements.volumeSlider.value = userVolume;
@@ -820,81 +831,107 @@
             setVolume(userVolume, false);
         }
 
-        function fadeAudio(player, targetVolume, duration = 500) {
+        /**
+         * НОВАЯ ФУНКЦИЯ: Плавное изменение громкости для узла GainNode.
+         * Заменяет старую функцию fadeAudio.
+         */
+        function fadeAudioNode(gainNode, targetVolume, duration = 500) {
+            if (!gainNode || !audioContext) return Promise.resolve();
+            
+            const now = audioContext.currentTime;
+            
             return new Promise(resolve => {
-                const startVolume = player.volume;
-                const delta = targetVolume - startVolume;
-                if (delta === 0) {
-                    resolve();
-                    return;
-                }
+                // Плавное (линейное) изменение громкости
+                gainNode.gain.cancelScheduledValues(now); // Отменяем предыдущие fade
+                gainNode.gain.setValueAtTime(gainNode.gain.value, now); // Начинаем с текущего значения
+                gainNode.gain.linearRampToValueAtTime(targetVolume, now + (duration / 1000));
                 
-                const tickRate = 25; // ms per tick
-                const ticks = Math.floor(duration / tickRate);
-                let currentTick = 0;
-
-                const timer = setInterval(() => {
-                    currentTick++;
-                    const progress = currentTick / ticks;
-                    const newVolume = startVolume + (delta * progress);
-                    
-                    // Убедимся, что громкость не выходит за пределы [0, 1]
-                    player.volume = Math.max(0, Math.min(1, newVolume));
-
-                    if (currentTick >= ticks) {
-                        clearInterval(timer);
-                        player.volume = targetVolume;
-                        resolve();
-                    }
-                }, tickRate);
+                // Запускаем таймер, чтобы разрешить Promise после завершения fade
+                setTimeout(resolve, duration);
             });
         }
 
+        /**
+         * НОВАЯ ФУНКЦИЯ: Останавливает текущий SFX.
+         * Решает проблему наложения (Problem 3).
+         */
+        function stopAllSfx() {
+            if (currentSfxSource) {
+                try {
+                    currentSfxSource.stop(0);
+                    currentSfxSource.disconnect();
+                } catch (e) {
+                    // Ошибка может возникнуть, если звук уже остановлен
+                }
+                currentSfxSource = null;
+            }
+        }
+
+        /**
+         * ПЕРЕПИСАНО: handleAudio (BGM) теперь использует Web Audio API.
+         * Это решит проблему прерывания (Problem 1).
+         */
         async function handleAudio(audioFile) {
+            // 0. Инициализация
+            initAudioContext();
+            if (!audioContext || !bgmGainNode) return;
+
             const newAudioUrl = audioFile ? `${CONFIG.PATHS.AUDIO_BASE}${encodeURIComponent(audioFile)}` : null;
 
             if (newAudioUrl === currentAudioUrl) return;
 
-            console.log(`[Audio] Transition from "${currentAudioUrl || 'none'}" to "${newAudioUrl || 'none'}"`);
-
-            const currentPlayer = (activeAudioPlayer === 1) ? elements.audioPlayer1 : elements.audioPlayer2;
-            const nextPlayer = (activeAudioPlayer === 1) ? elements.audioPlayer2 : elements.audioPlayer1;
-
-            // 1. Fade out the current player if it's playing
-            if (currentAudioUrl && !currentPlayer.paused) {
-                await fadeAudio(currentPlayer, 0);
-                currentPlayer.pause();
-                currentPlayer.src = '';
+            console.log(`[Audio] BGM Transition from "${currentAudioUrl || 'none'}" to "${newAudioUrl || 'none'}"`);
+            
+            // 1. Fade out и остановка текущего BGM
+            if (currentBgmSource) {
+                await fadeAudioNode(bgmGainNode, 0, 500); // Fade out
+                
+                try {
+                    currentBgmSource.stop(0);
+                    currentBgmSource.disconnect();
+                } catch (e) { /* Игнорируем ошибки остановки */ }
+                
+                currentBgmSource = null;
             }
+            // Если BGM не было, убедимся, что громкость на 0
+            bgmGainNode.gain.setValueAtTime(0, audioContext.currentTime);
 
             currentAudioUrl = newAudioUrl;
 
-            // 2. Fade in the new audio if one is provided
+            // 2. Загрузка и fade in нового BGM
             if (newAudioUrl) {
-                nextPlayer.src = newAudioUrl;
-                nextPlayer.volume = 0;
-                
                 try {
-                    await nextPlayer.play();
-                    await fadeAudio(nextPlayer, isMuted ? 0 : userVolume);
-                    activeAudioPlayer = (activeAudioPlayer === 1) ? 2 : 1;
+                    // Используем наш универсальный загрузчик
+                    const audioBuffer = await preloadAudioBuffer(newAudioUrl);
+                    
+                    const newSource = audioContext.createBufferSource();
+                    newSource.buffer = audioBuffer;
+                    newSource.loop = true; // BGM всегда зациклен
+                    newSource.connect(bgmGainNode); // Подключаем к микшеру BGM
+                    newSource.start(0);
+                    
+                    currentBgmSource = newSource; // Сохраняем ссылку
+
+                    // 3. Fade in
+                    const targetVol = isMuted ? 0 : userVolume;
+                    await fadeAudioNode(bgmGainNode, targetVol, 500); // Fade in
+                    
                 } catch (e) {
-                    // Ошибка может возникнуть, если пользователь не взаимодействовал со страницей
-                    console.warn(`[Audio] Playback failed for ${newAudioUrl}. User interaction might be required.`, e);
+                    console.warn(`[Audio] BGM Playback failed for ${newAudioUrl}.`, e);
                     currentAudioUrl = null;
                 }
             }
         }
         
         /**
-         * ОБНОВЛЕНО: Проигрывает_одноразовый_звуковой_эффект (Web Audio API).
-         * Эта_версия_не_будет_прерывать_BGM.
+         * ОБНОВЛЕНО: handleSfx
+         * Решает проблему наложения (Problem 3) и зацикливания (Problem 2).
          * @param {string} sfxFile - Имя_аудиофайла_эффекта.
          */
         async function handleSfx(sfxFile) {
             if (!sfxFile) return;
 
-            // Гарантируем, что_контекст_есть (на случай, если_это_первый_звук)
+            // Гарантируем, что_контекст_есть
             initAudioContext();
             if (!audioContext || !sfxGainNode) {
                 console.warn(`[SFX] AudioContext не готов. Воспроизведение ${sfxFile} отменено.`);
@@ -904,34 +941,42 @@
             const sfxUrl = `${CONFIG.PATHS.AUDIO_BASE}${encodeURIComponent(sfxFile)}`;
 
             try {
+                // 1. ОСТАНАВЛИВАЕМ ПРЕДЫДУЩИЙ SFX
+                // Это решает проблему наложения (Problem 3)
+                stopAllSfx();
+
+                // 2. Загружаем AudioBuffer
                 let audioBuffer;
-                
-                // Проверяем, есть ли в кэше (promise)
                 if (preloadedAssets[sfxUrl]) {
                     audioBuffer = await preloadedAssets[sfxUrl];
                 } else {
-                    // Ассета нет в кэше. Запускаем предзагрузку и ждем ее.
                     console.warn(`[SFX] SFX не был предзагружен: ${sfxFile}. Загрузка...`);
-                    audioBuffer = await preloadSfx(sfxUrl); 
+                    audioBuffer = await preloadAudioBuffer(sfxUrl); 
                 }
                 
                 if (!audioBuffer) {
-                    throw new Error("AudioBuffer недействителен (возможно, ошибка декодирования).");
+                    throw new Error("AudioBuffer недействителен.");
                 }
 
-                // Создаем_источник_воспроизведения
+                // 3. Создаем и настраиваем источник
                 const source = audioContext.createBufferSource();
                 source.buffer = audioBuffer;
                 
-                // ЭТО РЕШАЕТ ПРОБЛЕМУ 1: Звук_не_будет_зацикливаться.
+                // ЭТО РЕШАЕТ ПРОБЛЕМУ 2: Звук_не_будет_зацикливаться.
                 source.loop = false; 
                 
-                // Подключаем к нашему_общему_sfxGainNode (который_управляет_громкостью)
-                source.connect(sfxGainNode);
+                source.connect(sfxGainNode); // Подключаем к микшеру SFX
+                source.start(0); // Воспроизводим
                 
-                source.start(0); // Воспроизводим_немедленно
+                // 4. Сохраняем ссылку, чтобы_иметь_возможность_остановить_его
+                currentSfxSource = source;
                 
-                // 'source' будет_автоматически_удален_сборщиком_мусора_после_воспроизведения
+                // 5. Очищаем ссылку, когда звук_закончится_сам
+                source.onended = () => {
+                    if (currentSfxSource === source) {
+                        currentSfxSource = null;
+                    }
+                };
 
             } catch (e) {
                 console.error(`[SFX] Воспроизведение_эффекта_не_удалось: ${sfxUrl}`, e);
@@ -1087,9 +1132,7 @@
             elements.chapterLoadProgress = document.getElementById('chapter-load-progress');
             
             // --- Элементы управления аудио ---
-            elements.audioPlayer1 = document.getElementById('audioPlayer1');
-            elements.audioPlayer2 = document.getElementById('audioPlayer2');
-            // sfxPlayer удален
+            // Плееры audioPlayer1 и audioPlayer2 удалены из DOM и кэша
             elements.volumeSlider = document.getElementById('volume-slider');
             elements.muteButton = document.getElementById('mute-button');
             elements.volumeIcon = document.getElementById('volume-icon');
@@ -1427,7 +1470,8 @@
 
             // Остановка BGM
             await handleAudio(null);
-            // Остановка SFX больше не нужна, т.к. элементы временные
+            // НОВОЕ: Принудительная остановка SFX при загрузке главы
+            stopAllSfx();
 
             loadButton.disabled = true;
             loadText.textContent = i18n.ru.loadingText;
@@ -1497,7 +1541,8 @@
             
             if (sfxUrls.size > 0) {
                 console.log(`[SFX Preload] Запуск предзагрузки для ${sfxUrls.size} SFX...`);
-                const sfxPromises = Array.from(sfxUrls).map(url => preloadSfx(url).catch(e => null));
+                // ОБНОВЛЕНО: используем preloadAudioBuffer
+                const sfxPromises = Array.from(sfxUrls).map(url => preloadAudioBuffer(url).catch(e => null));
                 
                 // Мы не используем await, чтобы не блокировать UI
                 Promise.allSettled(sfxPromises).then(results => {
@@ -1792,4 +1837,5 @@
     </script>
 </body>
 </html>
+
 
