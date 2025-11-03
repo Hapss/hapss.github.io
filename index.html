@@ -592,6 +592,10 @@
         let currentAudioUrl = null;
         let userVolume = 0.5; // Громкость по умолчанию
         let isMuted = false;
+        
+        // === НОВЫЕ ПЕРЕМЕННЫЕ: Web Audio API для SFX ===
+        let audioContext = null; // Контекст Web Audio
+        let sfxGainNode = null;  // Узел для контроля громкости ВСЕХ SFX
 
         // УДАЛЕНЫ ПЛЕЙСХОЛДЕРЫ ИЗ i18n
         const i18n = {
@@ -640,30 +644,38 @@
         }
 
         /**
-         * НОВАЯ ФУНКЦИЯ: Предзагрузчик для SFX.
-         * Использует new Audio() для кэширования аудиофайлов.
+         * ОБНОВЛЕНО: Предзагрузчик для SFX (теперь использует Web Audio API).
+         * Загружает аудио и декодирует его в AudioBuffer.
          */
-        function preloadSfx(url) {
+        async function preloadSfx(url) {
             if (preloadedAssets[url]) {
                 return preloadedAssets[url];
             }
+            
+            // Гарантируем, что_контекст_есть
+            initAudioContext();
+            if (!audioContext) {
+                console.warn("[Preload SFX] AudioContext не готов. SFX может_не_работать.");
+                return Promise.reject(new Error("AudioContext not ready"));
+            }
 
-            const promise = new Promise((resolve, reject) => {
-                const audio = new Audio();
-                
-                // 'loadeddata' достаточно, чтобы браузер закэшировал файл.
-                audio.onloadeddata = () => {
-                    resolve(audio);
-                };
-                
-                audio.onerror = () => {
-                    console.warn(`[Preload SFX] Ошибка загрузки: ${url}`);
-                    reject(new Error(`Failed to load SFX: ${url}`)); 
-                };
-
-                audio.src = url; 
-                audio.load(); // Явно начинаем загрузку
-            });
+            const promise = (async () => {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+                    
+                    const arrayBuffer = await response.arrayBuffer();
+                    
+                    // decodeAudioData - асинхронный (возвращает Promise)
+                    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+                    return audioBuffer;
+                } catch (e) {
+                    console.warn(`[Preload SFX] Ошибка загрузки/декодирования: ${url}`, e);
+                    // Удаляем "сломанный" promise из кэша, чтобы можно было_попробовать_снова
+                    delete preloadedAssets[url]; 
+                    throw new Error(`Failed to load/decode SFX: ${url}`);
+                }
+            })();
 
             preloadedAssets[url] = promise;
             return promise;
@@ -703,6 +715,39 @@
         // === УПРАВЛЕНИЕ АУДИО ===
         // ====================================================================
         
+        /**
+         * НОВАЯ ФУНКЦИЯ: Инициализирует Web Audio API.
+         * Должна вызываться при первом взаимодействии пользователя (клик).
+         */
+        function initAudioContext() {
+            // Если контекст уже создан и работает, выходим
+            if (audioContext && audioContext.state === 'running') return;
+            
+            try {
+                if (!audioContext) {
+                    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioContext = new AudioContext();
+                    
+                    // Создаем_основной_узел_усиления_для_SFX
+                    sfxGainNode = audioContext.createGain();
+                    // Устанавливаем громкость SFX на основе текущих настроек
+                    sfxGainNode.gain.value = isMuted ? 0 : userVolume;
+                    // Подключаем узел SFX к "колонке"
+                    sfxGainNode.connect(audioContext.destination);
+                    console.log("[AudioContext] Web Audio API инициализирован.");
+                }
+                
+                // Возобновление_контекста, если он "завис" (требуется в Chrome/Safari)
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume().then(() => {
+                         console.log("[AudioContext] Контекст возобновлен.");
+                    });
+                }
+            } catch (e) {
+                console.error("[AudioContext] Web Audio API не поддерживается или не удалось_создать_контекст.", e);
+            }
+        }
+        
         // --- ОБНОВЛЕНО: Стандартные иконки громкости (Heroicons outline) ---
         const ICONS = {
             // Volume Up
@@ -719,7 +764,13 @@
 
             elements.audioPlayer1.volume = volumeLevel;
             elements.audioPlayer2.volume = volumeLevel;
-            // sfxPlayer.volume устанавливается динамически в handleSfx
+            
+            // ОБНОВЛЕНО: Управление громкостью SFX через Web Audio
+            if (sfxGainNode) {
+                // Плавное изменение громкости (предотвращает "щелчки")
+                sfxGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
+            }
+            
             elements.volumeSlider.value = userVolume;
 
             updateVolumeIcon();
@@ -754,7 +805,8 @@
         function toggleMute() {
             isMuted = !isMuted;
             localStorage.setItem(CONFIG.STORAGE.MUTE_KEY, isMuted.toString());
-            setVolume(userVolume, false); // Update volume without saving level
+            // setVolume обновит громкость и BGM, и SFX (sfxGainNode)
+            setVolume(userVolume, false); 
         }
 
         function loadVolume() {
@@ -835,41 +887,54 @@
         }
         
         /**
-         * НОВАЯ ФУНКЦИЯ: Проигрывает_одноразовый_звуковой_эффект.
-         * Создает новый элемент Audio, чтобы не прерывать BGM.
+         * ОБНОВЛЕНО: Проигрывает_одноразовый_звуковой_эффект (Web Audio API).
+         * Эта_версия_не_будет_прерывать_BGM.
          * @param {string} sfxFile - Имя_аудиофайла_эффекта.
          */
-        function handleSfx(sfxFile) {
+        async function handleSfx(sfxFile) {
             if (!sfxFile) return;
+
+            // Гарантируем, что_контекст_есть (на случай, если_это_первый_звук)
+            initAudioContext();
+            if (!audioContext || !sfxGainNode) {
+                console.warn(`[SFX] AudioContext не готов. Воспроизведение ${sfxFile} отменено.`);
+                return;
+            }
 
             const sfxUrl = `${CONFIG.PATHS.AUDIO_BASE}${encodeURIComponent(sfxFile)}`;
 
-            // Функция для воспроизведения (будет вызвана немедленно)
-            const playSfx = () => {
-                const sfx = new Audio(sfxUrl); // Создаем новый, независимый элемент
-                sfx.volume = isMuted ? 0 : userVolume;
-                sfx.loop = false; // Явно отключаем луп (решение проблемы 2)
+            try {
+                let audioBuffer;
                 
-                sfx.play().catch(e => {
-                    // Ошибка может возникнуть, если пользователь не взаимодействовал со страницей
-                    // или если SFX слишком много (хотя маловероятно)
-                    console.warn(`[SFX] Воспроизведение_эффекта_не_удалось: ${sfxUrl}`, e);
-                });
+                // Проверяем, есть ли в кэше (promise)
+                if (preloadedAssets[sfxUrl]) {
+                    audioBuffer = await preloadedAssets[sfxUrl];
+                } else {
+                    // Ассета нет в кэше. Запускаем предзагрузку и ждем ее.
+                    console.warn(`[SFX] SFX не был предзагружен: ${sfxFile}. Загрузка...`);
+                    audioBuffer = await preloadSfx(sfxUrl); 
+                }
+                
+                if (!audioBuffer) {
+                    throw new Error("AudioBuffer недействителен (возможно, ошибка декодирования).");
+                }
 
-                // Элемент будет автоматически удален сборщиком мусора после воспроизведения
-            };
+                // Создаем_источник_воспроизведения
+                const source = audioContext.createBufferSource();
+                source.buffer = audioBuffer;
+                
+                // ЭТО РЕШАЕТ ПРОБЛЕМУ 1: Звук_не_будет_зацикливаться.
+                source.loop = false; 
+                
+                // Подключаем к нашему_общему_sfxGainNode (который_управляет_громкостью)
+                source.connect(sfxGainNode);
+                
+                source.start(0); // Воспроизводим_немедленно
+                
+                // 'source' будет_автоматически_удален_сборщиком_мусора_после_воспроизведения
 
-            // Проверяем, был ли он предзагружен
-            if (preloadedAssets[sfxUrl]) {
-                // Ассет в кэше, играем немедленно
-                playSfx();
-            } else {
-                // Ассета нет в кэше (это не должно происходить, но на всякий случай)
-                // Все равно пытаемся проиграть. 
-                // Первый раз будет задержка, но мы запускаем предзагрузку на будущее.
-                console.warn(`[SFX] SFX не был предзагружен: ${sfxFile}. Запускаем предзагрузку.`);
-                preloadSfx(sfxUrl); // Запускаем фоновую загрузку на случай, если она не удалась
-                playSfx(); 
+            } catch (e) {
+                console.error(`[SFX] Воспроизведение_эффекта_не_удалось: ${sfxUrl}`, e);
             }
         }
 
@@ -957,6 +1022,9 @@
         function dismissWarningModal() {
             const overlay = elements.warningOverlay;
             if (!overlay) return;
+            
+            // НОВОЕ: Инициализируем AudioContext при первом действии
+            initAudioContext();
             
             localStorage.setItem(CONFIG.STORAGE.WARNING_KEY, 'true');
             
@@ -1075,6 +1143,9 @@
 
         function navigateDialogue(direction) {
             if (isHistoryVisible) return;
+            
+            // НОВОЕ: Инициализируем AudioContext при клике (если еще не был)
+            initAudioContext();
             
             try { 
                 if (!dialogueIsLoaded || currentDialogue.length === 0) return;
@@ -1219,8 +1290,9 @@
             }
             
             // 2. Управление SFX (Звуковые эффекты)
+            // (Вызов handleSfx остался прежним, но_сама_функция_теперь_async)
             if (step.sfx) {
-                handleSfx(step.sfx);
+                handleSfx(step.sfx); // "Огонь и Забвение" - не_нужно_ждать_await
             }
 
             dialogueWrapper.classList.toggle('hidden', isFullText);
@@ -1349,6 +1421,9 @@
             const { loadButton, loadText, chapterLoadOverlay, chapterLoadProgress } = elements;
 
             if (!fullStoryKey) return;
+
+            // НОВОЕ: Инициализируем AudioContext при загрузке
+            initAudioContext();
 
             // Остановка BGM
             await handleAudio(null);
@@ -1675,6 +1750,8 @@
                 
                 historyItem.dataset.index = i; 
                 historyItem.onclick = () => {
+                    // НОВОЕ: Инициализируем AudioContext при клике (если еще не был)
+                    initAudioContext();
                     currentDialogueIndex = i;
                     renderDialogueStep();
                     toggleHistory(); 
@@ -1715,3 +1792,4 @@
     </script>
 </body>
 </html>
+
