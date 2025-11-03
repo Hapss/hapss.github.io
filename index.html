@@ -58,7 +58,6 @@
             --color-text-secondary: #6b7280; 
             --color-text-vn: #e5e7eb; /* Идентично темной теме */
             
-            /* Синий акцент для имени */
             --color-speaker-name: #ca7cfe; 
         }
 
@@ -585,6 +584,8 @@
         window.storyMetadata = null; 
         let isHistoryVisible = false; 
         let activeBgLayer = 1; // 1 or 2
+        
+        let isNavigating = false; // НОВЫЙ ФЛАГ для_предотвращения_гонки_состояний
         
         let preloadedAssets = {}; 
 
@@ -1190,7 +1191,11 @@
         }
 
         function navigateDialogue(direction) {
-            if (isHistoryVisible) return;
+            // ОБНОВЛЕНО: Добавлен флаг isNavigating для предотвращения двойных кликов
+            if (isHistoryVisible || isNavigating) return;
+            
+            // НОВОЕ: Блокируем_повторные_вызовы
+            isNavigating = true; 
             
             // НОВОЕ: Инициализируем AudioContext при клике (если еще не был)
             initAudioContext();
@@ -1218,130 +1223,41 @@
             } catch (e) {
                  console.error("[Dialogue Navigation] Ошибка переключения:", e);
                  alertMessage(i18n.ru.errorRender(e.message));
+            } finally {
+                // НОВОЕ: Разблокируем_вызовы_в_любом_случае
+                isNavigating = false; 
             }
         }
         
-        const spritePath = (fileName) => {
-            if (!fileName) return null;
-            const encodedFileName = encodeURIComponent(fileName);
-            // Возврат пути к спрайту
-            return CONFIG.PATHS.SPRITE_BASE + encodedFileName; 
-        };
-        
-        async function loadSprite(url, element, container) {
-            if (!url) {
-                container.classList.add('hidden');
-                element.src = '';
-                return;
-            }
-            
-            try {
-                const loadedImage = await loadImage(url); 
-                element.src = loadedImage.src; 
-                container.classList.remove('hidden');
-
-            } catch (error) {
-                container.classList.add('hidden');
-                console.warn(`[Sprite Load] Не удалось загрузить спрайт персонажа: ${url}.`, error);
-                element.src = ''; 
-            }
-        }
-
-        async function crossFadeBackground(newBgFileName) {
-            const encodedBgFileName = encodeURIComponent(newBgFileName);
-            const finalBgUrl = CONFIG.PATHS.BACKGROUND_BASE + encodedBgFileName;
-            
-            if (finalBgUrl === currentBackgroundUrl) return; 
-
-            const { bgLayer1, bgLayer2 } = elements;
-            const nextLayer = activeBgLayer === 1 ? bgLayer2 : bgLayer1;
-            const currentLayer = activeBgLayer === 1 ? bgLayer1 : bgLayer2;
-            
-            try {
-                const loadedImage = await loadImage(finalBgUrl); 
-
-                nextLayer.style.backgroundImage = `url('${loadedImage.src}')`;
-                nextLayer.style.backgroundColor = 'transparent'; 
-                
-                setTimeout(() => {
-                    currentLayer.style.opacity = '0';
-                    nextLayer.style.opacity = '1';
-                    
-                    activeBgLayer = activeBgLayer === 1 ? 2 : 1;
-                    currentBackgroundUrl = loadedImage.src;
-                }, 10);
-                
-            } catch (error) {
-                console.warn(`[BG Fade] Не удалось загрузить фон: ${finalBgUrl}. Применение цвета фона по умолчанию.`);
-                
-                 setTimeout(() => {
-                    nextLayer.style.backgroundImage = 'none';
-                    const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
-
-                    nextLayer.style.backgroundColor = themeBgColor;
-
-                    currentLayer.style.opacity = '0';
-                    nextLayer.style.opacity = '1';
-
-                    activeBgLayer = activeBgLayer === 1 ? 2 : 1;
-                    currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
-                }, 10);
-            }
-        }
-        
-        // Обрабатывает \n -> <br>
-        function processTextForBreaks(text) {
-            if (!text) return "";
-            return text.replace(/\n/g, '<br>');
-        }
-
-        // --- НОВАЯ ФУНКЦИЯ для парсинга цветного текста ---
-        function parseColoredText(text) {
-            if (!text) return "";
-            // Заменяет [color=...]...[/color] теги на стилизованные span
-            // Базовая валидация: разрешены hex (#rrggbb, #rgb) или слова (a-z)
-            return text.replace(/\[color=([#\w]+)](.*?)\[\/color]/gi, (match, color, innerText) => {
-                // Очень базовая проверка формата цвета (hex или слово)
-                if (/^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3}|[a-zA-Z]+)$/.test(color)) {
-                     // Убедимся, что цвет начинается с #, если это hex и знака # нет
-                     let finalColor = color;
-                     if (!color.startsWith('#') && /^[a-fA-F0-9]+$/.test(color)) {
-                         finalColor = '#' + color;
-                     }
-                    return `<span style="color: ${finalColor};">${innerText}</span>`;
-                }
-                // Если формат цвета невалидный, возвращаем текст без стилизации
-                return innerText; 
-            });
-        }
-
-
-        function renderDialogueStep() {
-            const { dialogueWrapper, spriteLeftContainer, spriteRightContainer, 
-                    spriteLeftElement, spriteRightElement, currentSpeaker, currentText, speakerNameContainer,
-                    fullDialogueBox, fullDialogueContent, fullCurrentText,
-                    spriteCenterContainer, spriteCenterElement 
-                } = elements;
-
-            if (!dialogueIsLoaded || currentDialogue.length === 0) {
-                dialogueWrapper.classList.add('hidden');
-                fullDialogueBox.classList.add('hidden');
-                return;
-            }
-
+        const spritePath = (fileName)<!-- ... existing code ... -->
             const step = currentDialogue[currentDialogueIndex];
             const isFullText = step.text_style === 'full';
             
+            // --- ОБНОВЛЕННАЯ ЛОГИКА АУДИО (РЕШЕНИЕ ПРОБЛЕМЫ 2) ---
+            
             // 1. Управление BGM (Фоновая музыка)
-            if ('audio' in step) {
-                handleAudio(step.audio);
+            // Мы НЕ будем останавливать BGM (audio: null), ЕСЛИ в этом же шаге есть SFX.
+            // Это_позволит_SFX_играть_"поверх"_BGM.
+            const hasSfx = !!step.sfx;
+            const processBgm = 'audio' in step;
+            
+            if (processBgm) {
+                const audioValue = step.audio;
+                
+                if (audioValue === null && hasSfx) {
+                    // Игнорируем `audio: null` (команду "остановить"), 
+                    // потому что SFX должен играть поверх BGM.
+                } else {
+                    // Обрабатываем как обычно (запуск нового BGM или остановка, если нет SFX)
+                    handleAudio(audioValue);
+                }
             }
             
             // 2. Управление SFX (Звуковые эффекты)
-            // (Вызов handleSfx остался прежним, но_сама_функция_теперь_async)
-            if (step.sfx) {
-                handleSfx(step.sfx); // "Огонь и Забвение" - не_нужно_ждать_await
+            if (hasSfx) {
+                handleSfx(step.sfx); // "Огонь и Забвение"
             }
+            // --- КОНЕЦ ОБНОВЛЕННОЙ ЛОГИКИ АУДИО ---
 
             dialogueWrapper.classList.toggle('hidden', isFullText);
             fullDialogueBox.classList.toggle('hidden', !isFullText);
@@ -1842,6 +1758,3 @@
     </script>
 </body>
 </html>
-
-
-
