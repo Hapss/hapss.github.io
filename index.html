@@ -58,6 +58,7 @@
             --color-text-secondary: #6b7280; 
             --color-text-vn: #e5e7eb; /* Идентично темной теме */
             
+            /* Синий акцент для имени */
             --color-speaker-name: #ca7cfe; 
         }
 
@@ -925,10 +926,11 @@
         
         /**
          * ОБНОВЛЕНО: handleSfx
-         * Решает проблему наложения (Problem 3) и зацикливания (Problem 2).
+         * НЕ-async. Использует .then() для "fire-and-forget".
+         * Исправляет_гонку_состояний (race condition), которая_вызывала_наложение (Symptoms 1, 2).
          * @param {string} sfxFile - Имя_аудиофайла_эффекта.
          */
-        async function handleSfx(sfxFile) {
+        function handleSfx(sfxFile) {
             if (!sfxFile) return;
 
             // Гарантируем, что_контекст_есть
@@ -940,47 +942,50 @@
 
             const sfxUrl = `${CONFIG.PATHS.AUDIO_BASE}${encodeURIComponent(sfxFile)}`;
 
-            try {
-                // 1. ОСТАНАВЛИВАЕМ ПРЕДЫДУЩИЙ SFX
-                // Это решает проблему наложения (Problem 3)
-                stopAllSfx();
-
-                // 2. Загружаем AudioBuffer
-                let audioBuffer;
-                if (preloadedAssets[sfxUrl]) {
-                    audioBuffer = await preloadedAssets[sfxUrl];
-                } else {
-                    console.warn(`[SFX] SFX не был предзагружен: ${sfxFile}. Загрузка...`);
-                    audioBuffer = await preloadAudioBuffer(sfxUrl); 
-                }
-                
-                if (!audioBuffer) {
-                    throw new Error("AudioBuffer недействителен.");
-                }
-
-                // 3. Создаем и настраиваем источник
-                const source = audioContext.createBufferSource();
-                source.buffer = audioBuffer;
-                
-                // ЭТО РЕШАЕТ ПРОБЛЕМУ 2: Звук_не_будет_зацикливаться.
-                source.loop = false; 
-                
-                source.connect(sfxGainNode); // Подключаем к микшеру SFX
-                source.start(0); // Воспроизводим
-                
-                // 4. Сохраняем ссылку, чтобы_иметь_возможность_остановить_его
-                currentSfxSource = source;
-                
-                // 5. Очищаем ссылку, когда звук_закончится_сам
-                source.onended = () => {
-                    if (currentSfxSource === source) {
-                        currentSfxSource = null;
+            // Не используем await. Запускаем и "забываем"
+            preloadAudioBuffer(sfxUrl)
+                .then(audioBuffer => {
+                    // --- НАЧАЛО КРИТИЧЕСКОЙ СЕКЦИИ ---
+                    // Этот код выполнится, когда_буфер_готов
+                    
+                    if (!audioBuffer) {
+                        throw new Error("AudioBuffer недействителен.");
                     }
-                };
 
-            } catch (e) {
-                console.error(`[SFX] Воспроизведение_эффекта_не_удалось: ${sfxUrl}`, e);
-            }
+                    // 1. Создаем и настраиваем источник
+                    const source = audioContext.createBufferSource();
+                    source.buffer = audioBuffer;
+                    source.loop = false; // Решает проблему "вечного" проигрывания (Problem 2)
+                    source.connect(sfxGainNode); 
+                    
+                    // 2. ОСТАНАВЛИВАЕМ ПРЕДЫДУЩИЙ SFX (если он еще_играет)
+                    // Это_исправляет_гонку_состояний и наложение (Problem 1)
+                    // Мы_делаем_это_прямо_перед_запуском_нового.
+                    stopAllSfx();
+
+                    // 3. Запускаем_новый_звук
+                    source.start(0); 
+                    
+                    // 4. Сохраняем ссылку на НОВЫЙ источник
+                    currentSfxSource = source;
+                    
+                    // 5. Очищаем ссылку, когда звук_закончится_сам
+                    source.onended = () => {
+                        if (currentSfxSource === source) {
+                            currentSfxSource = null;
+                        }
+                    };
+                    // --- КОНЕЦ КРИТИЧЕСКОЙ СЕКЦИИ ---
+
+                })
+                .catch(e => {
+                    // Ошибка, скорее всего, из preloadAudioBuffer
+                    console.error(`[SFX] Воспроизведение_эффекта_не_удалось: ${sfxUrl}`, e);
+                    // Убедимся, что_если_что-то "зависло", оно_остановится
+                    if (currentSfxSource && (!currentSfxSource.buffer || currentSfxSource.buffer.duration === 0)) {
+                         stopAllSfx();
+                    }
+                });
         }
 
 
@@ -1837,5 +1842,6 @@
     </script>
 </body>
 </html>
+
 
 
