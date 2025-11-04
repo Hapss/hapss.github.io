@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -557,7 +556,7 @@
                 MAX_ATTEMPTS: 3,        
             },
             PLACEHOLDERS: {
-                DEFAULT_BG_COLOR: '#1f2937', 
+                DEFAULT_BG_COLOR: '#1f2937', // Используется как маркер, а не как прямой цвет
             }
         };
         
@@ -1055,7 +1054,9 @@
                  const inactiveLayer = activeBgLayer === 1 ? elements.bgLayer2 : elements.bgLayer1;
 
                  activeLayer.style.backgroundColor = themeBgColor;
+                 activeLayer.style.backgroundImage = 'none';
                  inactiveLayer.style.backgroundColor = themeBgColor;
+                 inactiveLayer.style.backgroundImage = 'none';
             }
         }
 
@@ -1154,13 +1155,18 @@
             elements.muteButton = document.getElementById('mute-button');
             elements.volumeIcon = document.getElementById('volume-icon');
 
-
-            // Установка дефолтного фона на активный слой (цвет)
-            elements.bgLayer1.style.backgroundColor = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
-            elements.bgLayer1.style.backgroundImage = 'none';
-            currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR; 
             
-            loadTheme(); 
+            loadTheme(); // Загружаем тему ПЕРЕД установкой фона
+            
+            // Установка дефолтного фона на активный слой (цвет)
+            const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
+            elements.bgLayer1.style.backgroundColor = themeBgColor;
+            elements.bgLayer1.style.backgroundImage = 'none';
+            elements.bgLayer2.style.backgroundColor = themeBgColor; // Также для 2-го слоя
+            elements.bgLayer2.style.backgroundImage = 'none';
+            
+            currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR; 
+             
             handleWarningModalState(); 
             loadVolume(); // Загрузка громкости при старте
 
@@ -1192,6 +1198,126 @@
         // ====================================================================
         // === CORE FUNCTIONS (Загрузка данных и Рендеринг) ===
         // ====================================================================
+        
+        // --- НОВЫЕ ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ (ИСПРАВЛЕНИЕ ОШИБОК) ---
+
+        /**
+         * ИСПРАВЛЕНИЕ: Добавлена отсутствующая функция.
+         * Обрабатывает \n (перенос строки) в <br>.
+         */
+        function processTextForBreaks(text) {
+            if (text === null || text === undefined) return '';
+            return String(text).replace(/\n/g, '<br>');
+        }
+
+        /**
+         * ИСПРАВЛЕНИЕ: Добавлена отсутствующая функция.
+         * Парсит [color=...]...[/color] теги в <span>.
+         */
+        function parseColoredText(text) {
+            if (text === null || text === undefined) return '';
+            let safeText = String(text);
+
+            // Regex для [color=...]...[/color] (нежадный)
+            const colorRegex = /\[color=([^\]]+)\](.*?)\[\/color\]/gi;
+            
+            return safeText.replace(colorRegex, (match, color, innerText) => {
+                // Базовая очистка цвета
+                const safeColor = color.replace(/['"<>]/g, ''); 
+                return `<span style="color: ${safeColor};">${innerText}</span>`;
+            });
+        }
+
+        /**
+         * ИСПРАВЛЕНИЕ: Добавлена отсутствующая функция.
+         * Управляет загрузкой спрайтов в элементы <img>.
+         */
+        function loadSprite(url, imgElement, containerElement) {
+            if (!url) {
+                containerElement.classList.add('hidden');
+                return;
+            }
+            
+            // Не перезагружаем, если изображение уже то же самое и контейнер видим
+            if (imgElement.src === url && !containerElement.classList.contains('hidden')) {
+                return;
+            }
+
+            const needsReload = imgElement.src !== url;
+
+            if (needsReload) {
+                imgElement.src = url; 
+            }
+            
+            imgElement.onload = () => {
+                containerElement.classList.remove('hidden');
+            };
+            imgElement.onerror = () => {
+                containerElement.classList.add('hidden'); 
+                console.warn(`[Sprite Load] Не удалось загрузить спрайт: ${url}`);
+            };
+
+            // Если кэшировано или уже загружается, просто показываем
+            // .complete может быть true для предзагруженных
+            if (imgElement.complete && needsReload) {
+                 containerElement.classList.remove('hidden');
+            } else if (!needsReload) {
+                 // Если src тот же, но контейнер был скрыт
+                 containerElement.classList.remove('hidden');
+            }
+        }
+
+        /**
+         * ИСПРАВЛЕНИЕ: Добавлена отсутствующая функция.
+         * Управляет плавным переходом фона.
+         */
+        function crossFadeBackground(newBackgroundFile) {
+            const { bgLayer1, bgLayer2 } = elements;
+            // Получаем актуальный цвет фона из CSS-переменной
+            const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
+
+            if (!newBackgroundFile) {
+                // Сброс на цвет темы
+                const targetUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
+                if (currentBackgroundUrl === targetUrl) return; // Уже сброшено
+                
+                currentBackgroundUrl = targetUrl;
+                
+                const activeLayer = (activeBgLayer === 1) ? bgLayer1 : bgLayer2;
+                const inactiveLayer = (activeBgLayer === 1) ? bgLayer2 : bgLayer1;
+
+                // Устанавливаем цвет на неактивный слой
+                inactiveLayer.style.backgroundImage = 'none';
+                inactiveLayer.style.backgroundColor = themeBgColor;
+
+                activeLayer.style.opacity = '0';
+                inactiveLayer.style.opacity = '1';
+                activeBgLayer = (activeBgLayer === 1) ? 2 : 1;
+            } else {
+                // Переход на изображение
+                const newBgUrl = CONFIG.PATHS.BACKGROUND_BASE + encodeURIComponent(newBackgroundFile);
+                if (newBgUrl === currentBackgroundUrl) return; // Нет изменений
+
+                currentBackgroundUrl = newBgUrl;
+
+                const activeLayer = (activeBgLayer === 1) ? bgLayer1 : bgLayer2;
+                const inactiveLayer = (activeBgLayer === 1) ? bgLayer2 : bgLayer1;
+
+                // 1. Устанавливаем новое изображение на *неактивный* слой
+                inactiveLayer.style.backgroundImage = `url("${newBgUrl}")`;
+                inactiveLayer.style.backgroundColor = 'transparent'; // Убираем цвет фона
+
+                // 2. Плавный переход
+                activeLayer.style.opacity = '0';
+                inactiveLayer.style.opacity = '1';
+
+                // 3. Переключаем активный слой
+                activeBgLayer = (activeBgLayer === 1) ? 2 : 1;
+            }
+        }
+        
+        // --- КОНЕЦ БЛОКА ИСПРАВЛЕНИЙ ---
+        
         
         async function fetchChapterMetadata() {
             try {
@@ -1255,11 +1381,6 @@
             /* * ИСПРАВЛЕНИЕ 2: Удаляем локальное определение. 
              * Оно было перемещено в глобальную область (см. выше).
              */
-            /*
-            const spritePath = (fileName) => {
-                return `${CONFIG.PATHS.SPRITE_BASE}${encodeURIComponent(fileName)}`;
-            };
-            */
 
             // Получение элементов (было удалено при ошибке)
             const { 
@@ -1307,8 +1428,9 @@
             dialogueWrapper.classList.toggle('hidden', isFullText);
             fullDialogueBox.classList.toggle('hidden', !isFullText);
             
-            if (step.background) { 
-                crossFadeBackground(step.background);
+            // ИСПРАВЛЕНИЕ: Вызов добавленной функции crossFadeBackground
+            if ('background' in step) { // Проверяем наличие ключа, включая null
+                crossFadeBackground(step.background); 
             }
 
             // --- 3. Управление Спрайтами (Видимость и Загрузка) - ИСПРАВЛЕНО ---
@@ -1326,7 +1448,7 @@
             // Центральный
             if (newCenterSpriteFile) {
                 const url = spritePath(newCenterSpriteFile);
-                loadSprite(url, spriteCenterElement, spriteCenterContainer);
+                loadSprite(url, spriteCenterElement, spriteCenterContainer); // ИСПРАВЛЕНИЕ: вызов loadSprite
             } else {
                  spriteCenterContainer.classList.add('hidden'); // Скрываем, если не указан
             }
@@ -1334,7 +1456,7 @@
             // Левый (показываем ТОЛЬКО если НЕТ центрального)
             if (!newCenterSpriteFile && newLeftSpriteFile) {
                  const url = spritePath(newLeftSpriteFile);
-                 loadSprite(url, spriteLeftElement, spriteLeftContainer);
+                 loadSprite(url, spriteLeftElement, spriteLeftContainer); // ИСПРАВЛЕНИЕ: вызов loadSprite
             } else {
                  spriteLeftContainer.classList.add('hidden'); // Скрываем, если есть центральный ИЛИ левый не указан
             }
@@ -1342,7 +1464,7 @@
             // Правый (показываем ТОЛЬКО если НЕТ центрального)
              if (!newCenterSpriteFile && newRightSpriteFile) {
                  const url = spritePath(newRightSpriteFile);
-                 loadSprite(url, spriteRightElement, spriteRightContainer);
+                 loadSprite(url, spriteRightElement, spriteRightContainer); // ИСПРАВЛЕНИЕ: вызов loadSprite
             } else {
                  spriteRightContainer.classList.add('hidden'); // Скрываем, если есть центральный ИЛИ правый не указан
             }
@@ -1393,6 +1515,7 @@
 
             // --- 5. Рендеринг Текста (с парсингом цвета) ---
             if (isFullText) {
+                // ИСПРАВЛЕНИЕ: вызов processTextForBreaks и parseColoredText
                 fullCurrentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
                 
                 const size = step.full_text_size || 'md';
@@ -1416,6 +1539,7 @@
                     speakerNameContainer.classList.add('hidden');
                 }
                 
+                // ИСПРАВЛЕНИЕ: вызов processTextForBreaks и parseColoredText
                 currentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
             }
             
@@ -1532,12 +1656,15 @@
             elements.spriteRightElement.src = '';
             elements.spriteCenterElement.src = ''; 
             elements.fullDialogueBox.classList.add('hidden'); 
+            
             // Сброс фона на дефолтный цвет
             const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
             elements.bgLayer1.style.backgroundImage = 'none';
             elements.bgLayer1.style.backgroundColor = themeBgColor;
             elements.bgLayer1.style.opacity = '1';
             elements.bgLayer2.style.opacity = '0';
+            elements.bgLayer2.style.backgroundImage = 'none';
+            elements.bgLayer2.style.backgroundColor = themeBgColor;
             activeBgLayer = 1;
             currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
 
@@ -1557,10 +1684,16 @@
 
         function alertMessage(message) {
             const header = document.getElementById('header');
+            if (!header) return; // Защита, если header не найден
+            
             const msgBox = document.createElement('div');
             msgBox.textContent = message;
             msgBox.className = 'fixed top-1 right-1/2 translate-x-1/2 p-2 text-white rounded-lg shadow-xl z-50 text-sm transition-opacity duration-300 alert-message';
-            header.appendChild(msgBox);
+            
+            // Позиционируем относительно хедера
+            msgBox.style.top = `${header.offsetHeight + 10}px`; 
+            
+            document.body.appendChild(msgBox); // Добавляем в body, а не в header
             
             setTimeout(() => {
                 msgBox.style.opacity = '0';
@@ -1787,7 +1920,8 @@
                 }
                 
                 // Используем parseColoredText и для истории, чтобы цвета отображались
-                textContent.innerHTML = parseColoredText(displayText || ''); 
+                // ИСПРАВЛЕНИЕ: также добавляем processTextForBreaks
+                textContent.innerHTML = parseColoredText(processTextForBreaks(displayText || '')); 
                 historyItem.appendChild(textContent);
 
                 fragment.appendChild(historyItem);
