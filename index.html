@@ -524,12 +524,6 @@
         </div>
     </div>
 
-    <!-- 
-      АУДИОПЛЕЕРЫ УДАЛЕНЫ.
-      Все аудио (BGM и SFX) теперь будет управляться через Web Audio API,
-      чтобы предотвратить конфликты и прерывания.
-    -->
-
 
     <script>
         // ====================================================================
@@ -560,12 +554,6 @@
             }
         };
         
-        /**
-         * ИСПРАВЛЕНИЕ: Перемещаем spritePath в глобальную область.
-         * Это исправляет 'ReferenceError: spritePath is not defined', 
-         * так как функция теперь доступна и для 'updateStoryContent' 
-         * (для предзагрузки), и для 'renderDialogueStep' (для отображения).
-         */
         const spritePath = (fileName) => {
             if (!fileName) return ""; // Защита от null/undefined
             return `${CONFIG.PATHS.SPRITE_BASE}${encodeURIComponent(fileName)}`;
@@ -613,7 +601,6 @@
         let currentSfxSource = null; // НОВЫЙ: ссылка на текущий SFX для остановки
         let currentBgmSource = null; // НОВЫЙ: ссылка на текущий BGM для остановки
 
-        // УДАЛЕНЫ ПЛЕЙСХОЛДЕРЫ ИЗ i18n
         const i18n = {
             ru: {
                 headerTitle: "Houkai Gakuen 2: Архив сюжета", labelStoryType: "Тип сюжета", labelArc: "Арка", labelChapter: "Глава",
@@ -659,10 +646,6 @@
             return promise;
         }
 
-        /**
-         * ОБНОВЛЕНО: Переименовано с preloadSfx -> preloadAudioBuffer
-         * Загружает ЛЮБОЙ аудиофайл (BGM или SFX) и декодирует его в AudioBuffer.
-         */
         async function preloadAudioBuffer(url) {
             if (preloadedAssets[url]) {
                 return preloadedAssets[url];
@@ -731,10 +714,6 @@
         // === УПРАВЛЕНИЕ АУДИО ===
         // ====================================================================
         
-        /**
-         * НОВАЯ ФУНКЦИЯ: Инициализирует Web Audio API.
-         * Должна вызываться при первом взаимодействии пользователя (клик).
-         */
         function initAudioContext() {
             // Если контекст уже создан и работает, выходим
             if (audioContext && audioContext.state === 'running') return;
@@ -749,7 +728,7 @@
                     sfxGainNode.gain.value = isMuted ? 0 : userVolume;
                     sfxGainNode.connect(audioContext.destination);
 
-                    // --- НОВОЕ: Создаем микшер для BGM ---
+                    // --- Создаем микшер для BGM ---
                     bgmGainNode = audioContext.createGain();
                     bgmGainNode.gain.value = isMuted ? 0 : userVolume;
                     bgmGainNode.connect(audioContext.destination);
@@ -768,7 +747,7 @@
             }
         }
         
-        // --- ОБНОВЛЕНО: Стандартные иконки громкости (Heroicons outline) ---
+        // --- Стандартные иконки громкости  ---
         const ICONS = {
             // Volume Up
             volumeHigh: 'M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z',
@@ -782,14 +761,10 @@
             const volumeLevel = isMuted ? 0 : parseFloat(level);
             userVolume = parseFloat(level);
 
-            // УДАЛЕНЫ ссылки на audioPlayer1 и audioPlayer2
-            
-            // ОБНОВЛЕНО: Управление громкостью SFX через Web Audio
             if (sfxGainNode) {
                 sfxGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
             }
             
-            // НОВОЕ: Управление громкостью BGM через Web Audio
             if (bgmGainNode) {
                 bgmGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
             }
@@ -843,10 +818,6 @@
             setVolume(userVolume, false);
         }
 
-        /**
-         * НОВАЯ ФУНКЦИЯ: Плавное изменение громкости для узла GainNode.
-         * Заменяет старую функцию fadeAudio.
-         */
         function fadeAudioNode(gainNode, targetVolume, duration = 500) {
             if (!gainNode || !audioContext) return Promise.resolve();
             
@@ -863,10 +834,6 @@
             });
         }
 
-        /**
-         * НОВАЯ ФУНКЦИЯ: Останавливает текущий SFX.
-         * Решает проблему наложения (Problem 3).
-         */
         function stopAllSfx() {
             if (currentSfxSource) {
                 try {
@@ -879,10 +846,6 @@
             }
         }
 
-        /**
-         * ПЕРЕПИСАНО: handleAudio (BGM) теперь использует Web Audio API.
-         * Это решит проблему прерывания (Problem 1).
-         */
         async function handleAudio(audioFile) {
             // 0. Инициализация
             initAudioContext();
@@ -935,12 +898,6 @@
             }
         }
         
-        /**
-         * ОБНОВЛЕНО: handleSfx
-         * НЕ-async. Использует .then() для "fire-and-forget".
-         * Исправляет_гонку_состояний (race condition), которая_вызывала_наложение (Symptoms 1, 2).
-         * @param {string} sfxFile - Имя_аудиофайла_эффекта.
-         */
         function handleSfx(sfxFile) {
             if (!sfxFile) return;
 
@@ -969,9 +926,6 @@
                     source.loop = false; // Решает проблему "вечного" проигрывания (Problem 2)
                     source.connect(sfxGainNode); 
                     
-                    // 2. ОСТАНАВЛИВАЕМ ПРЕДЫДУЩИЙ SFX (если он еще_играет)
-                    // Это_исправляет_гонку_состояний и наложение (Problem 1)
-                    // Мы_делаем_это_прямо_перед_запуском_нового.
                     stopAllSfx();
 
                     // 3. Запускаем_новый_звук
@@ -1086,7 +1040,6 @@
             const overlay = elements.warningOverlay;
             if (!overlay) return;
             
-            // НОВОЕ: Инициализируем AudioContext при первом действии
             initAudioContext();
             
             localStorage.setItem(CONFIG.STORAGE.WARNING_KEY, 'true');
@@ -1128,7 +1081,6 @@
             elements.spriteRightContainer = document.getElementById('spriteRightContainer');
             elements.spriteLeftElement = document.getElementById('spriteLeft');
             elements.spriteRightElement = document.getElementById('spriteRight');
-            // НОВОЕ: Кэширование центрального спрайта
             elements.spriteCenterContainer = document.getElementById('spriteCenterContainer');
             elements.spriteCenterElement = document.getElementById('spriteCenter');
 
@@ -1150,7 +1102,6 @@
             elements.chapterLoadProgress = document.getElementById('chapter-load-progress');
             
             // --- Элементы управления аудио ---
-            // Плееры audioPlayer1 и audioPlayer2 удалены из DOM и кэша
             elements.volumeSlider = document.getElementById('volume-slider');
             elements.muteButton = document.getElementById('mute-button');
             elements.volumeIcon = document.getElementById('volume-icon');
@@ -1198,22 +1149,12 @@
         // ====================================================================
         // === CORE FUNCTIONS (Загрузка данных и Рендеринг) ===
         // ====================================================================
-        
-        // --- НОВЫЕ ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ (ИСПРАВЛЕНИЕ ОШИБОК) ---
 
-        /**
-         * ИСПРАВЛЕНИЕ: Добавлена отсутствующая функция.
-         * Обрабатывает \n (перенос строки) в <br>.
-         */
         function processTextForBreaks(text) {
             if (text === null || text === undefined) return '';
             return String(text).replace(/\n/g, '<br>');
         }
 
-        /**
-         * ИСПРАВЛЕНИЕ: Добавлена отсутствующая функция.
-         * Парсит [color=...]...[/color] теги в <span>.
-         */
         function parseColoredText(text) {
             if (text === null || text === undefined) return '';
             let safeText = String(text);
@@ -1228,10 +1169,6 @@
             });
         }
 
-        /**
-         * ИСПРАВЛЕНИЕ: Добавлена отсутствующая функция.
-         * Управляет загрузкой спрайтов в элементы <img>.
-         */
         function loadSprite(url, imgElement, containerElement) {
             if (!url) {
                 containerElement.classList.add('hidden');
@@ -1267,10 +1204,6 @@
             }
         }
 
-        /**
-         * ИСПРАВЛЕНИЕ: Добавлена отсутствующая функция.
-         * Управляет плавным переходом фона.
-         */
         function crossFadeBackground(newBackgroundFile) {
             const { bgLayer1, bgLayer2 } = elements;
             // Получаем актуальный цвет фона из CSS-переменной
@@ -1316,8 +1249,6 @@
             }
         }
         
-        // --- КОНЕЦ БЛОКА ИСПРАВЛЕНИЙ ---
-        
         
         async function fetchChapterMetadata() {
             try {
@@ -1333,13 +1264,10 @@
         }
 
         function navigateDialogue(direction) {
-            // ОБНОВЛЕНО: Добавлен флаг isNavigating для предотвращения двойных кликов
             if (isHistoryVisible || isNavigating) return;
             
-            // НОВОЕ: Блокируем_повторные_вызовы
             isNavigating = true; 
-            
-            // НОВОЕ: Инициализируем AudioContext при клике (если еще не был)
+
             initAudioContext();
             
             try { 
@@ -1366,21 +1294,12 @@
                  console.error("[Dialogue Navigation] Ошибка переключения:", e);
                  alertMessage(i18n.ru.errorRender(e.message));
             } finally {
-                // НОВОЕ: Разблокируем_вызовы_в_любом_случае
                 isNavigating = false; 
             }
         }
         
-        /**
-         * ИСПРАВЛЕНИЕ: Добавлена_отсутствующая_строка 'function renderDialogueStep() {'
-         * Это_было_причиной_синтаксической_ошибки 'Unexpected token }'.
-         */
         function renderDialogueStep() {
             
-            // ИСПРАВЛЕНИЕ: Восстановлена_полная_функция spritePath, заменяя_сломанный_плейсхолдер
-            /* * ИСПРАВЛЕНИЕ 2: Удаляем локальное определение. 
-             * Оно было перемещено в глобальную область (см. выше).
-             */
 
             // Получение элементов (было удалено при ошибке)
             const { 
@@ -1399,11 +1318,9 @@
             const step = currentDialogue[currentDialogueIndex];
             const isFullText = step.text_style === 'full';
             
-            // --- ОБНОВЛЕННАЯ ЛОГИКА АУДИО (РЕШЕНИЕ ПРОБЛЕМЫ 2) ---
+            // --- ОБНОВЛЕННАЯ ЛОГИКА АУДИО ---
             
             // 1. Управление BGM (Фоновая музыка)
-            // Мы НЕ будем останавливать BGM (audio: null), ЕСЛИ в этом же шаге есть SFX.
-            // Это_позволит_SFX_играть_"поверх"_BGM.
             const hasSfx = !!step.sfx;
             const processBgm = 'audio' in step;
             
@@ -1428,7 +1345,6 @@
             dialogueWrapper.classList.toggle('hidden', isFullText);
             fullDialogueBox.classList.toggle('hidden', !isFullText);
             
-            // ИСПРАВЛЕНИЕ: Вызов добавленной функции crossFadeBackground
             if ('background' in step) { // Проверяем наличие ключа, включая null
                 crossFadeBackground(step.background); 
             }
@@ -1494,7 +1410,6 @@
                         }
                     });
                 }
-                 // Если 'none', dimTargets останется пустым
             }
 
             // --- E. Применение затемнения к видимым спрайтам ---
@@ -1515,7 +1430,6 @@
 
             // --- 5. Рендеринг Текста (с парсингом цвета) ---
             if (isFullText) {
-                // ИСПРАВЛЕНИЕ: вызов processTextForBreaks и parseColoredText
                 fullCurrentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
                 
                 const size = step.full_text_size || 'md';
@@ -1539,7 +1453,6 @@
                     speakerNameContainer.classList.add('hidden');
                 }
                 
-                // ИСПРАВЛЕНИЕ: вызов processTextForBreaks и parseColoredText
                 currentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
             }
             
@@ -1555,12 +1468,10 @@
 
             if (!fullStoryKey) return;
 
-            // НОВОЕ: Инициализируем AudioContext при загрузке
             initAudioContext();
 
             // Остановка BGM
             await handleAudio(null);
-            // НОВОЕ: Принудительная остановка SFX при загрузке главы
             stopAllSfx();
 
             loadButton.disabled = true;
@@ -1619,9 +1530,6 @@
             }
 
             // --- НОВОЕ: Предзагрузка SFX ---
-            // Мы запускаем их асинхронно и не ждем завершения,
-            // чтобы не блокировать отображение главы.
-            // К моменту, когда SFX понадобится, он, вероятно, будет в кэше.
             const sfxUrls = new Set();
             for (const step of chapterData.dialogue) {
                 if (step.sfx) {
@@ -1631,10 +1539,8 @@
             
             if (sfxUrls.size > 0) {
                 console.log(`[SFX Preload] Запуск предзагрузки для ${sfxUrls.size} SFX...`);
-                // ОБНОВЛЕНО: используем preloadAudioBuffer
                 const sfxPromises = Array.from(sfxUrls).map(url => preloadAudioBuffer(url).catch(e => null));
                 
-                // Мы не используем await, чтобы не блокировать UI
                 Promise.allSettled(sfxPromises).then(results => {
                     const loaded = results.filter(r => r.status === 'fulfilled').length;
                     console.log(`[SFX Preload] Фоновая предзагрузка ${loaded}/${sfxUrls.size} SFX завершена.`);
@@ -1920,7 +1826,6 @@
                 }
                 
                 // Используем parseColoredText и для истории, чтобы цвета отображались
-                // ИСПРАВЛЕНИЕ: также добавляем processTextForBreaks
                 textContent.innerHTML = parseColoredText(processTextForBreaks(displayText || '')); 
                 historyItem.appendChild(textContent);
 
