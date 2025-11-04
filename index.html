@@ -515,7 +515,6 @@
 
             <!-- Кнопка закрытия -->
             <button id="close-warning-button" 
-                    onclick="dismissWarningModal()"
                     class="warning-button font-bold py-3 px-8 text-base md:text-lg rounded-full 
                            transition duration-200 ease-in-out shadow-xl hover:shadow-2xl 
                            focus:outline-none focus:ring-4" 
@@ -1155,6 +1154,11 @@
 
             // Добавление обработчиков событий для громкости
             elements.volumeSlider.addEventListener('input', (e) => setVolume(e.target.value));
+            
+            // НОВОЕ: Добавление обработчика для кнопки закрытия предупреждения
+            if (elements.closeWarningButton) {
+                elements.closeWarningButton.addEventListener('click', dismissWarningModal);
+            }
             
             // Загрузка метаданных и инициализация UI
             await fetchChapterMetadata();
