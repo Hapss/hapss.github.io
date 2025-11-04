@@ -1233,7 +1233,31 @@
             }
         }
         
-        const spritePath = (fileName)<!-- ... existing code ... -->
+        /**
+         * ИСПРАВЛЕНИЕ: Добавлена_отсутствующая_строка 'function renderDialogueStep() {'
+         * Это_было_причиной_синтаксической_ошибки 'Unexpected token }'.
+         */
+        function renderDialogueStep() {
+            
+            // ИСПРАВЛЕНИЕ: Восстановлена_полная_функция spritePath, заменяя_сломанный_плейсхолдер
+            const spritePath = (fileName) => {
+                return `${CONFIG.PATHS.SPRITE_BASE}${encodeURIComponent(fileName)}`;
+            };
+
+            // Получение элементов (было удалено при ошибке)
+            const { 
+                dialogueWrapper, fullDialogueBox, currentSpeaker, speakerNameContainer, 
+                currentText, fullDialogueContent, fullCurrentText,
+                spriteLeftElement, spriteRightElement, spriteCenterElement,
+                spriteLeftContainer, spriteRightContainer, spriteCenterContainer
+            } = elements;
+            
+            // Проверка индекса (было удалено при ошибке)
+            if (currentDialogueIndex < 0 || currentDialogueIndex >= currentDialogue.length) {
+                console.warn(`[Render] Неверный_индекс_диалога: ${currentDialogueIndex}`);
+                return; 
+            }
+            
             const step = currentDialogue[currentDialogueIndex];
             const isFullText = step.text_style === 'full';
             
@@ -1259,7 +1283,7 @@
             
             // 2. Управление SFX (Звуковые эффекты)
             if (hasSfx) {
-                handleSfx(step.sfx); // "Огонь и Забвение"
+                handleSfx(step.sfx);
             }
             // --- КОНЕЦ ОБНОВЛЕННОЙ ЛОГИКИ АУДИО ---
 
