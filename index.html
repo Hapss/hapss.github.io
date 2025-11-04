@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -558,6 +559,17 @@
             PLACEHOLDERS: {
                 DEFAULT_BG_COLOR: '#1f2937', 
             }
+        };
+        
+        /**
+         * ИСПРАВЛЕНИЕ: Перемещаем spritePath в глобальную область.
+         * Это исправляет 'ReferenceError: spritePath is not defined', 
+         * так как функция теперь доступна и для 'updateStoryContent' 
+         * (для предзагрузки), и для 'renderDialogueStep' (для отображения).
+         */
+        const spritePath = (fileName) => {
+            if (!fileName) return ""; // Защита от null/undefined
+            return `${CONFIG.PATHS.SPRITE_BASE}${encodeURIComponent(fileName)}`;
         };
 
         const STORY_GROUPS = {
@@ -1240,9 +1252,14 @@
         function renderDialogueStep() {
             
             // ИСПРАВЛЕНИЕ: Восстановлена_полная_функция spritePath, заменяя_сломанный_плейсхолдер
+            /* * ИСПРАВЛЕНИЕ 2: Удаляем локальное определение. 
+             * Оно было перемещено в глобальную область (см. выше).
+             */
+            /*
             const spritePath = (fileName) => {
                 return `${CONFIG.PATHS.SPRITE_BASE}${encodeURIComponent(fileName)}`;
             };
+            */
 
             // Получение элементов (было удалено при ошибке)
             const { 
