@@ -790,8 +790,9 @@
             }
             
             // НОВОЕ: Управление громкостью BGM через Web Audio
-            if (bgmGainNode) {
-                bgmGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
+            // ОБНОВЛЕНИЕ: Не меняем громкость BGM, если он "на паузе" (приглушен из-за SFX)
+            if (bgmGainNode && (!currentSfxSource || bgmGainNode.gain.value > 0)) {
+                 bgmGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
             }
             
             elements.volumeSlider.value = userVolume;
@@ -828,8 +829,19 @@
         function toggleMute() {
             isMuted = !isMuted;
             localStorage.setItem(CONFIG.STORAGE.MUTE_KEY, isMuted.toString());
-            // setVolume обновит громкость и BGM, и SFX (sfxGainNode)
-            setVolume(userVolume, false); 
+            
+            const sfxVolume = isMuted ? 0 : userVolume;
+            if (sfxGainNode) {
+                 sfxGainNode.gain.setValueAtTime(sfxVolume, audioContext.currentTime);
+            }
+            
+            // ОБНОВЛЕНИЕ: Не "размьючиваем" BGM, если он на SFX-паузе
+            const bgmVolume = isMuted ? 0 : (bgmGainNode.gain.value > 0 ? userVolume : 0);
+             if (bgmGainNode) {
+                 bgmGainNode.gain.setValueAtTime(bgmVolume, audioContext.currentTime);
+             }
+            
+            updateVolumeIcon();
         }
 
         function loadVolume() {
@@ -840,7 +852,14 @@
             isMuted = savedMute === 'true';
             
             elements.volumeSlider.value = userVolume;
-            setVolume(userVolume, false);
+            
+            // setVolume применит громкость к обоим узлам
+            const initialVolume = isMuted ? 0 : userVolume;
+            
+            if (sfxGainNode) sfxGainNode.gain.setValueAtTime(initialVolume, audioContext.currentTime);
+            if (bgmGainNode) bgmGainNode.gain.setValueAtTime(initialVolume, audioContext.currentTime);
+            
+            updateVolumeIcon();
         }
 
         /**
@@ -925,6 +944,7 @@
                     currentBgmSource = newSource; // Сохраняем ссылку
 
                     // 3. Fade in
+                    // ОБНОВЛЕНИЕ: Громкость по умолчанию (не мьютим, если только нет isMuted)
                     const targetVol = isMuted ? 0 : userVolume;
                     await fadeAudioNode(bgmGainNode, targetVol, 500); // Fade in
                     
@@ -1413,32 +1433,37 @@
             const step = currentDialogue[currentDialogueIndex];
             const isFullText = step.text_style === 'full';
             
-            // --- ОБНОВЛЕННАЯ ЛОГИКА АУДИО (РЕШЕНИЕ ПРОБЛЕМЫ 2) ---
-            
-            // 1. Управление BGM (Фоновая музыка)
-            // Мы НЕ будем останавливать BGM (audio: null), ЕСЛИ в этом же шаге есть SFX.
-            // Это_позволит_SFX_играть_"поверх"_BGM.
+
+            // --- НОВАЯ ЛОГИКА АУДИО (Pause/Resume) ---
+
             const hasSfx = !!step.sfx;
             const processBgm = 'audio' in step;
-            
+
+            // 1. Управление BGM (Смена трека)
+            // Эта функция управляет ТОЛЬКО сменой, запуском или остановкой (audio: null) трека.
             if (processBgm) {
-                const audioValue = step.audio;
+                handleAudio(step.audio);
+            }
+
+            // 2. Управление SFX и Паузой BGM
+            if (hasSfx) {
+                // Воспроизводим SFX
+                handleSfx(step.sfx, currentDialogueIndex);
                 
-                if (audioValue === null && hasSfx) {
-                    // Игнорируем `audio: null` (команду "остановить"), 
-                    // потому что SFX должен играть поверх BGM.
-                } else {
-                    // Обрабатываем как обычно (запуск нового BGM или остановка, если нет SFX)
-                    handleAudio(audioValue);
+                // Ставим BGM на "паузу" (быстрое затухание до 0), если BGM в данный момент играет
+                if (currentBgmSource) {
+                    fadeAudioNode(bgmGainNode, 0, 100); // 100ms fade-out
+                }
+            } else {
+                // SFX нет.
+                // Возобновляем BGM (быстрое возвращение громкости), если BGM должен играть
+                if (currentBgmSource) {
+                    const targetVol = isMuted ? 0 : userVolume;
+                    fadeAudioNode(bgmGainNode, targetVol, 100); // 100ms fade-in
                 }
             }
-            
-            // 2. Управление SFX (Звуковые эффекты)
-            if (hasSfx) {
-                // ИЗМЕНЕНИЕ: Передаем currentDialogueIndex для проверки
-                handleSfx(step.sfx, currentDialogueIndex);
-            }
-            // --- КОНЕЦ ОБНОВЛЕННОЙ ЛОГИКИ АУДИО ---
+            // --- КОНЕЦ НОВОЙ ЛОГИКИ АУДИО ---
+
 
             dialogueWrapper.classList.toggle('hidden', isFullText);
             fullDialogueBox.classList.toggle('hidden', !isFullText);
