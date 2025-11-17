@@ -394,7 +394,8 @@
     "audio": null
   },
   {
-    "text": "Вечер."
+    "text": "Вечер.",
+    "background": "CG10301.png"
   },
   {
     "text": "Пробирает холодный ветер."
@@ -458,7 +459,7 @@
     "text": "...Цзинь!",
     "sprite_centre": "Hokushin Mei 3.png",
     "dim_override": "both",
-    "audio": "clang.ogg"
+    "sfx": "clang.ogg"
   },
   {
     "speaker": "Хокусин Мэй",
@@ -480,7 +481,6 @@
   {
     "speaker": "Хокусин Мэй",
     "text": "Чёрт, я и не подозревала, что меня так загнали в угол.",
-    "sprite_center": "Hokushin Mei 1.png",
     "audio": "BGM_078_KUKULKAN - Kukulkan.ogg"
   },
   {
@@ -497,7 +497,7 @@
     "text": "Бряц!",
     "sprite_center": "Hokushin Mei 2.png",
     "dim_override": "both",
-    "audio": "clang.ogg"
+    "sfx": "clang.ogg"
   },
   {
     "speaker": "Хокусин Мэй",
