@@ -877,7 +877,8 @@
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 2.png",
-    "dim_override": "centre"
+    "dim_override": "centre",
+    "sfx": "knock.ogg"
   },
   {
     "speaker": "Каллен",
@@ -887,7 +888,8 @@
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 5.png",
-    "dim_override": "centre"
+    "dim_override": "centre",
+    "sfx": "knock.ogg"
   },
   {
     "speaker": "Каллен",
@@ -917,7 +919,8 @@
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 5.png",
-    "dim_override": "centre"
+    "dim_override": "centre",
+    "sfx": "knock.ogg"
   },
   {
     "speaker": "Каллен",
@@ -932,17 +935,20 @@
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 4.png",
-    "dim_override": "centre"
+    "dim_override": "centre",
+    "sfx": "knock.ogg"
   },
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 4.png",
-    "dim_override": "centre"
+    "dim_override": "centre",
+    "sfx": "knock.ogg"
   },
   {
     "text": "Тук-тук...",
     "sprite_centre": "Kallen 4.png",
-    "dim_override": "centre"
+    "dim_override": "centre",
+    "sfx": "knock.ogg"
   },
   {
     "text": "...",
@@ -967,7 +973,8 @@
   {
     "text": "Скри-и-ип.",
     "sprite_centre": "Kallen 1.png",
-    "dim_override": "centre"
+    "dim_override": "centre",
+    "sfx": "creak.ogg"
   },
   {
     "speaker": "Каллен",
