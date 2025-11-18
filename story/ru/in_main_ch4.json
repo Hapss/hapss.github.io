@@ -486,170 +486,170 @@
   {
     "speaker": "Хокусин Мэй",
     "text": "Не то, что место найти для того, чтобы спрятаться, теперь я едва вижу дорогу впереди.",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Эта ситуация должна быть идеальной для побега...",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
-    "text": "Бряц!",
-    "sprite_center": "Hokushin Mei 2.png",
+    "text": "Звяк!",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both",
     "sfx": "clang.ogg"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Чёрт возьми! Они действительно лучше сражаются в темноте!",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Эй, вы кто такие, чёрт возьми?!",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "text": "...",
-    "sprite_center": "Hokushin Mei 2.png",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both"
   },
   {
     "text": "...",
-    "sprite_center": "Hokushin Mei 2.png",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Ничего не скажешь? Ты меня недооцениваешь.",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "text": "Молчаливая атака.",
-    "sprite_center": "Hokushin Mei 2.png",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both"
   },
   {
-    "text": "Бряц!",
-    "sprite_center": "Hokushin Mei 2.png",
+    "text": "Звяк!",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both",
     "sfx": "clang.ogg"
   },
   {
-    "text": "Бряц, бряц!",
-    "sprite_center": "Hokushin Mei 2.png",
+    "text": "Звяк, звяк!",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both",
     "sfx": "clang.ogg"
   },
   {
-    "text": "Бряц, бряц, бряц, бряц!",
-    "sprite_center": "Hokushin Mei 2.png",
+    "text": "Звяк, звяк, звяк, звяк!",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both",
     "sfx": "clang.ogg"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Отвратительно...",
-    "sprite_center": "Hokushin Mei 1.png"
+    "sprite_centre": "Hokushin Mei 1.png"
   },
   {
     "text": "Нападения продолжали происходить из тени, но никого не было видно.",
-    "sprite_center": "Hokushin Mei 1.png",
+    "sprite_centre": "Hokushin Mei 1.png",
     "dim_override": "both"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Это чувство ничуть не уступает тем двум рыцарям.",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "И ещё более коварное!",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "text": "«Приступайте к выполнению плана 21».",
-    "sprite_center": "Hokushin Mei 2.png",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both"
   },
   {
     "text": "«Меняйте построение————».",
-    "sprite_center": "Hokushin Mei 2.png",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Ну и морока!",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "text": "Фигура покачнулась, и длинный меч из Страны Восходящего Солнца отразил тусклый лунный свет.",
-    "sprite_center": "Hokushin Mei 1.png",
+    "sprite_centre": "Hokushin Mei 1.png",
     "dim_override": "both"
   },
   {
     "text": "Внутри таилась жажда убийства, а тёмно-фиолетовый кончик отравленного кинжала был таким же коварным, как змеиный клык.",
-    "sprite_center": "Hokushin Mei 1.png",
+    "sprite_centre": "Hokushin Mei 1.png",
     "dim_override": "both"
   },
   {
-    "text": "Бряц!",
-    "sprite_center": "Hokushin Mei 1.png",
+    "text": "Звяк!",
+    "sprite_centre": "Hokushin Mei 1.png",
     "dim_override": "both"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "А ну выходи!",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
-    "text": "Бряц————",
-    "sprite_center": "Hokushin Mei 2.png",
+    "text": "Звяк————",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Я вообще не могу их ударить и не могу сбежать. Так больше не может продолжаться.",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Если бы я могла просто вытащить их из тени, возможно, у меня был бы шанс.",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Но если эти люди действительно из рыцарей апокалипсиса...",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "text": "Рука, сжимавшая клинок, дрожала.",
-    "sprite_center": "Hokushin Mei 2.png",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Какого чёрта, я...",
-    "sprite_center": "Hokushin Mei 1.png"
+    "sprite_centre": "Hokushin Mei 1.png"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Может, это страх поражения?",
-    "sprite_center": "Hokushin Mei 1.png"
+    "sprite_centre": "Hokushin Mei 1.png"
   },
   {
     "text": "В оцепенении Мэй Хокусин увидела фигуру, от которой исходила мощная аура убийственного намерения.",
-    "sprite_center": "Hokushin Mei 2.png",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Чёрт!",
-    "sprite_center": "Hokushin Mei 2.png"
+    "sprite_centre": "Hokushin Mei 2.png"
   },
   {
     "text": "Чёрт!",
-    "sprite_center": "Hokushin Mei 2.png",
+    "sprite_centre": "Hokushin Mei 2.png",
     "dim_override": "both"
   },
   {
@@ -664,5 +664,408 @@
   {
     "text": "Фу..."
   },
+  {
+    "text": "Ху... Ху..."
+  },
+  {
+    "text": "Всё бегу и бегу, не останавливаясь."
+  },
+  {
+    "text": "И всё же она не чувствует усталости; в её жизни ронина победа и поражение, жизнь и смерть были обычным делом."
+  },
+  {
+    "text": "Дальнее путешествие совсем не ново."
+  },
+  {
+    "text": "Просто..."
+  },
+  {
+    "text": "То, из-за чего она продолжает бежать, казалось, постепенно исчезало."
+  },
+  {
+    "text": "Перед её глазами осталась лишь порочная, хаотичная тьма."
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ух...",
+    "sprite_centre": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Что это было сейчас? Мой страх?",
+    "sprite_centre": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Страх проиграть... Впервые его испытываю.",
+    "sprite_centre": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Когда я последний раз выигрывала бой своим мечом?.."
+  },
+  {
+    "text": "...",
+    "sprite_centre": "Hokushin Mei 2.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "!?",
+    "sprite_centre": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Рыцарь смерти",
+    "text": "Докладываю, грешница больше не может двигаться.",
+    "sprite_centre": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Чёрт...",
+    "sprite_centre": "Hokushin Mei 1.png",
+    "background": "CG10311.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Сволочи... Наконец решились выйти из тени, а?"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Неужели это рыцари смерти, отряд Шиксала из слухов..."
+  },
+  {
+    "speaker": "Рыцарь смерти",
+    "text": "Этот человек крайне нестабильно реагирует на энергию Хоукая. Рекомендуется немедленное устранение.",
+    "sprite_centre": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Рыцарь смерти",
+    "text": "Нет нужды ждать лидера, даруйте грешнице освобождение немедля.",
+    "sprite_centre": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эй, эй! Я Хокусин Мэй, и дух мой ещё не сломлен!",
+    "sprite_centre": "Hokushin Mei 1.png"
+  },
+  {
+    "text": "Хокусин Мэй собралась с силами и снова встала.",
+    "sprite_centre": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Рыцарь смерти",
+    "text": "Заблудший грешник, Шиксал простит твоё невежество и дарует тебе право отправиться в святилище.",
+    "sprite_centre": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Это просто завуалированный способ сказать, что ты хочешь моей смерти.",
+    "sprite_centre": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ну что ж...",
+    "sprite_centre": "Hokushin Mei 1.png"
+  },
+  {
+    "text": "!",
+    "background": "black.png"
+  },
+  {
+    "text": "В сердце Хокусин Мэй, охваченной яростью, вспыхнула неутолимая жажда крови. Она наблюдала за тем, как погружается в эту хаотичную тьму."
+  },
+  {
+    "text": "И в этот момент перед её мысленным взором возникло лицо бессмертной."
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Эта назойливая бессмертная."
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Если бы не она, то превращение в демона из-за невозможности подавить Хоукай, было бы естественным."
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Я следовала за ней и сама не заметила, как... у меня появилось лёгкое отвращение к тому будущему, в котором я сойду с ума и превращусь в кровожадного монстра."
+  },
+  {
+    "text": "Она словно убеждала себя, что боевые искусства, которым она посвятила столько лет, были всего лишь кривой дорожкой, лишённой подлинной сути.",
+    "sprite_centre": "Hokushin Mei 1.png",
+    "dim_override": "centre",
+    "background": "CG10301.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ты действительно нечто...",
+    "sprite_centre": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "Звяк!",
+    "sfx":"clang.ogg"
+  },
+  {
+    "speaker": "Рыцарь смерти",
+    "text": "!?"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Хокусин Мэй, Хокусин Мэй, когда же ты стала так нерешительно обращаться со своим клинком?",
+    "sprite_centre": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Чего я боюсь, так это не неудачи.",
+    "sprite_centre": "Hokushin Mei 1.png",
+    "audio":null
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "А того, что даже единственное стремление будет раздавлено этим иррациональным миром!",
+    "sprite_centre": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ха!",
+    "sprite_centre": "Hokushin Mei 1.png"
+  },
+  {
+    "text": "......"
+  },
+  {
+    "text": "Внутри безопасного дома.",
+    "background": "CG10299.png",
+    "audio": "BGM_129_Loop - Daily.ogg"
+  },
+  {
+    "text":"В комнате, в которой сидели три человека, остался лишь один."
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Мисс Мэй... и мисс Фука вышли.",
+    "sprite_centre": "Kallen 1.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Несмотря на то, что сейчас ночь, комендантский час в столице всегда соблюдается строго. Если их обнаружат патрулирующие стражники, даже им было бы трудно скрыться..."
+  },
+  {
+    "speaker": "Каллен",
+    "text": "...Вот так напасть.",
+    "sprite_centre": "Kallen 2.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Стоит ли мне разыскать их?",
+    "sprite_centre": "Kallen 2.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Но учитывая их навыки, я только замедлю их, если выйду...",
+    "sprite_centre": "Kallen 2.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "И Клятва Иуда больше не у меня.",
+    "sprite_centre": "Kallen 2.png"
+  },
+  {
+    "text": "Тук-тук-тук.",
+    "sprite_centre": "Kallen 2.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "!?",
+    "sprite_centre": "Kallen 5.png"
+  },
+  {
+    "text": "Тук-тук-тук.",
+    "sprite_centre": "Kallen 5.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "(Зачем кому-то понадобилось вот так стучать в дверь посреди ночи?）",
+    "sprite_centre": "Kallen 5.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "(Это кто-то из церкви? А может бандиты?)",
+    "sprite_centre": "Kallen 5.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "(...Лучше обождать и посмотреть.)",
+    "sprite_centre": "Kallen 5.png"
+  },
+  {
+    "text": "«Я фермер, который ночью приехал сюда из деревни».",
+    "sprite_centre": "Kallen 5.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "«Наступила глубокая ночь, и я боюсь, что в пути со мной может случиться беда. Я смиренно прошу Вас о милосердии, позвольте мне переночевать здесь...»",
+    "sprite_centre": "Kallen 5.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "Тук-тук-тук.",
+    "sprite_centre": "Kallen 5.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "(Не могу же я взять и просто поверить...)",
+    "sprite_centre": "Kallen 4.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "(Но если это правда...)",
+    "sprite_centre": "Kallen 4.png"
+  },
+  {
+    "text": "Тук-тук-тук.",
+    "sprite_centre": "Kallen 4.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "Тук-тук-тук.",
+    "sprite_centre": "Kallen 4.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "Тук-тук...",
+    "sprite_centre": "Kallen 4.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "...",
+    "sprite_centre": "Kallen 4.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "(Стук прекратился.)",
+    "sprite_centre": "Kallen 1.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "(Он ушёл... Быть может он действительно был обычным гражданином?)",
+    "sprite_centre": "Kallen 1.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "(Я приоткрою окно и тихонько выгляну.)",
+    "sprite_centre": "Kallen 1.png"
+  },
+  {
+    "text": "Скри-и-ип.",
+    "sprite_centre": "Kallen 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "А, ну конечно——",
+    "sprite_centre": "Kallen 10.png"
+  },
+  {
+    "text": "В бескрайней ночи невдалеке, спотыкаясь, двигалась вперёд чёрная фигура.",
+    "sprite_centre": "Kallen 10.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "Хотя видна была только спина, это явно был старик в лохмотьях.",
+    "sprite_centre": "Kallen 10.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Всё же правду говорил...",
+    "sprite_centre": "Kallen 2.png"
+  },
+  {
+    "text": "Каллен быстро распахнула дверь, закрыла её за собой и подошла к старику.",
+    "sprite_centre": "Kallen 2.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Подождите, старче!",
+    "sprite_centre": "Kallen 5.png"
+  },
+  {
+    "speaker": "Старый человек",
+    "text": "Т-ты же...",
+    "sprite_centre": "Kallen 5.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Я из того дома.",
+    "sprite_centre": "Kallen 3.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Старче, хотя я и не могу предложить Вам ночлег, я могу хотя бы принести Вам немного еды на ночь.",
+    "sprite_centre": "Kallen 3.png"
+  },
+  {
+    "speaker": "Старый человек",
+    "text": "О... о... большое вам спасибо...",
+    "sprite_centre": "Kallen 3.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Пожалуйста, благословите этого путника на безопасное путешествие——",
+    "sprite_centre": "Kallen 3.png"
+  },
+  {
+    "text": "Проводив пожилого мужчину, Каллен развернулась и направилась к безопасному дому.",
+    "sprite_centre": "Kallen 3.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "Но как только она подошла к двери, Каллен замерла.",
+    "sprite_centre": "Kallen 3.png",
+    "dim_override": "centre",
+    "audio": null
+  },
+  {
+    "text": "Потому что дверь уже была открыта.",
+    "sprite_centre": "Kallen 3.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "К-кто...",
+    "sprite_centre": "Kallen 5.png"
+  },
+  {
+    "text": "Звяк!",
+    "sprite_centre": "Kallen 5.png",
+    "dim_override": "centre",
+    "sfx": "clang.ogg"
+  },
+  {
+    "speaker": "???",
+    "text": "Раз уж вышла, то о возвращении не думай.",
+    "sprite_left": "Iron Maiden 1.png"
+  },
+  {
+    "speaker": "Каллен",
+    "text": "Шиксалец——",
+    "sprite_left": "Kallen 8.png"
+  },
+  {
+    "speaker": "???",
+    "text": "Операция начинается."
+  }
   ]
 }

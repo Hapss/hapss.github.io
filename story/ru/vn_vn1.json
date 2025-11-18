@@ -67,7 +67,7 @@
     "text": "И тогда из самой непроглядной тьмы донёсся голос, который искала девушка—"
   },
   {
-    "audio": "seelesister.ogg",
+    "sfx": "seelesister.ogg",
     "speaker": "Зеле",
     "text": "Где ты, сестрица Броня?",
     "sprite_centre": "Seele 14.png"
@@ -409,12 +409,12 @@
     "dim_override": "right"
   },
   {
-    "audio": "soundeffectzizi.ogg",
+    "sfx": "soundeffectzizi.ogg",
     "background": "black.png",
     "text": "Треск электричества [Зззззз—]"
   },
   {
-    "audio": "soundeffectpa.ogg",
+    "sfx": "soundeffectpa.ogg",
     "text": "Слабый звук выстрела [Бэнг—]"
   },
   {
@@ -590,7 +590,7 @@
     "dim_override": "left"
   },
   {
-    "audio": "seelehahaha.ogg",
+    "sfx": "seelehahaha.ogg",
     "speaker": "Зеле",
     "text": "...Ха-ха-ха-ха-ха-ха...",
     "sprite_right": "Seele 2.png",
