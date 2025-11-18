@@ -655,6 +655,14 @@
   {
     "text": "......",
     "audio": null
-  }
+  },
+  {
+    "text": "......",
+    "background":"black.png",
+    "audio":"BGM_078_KUKULKAN - Kukulkan.ogg"
+  },
+  {
+    "text": "Фу..."
+  },
   ]
 }
