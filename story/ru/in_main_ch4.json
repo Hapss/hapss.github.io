@@ -1073,6 +1073,271 @@
   {
     "speaker": "???",
     "text": "Операция начинается."
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Кучка прихвостней, вы правда думаете, что я не смогу с вами справиться?",
+    "sprite_center": "Hokushin Mei 1.png",
+    "background": "CG10301.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Вы только что застали меня врасплох, а теперь осмеливаетесь показываться мне на глаза, мне нечего бояться.",
+    "sprite_center": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Выкусите!",
+    "sprite_center": "Hokushin Mei 1.png"
+  },
+  {
+    "text": "Ронин, нырнув с головой, резко повернула её и устремилась вниз!",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "Её длинный меч описал в воздухе серебристую дугу, холодную и глубокую, как лунный свет!",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Я расцветаю в хаосе!",
+    "sprite_center": "Hokushin Mei 1.png"
+  },
+  {
+    "text": "Звяк———",
+    "sfx": "clang.ogg"
+  },
+  {
+    "text": "Строй распался!"
+  },
+  {
+    "text": "Собравшиеся рыцари, пришедшие в замешательство, больше не могли удерживать строй. В этой суматохе ронин легко перемещалась между рядами, как рыба в воде."
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Думаете справитесь со мной?",
+    "sprite_center": "Hokushin Mei 3.png"
+  },
+  {
+    "text": "Ряды противника редели."
+  },
+  {
+    "text": "Ронин обуздала свой убийственный порыв, чтобы не дать пробудиться Хоукаю внутри себя."
+  },
+  {
+    "text": "Хотя её длинный меч оставался острым, в нём уже не было прежней смертоносной силы. Однако, когда она взмахнула им, он неожиданно стал легче."
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Даже обычная прогулка может привести к множеству событий, поистине год несчастий.",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Теперь нужно найти способ сбежать отсюда.",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "В этот момент в ночном ветру внезапно раздался голос.",
+    "background":"black.png",
+    "audio": "BGM_137_INQUISITOR_Loop.ogg"
+  },
+  {
+    "text": "Он зазвучал прямо перед ней.",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "???",
+    "text": "Похоже, что такого уровня всё ещё недостаточно, чтобы одолеть грозного противника.",
+    "sprite_center": "Iron Maiden 1.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Кто!?",
+    "sprite_center": "Hokushin Mei 1.png",
+    "background": "CG10301.png"
+  },
+  {
+    "text": "Когда голос затих, луна, казалось, стала багровой.",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "centre",
+    "background":"black.png"
+  },
+  {
+    "text": "Хокусин Мэй прекрасно понимала, что это всего лишь иллюзия.",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "Просто, как и в случае с ней прежней, ужасающее проклятие, вызванное чрезмерным количеством убийств, исказило её разум.",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "text": "И всё же, несмотря на такое сильное желание убить, голос этого человека оставался спокойным...",
+    "sprite_center": "Hokushin Mei 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "???",
+    "text": "Приветствую.",
+    "background": "CG10305.png"
+  },
+  {
+    "speaker": "???",
+    "text": "Та, что бросила вызов церкви, грешница, похитившая божественную коробку, демон из страны восходящего солнца, Хокусин Мэй."
+  },
+  {
+    "speaker": "???",
+    "text": "Шиксал прощает тебя, даруя искупление телу грешника."
+  },
+  {
+    "speaker": "???",
+    "text": "Вернись на праведный путь."
+  },
+  {
+    "speaker": "???",
+    "text": "Привести приговор в исполнение!"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "...Хмпф!",
+    "sprite_left": "Hokushin Mei 2.png",
+    "background": "inng_stage4A.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Похоже, на этот раз в дело вступает босс. Интересно. Чтобы поймать вора, нужно сначала поймать короля.",
+    "sprite_left": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ну что ж, давай посмотрим, на что ты способна!",
+    "sprite_left": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "???",
+    "text": "Вор, говоришь... Ты не о себе?",
+    "sprite_right": "Iron Maiden 4.png",
+    "audio": "BGM_136_EXECUTIONER - Executioner.ogg"
+  },
+  {
+    "speaker": "???",
+    "text": "Как прискорбно.",
+    "sprite_right": "Iron Maiden 4.png"
+  },
+  {
+    "speaker": "???",
+    "text": "Кажется, ты не осознаёшь своей вины.",
+    "sprite_right": "Iron Maiden 4.png"
+  },
+  {
+    "speaker": "???",
+    "text": "В таком случае...",
+    "sprite_right": "Iron Maiden 3.png"
+  },
+  {
+    "sfx": "clang.ogg",
+    "text": "Звяк!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "centre"
+  },
+  {
+    "sfx": "clang.ogg",
+    "text": "Звяк!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Мэй Хокусин",
+    "text": "Чёрт... Она такая быстрая———",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "sfx": "clang.ogg",
+    "text": "Звяк!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "centre"
+  },
+  {
+    "sfx": "clang.ogg",
+    "text": "Звяк!",
+    "sprite_center": "Hokushin Mei 2.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "???",
+    "text": "Невежественная бунтарка, вспомни свои грехи.",
+    "sprite_center": "Iron Maiden 1.png"
+  },
+  {
+    "sfx": "clang.ogg",
+    "text": "Звяк!"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Кха... Ты говоришь о праведности, но весь твой отряд полон убийц———",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "???",
+    "text": "Чтобы бороться с ересью, благожелательность заключается в том, чтобы снова дать учение грешникам, запечатлевая его глубоко в душе и давая возможность жить с чувством вины.",
+    "sprite_center": "Iron Maiden 2.png"
+  },
+  {
+    "speaker": "???",
+    "text": "Но для тебя смерть — это уже величайшее милосердие, которое может даровать Шиксал.",
+    "sprite_center": "Iron Maiden 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ох, ну что за чушь! Я правда... не выношу вас, шиксальцев!",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "text": "Сверкающее лезвие рассекло воздух по прямой дуге, описав блестящую кривую."
+  },
+  {
+    "text": "В тот момент, когда лезвие ударилось о длинную рукоять, раздался звонкий лязг."
+  },
+  {
+    "sfx": "clang.ogg",
+    "text": "Звяк!!!",
+    "sprite_center": "Iron Maiden 1.png",
+    "dim_override": "centre"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ху... Ху... Ха...",
+    "sprite_center": "Hokushin Mei 1.png"
+  },
+  {
+    "speaker": "???",
+    "text": "...Какой захватывающий удар.",
+    "sprite_center": "Iron Maiden 4.png"
+  },
+  {
+    "speaker": "???",
+    "text": "Я думала, что твои силы на исходе, но ты всё же смогла нанести такой удар. Поистине достойно восхищения.",
+    "sprite_center": "Iron Maiden 4.png"
+  },
+  {
+    "speaker": "???",
+    "text": "Ты как падающая звезда: мимолётная, но прекрасная.",
+    "sprite_center": "Iron Maiden 4.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Пфф... Хватит там важничать... Вы, ублюдки из Шиксала.",
+    "sprite_center": "Hokushin Mei 2.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Неужто считаешь, что я проиграю тебе?",
+    "sprite_center": "Hokushin Mei 2.png"
   }
   ]
 }
