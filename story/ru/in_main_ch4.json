@@ -1049,7 +1049,8 @@
   {
     "speaker": "???",
     "text": "Раз уж вышла, то о возвращении не думай.",
-    "sprite_left": "Iron Maiden 1.png"
+    "sprite_left": "Iron Maiden 1.png",
+    "pos_left": "width: 60%"
   },
   {
     "speaker": "Каллен",
@@ -1561,8 +1562,7 @@
     "text": "На этом мы пока попрощаемся.",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left",
-    "anim_right": "exit-right"
+    "dim_override": "left"
   },
   {
     "speaker": "Фука",
@@ -1583,7 +1583,8 @@
     "text": "Что ж... было приятно познакомиться с вами обеими. До новой встречи———",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "anim_right": "exit-right"
   },
   {
     "speaker": "Хокусин Мэй",
