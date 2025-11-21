@@ -219,9 +219,7 @@
         .sprite-position {
             position: absolute;
             bottom: 0; 
-            height: 95%; 
-            /* Уменьшаем ширину спрайта, чтобы освободить место на узких экранах */
-            width: 40%;
+            width: 95%;
             bottom: -30%;
             transition: opacity 0.5s ease; 
             z-index: 10;
@@ -232,6 +230,7 @@
         @media (min-width: 768px) {
             .sprite-position {
                 width: 60%; /* Увеличиваем на больших экранах */
+                bottom: -30%;
             }
         }
 
@@ -242,11 +241,13 @@
         .sprite-position.center {
             left: 50%;
             transform: translateX(-50%);
-            width: 40%; /* Адаптивная ширина */
+            width: 100%; /* Адаптивная ширина */
+            bottom: -30%;
         }
         @media (min-width: 768px) {
             .sprite-position.center {
                 width: 60%; /* Адаптивная ширина */
+                bottom: -30%;
             }
         }
         
@@ -492,7 +493,6 @@
                     transform scale-100 transition-transform duration-300 border-2" 
                     style="background-color: var(--color-warning-bg); border-color: var(--color-warning-accent); color: var(--color-text-primary);">
 
-            <!-- Заголовок: Изменен на "ПРИМЕЧАНИЕ" -->
             <h1 id="warningTitleText" class="text-4xl md:text-7xl font-extrabold mb-6 select-none tracking-tight" 
                 style="color: var(--color-warning-accent);">
                 ПРИМЕЧАНИЕ
@@ -524,13 +524,6 @@
             </button>
         </div>
     </div>
-
-    <!-- 
-      АУДИОПЛЕЕРЫ УДАЛЕНЫ.
-      Все аудио (BGM и SFX) теперь будет управляться через Web Audio API,
-      чтобы предотвратить конфликты и прерывания.
-    -->
-
 
     <script>
         // ====================================================================
