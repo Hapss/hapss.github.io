@@ -444,7 +444,7 @@
                 WARNING_KEY: 'vn_warning_dismissed',
                 VOLUME_KEY: 'vn_volume',
                 MUTE_KEY: 'vn_muted',
-                PROGRESS_KEY: 'vn_progress', // Новый ключ для сохранения прогресса
+                PROGRESS_KEY: 'vn_progress',
             },
             AUDIO: {
                 DUCKING_RATIO: 0.3, 
@@ -754,65 +754,88 @@
             }).catch(e => console.error(`SFX failed: ${sfxUrl}`, e));
         }
 
-        // === Logic for Progress Saving ===
+        // === PROGRESS SAVE/RESTORE SYSTEM ===
 
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Сохранение с поддержкой позиции скролла
         function saveProgress() {
             if (!dialogueIsLoaded || !elements.chapterSelect.value) return;
+
+            const fullContent = document.getElementById('fullDialogueContent');
+            const scrollTop = fullContent ? fullContent.scrollTop : 0;
 
             const progress = {
                 type: elements.storyTypeSelect.value,
                 arc: elements.arcSelect.value,
                 chapter: elements.chapterSelect.value,
                 index: currentDialogueIndex,
+                scrollTop: scrollTop,
                 timestamp: Date.now()
             };
 
             localStorage.setItem(CONFIG.STORAGE.PROGRESS_KEY, JSON.stringify(progress));
         }
 
+        // Надежное восстановление прогресса
         async function restoreProgress() {
             const savedData = localStorage.getItem(CONFIG.STORAGE.PROGRESS_KEY);
             if (!savedData) {
-                initializeOrUpdateUI(); // Стандартная инициализация, если нет сохранений
+                initializeOrUpdateUI(); 
                 return;
             }
 
             try {
                 const progress = JSON.parse(savedData);
-                
-                // 1. Восстанавливаем тип сюжета
-                if (elements.storyTypeSelect.querySelector(`option[value="${progress.type}"]`)) {
-                    elements.storyTypeSelect.value = progress.type;
-                    updateArcAndChapterUI(); // Обновляем зависимые селекторы (синхронно)
-                } else {
-                    throw new Error("Saved story type not found");
-                }
+                console.log("[Restore] Found saved state:", progress);
 
-                // 2. Восстанавливаем арку (если есть)
-                if (progress.type === 'main' && progress.arc) {
-                    if (elements.arcSelect.querySelector(`option[value="${progress.arc}"]`)) {
+                // 1. Восстанавливаем Type
+                const typeOption = elements.storyTypeSelect.querySelector(`option[value="${progress.type}"]`);
+                if (!typeOption) throw new Error(`Saved Type "${progress.type}" not found.`);
+                
+                elements.storyTypeSelect.value = progress.type;
+                
+                // 2. Принудительно обновляем UI (заполняем Arcs или скрываем их)
+                // ВАЖНО: updateArcAndChapterUI сбрасывает arcSelect, поэтому нужно восстанавливать его ПОСЛЕ
+                updateArcAndChapterUI(); 
+
+                // 3. Восстанавливаем Arc (если тип main)
+                if (progress.type === 'main') {
+                    const arcOption = elements.arcSelect.querySelector(`option[value="${progress.arc}"]`);
+                    if (arcOption) {
                         elements.arcSelect.value = progress.arc;
-                        updateChapterSelect(); // Обновляем список глав
+                        // Обновляем список глав для этой конкретной арки
+                        updateChapterSelect();
+                    } else {
+                        console.warn(`Saved Arc "${progress.arc}" not found, defaulting.`);
                     }
                 }
 
-                // 3. Восстанавливаем главу
-                if (elements.chapterSelect.querySelector(`option[value="${progress.chapter}"]`)) {
+                // 4. Восстанавливаем Chapter
+                const chapterOption = elements.chapterSelect.querySelector(`option[value="${progress.chapter}"]`);
+                if (chapterOption) {
                     elements.chapterSelect.value = progress.chapter;
                     enableLoadButton();
                     
-                    // 4. Загружаем контент и прыгаем к индексу
-                    // Передаем сохраненный индекс в функцию загрузки
-                    await updateStoryContent(progress.index);
-                    
-                    console.log("Progress restored:", progress);
+                    // 5. Загружаем контент
+                    await updateStoryContent(progress.index, progress.scrollTop);
                 } else {
-                    throw new Error("Saved chapter not found");
+                    throw new Error(`Saved Chapter "${progress.chapter}" not found.`);
                 }
 
             } catch (e) {
-                console.warn("Failed to restore progress:", e);
-                localStorage.removeItem(CONFIG.STORAGE.PROGRESS_KEY); // Удаляем битое сохранение
+                console.warn("[Restore] Failed:", e);
+                localStorage.removeItem(CONFIG.STORAGE.PROGRESS_KEY); // Очистка битого сохранения
                 initializeOrUpdateUI();
             }
         }
@@ -932,10 +955,12 @@
             elements.volumeSlider.addEventListener('input', (e) => setVolume(e.target.value));
             if (elements.closeWarningButton) elements.closeWarningButton.addEventListener('click', dismissWarningModal);
             
-            // Сохранение при закрытии вкладки
-            window.addEventListener('beforeunload', () => {
-                saveProgress();
-            });
+            // Auto-save triggers
+            const debouncedSave = debounce(saveProgress, 1000);
+            window.addEventListener('beforeunload', saveProgress);
+            if (elements.fullDialogueContent) {
+                elements.fullDialogueContent.addEventListener('scroll', debouncedSave);
+            }
 
             document.addEventListener('click', (event) => {
                 if (isHistoryVisible && !elements.historyPanel.contains(event.target) && !elements.historyButton.contains(event.target)) {
@@ -944,7 +969,7 @@
             });
 
             await fetchChapterMetadata();
-            // Вместо стандартной инициализации, пытаемся восстановить прогресс
+            // Попытка восстановления вместо стандартной инициализации
             await restoreProgress(); 
         });
 
@@ -1052,7 +1077,7 @@
             const step = currentDialogue[currentDialogueIndex];
             const isFullText = step.text_style === 'full';
             
-            // === Saving Progress ===
+            // === Saving Progress on every step ===
             saveProgress();
 
             // === Audio Control ===
@@ -1063,7 +1088,6 @@
             if (step.sfx) {
                 handleSfx(step.sfx, currentDialogueIndex);
             } else {
-                // Если SFX нет, убеждаемся, что BGM на нормальной громкости 
                 if (bgmGainNode && !isMuted) {
                      fadeAudioNode(bgmGainNode, userVolume, 300);
                 }
@@ -1165,8 +1189,8 @@
             if (isHistoryVisible) renderHistory();
         }
         
-        // Обновленная функция загрузки контента с поддержкой стартового индекса
-        async function updateStoryContent(startIndex = 0) {
+        // Обновлен для поддержки восстановления позиции
+        async function updateStoryContent(startIndex = 0, startScrollTop = 0) {
             const fullStoryKey = elements.chapterSelect.value.trim();
             if (!fullStoryKey) return;
 
@@ -1224,7 +1248,7 @@
             }
 
             currentDialogue = chapterData.dialogue;
-            // Устанавливаем индекс на сохраненный или 0
+            // Восстановление индекса
             currentDialogueIndex = (startIndex >= 0 && startIndex < currentDialogue.length) ? startIndex : 0;
             dialogueIsLoaded = true;
             
@@ -1241,7 +1265,14 @@
             activeBgLayer = 1;
             currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
 
-            renderDialogueStep(); // Отрисовка с нужного кадра
+            renderDialogueStep(); 
+
+            // Восстановление скролла после рендера
+            if (startScrollTop > 0 && elements.fullDialogueContent) {
+                setTimeout(() => {
+                    elements.fullDialogueContent.scrollTop = startScrollTop;
+                }, 100); // Небольшая задержка для уверенности
+            }
 
             elements.chapterLoadOverlay.classList.add('hidden');
             elements.loadText.textContent = i18n.ru.loadedText;
