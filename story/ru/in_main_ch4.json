@@ -1644,6 +1644,482 @@
     "speaker": "Фука",
     "text": "Мэй, Хокусин Мэй!",
     "sprite_left": "Fuka 2.png"
+  },
+  {
+    "text": "Катана — это мой путь, мой путь в мире боевых искусств.",
+    "background": "black.png",
+    "audio": "BGM_131_Loop.ogg"
+  },
+  {
+    "text": "Победа достаётся сильному, а поражение слабому. Острый клинок дарует жизнь, тупой ведёт к гибели."
+  },
+  {
+    "text": "Нравоучения о добродетели не более, чем бредни глупцов."
+  },
+  {
+    "text": "Благие намерения лишь маска для тех, кто жаждет власти."
+  },
+  {
+    "text": "Толпы стекаются под знамёна, не замечая, как те меняют цвет."
+  },
+  {
+    "text": "Мир восхваляет героев, а только те становятся рабами."
+  },
+  {
+    "text": "Всё решает сила."
+  },
+  {
+    "text": "Всё определяет война."
+  },
+  {
+    "text": "Разве не таков порядок вещей в этом мире?"
+  },
+  {
+    "text": "К чему тогда пустые речи о долге и добродетели?"
+  },
+  {
+    "text": "Превзойти всех в воинском искусстве и покорить мир."
+  },
+  {
+    "text": "Отточить мастерство владения клинком и сокрушить врагов."
+  },
+  {
+    "text": "Только так..."
+  },
+  {
+    "text": "можно выжить в любую, самую смутную эпоху."
+  },
+  {
+    "text": "Именно таков мой путь."
+  },
+  {
+    "text": "..."
+  },
+  {
+    "text": "Не знаю, почему, но на этой дороге мне всегда встречались странные люди."
+  },
+  {
+    "text": "Две сестрицы, что положили жизни, которые пожертвовали собой, чтобы изгнать демонов ради меня, незнакомки."
+  },
+  {
+    "text": "Бессмертная, что победила, но пощадила мою жизнь."
+  },
+  {
+    "text": "И та, что пересекла моря, движимая верой в спасение мира."
+  },
+  {
+    "text": "Странные, странные люди."
+  },
+  {
+    "text": "И всё же все они были подлинно сильными."
+  },
+  {
+    "text": "Возможно, в этом мире существуют иные пути, кроме пути клинка."
+  },
+  {
+    "text": "Возможно, есть нечто выше воинского искусства и самой жизни."
+  },
+  {
+    "text": "Но, видно..."
+  },
+  {
+    "text": "мне уже не дано это познать."
+  },
+  {
+    "text": "..."
+  },
+  {
+    "text": "......"
+  },
+  {
+    "text": "Под пронизывающим ночным ветром.",
+    "audio": null,
+    "background": "CG10301.png"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "А-а..."
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хокусин Мэй, ты проснулась.",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ух, я...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Э-э!? Почему я на спине Бессмертной!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Мы возвращаемся в безопасный дом. Ты потеряла сознание, так что мне пришлось тебя понести.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Поставь меня. С моими ногами всё в порядке, не нужно меня нести.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Хорошо.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Спасибо тебе за ранее.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Не за что. Всё потому, что ты смогла так долго продержаться. Оступись ты хоть на секунду раньше, я бы уже не смогла тебя спасти.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Даже если не нужно благодарить, мне следует извиниться. Я молча ушла, и доставила только хлопот.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Поговорим об этом потом.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Что случилось?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Меня смущают действия того рыцаря. Боюсь, это был обман.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Мы должны немедля вернуться в безопасный дом, и подтвердить ситуацию.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Она пыталась отвлечь внимание!?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Возможно.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "В безопасном доме осталась только мисс Каллен, это опасно!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Ускоряемся.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "text": "...",
+    "background": "black.png"
+  },
+  {
+    "text": "Внутри безопасного дома.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right, left",
+    "background": "CG10300.png"
+  },
+  {
+    "text": "Фука замолкла.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right, left"
+  },
+  {
+    "text": "Хокусин Мэй неподвижно стояла рядом с ней.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right, left"
+  },
+  {
+    "text": "Не из-за того, что что-то происходило.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right, left"
+  },
+  {
+    "text": "Внутри безопасного дома было темно, ни единого проблеска света. Царила тишина.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right, left"
+  },
+  {
+    "text": "Тьма и тишь.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right, left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Леди Каллен!",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "text": "Деревянное окно разбито наполовину, на полу валяется разбитый фонарь, ножки стульев сломаны, а огонь в очаге погас.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right, left"
+  },
+  {
+    "text": "Комната была пуста, только холодный ветер свистел в разбитом окне.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right, left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Каллен... Неужели рыцари смерти настигли её?",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Похоже, мы попались на крючок.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Её целью с самого начала была Каллен. Она просто выжидала, пока мы все не уйдём.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Теперь нам остаётся только найти Каллен. Но столица Шиксала настолько огромна, что найти одного человека в этом море людей — непростая задача.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "...",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Всё это из-за моего упрямства. Даже если это будет стоить мне жизни, я верну леди Каллен.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Ты ранена. Отдохни и восстановись.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Так не пойдёт, Бессмертная, это противник другого уровня.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Теперь я отчасти понимаю что такое энергия Хоукая.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Столкнувшись лицом к лицу с этим рыцарем, я ясно почувствовала, что ей не хватает той жуткой гнетущей ауры, которой обладали два предыдущих рыцаря.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Это была всего лишь аура, порождённая кровопролитием, — чистое, неподдельное намерение убивать. Оно не имеет ничего общего с Хоукаем.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "...Верно.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Даже с твоими силами найти её будет непросто.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Не совсем. Энергия Хоукая пронизывает каждый уголок этой столицы, а в церки Хоукай ощущается особенно сильно.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Если Каллен схватили и вернули в Церковь Шиксала, то это место нельзя упускать из виду.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Тогда разделимся. Ты обыщешь церковь, а я займусь поисками в столице.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Но ты ранена, а катана сломана... Искать её в хорошо охраняемой столице Шиксала слишком рискованно.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Не волнуйся, Бессмертная.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Будучи ронином, я научилась хорошо скрывать своё присутствие.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Ладно, похоже, мне не удастся тебя переубедить.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Даже если найдёшь Каллен, не действуй опрометчиво. Сначала сообщи мне.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Фука",
+    "text": "Позови Цзинвэй, она доставит сообщение.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Ту птицу... Хорошо.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Тебе не нужно так волноваться.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "По правде говоря, по сравнению с искусством фехтования, позволяющим убивать врагов, я больше преуспела в... том, чтобы оставаться в живых.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Фука",
+    "text": "...Хорошо.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "left"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "Бессмертная, да пребудет с тобой удача в сражениях.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
+  },
+  {
+    "speaker": "Хокусин Мэй",
+    "text": "А теперь пора.",
+    "sprite_left": "Hokushin Mei 1.png",
+    "sprite_right": "Fuka 2.png",
+    "dim_override": "right"
   }
   ]
 }
