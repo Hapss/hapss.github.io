@@ -207,7 +207,7 @@
             display: block; 
             transition: opacity 0.3s ease, filter 0.3s ease; 
             opacity: 1; 
-            transform: scale(1.3);
+            transform: scale(1.4);
             transform-origin: bottom center;
         }
         
@@ -216,7 +216,7 @@
             opacity: 1 !important; 
         }
 
-        /* === ЭФФЕКТЫ И АНИМАЦИИ (НОВОЕ) === */
+        /* === ЭФФЕКТЫ И АНИМАЦИИ === */
         
         /* 1. Тряска экрана */
         @keyframes shake-anim {
@@ -229,8 +229,6 @@
         }
 
         /* 2. Уход спрайтов (Exit Animations) */
-        /* !important используется для переопределения inline-стилей кастомных позиций */
-        
         .sprite-position.left.exit-left { transform: translateX(-100%) !important; opacity: 0 !important; }
         .sprite-position.left.exit-right { transform: translateX(200%) !important; opacity: 0 !important; }
         .sprite-position.left.exit-down { transform: translateY(100%) !important; opacity: 0 !important; }
@@ -446,12 +444,13 @@
                 WARNING_KEY: 'vn_warning_dismissed',
                 VOLUME_KEY: 'vn_volume',
                 MUTE_KEY: 'vn_muted',
+                PROGRESS_KEY: 'vn_progress', // Новый ключ для сохранения прогресса
             },
             AUDIO: {
-                DUCKING_RATIO: 0.3, // Громкость музыки падает до 30% во время SFX
-                FADE_OUT_TIME: 100, // мс
-                FADE_IN_TIME: 500,  // мс
-                SFX_MULTIPLIER: 2.0, // SFX звучит в 2 раза громче настройки
+                DUCKING_RATIO: 0.3, 
+                FADE_OUT_TIME: 100, 
+                FADE_IN_TIME: 500,  
+                SFX_MULTIPLIER: 2.0, 
             },
             PLACEHOLDERS: {
                 DEFAULT_BG_COLOR: '#1f2937',
@@ -575,7 +574,6 @@
                     audioContext = new AudioContext();
                     
                     sfxGainNode = audioContext.createGain();
-                    // ОБНОВЛЕНО: Применяем множитель SFX при инициализации
                     sfxGainNode.gain.value = isMuted ? 0 : (userVolume * CONFIG.AUDIO.SFX_MULTIPLIER);
                     sfxGainNode.connect(audioContext.destination);
 
@@ -601,7 +599,6 @@
             const volumeLevel = isMuted ? 0 : parseFloat(level);
             userVolume = parseFloat(level);
 
-            // ОБНОВЛЕНО: Применяем множитель SFX при изменении громкости
             if (sfxGainNode) {
                 const sfxVolume = isMuted ? 0 : (userVolume * CONFIG.AUDIO.SFX_MULTIPLIER);
                 sfxGainNode.gain.setValueAtTime(sfxVolume, audioContext.currentTime);
@@ -734,13 +731,11 @@
                 
                 stopAllSfx();
 
-                // === DUCKING LOGIC (Приглушение) ===
                 if (bgmGainNode && !isMuted) {
                     const duckVolume = userVolume * CONFIG.AUDIO.DUCKING_RATIO;
                     fadeAudioNode(bgmGainNode, duckVolume, CONFIG.AUDIO.FADE_OUT_TIME);
                 }
                 
-                // ОБНОВЛЕНО: Принудительное применение громкости
                 const sfxVol = isMuted ? 0 : (userVolume * CONFIG.AUDIO.SFX_MULTIPLIER);
                 sfxGainNode.gain.cancelScheduledValues(audioContext.currentTime);
                 sfxGainNode.gain.setValueAtTime(sfxVol, audioContext.currentTime);
@@ -749,7 +744,6 @@
                 currentSfxSource = source;
                 
                 source.onended = () => {
-                    // Восстановление громкости после окончания SFX
                     if (currentSfxSource === source) {
                         currentSfxSource = null;
                         if (bgmGainNode && !isMuted) {
@@ -758,6 +752,69 @@
                     }
                 };
             }).catch(e => console.error(`SFX failed: ${sfxUrl}`, e));
+        }
+
+        // === Logic for Progress Saving ===
+
+        function saveProgress() {
+            if (!dialogueIsLoaded || !elements.chapterSelect.value) return;
+
+            const progress = {
+                type: elements.storyTypeSelect.value,
+                arc: elements.arcSelect.value,
+                chapter: elements.chapterSelect.value,
+                index: currentDialogueIndex,
+                timestamp: Date.now()
+            };
+
+            localStorage.setItem(CONFIG.STORAGE.PROGRESS_KEY, JSON.stringify(progress));
+        }
+
+        async function restoreProgress() {
+            const savedData = localStorage.getItem(CONFIG.STORAGE.PROGRESS_KEY);
+            if (!savedData) {
+                initializeOrUpdateUI(); // Стандартная инициализация, если нет сохранений
+                return;
+            }
+
+            try {
+                const progress = JSON.parse(savedData);
+                
+                // 1. Восстанавливаем тип сюжета
+                if (elements.storyTypeSelect.querySelector(`option[value="${progress.type}"]`)) {
+                    elements.storyTypeSelect.value = progress.type;
+                    updateArcAndChapterUI(); // Обновляем зависимые селекторы (синхронно)
+                } else {
+                    throw new Error("Saved story type not found");
+                }
+
+                // 2. Восстанавливаем арку (если есть)
+                if (progress.type === 'main' && progress.arc) {
+                    if (elements.arcSelect.querySelector(`option[value="${progress.arc}"]`)) {
+                        elements.arcSelect.value = progress.arc;
+                        updateChapterSelect(); // Обновляем список глав
+                    }
+                }
+
+                // 3. Восстанавливаем главу
+                if (elements.chapterSelect.querySelector(`option[value="${progress.chapter}"]`)) {
+                    elements.chapterSelect.value = progress.chapter;
+                    enableLoadButton();
+                    
+                    // 4. Загружаем контент и прыгаем к индексу
+                    // Передаем сохраненный индекс в функцию загрузки
+                    await updateStoryContent(progress.index);
+                    
+                    console.log("Progress restored:", progress);
+                } else {
+                    throw new Error("Saved chapter not found");
+                }
+
+            } catch (e) {
+                console.warn("Failed to restore progress:", e);
+                localStorage.removeItem(CONFIG.STORAGE.PROGRESS_KEY); // Удаляем битое сохранение
+                initializeOrUpdateUI();
+            }
         }
 
         // === Theme & UX ===
@@ -875,6 +932,11 @@
             elements.volumeSlider.addEventListener('input', (e) => setVolume(e.target.value));
             if (elements.closeWarningButton) elements.closeWarningButton.addEventListener('click', dismissWarningModal);
             
+            // Сохранение при закрытии вкладки
+            window.addEventListener('beforeunload', () => {
+                saveProgress();
+            });
+
             document.addEventListener('click', (event) => {
                 if (isHistoryVisible && !elements.historyPanel.contains(event.target) && !elements.historyButton.contains(event.target)) {
                     toggleHistory(); 
@@ -882,7 +944,8 @@
             });
 
             await fetchChapterMetadata();
-            initializeOrUpdateUI(); 
+            // Вместо стандартной инициализации, пытаемся восстановить прогресс
+            await restoreProgress(); 
         });
 
         // === Logic Functions ===
@@ -989,6 +1052,9 @@
             const step = currentDialogue[currentDialogueIndex];
             const isFullText = step.text_style === 'full';
             
+            // === Saving Progress ===
+            saveProgress();
+
             // === Audio Control ===
             if ('audio' in step) {
                 handleAudio(step.audio);
@@ -998,7 +1064,6 @@
                 handleSfx(step.sfx, currentDialogueIndex);
             } else {
                 // Если SFX нет, убеждаемся, что BGM на нормальной громкости 
-                // (на случай если предыдущий SFX был прерван навигацией)
                 if (bgmGainNode && !isMuted) {
                      fadeAudioNode(bgmGainNode, userVolume, 300);
                 }
@@ -1022,37 +1087,29 @@
             const newRight = step.sprite_right || null;
             const newCenter = step.sprite_centre || null;
 
-            // === НОВОЕ: Сброс эффектов и позиций перед отрисовкой ===
-            
-            // 1. Сброс кастомных стилей
+            // === Effects Reset ===
             spriteLeftContainer.style.cssText = '';
             spriteRightContainer.style.cssText = '';
             spriteCenterContainer.style.cssText = '';
 
-            // 2. Сброс классов анимации ухода
             const exitClasses = ['exit-left', 'exit-right', 'exit-down'];
             spriteLeftContainer.classList.remove(...exitClasses);
             spriteRightContainer.classList.remove(...exitClasses);
             spriteCenterContainer.classList.remove(...exitClasses);
 
-            // 3. Применение кастомных позиций (если есть)
             if (step.pos_left) spriteLeftContainer.style.cssText = step.pos_left;
             if (step.pos_right) spriteRightContainer.style.cssText = step.pos_right;
             if (step.pos_center) spriteCenterContainer.style.cssText = step.pos_center;
 
-            // 4. Применение анимации ухода (если есть)
             if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
             if (step.anim_right) spriteRightContainer.classList.add(step.anim_right);
             if (step.anim_center) spriteCenterContainer.classList.add(step.anim_center);
 
-            // 5. Эффект тряски
             vnViewerElement.classList.remove('shake');
             if (step.effect === 'shake') {
-                void vnViewerElement.offsetWidth; // Триггер перерисовки (reflow) для перезапуска анимации
+                void vnViewerElement.offsetWidth; 
                 vnViewerElement.classList.add('shake');
             }
-
-            // === Конец блока новых эффектов ===
 
             if (newCenter) {
                 loadSprite(spritePath(newCenter), spriteCenterElement, spriteCenterContainer);
@@ -1108,7 +1165,8 @@
             if (isHistoryVisible) renderHistory();
         }
         
-        async function updateStoryContent() {
+        // Обновленная функция загрузки контента с поддержкой стартового индекса
+        async function updateStoryContent(startIndex = 0) {
             const fullStoryKey = elements.chapterSelect.value.trim();
             if (!fullStoryKey) return;
 
@@ -1166,7 +1224,8 @@
             }
 
             currentDialogue = chapterData.dialogue;
-            currentDialogueIndex = 0;
+            // Устанавливаем индекс на сохраненный или 0
+            currentDialogueIndex = (startIndex >= 0 && startIndex < currentDialogue.length) ? startIndex : 0;
             dialogueIsLoaded = true;
             
             currentBackgroundUrl = null;
@@ -1182,7 +1241,7 @@
             activeBgLayer = 1;
             currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
 
-            renderDialogueStep();
+            renderDialogueStep(); // Отрисовка с нужного кадра
 
             elements.chapterLoadOverlay.classList.add('hidden');
             elements.loadText.textContent = i18n.ru.loadedText;
