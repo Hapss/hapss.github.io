@@ -1561,7 +1561,8 @@
     "text": "На этом мы пока попрощаемся.",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "anim_right": "exit_right"
   },
   {
     "speaker": "Фука",
