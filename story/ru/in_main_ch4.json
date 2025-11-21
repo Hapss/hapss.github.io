@@ -707,7 +707,7 @@
   {
     "text": "...",
     "sprite_centre": "Hokushin Mei 2.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Хокусин Мэй",
@@ -716,14 +716,11 @@
   },
   {
     "speaker": "Рыцарь смерти",
-    "text": "Докладываю, грешница больше не может двигаться.",
-    "sprite_centre": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "text": "Докладываю, грешница больше не может двигаться."
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Чёрт...",
-    "sprite_centre": "Hokushin Mei 1.png",
     "background": "CG10311.png"
   },
   {
@@ -736,41 +733,30 @@
   },
   {
     "speaker": "Рыцарь смерти",
-    "text": "Этот человек крайне нестабильно реагирует на энергию Хоукая. Рекомендуется немедленное устранение.",
-    "sprite_centre": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "text": "Этот человек крайне нестабильно реагирует на энергию Хоукая. Рекомендуется немедленное устранение."
   },
   {
     "speaker": "Рыцарь смерти",
-    "text": "Нет нужды ждать лидера, даруйте грешнице освобождение немедля.",
-    "sprite_centre": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "text": "Нет нужды ждать лидера, даруйте грешнице освобождение немедля."
   },
   {
     "speaker": "Хокусин Мэй",
-    "text": "Эй, эй! Я Хокусин Мэй, и дух мой ещё не сломлен!",
-    "sprite_centre": "Hokushin Mei 1.png"
+    "text": "Эй, эй! Я Хокусин Мэй, и дух мой ещё не сломлен!"
   },
   {
-    "text": "Хокусин Мэй собралась с силами и снова встала.",
-    "sprite_centre": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "text": "Хокусин Мэй собралась с силами и снова встала."
   },
   {
     "speaker": "Рыцарь смерти",
-    "text": "Заблудший грешник, Шиксал простит твоё невежество и дарует тебе право отправиться в святилище.",
-    "sprite_centre": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "text": "Заблудший грешник, Шиксал простит твоё невежество и дарует тебе право отправиться в святилище."
   },
   {
     "speaker": "Хокусин Мэй",
-    "text": "Это просто завуалированный способ сказать, что ты хочешь моей смерти.",
-    "sprite_centre": "Hokushin Mei 1.png"
+    "text": "Это просто завуалированный способ сказать, что ты хочешь моей смерти."
   },
   {
     "speaker": "Хокусин Мэй",
-    "text": "Ну что ж...",
-    "sprite_centre": "Hokushin Mei 1.png"
+    "text": "Ну что ж..."
   },
   {
     "text": "!",
@@ -797,7 +783,7 @@
   {
     "text": "Она словно убеждала себя, что боевые искусства, которым она посвятила столько лет, были всего лишь кривой дорожкой, лишённой подлинной сути.",
     "sprite_centre": "Hokushin Mei 1.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "background": "CG10301.png"
   },
   {
@@ -877,7 +863,7 @@
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 2.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "sfx": "knock.ogg"
   },
   {
@@ -888,7 +874,7 @@
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 5.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "sfx": "knock.ogg"
   },
   {
@@ -909,17 +895,17 @@
   {
     "text": "«Я фермер, который ночью приехал сюда из деревни».",
     "sprite_centre": "Kallen 5.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "text": "«Наступила глубокая ночь, и я боюсь, что в пути со мной может случиться беда. Я смиренно прошу Вас о милосердии, позвольте мне переночевать здесь...»",
     "sprite_centre": "Kallen 5.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 5.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "sfx": "knock.ogg"
   },
   {
@@ -935,25 +921,25 @@
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 4.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "sfx": "knock.ogg"
   },
   {
     "text": "Тук-тук-тук.",
     "sprite_centre": "Kallen 4.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "sfx": "knock.ogg"
   },
   {
     "text": "Тук-тук...",
     "sprite_centre": "Kallen 4.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "sfx": "knock.ogg"
   },
   {
     "text": "...",
     "sprite_centre": "Kallen 4.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Каллен",
@@ -973,7 +959,7 @@
   {
     "text": "Скри-и-ип.",
     "sprite_centre": "Kallen 1.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "sfx": "creak.ogg"
   },
   {
@@ -984,12 +970,12 @@
   {
     "text": "В бескрайней ночи невдалеке, спотыкаясь, двигалась вперёд чёрная фигура.",
     "sprite_centre": "Kallen 10.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "text": "Хотя видна была только спина, это явно был старик в лохмотьях.",
     "sprite_centre": "Kallen 10.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Каллен",
@@ -999,7 +985,7 @@
   {
     "text": "Каллен быстро распахнула дверь, закрыла её за собой и подошла к старику.",
     "sprite_centre": "Kallen 2.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Каллен",
@@ -1010,7 +996,7 @@
     "speaker": "Старый человек",
     "text": "Т-ты же...",
     "sprite_centre": "Kallen 5.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Каллен",
@@ -1026,7 +1012,7 @@
     "speaker": "Старый человек",
     "text": "О... о... большое вам спасибо...",
     "sprite_centre": "Kallen 3.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Каллен",
@@ -1036,18 +1022,18 @@
   {
     "text": "Проводив пожилого мужчину, Каллен развернулась и направилась к безопасному дому.",
     "sprite_centre": "Kallen 3.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "text": "Но как только она подошла к двери, Каллен замерла.",
     "sprite_centre": "Kallen 3.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "audio": null
   },
   {
     "text": "Потому что дверь уже была открыта.",
     "sprite_centre": "Kallen 3.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Каллен",
@@ -1057,7 +1043,7 @@
   {
     "text": "Звяк!",
     "sprite_centre": "Kallen 5.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "sfx": "clang.ogg"
   },
   {
@@ -1093,12 +1079,12 @@
   {
     "text": "Ронин, нырнув с головой, резко повернула её и устремилась вниз!",
     "sprite_center": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "text": "Её длинный меч описал в воздухе серебристую дугу, холодную и глубокую, как лунный свет!",
     "sprite_center": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Хокусин Мэй",
@@ -1147,7 +1133,7 @@
   {
     "text": "Он зазвучал прямо перед ней.",
     "sprite_center": "Hokushin Mei 2.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "???",
@@ -1163,23 +1149,23 @@
   {
     "text": "Когда голос затих, луна, казалось, стала багровой.",
     "sprite_center": "Hokushin Mei 1.png",
-    "dim_override": "centre",
+    "dim_override": "center",
     "background":"black.png"
   },
   {
     "text": "Хокусин Мэй прекрасно понимала, что это всего лишь иллюзия.",
     "sprite_center": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "text": "Просто, как и в случае с ней прежней, ужасающее проклятие, вызванное чрезмерным количеством убийств, исказило её разум.",
     "sprite_center": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "text": "И всё же, несмотря на такое сильное желание убить, голос этого человека оставался спокойным...",
     "sprite_center": "Hokushin Mei 1.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "???",
@@ -1243,13 +1229,13 @@
     "sfx": "clang.ogg",
     "text": "Звяк!",
     "sprite_center": "Hokushin Mei 2.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "sfx": "clang.ogg",
     "text": "Звяк!",
     "sprite_center": "Hokushin Mei 2.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Мэй Хокусин",
@@ -1260,13 +1246,13 @@
     "sfx": "clang.ogg",
     "text": "Звяк!",
     "sprite_center": "Hokushin Mei 2.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "sfx": "clang.ogg",
     "text": "Звяк!",
     "sprite_center": "Hokushin Mei 2.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "???",
@@ -1307,7 +1293,7 @@
     "sfx": "clang.ogg",
     "text": "Звяк!!!",
     "sprite_center": "Iron Maiden 1.png",
-    "dim_override": "centre"
+    "dim_override": "center"
   },
   {
     "speaker": "Хокусин Мэй",
