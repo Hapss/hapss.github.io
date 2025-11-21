@@ -175,9 +175,9 @@
         /* === Спрайты и Фон === */
         .sprite-position {
             position: absolute;
-            height: 140%;
-            bottom: -20%;
-            /* ОБНОВЛЕНО: Добавлены переходы для transform, left, right, bottom для плавных эффектов */
+            /* ОБНОВЛЕНО: Вернул оригинальные значения высоты и позиции */
+            height: 100%;
+            bottom: -30%;
             transition: opacity 0.5s ease, transform 0.5s ease, left 0.5s ease, right 0.5s ease, bottom 0.5s ease; 
             z-index: 10;
             display: flex; 
@@ -208,6 +208,9 @@
             display: block; 
             transition: opacity 0.3s ease, filter 0.3s ease; 
             opacity: 1; 
+            /* ОБНОВЛЕНО: Увеличение спрайта через transform */
+            transform: scale(1.4);
+            transform-origin: bottom center;
         }
         
         .dimmed-sprite {
@@ -230,17 +233,14 @@
         /* 2. Уход спрайтов (Exit Animations) */
         /* !important используется для переопределения inline-стилей кастомных позиций */
         
-        /* Для левого контейнера */
         .sprite-position.left.exit-left { transform: translateX(-100%) !important; opacity: 0 !important; }
         .sprite-position.left.exit-right { transform: translateX(200%) !important; opacity: 0 !important; }
         .sprite-position.left.exit-down { transform: translateY(100%) !important; opacity: 0 !important; }
 
-        /* Для правого контейнера */
         .sprite-position.right.exit-left { transform: translateX(-200%) !important; opacity: 0 !important; }
         .sprite-position.right.exit-right { transform: translateX(100%) !important; opacity: 0 !important; }
         .sprite-position.right.exit-down { transform: translateY(100%) !important; opacity: 0 !important; }
 
-        /* Для центрального контейнера (учитываем его базовый translateX(-50%)) */
         .sprite-position.center.exit-left { transform: translate(-50%, 0) translateX(-200%) !important; opacity: 0 !important; }
         .sprite-position.center.exit-right { transform: translate(-50%, 0) translateX(200%) !important; opacity: 0 !important; }
         .sprite-position.center.exit-down { transform: translate(-50%, 100%) !important; opacity: 0 !important; }
@@ -741,6 +741,11 @@
                     const duckVolume = userVolume * CONFIG.AUDIO.DUCKING_RATIO;
                     fadeAudioNode(bgmGainNode, duckVolume, CONFIG.AUDIO.FADE_OUT_TIME);
                 }
+                
+                // ОБНОВЛЕНО: Принудительное применение громкости
+                const sfxVol = isMuted ? 0 : (userVolume * CONFIG.AUDIO.SFX_MULTIPLIER);
+                sfxGainNode.gain.cancelScheduledValues(audioContext.currentTime);
+                sfxGainNode.gain.setValueAtTime(sfxVol, audioContext.currentTime);
 
                 source.start(0); 
                 currentSfxSource = source;
