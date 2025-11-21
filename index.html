@@ -175,9 +175,10 @@
         /* === Спрайты и Фон === */
         .sprite-position {
             position: absolute;
-            height: 100%;
-            width: 70%;
-            bottom: -30%;
+            /* ОБНОВЛЕНО: Увеличена высота до 140% (+40% размера) */
+            height: 140%;
+            /* ОБНОВЛЕНО: Подняты чуть выше, чтобы компенсировать рост вниз */
+            bottom: -20%;
             transition: opacity 0.5s ease; 
             z-index: 10;
             display: flex; 
@@ -185,26 +186,23 @@
             align-items: flex-end;
         }
         @media (min-width: 768px) {
-            .sprite-position {
-                width: 70%;
-                bottom: -30%;
-            }
+            /* Десктоп */
         }
 
-        .sprite-position.left { left: 0; }
-        .sprite-position.right { right: 0; }
+        /* ОБНОВЛЕНО: Ограничение ширины для предотвращения наложения */
+        .sprite-position.left { 
+            left: 0; 
+            width: 45%; /* Было 70% */
+        }
+        .sprite-position.right { 
+            right: 0; 
+            width: 45%; /* Было 70% */
+        }
         
         .sprite-position.center {
             left: 50%;
             transform: translateX(-50%);
-            width: 70%;
-            bottom: -30%;
-        }
-        @media (min-width: 768px) {
-            .sprite-position.center {
-                width: 70%;
-                bottom: -30%;
-            }
+            width: 50%; /* Было 70% */
         }
         
         .sprite-image {
@@ -429,6 +427,7 @@
                 DUCKING_RATIO: 0.3, // Громкость музыки падает до 30% во время SFX
                 FADE_OUT_TIME: 100, // мс
                 FADE_IN_TIME: 500,  // мс
+                SFX_MULTIPLIER: 2.0, // SFX звучит в 2 раза громче настройки
             },
             PLACEHOLDERS: {
                 DEFAULT_BG_COLOR: '#1f2937',
@@ -552,7 +551,8 @@
                     audioContext = new AudioContext();
                     
                     sfxGainNode = audioContext.createGain();
-                    sfxGainNode.gain.value = isMuted ? 0 : userVolume;
+                    // ОБНОВЛЕНО: Применяем множитель SFX при инициализации
+                    sfxGainNode.gain.value = isMuted ? 0 : (userVolume * CONFIG.AUDIO.SFX_MULTIPLIER);
                     sfxGainNode.connect(audioContext.destination);
 
                     bgmGainNode = audioContext.createGain();
@@ -577,12 +577,14 @@
             const volumeLevel = isMuted ? 0 : parseFloat(level);
             userVolume = parseFloat(level);
 
-            if (sfxGainNode) sfxGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
+            // ОБНОВЛЕНО: Применяем множитель SFX при изменении громкости
+            if (sfxGainNode) {
+                const sfxVolume = isMuted ? 0 : (userVolume * CONFIG.AUDIO.SFX_MULTIPLIER);
+                sfxGainNode.gain.setValueAtTime(sfxVolume, audioContext.currentTime);
+            }
             
-            // Не меняем громкость BGM, если она сейчас приглушена (ducking)
             if (bgmGainNode) {
                 const currentBgmVal = bgmGainNode.gain.value;
-                // Если текущая громкость значительно ниже целевой (значит идет ducking), мы не сбрасываем её резко
                 if (Math.abs(currentBgmVal - volumeLevel) < 0.1 || !currentSfxSource) {
                      bgmGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
                 }
