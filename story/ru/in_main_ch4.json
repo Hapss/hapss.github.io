@@ -1139,7 +1139,8 @@
   {
     "speaker": "???",
     "text": "Похоже, что такого уровня всё ещё недостаточно, чтобы одолеть грозного противника.",
-    "sprite_centre": "Iron Maiden 1.png"
+    "sprite_centre": "Iron Maiden 1.png",
+    "pos_center": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
@@ -1209,22 +1210,26 @@
     "speaker": "???",
     "text": "Вор, говоришь... Ты не о себе?",
     "sprite_right": "Iron Maiden 4.png",
-    "audio": "BGM_136_EXECUTIONER - Executioner.ogg"
+    "audio": "BGM_136_EXECUTIONER - Executioner.ogg",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "???",
     "text": "Как прискорбно.",
-    "sprite_right": "Iron Maiden 4.png"
+    "sprite_right": "Iron Maiden 4.png",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "???",
     "text": "Кажется, ты не осознаёшь своей вины.",
-    "sprite_right": "Iron Maiden 4.png"
+    "sprite_right": "Iron Maiden 4.png",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "???",
     "text": "В таком случае...",
-    "sprite_right": "Iron Maiden 3.png"
+    "sprite_right": "Iron Maiden 3.png",
+    "pos_right": "width: 60%"
   },
   {
     "sfx": "clang.ogg",
@@ -1272,12 +1277,14 @@
   {
     "speaker": "???",
     "text": "Чтобы бороться с ересью, благожелательность заключается в том, чтобы снова дать учение грешникам, запечатлевая его глубоко в душе и давая возможность жить с чувством вины.",
-    "sprite_centre": "Iron Maiden 2.png"
+    "sprite_centre": "Iron Maiden 2.png",
+    "pos_center": "width: 60%"
   },
   {
     "speaker": "???",
     "text": "Но для тебя смерть — это уже величайшее милосердие, которое может даровать Шиксал.",
-    "sprite_centre": "Iron Maiden 2.png"
+    "sprite_centre": "Iron Maiden 2.png",
+    "pos_center": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
@@ -1294,7 +1301,8 @@
     "sfx": "clang.ogg",
     "text": "Звяк!!!",
     "sprite_centre": "Iron Maiden 1.png",
-    "dim_override": "center"
+    "dim_override": "center",
+    "pos_center": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
@@ -1304,17 +1312,20 @@
   {
     "speaker": "???",
     "text": "...Какой захватывающий удар.",
-    "sprite_centre": "Iron Maiden 4.png"
+    "sprite_centre": "Iron Maiden 4.png",
+    "pos_center": "width: 60%"
   },
   {
     "speaker": "???",
     "text": "Я думала, что твои силы на исходе, но ты всё же смогла нанести такой удар. Поистине достойно восхищения.",
-    "sprite_centre": "Iron Maiden 4.png"
+    "sprite_centre": "Iron Maiden 4.png",
+    "pos_center": "width: 60%"
   },
   {
     "speaker": "???",
     "text": "Ты как падающая звезда: мимолётная, но прекрасная.",
-    "sprite_centre": "Iron Maiden 4.png"
+    "sprite_centre": "Iron Maiden 4.png",
+    "pos_center": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
@@ -1348,49 +1359,56 @@
     "text": "Одежда и украшения — это всего лишь атрибуты красоты, а оружие — всего лишь внешние объекты. Пока сердце остаётся неизменным, как его можно назвать «лицемерным»?",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Iron Maiden 1.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Какая извращённая логика. Когда человек и клинок становятся единым целым, достигается вершина боевых искусств. Сегодня я заставлю тебя понять эту истину.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Iron Maiden 1.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Что в Японии, что в Европе. Повстречавшись с вами, я не одержала ни одной победы.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Iron Maiden 1.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Но теперь всё это в прошлом. Стиль одного меча: Полярная Звезда оставит свой след на этой земле, начиная с тебя!",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Iron Maiden 1.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Стиль одного меча: Полярная Звезда————",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Iron Maiden 1.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "???",
     "text": "Ты едина со своим клинком? Похоже, сначала тебе нужно исправить убеждения в своём сердце.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Iron Maiden 1.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Единение!",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Iron Maiden 1.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "sfx": "clang.ogg",
@@ -1471,112 +1489,128 @@
   {
     "speaker": "???",
     "text": "Ты с лёгкостью отразила мою атаку... боюсь, ты и правда бессмертная.",
-    "sprite_right": "Iron Maiden 2.png"
+    "sprite_right": "Iron Maiden 2.png",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Фука",
     "text": "Гора Тайсюань, Фука. Я пришла проверить твои навыки.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Фука",
     "text": "Ты, должно быть, одна из рыцарей апокалипсиса, рыцарь смерти.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "???",
     "text": "Откуда такая уверенность? В конце концов, назвать своё имя сильному противнику — это проявление вежливости. Я не вижу необходимости скрывать его.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "???",
     "text": "Церковь Шиксала, рыцари апокалипсиса. Рыцарь смерти, Железная Дева.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Железная Дева",
     "text": "Хоть вы обе еретички, ваше необычайное мастерство заслуживает уважения.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
     "text": "Апокаплисис... Смерть, как и ожидалось.",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Фука",
     "text": "Ты так долго наблюдала за нами из тени, но не предпринимала никаких действий.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Фука",
     "text": "За последние несколько дней даже люди не из Шиксала, осадили наше убежище.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Фука",
     "text": "Какова именно твоя цель?",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Железная Дева",
     "text": "Если скажу, что надеюсь на ваше присоединение к Шиксалу, вы поверите?",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Фука",
     "text": "Что?..",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Железная Дева",
     "text": "Но после нашей стычки я поняла, что сейчас не время.",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Железная Дева",
     "text": "На этом мы пока попрощаемся.",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Фука",
     "text": "Стой.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "right"
+    "dim_override": "right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Железная Дева",
     "text": "Даже Зофия не смогла бы одолеть вас в честном бою, так что я уж точно не стану претендовать на то, чтобы уничтожить всех сегодня вечером.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
-    "dim_override": "left"
+    "dim_override": "left",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Железная Дева",
@@ -1584,7 +1618,8 @@
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Iron Maiden 2.png",
     "dim_override": "left",
-    "anim_right": "exit-right"
+    "anim_right": "exit-right",
+    "pos_right": "width: 60%"
   },
   {
     "speaker": "Хокусин Мэй",
