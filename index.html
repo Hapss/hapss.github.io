@@ -175,34 +175,29 @@
         /* === Спрайты и Фон === */
         .sprite-position {
             position: absolute;
-            /* ОБНОВЛЕНО: Увеличена высота до 140% (+40% размера) */
             height: 140%;
-            /* ОБНОВЛЕНО: Подняты чуть выше, чтобы компенсировать рост вниз */
             bottom: -20%;
-            transition: opacity 0.5s ease; 
+            /* ОБНОВЛЕНО: Добавлены переходы для transform, left, right, bottom для плавных эффектов */
+            transition: opacity 0.5s ease, transform 0.5s ease, left 0.5s ease, right 0.5s ease, bottom 0.5s ease; 
             z-index: 10;
             display: flex; 
             justify-content: center;
             align-items: flex-end;
         }
-        @media (min-width: 768px) {
-            /* Десктоп */
-        }
 
-        /* ОБНОВЛЕНО: Ограничение ширины для предотвращения наложения */
         .sprite-position.left { 
             left: 0; 
-            width: 45%; /* Было 70% */
+            width: 45%; 
         }
         .sprite-position.right { 
             right: 0; 
-            width: 45%; /* Было 70% */
+            width: 45%; 
         }
         
         .sprite-position.center {
             left: 50%;
             transform: translateX(-50%);
-            width: 50%; /* Было 70% */
+            width: 50%; 
         }
         
         .sprite-image {
@@ -219,6 +214,37 @@
             filter: brightness(0.3) grayscale(30%) !important; 
             opacity: 1 !important; 
         }
+
+        /* === ЭФФЕКТЫ И АНИМАЦИИ (НОВОЕ) === */
+        
+        /* 1. Тряска экрана */
+        @keyframes shake-anim {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        .shake {
+            animation: shake-anim 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+
+        /* 2. Уход спрайтов (Exit Animations) */
+        /* !important используется для переопределения inline-стилей кастомных позиций */
+        
+        /* Для левого контейнера */
+        .sprite-position.left.exit-left { transform: translateX(-100%) !important; opacity: 0 !important; }
+        .sprite-position.left.exit-right { transform: translateX(200%) !important; opacity: 0 !important; }
+        .sprite-position.left.exit-down { transform: translateY(100%) !important; opacity: 0 !important; }
+
+        /* Для правого контейнера */
+        .sprite-position.right.exit-left { transform: translateX(-200%) !important; opacity: 0 !important; }
+        .sprite-position.right.exit-right { transform: translateX(100%) !important; opacity: 0 !important; }
+        .sprite-position.right.exit-down { transform: translateY(100%) !important; opacity: 0 !important; }
+
+        /* Для центрального контейнера (учитываем его базовый translateX(-50%)) */
+        .sprite-position.center.exit-left { transform: translate(-50%, 0) translateX(-200%) !important; opacity: 0 !important; }
+        .sprite-position.center.exit-right { transform: translate(-50%, 0) translateX(200%) !important; opacity: 0 !important; }
+        .sprite-position.center.exit-down { transform: translate(-50%, 100%) !important; opacity: 0 !important; }
+
         
         .bg-layer {
             transition: opacity 1.0s ease; 
@@ -982,7 +1008,8 @@
             if ('background' in step) crossFadeBackground(step.background); 
 
             const { spriteLeftElement, spriteRightElement, spriteCenterElement, 
-                    spriteLeftContainer, spriteRightContainer, spriteCenterContainer } = elements;
+                    spriteLeftContainer, spriteRightContainer, spriteCenterContainer,
+                    vnViewerElement } = elements;
 
             spriteLeftElement.classList.remove('dimmed-sprite');
             spriteRightElement.classList.remove('dimmed-sprite');
@@ -991,6 +1018,38 @@
             const newLeft = step.sprite_left || null;
             const newRight = step.sprite_right || null;
             const newCenter = step.sprite_centre || null;
+
+            // === НОВОЕ: Сброс эффектов и позиций перед отрисовкой ===
+            
+            // 1. Сброс кастомных стилей
+            spriteLeftContainer.style.cssText = '';
+            spriteRightContainer.style.cssText = '';
+            spriteCenterContainer.style.cssText = '';
+
+            // 2. Сброс классов анимации ухода
+            const exitClasses = ['exit-left', 'exit-right', 'exit-down'];
+            spriteLeftContainer.classList.remove(...exitClasses);
+            spriteRightContainer.classList.remove(...exitClasses);
+            spriteCenterContainer.classList.remove(...exitClasses);
+
+            // 3. Применение кастомных позиций (если есть)
+            if (step.pos_left) spriteLeftContainer.style.cssText = step.pos_left;
+            if (step.pos_right) spriteRightContainer.style.cssText = step.pos_right;
+            if (step.pos_center) spriteCenterContainer.style.cssText = step.pos_center;
+
+            // 4. Применение анимации ухода (если есть)
+            if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
+            if (step.anim_right) spriteRightContainer.classList.add(step.anim_right);
+            if (step.anim_center) spriteCenterContainer.classList.add(step.anim_center);
+
+            // 5. Эффект тряски
+            vnViewerElement.classList.remove('shake');
+            if (step.effect === 'shake') {
+                void vnViewerElement.offsetWidth; // Триггер перерисовки (reflow) для перезапуска анимации
+                vnViewerElement.classList.add('shake');
+            }
+
+            // === Конец блока новых эффектов ===
 
             if (newCenter) {
                 loadSprite(spritePath(newCenter), spriteCenterElement, spriteCenterContainer);
