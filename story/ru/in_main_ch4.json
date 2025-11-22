@@ -985,7 +985,8 @@
   {
     "text": "Каллен быстро распахнула дверь, закрыла её за собой и подошла к старику.",
     "sprite_centre": "Kallen 2.png",
-    "dim_override": "center"
+    "dim_override": "center",
+    "background": "CG10301.png"
   },
   {
     "speaker": "Каллен",
