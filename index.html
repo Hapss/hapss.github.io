@@ -787,8 +787,6 @@
         async function restoreProgress() {
             const savedData = localStorage.getItem(CONFIG.STORAGE.PROGRESS_KEY);
             
-            // 1. Сначала инициализируем базовые списки (Типы сюжетов)
-            // Важно: вызов этой функции заполняет storyTypeSelect опциями
             updateI18nStrings(); 
 
             if (!savedData) {
@@ -800,17 +798,12 @@
                 const progress = JSON.parse(savedData);
                 console.log("[Restore] Found saved state:", progress);
 
-                // 2. Восстанавливаем Тип (Type)
                 const typeOption = elements.storyTypeSelect.querySelector(`option[value="${progress.type}"]`);
                 if (!typeOption) throw new Error(`Saved Type "${progress.type}" not found (config changed?).`);
                 
                 elements.storyTypeSelect.value = progress.type;
-                
-                // 3. Обновляем UI под выбранный тип (заполняет или скрывает список Арок)
-                // Это сбросит текущий выбор арки на дефолтный (первый в списке)
                 updateArcAndChapterUI(); 
 
-                // 4. Восстанавливаем Арку (Arc), если она нужна
                 if (progress.type === 'main' && progress.arc) {
                     const arcOption = elements.arcSelect.querySelector(`option[value="${progress.arc}"]`);
                     if (arcOption) {
@@ -820,17 +813,13 @@
                     }
                 }
 
-                // 5. Обновляем список глав на основе Типа и Арки
-                // Это заполнит chapterSelect правильными главами
                 updateChapterSelect();
 
-                // 6. Восстанавливаем Главу (Chapter)
                 const chapterOption = elements.chapterSelect.querySelector(`option[value="${progress.chapter}"]`);
                 if (chapterOption) {
                     elements.chapterSelect.value = progress.chapter;
                     enableLoadButton();
                     
-                    // 7. Загружаем контент
                     console.log(`[Restore] Loading chapter ${progress.chapter} at index ${progress.index}`);
                     await updateStoryContent(progress.index, progress.scrollTop);
                 } else {
@@ -1256,6 +1245,18 @@
             elements.bgLayer2.style.opacity = '0'; elements.bgLayer2.style.backgroundImage = 'none';
             activeBgLayer = 1;
             currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
+
+            let restoredBg = null;
+            let restoredAudio = undefined; 
+
+            for (let i = 0; i <= currentDialogueIndex; i++) {
+                const step = currentDialogue[i];
+                if ('background' in step) restoredBg = step.background;
+                if ('audio' in step) restoredAudio = step.audio;
+            }
+
+            if (restoredBg !== null) crossFadeBackground(restoredBg); 
+            if (restoredAudio !== undefined) await handleAudio(restoredAudio); 
 
             renderDialogueStep(); 
 
