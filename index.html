@@ -218,7 +218,6 @@
 
         /* === ЭФФЕКТЫ И АНИМАЦИИ === */
         
-        /* 1. Тряска экрана */
         @keyframes shake-anim {
             0%, 100% { transform: translateX(0); }
             10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
@@ -228,7 +227,6 @@
             animation: shake-anim 0.5s cubic-bezier(.36,.07,.19,.97) both;
         }
 
-        /* 2. Уход спрайтов (Exit Animations) */
         .sprite-position.left.exit-left { transform: translateX(-100%) !important; opacity: 0 !important; }
         .sprite-position.left.exit-right { transform: translateX(200%) !important; opacity: 0 !important; }
         .sprite-position.left.exit-down { transform: translateY(100%) !important; opacity: 0 !important; }
@@ -467,7 +465,7 @@
             extra: { ru: "Дополнительный сюжет", prefix: "extra_" },
             bosses: { ru: "Боссы", prefix: "boss_" },
             vn: { ru: "Визуальная новелла", prefix: "vn_" },
-            novel: { ru: "Новелла", prefix: "ln_" }
+            romance: { ru: "Лёгкая новелла", prefix: "ln_" }
         };
         
         const MAIN_STORY_ARCS = {
@@ -768,7 +766,6 @@
             };
         }
 
-        // Сохранение с поддержкой позиции скролла
         function saveProgress() {
             if (!dialogueIsLoaded || !elements.chapterSelect.value) return;
 
@@ -787,9 +784,13 @@
             localStorage.setItem(CONFIG.STORAGE.PROGRESS_KEY, JSON.stringify(progress));
         }
 
-        // Надежное восстановление прогресса
         async function restoreProgress() {
             const savedData = localStorage.getItem(CONFIG.STORAGE.PROGRESS_KEY);
+            
+            // 1. Сначала инициализируем базовые списки (Типы сюжетов)
+            // Важно: вызов этой функции заполняет storyTypeSelect опциями
+            updateI18nStrings(); 
+
             if (!savedData) {
                 initializeOrUpdateUI(); 
                 return;
@@ -799,43 +800,46 @@
                 const progress = JSON.parse(savedData);
                 console.log("[Restore] Found saved state:", progress);
 
-                // 1. Восстанавливаем Type
+                // 2. Восстанавливаем Тип (Type)
                 const typeOption = elements.storyTypeSelect.querySelector(`option[value="${progress.type}"]`);
-                if (!typeOption) throw new Error(`Saved Type "${progress.type}" not found.`);
+                if (!typeOption) throw new Error(`Saved Type "${progress.type}" not found (config changed?).`);
                 
                 elements.storyTypeSelect.value = progress.type;
                 
-                // 2. Принудительно обновляем UI (заполняем Arcs или скрываем их)
-                // ВАЖНО: updateArcAndChapterUI сбрасывает arcSelect, поэтому нужно восстанавливать его ПОСЛЕ
+                // 3. Обновляем UI под выбранный тип (заполняет или скрывает список Арок)
+                // Это сбросит текущий выбор арки на дефолтный (первый в списке)
                 updateArcAndChapterUI(); 
 
-                // 3. Восстанавливаем Arc (если тип main)
-                if (progress.type === 'main') {
+                // 4. Восстанавливаем Арку (Arc), если она нужна
+                if (progress.type === 'main' && progress.arc) {
                     const arcOption = elements.arcSelect.querySelector(`option[value="${progress.arc}"]`);
                     if (arcOption) {
                         elements.arcSelect.value = progress.arc;
-                        // Обновляем список глав для этой конкретной арки
-                        updateChapterSelect();
                     } else {
-                        console.warn(`Saved Arc "${progress.arc}" not found, defaulting.`);
+                        console.warn(`Saved Arc "${progress.arc}" not found in list.`);
                     }
                 }
 
-                // 4. Восстанавливаем Chapter
+                // 5. Обновляем список глав на основе Типа и Арки
+                // Это заполнит chapterSelect правильными главами
+                updateChapterSelect();
+
+                // 6. Восстанавливаем Главу (Chapter)
                 const chapterOption = elements.chapterSelect.querySelector(`option[value="${progress.chapter}"]`);
                 if (chapterOption) {
                     elements.chapterSelect.value = progress.chapter;
                     enableLoadButton();
                     
-                    // 5. Загружаем контент
+                    // 7. Загружаем контент
+                    console.log(`[Restore] Loading chapter ${progress.chapter} at index ${progress.index}`);
                     await updateStoryContent(progress.index, progress.scrollTop);
                 } else {
-                    throw new Error(`Saved Chapter "${progress.chapter}" not found.`);
+                    throw new Error(`Saved Chapter "${progress.chapter}" not found in list.`);
                 }
 
             } catch (e) {
-                console.warn("[Restore] Failed:", e);
-                localStorage.removeItem(CONFIG.STORAGE.PROGRESS_KEY); // Очистка битого сохранения
+                console.warn("[Restore] Failed or Save invalid:", e);
+                localStorage.removeItem(CONFIG.STORAGE.PROGRESS_KEY); 
                 initializeOrUpdateUI();
             }
         }
@@ -955,7 +959,6 @@
             elements.volumeSlider.addEventListener('input', (e) => setVolume(e.target.value));
             if (elements.closeWarningButton) elements.closeWarningButton.addEventListener('click', dismissWarningModal);
             
-            // Auto-save triggers
             const debouncedSave = debounce(saveProgress, 1000);
             window.addEventListener('beforeunload', saveProgress);
             if (elements.fullDialogueContent) {
@@ -969,7 +972,6 @@
             });
 
             await fetchChapterMetadata();
-            // Попытка восстановления вместо стандартной инициализации
             await restoreProgress(); 
         });
 
@@ -1077,10 +1079,8 @@
             const step = currentDialogue[currentDialogueIndex];
             const isFullText = step.text_style === 'full';
             
-            // === Saving Progress on every step ===
             saveProgress();
 
-            // === Audio Control ===
             if ('audio' in step) {
                 handleAudio(step.audio);
             }
@@ -1093,7 +1093,6 @@
                 }
             }
 
-            // === Visuals ===
             elements.dialogueWrapper.classList.toggle('hidden', isFullText);
             elements.fullDialogueBox.classList.toggle('hidden', !isFullText);
             
@@ -1111,7 +1110,6 @@
             const newRight = step.sprite_right || null;
             const newCenter = step.sprite_centre || null;
 
-            // === Effects Reset ===
             spriteLeftContainer.style.cssText = '';
             spriteRightContainer.style.cssText = '';
             spriteCenterContainer.style.cssText = '';
@@ -1148,7 +1146,6 @@
                 else spriteRightContainer.classList.add('hidden');
             }
             
-            // Dimming
             let dimTargets = new Set();
             const speakerPos = step.position ? step.position.toLowerCase() : null;
             
@@ -1173,7 +1170,6 @@
                 if (dimTargets.has('right')) spriteRightElement.classList.add('dimmed-sprite');
             }
 
-            // Text
             if (isFullText) {
                 elements.fullCurrentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
                 elements.fullCurrentText.className = `leading-relaxed transition-opacity duration-300 full-text-${step.full_text_size || 'md'}`;
@@ -1189,7 +1185,6 @@
             if (isHistoryVisible) renderHistory();
         }
         
-        // Обновлен для поддержки восстановления позиции
         async function updateStoryContent(startIndex = 0, startScrollTop = 0) {
             const fullStoryKey = elements.chapterSelect.value.trim();
             if (!fullStoryKey) return;
@@ -1219,7 +1214,6 @@
                 return;
             }
 
-            // Asset Preloading
             const urlsToLoad = new Set();
             for (const step of chapterData.dialogue) {
                 if (step.background) urlsToLoad.add(CONFIG.PATHS.BACKGROUND_BASE + encodeURIComponent(step.background));
@@ -1240,7 +1234,6 @@
                 }
             }
             
-            // SFX Preload
             const sfxUrls = new Set();
             chapterData.dialogue.forEach(s => s.sfx && sfxUrls.add(CONFIG.PATHS.AUDIO_BASE + encodeURIComponent(s.sfx)));
             if (sfxUrls.size > 0) {
@@ -1248,7 +1241,6 @@
             }
 
             currentDialogue = chapterData.dialogue;
-            // Восстановление индекса
             currentDialogueIndex = (startIndex >= 0 && startIndex < currentDialogue.length) ? startIndex : 0;
             dialogueIsLoaded = true;
             
@@ -1267,11 +1259,10 @@
 
             renderDialogueStep(); 
 
-            // Восстановление скролла после рендера
             if (startScrollTop > 0 && elements.fullDialogueContent) {
                 setTimeout(() => {
                     elements.fullDialogueContent.scrollTop = startScrollTop;
-                }, 100); // Небольшая задержка для уверенности
+                }, 100); 
             }
 
             elements.chapterLoadOverlay.classList.add('hidden');
