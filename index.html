@@ -308,20 +308,17 @@
         }
 
         /* === ПОЛНОЭКРАННЫЙ РЕЖИМ (Стилизация) === */
-        /* Стили, применяемые только когда vnViewer в режиме Fullscreen API */
         #vnViewer:fullscreen {
             width: 100vw;
             height: 100vh;
-            border-radius: 0; /* Убираем скругление в полном экране */
-            /* Важно: в фуллскрине нужно сбросить aspect-ratio, чтобы заполнить весь экран */
+            border-radius: 0; 
             aspect-ratio: auto; 
             display: flex;
             flex-direction: column;
-            justify-content: flex-end; /* Сохраняем позиционирование диалога снизу */
-            background-color: black; /* Фон на всякий случай */
+            justify-content: flex-end; 
+            background-color: black;
         }
         
-        /* Поддержка webkit для Safari */
         #vnViewer:-webkit-full-screen {
             width: 100%;
             height: 100%;
@@ -331,7 +328,6 @@
             justify-content: flex-end;
         }
 
-        /* Тултип для кнопки полноэкранного режима */
         .tooltip-text {
             visibility: hidden;
             background-color: var(--color-bg-medium);
@@ -341,7 +337,7 @@
             padding: 5px 10px;
             position: absolute;
             z-index: 1;
-            top: 125%; /* Позиция снизу кнопки */
+            top: 125%; 
             left: 50%;
             transform: translateX(-50%);
             opacity: 0;
@@ -364,17 +360,14 @@
     <header id="header" class="fixed top-0 left-0 right-0 z-50 p-3 md:p-4 shadow-xl transition-colors duration-300" style="background-color: var(--color-bg-darkest);">
         <div class="flex flex-wrap justify-between items-center max-w-7xl mx-auto">
             <div class="flex items-center space-x-3">
-                <!-- Кнопка Полноэкранного режима (Слева) -->
+                <!-- Кнопка Полноэкранного режима -->
                 <button id="fullscreenToggle" onclick="toggleFullscreen()" class="tooltip-container p-2 rounded-full transition-colors duration-150 hover:bg-[var(--color-bg-medium)] relative group" style="color: var(--color-text-primary);">
-                    <!-- Иконка разворачивания (по умолчанию) -->
                     <svg id="icon-enter-fullscreen" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
                     </svg>
-                    <!-- Иконка сворачивания (скрыта) -->
                     <svg id="icon-exit-fullscreen" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14h4v4m0-4l-5 5m17-5h-4v4m0-4l5 5M4 10h4V6m0 4l-5-5m17 5h-4V6m0 4l5-5"></path>
                     </svg>
-                    
                     <span id="fullscreen-tooltip-text" class="tooltip-text">Полноэкранный режим</span>
                 </button>
 
@@ -467,7 +460,7 @@
             </div>
 
             <!-- Full Dialogue Box -->
-            <div id="fullDialogueBox" class="hidden">
+<div id="fullDialogueBox" class="hidden">
                 <div id="fullDialogueContent" class="h-full w-full flex flex-col p-4 md:p-8">
                     <p id="fullCurrentText" class="leading-relaxed transition-opacity duration-300"></p>
                 </div>
@@ -493,7 +486,7 @@
     </div>
 
     <script>
-        const CONFIG = {
+const CONFIG = {
             PATHS: {
                 SPRITE_BASE: 'images/sprites/',
                 BACKGROUND_BASE: 'images/background/',
@@ -804,3 +797,751 @@
 
                 source.start(0); 
                 currentSfxSource = source;
+                
+                source.onended = () => {
+                    if (currentSfxSource === source) {
+                        currentSfxSource = null;
+                        if (bgmGainNode && !isMuted) {
+                            fadeAudioNode(bgmGainNode, userVolume, CONFIG.AUDIO.FADE_IN_TIME);
+                        }
+                    }
+                };
+            }).catch(e => console.error(`SFX failed: ${sfxUrl}`, e));
+        }
+
+        // === FULLSCREEN LOGIC ===
+
+        function toggleFullscreen() {
+            const viewer = document.getElementById('vnViewer');
+            if (!document.fullscreenElement) {
+                // Пытаемся войти в полноэкранный режим
+                if (viewer.requestFullscreen) {
+                    viewer.requestFullscreen().catch(err => {
+                        console.warn(`Error attempting to enable fullscreen: ${err.message}`);
+                    });
+                } else if (viewer.webkitRequestFullscreen) { /* Safari */
+                    viewer.webkitRequestFullscreen();
+                }
+            } else {
+                // Выходим
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) { /* Safari */
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+
+        function updateFullscreenUI() {
+            const isFullscreen = !!document.fullscreenElement;
+            const enterIcon = document.getElementById('icon-enter-fullscreen');
+            const exitIcon = document.getElementById('icon-exit-fullscreen');
+            const tooltipText = document.getElementById('fullscreen-tooltip-text');
+
+            if (isFullscreen) {
+                enterIcon.classList.add('hidden');
+                exitIcon.classList.remove('hidden');
+                tooltipText.textContent = "Выйти из полноэкранного режима";
+            } else {
+                enterIcon.classList.remove('hidden');
+                exitIcon.classList.add('hidden');
+                tooltipText.textContent = "Полноэкранный режим";
+            }
+        }
+
+        // === PROGRESS SAVE/RESTORE SYSTEM ===
+
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function saveProgress() {
+            if (!dialogueIsLoaded || !elements.chapterSelect.value) return;
+
+            const fullContent = document.getElementById('fullDialogueContent');
+            const scrollTop = fullContent ? fullContent.scrollTop : 0;
+
+            const progress = {
+                type: elements.storyTypeSelect.value,
+                arc: elements.arcSelect.value,
+                chapter: elements.chapterSelect.value,
+                index: currentDialogueIndex,
+                scrollTop: scrollTop,
+                timestamp: Date.now()
+            };
+
+            localStorage.setItem(CONFIG.STORAGE.PROGRESS_KEY, JSON.stringify(progress));
+        }
+
+        async function restoreProgress() {
+            const savedData = localStorage.getItem(CONFIG.STORAGE.PROGRESS_KEY);
+            
+            updateI18nStrings(); 
+
+            if (!savedData) {
+                initializeOrUpdateUI(); 
+                return;
+            }
+
+            try {
+                const progress = JSON.parse(savedData);
+                console.log("[Restore] Found saved state:", progress);
+
+                const typeOption = elements.storyTypeSelect.querySelector(`option[value="${progress.type}"]`);
+                if (!typeOption) throw new Error(`Saved Type "${progress.type}" not found (config changed?).`);
+                
+                elements.storyTypeSelect.value = progress.type;
+                updateArcAndChapterUI(); 
+
+                if (progress.type === 'main' && progress.arc) {
+                    const arcOption = elements.arcSelect.querySelector(`option[value="${progress.arc}"]`);
+                    if (arcOption) {
+                        elements.arcSelect.value = progress.arc;
+                    } else {
+                        console.warn(`Saved Arc "${progress.arc}" not found in list.`);
+                    }
+                }
+
+                updateChapterSelect();
+
+                const chapterOption = elements.chapterSelect.querySelector(`option[value="${progress.chapter}"]`);
+                if (chapterOption) {
+                    elements.chapterSelect.value = progress.chapter;
+                    enableLoadButton();
+                    
+                    console.log(`[Restore] Loading chapter ${progress.chapter} at index ${progress.index}`);
+                    await updateStoryContent(progress.index, progress.scrollTop);
+                } else {
+                    throw new Error(`Saved Chapter "${progress.chapter}" not found in list.`);
+                }
+
+            } catch (e) {
+                console.warn("[Restore] Failed or Save invalid:", e);
+                localStorage.removeItem(CONFIG.STORAGE.PROGRESS_KEY); 
+                initializeOrUpdateUI();
+            }
+        }
+
+        // === Theme & UX ===
+
+        function saveTheme(theme) {
+            localStorage.setItem(CONFIG.STORAGE.THEME_KEY, theme);
+            applyTheme(theme);
+        }
+
+        function applyTheme(theme) {
+            const isDark = theme === 'dark';
+            document.body.classList.toggle('light-theme', !isDark);
+            document.body.classList.toggle('dark-theme', isDark);
+            if (elements.themeIcon) {
+                elements.themeIcon.textContent = isDark ? '🌙' : '☀️';
+                elements.themeText.textContent = isDark ? i18n.ru.themeDark : i18n.ru.themeLight;
+            }
+            const card = document.getElementById('warning-card');
+            if (card) {
+                const style = getComputedStyle(document.body);
+                card.style.backgroundColor = style.getPropertyValue('--color-warning-bg').trim();
+                card.style.borderColor = style.getPropertyValue('--color-warning-accent').trim();
+                const title = document.getElementById('warningTitleText');
+                if (title) title.style.color = style.getPropertyValue('--color-warning-accent').trim();
+                document.getElementById('warning-overlay').style.backgroundColor = isDark ? 'rgba(15, 23, 42, 0.95)' : 'rgba(241, 245, 249, 0.95)';
+                const btn = card.querySelector('#close-warning-button');
+                if(btn) {
+                    btn.style.backgroundColor = style.getPropertyValue('--color-warning-accent').trim();
+                    btn.style.color = 'white';
+                }
+            }
+            if (currentBackgroundUrl === CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR) {
+                 const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
+                 elements.bgLayer1.style.backgroundColor = themeBgColor;
+                 elements.bgLayer2.style.backgroundColor = themeBgColor;
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            saveTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        }
+
+        function loadTheme() {
+            const savedTheme = localStorage.getItem(CONFIG.STORAGE.THEME_KEY) || 'dark'; 
+            applyTheme(savedTheme);
+        }
+        
+        function handleWarningModalState() {
+            const isDismissed = localStorage.getItem(CONFIG.STORAGE.WARNING_KEY) === 'true';
+            if (isDismissed) {
+                elements.warningOverlay.style.display = 'none';
+            }
+        }
+        
+        function dismissWarningModal() {
+            initAudioContext();
+            localStorage.setItem(CONFIG.STORAGE.WARNING_KEY, 'true');
+            elements.warningOverlay.style.opacity = '0';
+            setTimeout(() => { elements.warningOverlay.style.display = 'none'; }, 500); 
+        }
+
+        // === DOM Init ===
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            elements = {
+                storyTypeSelect: document.getElementById('storyTypeSelect'),
+                arcSelectContainer: document.getElementById('arcSelectContainer'),
+                arcSelect: document.getElementById('arcSelect'),
+                chapterSelect: document.getElementById('chapterSelect'),
+                loadButton: document.getElementById('loadButton'),
+                loadText: document.getElementById('loadText'),
+                vnViewerElement: document.getElementById('vnViewer'),
+                dialogueWrapper: document.getElementById('dialogueWrapper'),
+                currentSpeaker: document.getElementById('currentSpeaker'),
+                currentText: document.getElementById('currentText'),
+                speakerNameContainer: document.getElementById('speakerNameContainer'),
+                fullDialogueBox: document.getElementById('fullDialogueBox'),
+                fullDialogueContent: document.getElementById('fullDialogueContent'),
+                fullCurrentText: document.getElementById('fullCurrentText'),
+                spriteLeftContainer: document.getElementById('spriteLeftContainer'),
+                spriteRightContainer: document.getElementById('spriteRightContainer'),
+                spriteCenterContainer: document.getElementById('spriteCenterContainer'),
+                spriteLeftElement: document.getElementById('spriteLeft'),
+                spriteRightElement: document.getElementById('spriteRight'),
+                spriteCenterElement: document.getElementById('spriteCenter'),
+                bgLayer1: document.getElementById('bgLayer1'),
+                bgLayer2: document.getElementById('bgLayer2'),
+                themeIcon: document.getElementById('themeIcon'),
+                themeText: document.getElementById('themeText'),
+                historyPanel: document.getElementById('historyPanel'),
+                historyContent: document.getElementById('historyContent'),
+                historyTitle: document.getElementById('historyTitle'),
+                historyButton: document.getElementById('historyToggle'),
+                historyText: document.getElementById('historyText'),
+                mainContent: document.getElementById('mainContent'), 
+                warningOverlay: document.getElementById('warning-overlay'),
+                closeWarningButton: document.getElementById('close-warning-button'),
+                chapterLoadOverlay: document.getElementById('chapter-load-overlay'),
+                chapterLoadProgress: document.getElementById('chapter-load-progress'),
+                volumeSlider: document.getElementById('volume-slider'),
+                muteButton: document.getElementById('mute-button'),
+                volumeIcon: document.getElementById('volume-icon'),
+            };
+
+            loadTheme();
+            loadVolume();
+            
+            const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
+            elements.bgLayer1.style.backgroundColor = themeBgColor;
+            elements.bgLayer2.style.backgroundColor = themeBgColor;
+            currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR; 
+             
+            handleWarningModalState(); 
+            elements.volumeSlider.addEventListener('input', (e) => setVolume(e.target.value));
+            if (elements.closeWarningButton) elements.closeWarningButton.addEventListener('click', dismissWarningModal);
+            
+            const debouncedSave = debounce(saveProgress, 1000);
+            window.addEventListener('beforeunload', saveProgress);
+            if (elements.fullDialogueContent) {
+                elements.fullDialogueContent.addEventListener('scroll', debouncedSave);
+            }
+
+            document.addEventListener('click', (event) => {
+                if (isHistoryVisible && !elements.historyPanel.contains(event.target) && !elements.historyButton.contains(event.target)) {
+                    toggleHistory(); 
+                }
+            });
+
+            // Fullscreen listener
+            document.addEventListener('fullscreenchange', updateFullscreenUI);
+            document.addEventListener('webkitfullscreenchange', updateFullscreenUI);
+
+            await fetchChapterMetadata();
+            await restoreProgress(); 
+        });
+
+        // === Logic Functions ===
+        
+        function processTextForBreaks(text) {
+            if (text == null) return '';
+            return String(text).replace(/\n/g, '<br>');
+        }
+
+        function parseColoredText(text) {
+            if (text == null) return '';
+            return String(text).replace(/\[color=([^\]]+)\](.*?)\[\/color\]/gi, (match, color, innerText) => {
+                const safeColor = color.replace(/['"<>]/g, ''); 
+                return `<span style="color: ${safeColor};">${innerText}</span>`;
+            });
+        }
+
+        function loadSprite(url, imgElement, containerElement) {
+            if (!url) {
+                containerElement.classList.add('hidden');
+                return;
+            }
+            const needsReload = imgElement.src !== url;
+            if (needsReload) imgElement.src = url;
+            
+            imgElement.onload = () => containerElement.classList.remove('hidden');
+            imgElement.onerror = () => containerElement.classList.add('hidden');
+            if (imgElement.complete && needsReload) containerElement.classList.remove('hidden');
+            else if (!needsReload) containerElement.classList.remove('hidden');
+        }
+
+        function crossFadeBackground(newBackgroundFile) {
+            const { bgLayer1, bgLayer2 } = elements;
+            const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
+            
+            let newBgUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
+            let isImage = false;
+
+            if (newBackgroundFile) {
+                newBgUrl = CONFIG.PATHS.BACKGROUND_BASE + encodeURIComponent(newBackgroundFile);
+                isImage = true;
+            }
+            
+            if (newBgUrl === currentBackgroundUrl) return;
+            currentBackgroundUrl = newBgUrl;
+
+            const activeLayer = (activeBgLayer === 1) ? bgLayer1 : bgLayer2;
+            const inactiveLayer = (activeBgLayer === 1) ? bgLayer2 : bgLayer1;
+
+            if (isImage) {
+                inactiveLayer.style.backgroundImage = `url("${newBgUrl}")`;
+                inactiveLayer.style.backgroundColor = 'transparent';
+            } else {
+                inactiveLayer.style.backgroundImage = 'none';
+                inactiveLayer.style.backgroundColor = themeBgColor;
+            }
+
+            activeLayer.style.opacity = '0';
+            inactiveLayer.style.opacity = '1';
+            activeBgLayer = (activeBgLayer === 1) ? 2 : 1;
+        }
+        
+        async function fetchChapterMetadata() {
+            try {
+                const response = await fetch(CONFIG.PATHS.METADATA_FILE); 
+                if (!response.ok) throw new Error(response.statusText);
+                window.storyMetadata = await response.json();
+            } catch (error) {
+                console.error(error);
+                alertMessage(i18n.ru.errorFetchMetadataStrict); 
+            }
+        }
+
+        function navigateDialogue(direction) {
+            if (isHistoryVisible || isNavigating) return;
+            isNavigating = true; 
+            initAudioContext();
+            stopAllSfx(); 
+            
+            try { 
+                if (!dialogueIsLoaded || currentDialogue.length === 0) return;
+                const newIndex = currentDialogueIndex + direction;
+
+                if (newIndex >= 0 && newIndex < currentDialogue.length) {
+                    currentDialogueIndex = newIndex;
+                    renderDialogueStep();
+                    if (direction > 0) preloadAssets(currentDialogueIndex + 1);
+                } else if (newIndex >= currentDialogue.length) {
+                    alertMessage(i18n.ru.endOfStory);
+                    currentDialogueIndex = currentDialogue.length - 1;
+                    handleAudio(null); 
+                } else {
+                    alertMessage(i18n.ru.startOfStory);
+                }
+            } catch (e) {
+                 console.error(e);
+                 alertMessage(i18n.ru.errorRender(e.message));
+            } finally {
+                isNavigating = false; 
+            }
+        }
+        
+        function renderDialogueStep() {
+            const step = currentDialogue[currentDialogueIndex];
+            const isFullText = step.text_style === 'full';
+            
+            saveProgress();
+
+            if ('audio' in step) {
+                handleAudio(step.audio);
+            }
+
+            if (step.sfx) {
+                handleSfx(step.sfx, currentDialogueIndex);
+            } else {
+                if (bgmGainNode && !isMuted) {
+                     fadeAudioNode(bgmGainNode, userVolume, 300);
+                }
+            }
+
+            elements.dialogueWrapper.classList.toggle('hidden', isFullText);
+            elements.fullDialogueBox.classList.toggle('hidden', !isFullText);
+            
+            if ('background' in step) crossFadeBackground(step.background); 
+
+            const { spriteLeftElement, spriteRightElement, spriteCenterElement, 
+                    spriteLeftContainer, spriteRightContainer, spriteCenterContainer,
+                    vnViewerElement } = elements;
+
+            spriteLeftElement.classList.remove('dimmed-sprite');
+            spriteRightElement.classList.remove('dimmed-sprite');
+            spriteCenterElement.classList.remove('dimmed-sprite');
+
+            const newLeft = step.sprite_left || null;
+            const newRight = step.sprite_right || null;
+            const newCenter = step.sprite_centre || null;
+
+            spriteLeftContainer.style.cssText = '';
+            spriteRightContainer.style.cssText = '';
+            spriteCenterContainer.style.cssText = '';
+
+            const exitClasses = ['exit-left', 'exit-right', 'exit-down'];
+            spriteLeftContainer.classList.remove(...exitClasses);
+            spriteRightContainer.classList.remove(...exitClasses);
+            spriteCenterContainer.classList.remove(...exitClasses);
+
+            if (step.pos_left) spriteLeftContainer.style.cssText = step.pos_left;
+            if (step.pos_right) spriteRightContainer.style.cssText = step.pos_right;
+            if (step.pos_center) spriteCenterContainer.style.cssText = step.pos_center;
+
+            if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
+            if (step.anim_right) spriteRightContainer.classList.add(step.anim_right);
+            if (step.anim_center) spriteCenterContainer.classList.add(step.anim_center);
+
+            vnViewerElement.classList.remove('shake');
+            if (step.effect === 'shake') {
+                void vnViewerElement.offsetWidth; 
+                vnViewerElement.classList.add('shake');
+            }
+
+            if (newCenter) {
+                loadSprite(spritePath(newCenter), spriteCenterElement, spriteCenterContainer);
+                spriteLeftContainer.classList.add('hidden');
+                spriteRightContainer.classList.add('hidden');
+            } else {
+                spriteCenterContainer.classList.add('hidden');
+                if (newLeft) loadSprite(spritePath(newLeft), spriteLeftElement, spriteLeftContainer);
+                else spriteLeftContainer.classList.add('hidden');
+                
+                if (newRight) loadSprite(spritePath(newRight), spriteRightElement, spriteRightContainer);
+                else spriteRightContainer.classList.add('hidden');
+            }
+            
+            let dimTargets = new Set();
+            const speakerPos = step.position ? step.position.toLowerCase() : null;
+            
+            if (step.dim_override && !isFullText) { 
+                const overrideValue = step.dim_override.toLowerCase().replace(/\s/g, '');
+                if (overrideValue === 'auto' && step.speaker && speakerPos) {
+                    if (speakerPos === 'left') dimTargets.add('center').add('right');
+                    else if (speakerPos === 'right') dimTargets.add('center').add('left');
+                    else if (speakerPos === 'center') dimTargets.add('left').add('right');
+                } else if (overrideValue === 'all') {
+                    dimTargets.add('left').add('center').add('right');
+                } else if (overrideValue === 'both') {
+                    dimTargets.add('left').add('right');
+                } else if (overrideValue !== 'none') {
+                    overrideValue.split(',').forEach(pos => { if (['left','center','right'].includes(pos)) dimTargets.add(pos); });
+                }
+            }
+
+            if (!isFullText) {
+                if (dimTargets.has('left')) spriteLeftElement.classList.add('dimmed-sprite');
+                if (dimTargets.has('center')) spriteCenterElement.classList.add('dimmed-sprite');
+                if (dimTargets.has('right')) spriteRightElement.classList.add('dimmed-sprite');
+            }
+
+            if (isFullText) {
+                elements.fullCurrentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
+                elements.fullCurrentText.className = `leading-relaxed transition-opacity duration-300 full-text-${step.full_text_size || 'md'}`;
+                elements.fullDialogueContent.classList.remove('align-top-left', 'align-center');
+                elements.fullDialogueContent.classList.add((step.full_text_align || 'top-left') === 'center' ? 'align-center' : 'align-top-left');
+                elements.speakerNameContainer.classList.add('hidden');
+            } else {
+                elements.currentSpeaker.textContent = step.speaker || "";
+                elements.speakerNameContainer.classList.toggle('hidden', !step.speaker);
+                elements.currentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
+            }
+            
+            if (isHistoryVisible) renderHistory();
+        }
+        
+        async function updateStoryContent(startIndex = 0, startScrollTop = 0) {
+            const fullStoryKey = elements.chapterSelect.value.trim();
+            if (!fullStoryKey) return;
+
+            initAudioContext();
+            await handleAudio(null);
+            stopAllSfx();
+
+            elements.loadButton.disabled = true;
+            elements.loadText.textContent = i18n.ru.loadingText;
+            elements.chapterLoadOverlay.classList.remove('hidden');
+            elements.chapterLoadProgress.textContent = `(0/?)`;
+
+            const expectedFilePath = `${CONFIG.PATHS.STORY_BASE}${fullStoryKey}.json`;
+            let chapterData;
+            try {
+                const response = await fetch(expectedFilePath);
+                if (!response.ok) throw new Error(response.statusText);
+                chapterData = await response.json();
+                if (!chapterData || !Array.isArray(chapterData.dialogue)) throw new Error("Invalid JSON format");
+            } catch (error) {
+                console.error(error);
+                alertMessage(i18n.ru.errorChapterNotFound);
+                elements.loadText.textContent = i18n.ru.loadText;
+                elements.loadButton.disabled = false;
+                elements.chapterLoadOverlay.classList.add('hidden');
+                return;
+            }
+
+            const urlsToLoad = new Set();
+            for (const step of chapterData.dialogue) {
+                if (step.background) urlsToLoad.add(CONFIG.PATHS.BACKGROUND_BASE + encodeURIComponent(step.background));
+                if (step.sprite_left) urlsToLoad.add(spritePath(step.sprite_left));
+                if (step.sprite_right) urlsToLoad.add(spritePath(step.sprite_right));
+                if (step.sprite_centre) urlsToLoad.add(spritePath(step.sprite_centre));
+            }
+            const loadList = Array.from(urlsToLoad);
+            
+            elements.chapterLoadProgress.textContent = `(0/${loadList.length})`;
+            if (loadList.length > 0) {
+                const BATCH = 10;
+                let loaded = 0;
+                for (let i = 0; i < loadList.length; i += BATCH) {
+                    await Promise.allSettled(loadList.slice(i, i + BATCH).map(url => loadImage(url).catch(()=>{})));
+                    loaded += Math.min(BATCH, loadList.length - i);
+                    elements.chapterLoadProgress.textContent = `(${loaded}/${loadList.length})`;
+                }
+            }
+            
+            const sfxUrls = new Set();
+            chapterData.dialogue.forEach(s => s.sfx && sfxUrls.add(CONFIG.PATHS.AUDIO_BASE + encodeURIComponent(s.sfx)));
+            if (sfxUrls.size > 0) {
+                Promise.allSettled(Array.from(sfxUrls).map(url => preloadAudioBuffer(url).catch(()=>{})));
+            }
+
+            currentDialogue = chapterData.dialogue;
+            currentDialogueIndex = (startIndex >= 0 && startIndex < currentDialogue.length) ? startIndex : 0;
+            dialogueIsLoaded = true;
+            
+            currentBackgroundUrl = null;
+            elements.spriteLeftContainer.classList.add('hidden');
+            elements.spriteRightContainer.classList.add('hidden');
+            elements.spriteCenterContainer.classList.add('hidden'); 
+            elements.spriteLeftElement.src = ''; elements.spriteRightElement.src = ''; elements.spriteCenterElement.src = ''; 
+            elements.fullDialogueBox.classList.add('hidden'); 
+            
+            const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
+            elements.bgLayer1.style.backgroundImage = 'none'; elements.bgLayer1.style.backgroundColor = themeBgColor; elements.bgLayer1.style.opacity = '1';
+            elements.bgLayer2.style.opacity = '0'; elements.bgLayer2.style.backgroundImage = 'none';
+            activeBgLayer = 1;
+            currentBackgroundUrl = CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR;
+
+            let restoredBg = null;
+            let restoredAudio = undefined; 
+
+            for (let i = 0; i <= currentDialogueIndex; i++) {
+                const step = currentDialogue[i];
+                if ('background' in step) restoredBg = step.background;
+                if ('audio' in step) restoredAudio = step.audio;
+            }
+
+            if (restoredBg !== null) crossFadeBackground(restoredBg); 
+            if (restoredAudio !== undefined) await handleAudio(restoredAudio); 
+
+            renderDialogueStep(); 
+
+            if (startScrollTop > 0 && elements.fullDialogueContent) {
+                setTimeout(() => {
+                    elements.fullDialogueContent.scrollTop = startScrollTop;
+                }, 100); 
+            }
+
+            elements.chapterLoadOverlay.classList.add('hidden');
+            elements.loadText.textContent = i18n.ru.loadedText;
+            setTimeout(() => {
+                elements.loadText.textContent = i18n.ru.loadText;
+                elements.loadButton.disabled = false;
+            }, 1500);
+        }
+
+        function alertMessage(message) {
+            const header = document.getElementById('header');
+            if (!header) return;
+            const msgBox = document.createElement('div');
+            msgBox.textContent = message;
+            msgBox.className = 'fixed top-1 right-1/2 translate-x-1/2 p-2 text-white rounded-lg shadow-xl z-50 text-sm transition-opacity duration-300 alert-message';
+            msgBox.style.top = `${header.offsetHeight + 10}px`; 
+            document.body.appendChild(msgBox);
+            setTimeout(() => { msgBox.style.opacity = '0'; setTimeout(() => msgBox.remove(), 300); }, 5000);
+        }
+
+        function updateI18nStrings() {
+            const text = i18n.ru;
+            document.getElementById('headerTitle').textContent = text.headerTitle;
+            document.getElementById('labelStoryType').textContent = text.labelStoryType;
+            document.getElementById('labelArc').textContent = text.labelArc; 
+            document.getElementById('labelChapter').textContent = text.labelChapter;
+            elements.loadText.textContent = text.loadText;
+            elements.historyText.textContent = text.historyButton;
+            elements.historyTitle.textContent = text.historyTitle;
+            const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            elements.themeText.textContent = currentTheme === 'dark' ? text.themeDark : text.themeLight;
+            const typeSelect = elements.storyTypeSelect;
+            const currentType = typeSelect.value;
+            typeSelect.innerHTML = '';
+            for (const key in STORY_GROUPS) {
+                const option = document.createElement('option');
+                option.value = key; option.textContent = STORY_GROUPS[key].ru; 
+                if (key === currentType) option.selected = true;
+                typeSelect.appendChild(option);
+            }
+            if (!currentType && typeSelect.options.length > 0) typeSelect.selectedIndex = 0;
+        }
+        
+        function updateArcAndChapterUI() {
+            updateI18nStrings(); 
+            const typeKey = elements.storyTypeSelect.value;
+            const arcSelect = elements.arcSelect;
+            const arcContainer = elements.arcSelectContainer;
+            const currentArcKey = arcSelect.value; 
+            
+            arcSelect.innerHTML = ''; arcSelect.disabled = true;
+            if (typeKey !== 'main') arcSelect.value = ""; 
+
+            if (typeKey === 'main') {
+                arcContainer.classList.remove('hidden');
+                let arcFound = false;
+                for (const key in MAIN_STORY_ARCS) {
+                    const option = document.createElement('option');
+                    option.value = key; option.textContent = MAIN_STORY_ARCS[key].ru;
+                    if (key === currentArcKey) option.selected = true;
+                    arcSelect.appendChild(option);
+                    arcFound = true;
+                }
+                arcSelect.disabled = !arcFound;
+                if (!currentArcKey && arcSelect.options.length > 0) arcSelect.selectedIndex = 0;
+            } else {
+                arcContainer.classList.add('hidden');
+                arcSelect.value = ""; 
+            }
+            updateChapterSelect();
+        }
+
+        function updateChapterSelect() {
+            const typeKey = elements.storyTypeSelect.value;
+            const arcKey = elements.arcSelect.value;       
+            const select = elements.chapterSelect;
+            const currentChapterKey = select.value;
+            select.innerHTML = ''; select.disabled = true; select.value = ""; 
+            
+            if (!window.storyMetadata || !typeKey || (typeKey === 'main' && !arcKey)) { enableLoadButton(); return; }
+            
+            const storyGroup = STORY_GROUPS[typeKey];
+            if (!storyGroup) { enableLoadButton(); return; }
+            
+            let targetPrefix = (typeKey === 'main') ? `${arcKey}_main_` : storyGroup.prefix; 
+            let chapterFound = false;
+            for (const fullChapterKey in window.storyMetadata) {
+                if (fullChapterKey.startsWith(targetPrefix)) {
+                    const name = window.storyMetadata[fullChapterKey].ru;
+                    if (name) {
+                        const option = document.createElement('option');
+                        option.value = fullChapterKey; option.textContent = name; 
+                        if (fullChapterKey === currentChapterKey) option.selected = true;
+                        select.appendChild(option);
+                        chapterFound = true;
+                    }
+                }
+            }
+            select.disabled = !chapterFound;
+            if (!currentChapterKey && select.options.length > 0) select.selectedIndex = 0;
+            enableLoadButton();
+        }
+        
+        function initializeOrUpdateUI() {
+             updateArcAndChapterUI(); 
+             applyTheme(document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+             enableLoadButton();
+        }
+
+        function enableLoadButton() {
+            elements.loadButton.disabled = !elements.chapterSelect.value; 
+        }
+
+        function toggleHistory() {
+            isHistoryVisible = !isHistoryVisible;
+            elements.historyPanel.classList.toggle('open', isHistoryVisible);
+            if (isHistoryVisible) setTimeout(renderHistory, 300); 
+        }
+
+        function renderHistory() {
+            const { historyContent } = elements;
+            historyContent.innerHTML = '';
+            
+            if (!dialogueIsLoaded || currentDialogue.length === 0) {
+                historyContent.innerHTML = `<p class="text-center mt-8 p-3 rounded-lg" style="color: var(--color-text-secondary); background-color: var(--color-bg-medium);">${i18n.ru.historyEmpty}</p>`;
+                return;
+            }
+            
+            const fragment = document.createDocumentFragment();
+            for (let i = 0; i <= currentDialogueIndex; i++) {
+                const step = currentDialogue[i];
+                if (!step.text && !step.background && i !== 0) continue; 
+                
+                const isCurrent = (i === currentDialogueIndex);
+                const historyItem = document.createElement('div');
+                historyItem.className = `p-3 rounded-lg cursor-pointer transition duration-150 shadow-md border border-transparent`;
+                
+                if (isCurrent) {
+                    historyItem.classList.add('ring-2', 'ring-offset-2');
+                    historyItem.style.backgroundColor = 'var(--color-accent-primary)'; 
+                    historyItem.style.color = 'white';
+                    historyItem.style.borderColor = 'var(--color-accent-ring)';
+                    historyItem.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+                    historyItem.style.fontWeight = 'bold';
+                } else {
+                    historyItem.style.backgroundColor = 'var(--color-bg-medium)'; 
+                    historyItem.style.color = 'var(--color-text-primary)';
+                }
+                
+                historyItem.onclick = () => {
+                    initAudioContext();
+                    currentDialogueIndex = i;
+                    renderDialogueStep();
+                    toggleHistory(); 
+                };
+
+                if (step.speaker) {
+                    const speakerName = document.createElement('p');
+                    speakerName.className = 'font-bold mb-1';
+                    speakerName.style.color = isCurrent ? 'white' : 'var(--color-speaker-name)'; 
+                    speakerName.textContent = step.speaker;
+                    historyItem.appendChild(speakerName);
+                }
+
+                const textContent = document.createElement('p');
+                textContent.className = 'text-sm leading-snug';
+                let displayText = step.text;
+                if (!displayText && i === 0) displayText = i18n.ru.startOfStory;
+                textContent.innerHTML = parseColoredText(processTextForBreaks(displayText || '')); 
+                historyItem.appendChild(textContent);
+                fragment.appendChild(historyItem);
+            }
+            historyContent.appendChild(fragment);
+            const currentItem = historyContent.lastElementChild;
+            if (currentItem) currentItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
