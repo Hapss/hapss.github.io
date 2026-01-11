@@ -173,7 +173,6 @@
             "sprite_left": "Kiana 1.png"
         },
         {
-            "speaker": "",
             "text": "Бж-ж-ж-ж...",
             "sprite_left": "Kiana 1.png"
         },
@@ -317,7 +316,7 @@
             "text": "БУМ!!!",
             "sprite_left": "Kiana 1.png",
             "sprite_right": "Herrscher Mei.png",
-            "dim_override": "both"
+            "dim_override": "left, right"
         },
         {
             "speaker": "Киана",
@@ -351,7 +350,7 @@
             "text": "Бац! Бах!",
             "sprite_left": "Kiana 1.png",
             "sprite_right": "Herrscher Mei.png",
-            "dim_override": "both"
+            "dim_override": "left, right"
         },
         {
             "speaker": "Киана",
@@ -430,7 +429,7 @@
             "text": "Прошу, помоги мне... Отец! Прошу, помоги мне... Пожалуйста, не оставляй Мэй одну.",
             "sprite_left": "Kiana 4.png",
             "sprite_right": "Herrscher Mei.png",
-            "dim_override": "both"
+            "dim_override": "left, right"
         },
         {
             "speaker": "Киана",
@@ -443,7 +442,7 @@
             "text": "Отец! Почему ты покинул меня.. Почему все меня ненавидят!? Почему! Почему! Почему!!! Такой мир должен быть разрушен!!!",
             "sprite_left": "Kiana 3.png",
             "sprite_right": "Herrscher Mei.png",
-            "dim_override": "both"
+            "dim_override": "left, right"
         },
         {
             "speaker": "Заражённая Мэй",
