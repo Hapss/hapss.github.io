@@ -1,120 +1,84 @@
 {
     "dialogue": [
-       { 
-            "text": "Даже в этой, казалось бы, тихой \nбиблиотеке нет никакой гарантии безопасности.",
-           "text_style": "full",
-           "full_text_size": "lg",
-           "full_text_align": "center",
+        { 
+            "text": "Even in this seemingly quiet library,\nthere is no guarantee of safety.",
+            "text_style": "full",
+            "full_text_size": "lg",
+            "full_text_align": "center",
             "background": "bg_stage1.png"
         },
         { 
-            "speaker": "", 
-            "text": "В ночь до выброса Хоукая я не могла уснуть..."
+            "text": "The night before the Honkai Eruption, I couldn't sleep..."
         },
         { 
-            "speaker": "", 
-            "text": "14:07:47. Выброс [Хоукая] возник в академии Чиба. Вероятность выживания – 0.000000001%.",
-            "sprite_left": "",
-            "sprite_right": ""
+            "text": "14:07:47. [Houkai] Eruption occurred at Chiba Academy. Survival probability – 0.000000001%."
         },
         { 
-            "speaker": "", 
-            "text": "Тууу, тууу... Абонент временно недоступен, перезвоните позже",
-            "sprite_left": "",
-            "sprite_right": ""
+            "text": "Beep, beep... The number you are calling is currently out of range. Please call later again."
         },
         { 
-            "speaker": "", 
-            "text": "Бип--",
-            "sprite_left": "",
-            "sprite_right": ""
+            "text": "Beep--"
         },
         { 
-            "speaker": "Киана", 
-            "text": "Я Киана. В данный момент нахожусь в дальневосточном регионе Нагазоры, академия Чиба. Ты, должно быть, сейчас направляешься к этому месту выброса. Просто знай, что я тебя обязательно найду, куда бы ты ни отправился!",
-            "sprite_left": "",
-            "sprite_right": ""
+            "speaker": "Kiana", 
+            "text": "I'm Kiana. I'm currently in the Far Eastern region of Nagazora, Chiba Academy. You must be heading to this eruption site right now. Just know that I will definitely find you, no matter where you go!"
         },
         { 
-            "speaker": "", 
-            "text": "Клик!",
-            "sprite_left": "",
-            "sprite_right": ""
-        },
-        
-        { 
-            "speaker": "Киана", 
-            "text": "Фуф... Я сказала что хотела. Уж не думала, что выброс случится так внезапно. Кажется он совсем небольшой, а его зона – вся академия Чиба.",
-            "sprite_left": "",
-            "sprite_right": ""
+            "text": "Click!"
         },
         { 
-            "speaker": "Киана", 
-            "text": "Теперь нужно найти цель быстрее, чем Шиксал прибудет. В этот раз я не дам тебе сбежать!",
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": ""
+            "speaker": "Kiana", 
+            "text": "Phew... I said what I wanted to say. I never thought the eruption would happen so suddenly. It seems quite small, but its zone is the entire Chiba Academy."
         },
-        
         { 
-            "speaker": "Зомби", 
-            "text": "Гррааа!!",
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": "",
-            "dim_override": "left"
+            "speaker": "Kiana", 
+            "text": "Now I need to find the target before Schicksal arrives. This time I won't let you escape!",
+            "sprite_left": "Kiana 1.png"
         },
-        
         { 
-            "speaker": "Киана", 
-            "text": "Заражённые Хоукаем зомби объявились... К счастью, я заранее подготовила оружие.",
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": ""
-        },
-        
-        { 
-            "speaker": "", 
-            "text": "Щелчок!",
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": "",
+            "speaker": "Zombie", 
+            "text": "Grraaah!!",
+            "sprite_left": "Kiana 1.png",
             "dim_override": "left"
         },
         { 
-            "speaker": "Киана", 
-            "text": "Проверка оружия завершена, боеприпасы на месте... Правда я не знаю, как долго продержится это старьё.",
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": ""
+            "speaker": "Kiana", 
+            "text": "Zombies infected by the Houkai have appeared... Luckily, I prepared my weapons in advance.",
+            "sprite_left": "Kiana 1.png"
         },
         { 
-            "speaker": "Киана", 
-            "text": "Ну~ Следуя плану, сначала нужно выбраться из этой библиотеки. И конечно же путь преграждают зомби...",
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": ""
+            "text": "Click!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
         },
         { 
-            "speaker": "Киана", 
-            "text": "Люди, заражённые Хоукаем и мутировавшие из-за него... Они утратили свои чувства и сознание. Прямо как ходячие мертвецы, какие жалкие создания.",
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": ""
+            "speaker": "Kiana", 
+            "text": "Weapon check complete, ammo is in place... Though I don't know how long this old thing will last.",
+            "sprite_left": "Kiana 1.png"
         },
-        
         { 
-            "speaker": "Зомби", 
-            "text": "Гррааа!!",
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": ""
+            "speaker": "Kiana", 
+            "text": "Well~ Following the plan, first I need to get out of this library. And of course, zombies are blocking the way...",
+            "sprite_left": "Kiana 1.png"
         },
-        
         { 
-            "speaker": "Киана", 
-            "text": "Прости, даже так эта леди не проявит пощады. По крайней мере в качестве компенсации поспите спокойно.",
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": ""
+            "speaker": "Kiana", 
+            "text": "People infected and mutated by the Houkai... They've lost their feelings and consciousness. Just like walking dead, such pitiful creatures.",
+            "sprite_left": "Kiana 1.png"
         },
-        
         { 
-            "speaker": "", 
-            "text": "Бах! Бах! Бах!", 
-            "sprite_left": "Kiana 1.png", 
-            "sprite_right": "",
+            "speaker": "Zombie", 
+            "text": "Grraaah!!",
+            "sprite_left": "Kiana 1.png"
+        },
+        { 
+            "speaker": "Kiana", 
+            "text": "Sorry, even so, this lady won't show mercy. At least as compensation, rest in peace.",
+            "sprite_left": "Kiana 1.png"
+        },
+        { 
+            "text": "Bang! Bang! Bang!",
+            "sprite_left": "Kiana 1.png",
             "dim_override": "left"
         }
     ]
