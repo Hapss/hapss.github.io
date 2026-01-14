@@ -167,7 +167,7 @@
       "sprite_left": "Theresa 2.png"
     },
     {
-      "speaker": "Тереза"
+      "speaker": "Тереза",
       "text": "Этот ребёнок... она что, пытается утянуть нас всех за собой?!",
       "sprite_left": "Theresa 2.png"
      },
@@ -317,7 +317,6 @@
       "sprite_left": "Kiana 4.png"
     },
     {
-      
       "text": "Тук!!!!"
     },
     {
@@ -628,7 +627,6 @@
       "background": "bg_stage11-1.png"
     },
     {
-      
       "text": "БУМ!!!",
       "sprite_left": "Himeko 1.png",
       "dim_override": "left"
@@ -644,7 +642,6 @@
       "sprite_left": "Himeko 1.png"
     },
     {
-      
       "text": "Грохот!!!",
       "sprite_left": "Himeko 1.png"
     },
@@ -719,9 +716,9 @@
       "sprite_left": "Theresa 2.png"
     },
     {
-      
       "text": "Грохот!!!!!!",
-      "sprite_left": "Theresa 2.png"
+      "sprite_left": "Theresa 2.png",
+      "dim_override": "left"
     },
     {
       "speaker": "Киана",
@@ -821,7 +818,6 @@
       "dim_override": "left"
     },
     {
-      
       "text": "......"
     },
     {
@@ -914,7 +910,6 @@
       "dim_override": "right"
     },
     {
-      
       "text": "Тудух!!!"
     },
     {
