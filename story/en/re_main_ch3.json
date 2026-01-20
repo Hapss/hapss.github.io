@@ -1,0 +1,491 @@
+{
+    "dialogue": [
+        { 
+            "text": "The roar of thunder over the school pierces my heart.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center",
+            "background": "bg_stage3.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Hoo~Hoo~ They're endless! I didn't expect all the zombies in the area would be drawn to the Houkai source! Can't keep this up.",
+            "sprite_left": "Kiana 4.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Almost out of ammo, and out of time too. Need to find the target immediately...",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Rustle!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override":"left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Who's there!?",
+            "sprite_left": "Kiana 4.png",
+            "position": "left"
+        },
+       {
+            "speaker": "Kiana",
+            "text": "Doesn't look like a zombie... Could it be!? Finally, I found you! Stay right there!",
+            "sprite_left": "Kiana 3.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "...",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Ah! This is... a student? Who would have thought there'd be someone not infected by Houkai here... Judging by the uniform, you must be an upperclassman. What's your name?",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "...",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Hey! Are you deaf? Can't you even answer something?",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "...",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Hey~ Seems you're terrified... Whatever, I can't protect you, so find a secluded corner and hide there.",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Zombie",
+            "text": "Grrooo.....",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Tsk! It's no longer safe here... If you yourself don't want to survive, then no one can save you... Farewell and don't blame me.",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "...",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Zombie",
+            "text": "Grrooo......",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Hey! What bad luck! Come with me!",
+            "sprite_left": "Kiana 2.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Whew~. Seems it was a bit much fighting off zombies while protecting a normal person... Hey! Are you okay?",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "......",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Tsk... I'm such an idiot. Why did I even save you? Can't even say thank you for all my trouble! Well, stay here. This old academy building should be safe for a while. I'm not going to stay and help you any longer, so you're on your own now~",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "...Why did you save me?",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Huh? You finally spoke.",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "People like me should die and be forgotten... Perhaps my very birth was a mistake...",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Hah? What are you even talking about? Who even talks about themselves like that!",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "Leave me... Stop your hypocrisy. You just pretended to get close to me anyway, Raiden Mei...",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Raiden Mei? Sounds kind of familiar... I think she's a famous person at Chiba Academy... The daughter of the ME Corp president, right?",
+            "sprite_left": "Kiana 3.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "......",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "The girl rumored to have rejected 12 guys in one day, nicknamed \"Thunder Queen\". And now she looks all dejected, what a rare sight~",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "You came to laugh at me too... Of course all people are rotten.",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Don't get me wrong, that's not why I'm here. I just want to say, instead of blaming other people, better find a way to change.",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "Change? That's right... That's right... It's not me who's wrong here, it's this damn world! This hypocritical world should be destroyed!",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Hey, I think that's wrong, hey! What's wrong with you!?",
+            "sprite_left": "Kiana 3.png"
+        },
+        {
+            "text": "Crash!!!",
+            "sprite_left": "Kiana 3.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Agh! What the hell is up with the weather? Is this another effect of the Houkai?..",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Bzzz...",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Tsk, and now the phone at a time like this... Eh! Houkai energy detected at... a distance of 0 meters?",
+            "sprite_left": "Kiana 3.png"
+        },
+        {
+            "text": "Tzzzt!",
+            "sprite_left": "Kiana 3.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Huh? Why did the signal cut out? At such a critical time this phone glitches! It's right next to me! There's no one else here except this depressed rich girl!",
+            "sprite_left": "Kiana 3.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "When this hypocritical world is destroyed... Everything can return to its place... My father and everyone else will surely return to me!",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Hey! Where are you going!? Don't wander off at a time like this! Wait for me!",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Crash!!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Damn! Where did she go!? Why am I even wasting so much time on a stranger?!",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+        "speaker": "Kiana",
+            "text": "There are more and more zombies, if I go further...",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Zombie",
+            "text": "Grrraaaa...",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Mei",
+            "text": "Oh, everyone's gathered around me. As long as Dad and the others are here, I don't care about anything else~",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "There she is! Damn! She's surrounded by zombies!",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Bang! Bang! Bang!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "You dead bastards! Get away from that girl!!",
+            "sprite_left": "Kiana 4.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "Why are you... here again to ruin my happiness!",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "What are you talking about!? I came to save you!",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "Get away from here! I don't need your pity!",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "text": "Grrrrooo!!!",
+            "sprite_left": "Mei 1.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Agh! What's with the zombies around you...",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "Disappear!",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Hey! Where are you going?! Damn... When I finish with these zombies, I should teach this willful young lady a lesson!",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+           "speaker": "Kiana",
+           "text": "Finally caught up to you!",
+           "sprite_left": "Kiana 1.png"
+        },
+        {
+            "speaker": "Mei",
+            "text": "Wait a little... Father, wait just a bit and Mei will become the way you want her to be!",
+            "sprite_left": "Mei 1.png"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "What happened to her? She's suddenly changed... And the reaction of the zombies around her is a bit strange... When they get close to her, they don't attack, on the contrary. They slow down and follow her.",
+            "sprite_left": "Kiana 3.png"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Aaa~ What a pleasant feeling, the whole surrounding world... No one will abandon me anymore, and everyone will find eternal happiness by my side! Ooo~ Raiden Mei, let me fulfill your wish~",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 3.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "What's with your appearance!? You're not Raiden Mei! Who are you?!",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Oh~ Cute little kitten, it no longer matters who I am~ Because soon you'll join these guys and become a zombie!",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "text": "BOOM!!!",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "left, right"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Whoa! Why the sudden lightning strike?!",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Hoho~ You're good, to be able to dodge. Seems this will be a good warm-up, let me torture you slowly~",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Just tell me who you are! Not many people can survive a Houkai eruption, except for the Kaslana family!",
+            "sprite_right": "Kiana 1.png",
+            "sprite_left": "Herrscher Mei.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Hmph... It no longer matters who I am. Raiden Mei is gone. And I exist to destroy this disgusting world!",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "text": "Whack! Bang!",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "left, right"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "The lightning energy is channeling into her... If this phenomenon is caused by Houkai, then she's currently absorbing the Houkai energy around! There are people in the world who can directly use and manipulate Houkai energy without external assistance. And only... can do that.",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Eh, seems I'm involved in a major incident... But it's too early to give up! On the other hand, maybe I'll become the savior of the world! There must be a way to stop her!",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Haha! What a great attitude. Well come on, try it!",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "text": "Grrooo!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Get away!",
+            "sprite_left": "Kiana 4.png"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Hmph! I was careless... Didn't expect a little girl like you to be able to oppose me. Seems I'll need more energy to defeat you!",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 4.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Not gonna happen!",
+            "sprite_left": "Kiana 4.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Agh! What do you want to do!?",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 4.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "The blood of the Kaslana family has perfect resistance to Houkai energy! Since my body can withstand Houkai, then I'll cut off your supply of Houkai energy!",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Bitch! Let go! Don't touch me!",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Agh...! The surge of Houkai energy directly affecting my body... For the first time I truly feel this energy! It hurts so much!!",
+            "sprite_left": "Kiana 4.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "text": "Please, help me... Father! Please, help me... Please, don't leave Mei alone.",
+            "sprite_left": "Kiana 4.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "left, right"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "This is... A fragment of consciousness, transmitted through the Houkai energy...",
+            "sprite_left": "Kiana 3.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "text": "Father! Why did you leave me.. Why does everyone hate me!? Why! Why! Why!!! A world like this should be destroyed!!!",
+            "sprite_left": "Kiana 3.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "left, right"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Don't look into my heart!",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 3.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Ah!",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Damn... If I had more power, no one would be able to harm me anymore!",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Stop it! You're already infected with Houkai, if you absorb this energy again, you'll lose your sanity! Then it'll be too late!",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        },
+        {
+            "speaker": "Corrupted Mei",
+            "text": "Ha~ Don't lie to me! I saw through you long ago. You're just like them, but they envy my status and family, and you envy my abilities! I'll never forgive you... Just you wait!",
+            "sprite_right": "Herrscher Mei.png",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "speaker": "Kiana",
+            "text": "Hey! Don't run!",
+            "sprite_left": "Kiana 1.png",
+            "sprite_right": "Herrscher Mei.png",
+            "dim_override": "right"
+        }
+    ]
+}
