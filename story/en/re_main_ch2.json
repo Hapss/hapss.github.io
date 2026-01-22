@@ -1,0 +1,96 @@
+{
+    "dialogue": [
+        { 
+            "text": "Noon with blooming cherry blossoms and splatters\nof blood is the beginning of a magnificent battle.",
+           "text_style": "full",
+           "full_text_size": "lg",
+           "full_text_align": "center",
+            "background": "bg_stage2.png"
+        },
+        {
+            "text": "Phew~ Finally left the library, things aren't so bad after all. According to the plan, I need to find the target in the eruption zone as soon as possible~",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "I'm already here, I should avoid areas where zombies are densely packed to make progress. In that case, the most efficient route would be through the cherry blossom road at the center of Chiba Academy campus. Let's go!",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "And yet... The once noisy academy is now quite quiet, it feels somewhat uncomfortable. Well, at least I don't have to pretend to be ladylike and accompany other girls to enjoy the flowers... At least there's something good in this situation~",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Whoa! Wait! Why am I suddenly getting sentimental!? I have important business!",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Bzzz......",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "text": "Whoa! My phone detected a Houkai source, gotta check~ There's a Houkai source 700 meters away for two hours...... Hmm~ Since it's the epicenter, the target must be here!",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Hehe~ Even though you left me this broken phone that can't make calls, this strange function is quite effective~ He didn't even think I'd use it to find him~",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 3.png"
+        },
+        {
+            "text": "Alright, continuing to move according to the plan!",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "50 meters to the target... Reached a place where the target can be seen.",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Must be around here, tsk~~ Quite a lot of zombies gathered here, even for this lady it'll be troublesome to deal with all of them...",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "However, most zombies will move towards the source of sound. Using this weakness, I can effectively avoid some problems~",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Looks like the only way is to take a detour, first make noise here to attract their attention, then approach from the left flank.",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Boom!!!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "text": "Whoa! What was that sound? I didn't even get to do anything! Oh... That's lightning? It was clearly sunny a while ago, so why...",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Grraaah!!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        {
+            "text": "Agh! Oh no! I've been spotted!",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 1.png"
+        },
+        {
+            "text": "Fine then, looks like the only way is to force my way through!",
+            "speaker": "Kiana",
+            "sprite_left": "Kiana 4.png"
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "dialogue": [
+        { 
+            "text": "Even in this seemingly quiet library,\nthere is no guarantee of safety.",
+            "text_style": "full",
+            "full_text_size": "lg",
+            "full_text_align": "center",
+            "background": "bg_stage1.png"
+        },
+        { 
+            "text": "The night before the Honkai Eruption, I couldn't sleep..."
+        },
+        { 
+            "text": "14:07:47. [Houkai] Eruption occurred at Chiba Academy. Survival probability – 0.000000001%."
+        },
+        { 
+            "text": "Beep, beep... The number you are calling is currently out of range. Please call later again."
+        },
+        { 
+            "text": "Beep--"
+        },
+        { 
+            "speaker": "Kiana", 
+            "text": "I'm Kiana. I'm currently in the Far Eastern region of Nagazora, Chiba Academy. You must be heading to this eruption site right now. Just know that I will definitely find you, no matter where you go!"
+        },
+        { 
+            "text": "Click!"
+        },
+        { 
+            "speaker": "Kiana", 
+            "text": "Phew... I said what I wanted to say. I never thought the eruption would happen so suddenly. It seems quite small, but its zone is the entire Chiba Academy."
+        },
+        { 
+            "speaker": "Kiana", 
+            "text": "Now I need to find the target before Schicksal arrives. This time I won't let you escape!",
+            "sprite_left": "Kiana 1.png"
+        },
+        { 
+            "speaker": "Zombie", 
+            "text": "Grraaah!!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        { 
+            "speaker": "Kiana", 
+            "text": "Zombies infected by the Houkai have appeared... Luckily, I prepared my weapons in advance.",
+            "sprite_left": "Kiana 1.png"
+        },
+        { 
+            "text": "Click!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        },
+        { 
+            "speaker": "Kiana", 
+            "text": "Weapon check complete, ammo is in place... Though I don't know how long this old thing will last.",
+            "sprite_left": "Kiana 1.png"
+        },
+        { 
+            "speaker": "Kiana", 
+            "text": "Well~ Following the plan, first I need to get out of this library. And of course, zombies are blocking the way...",
+            "sprite_left": "Kiana 1.png"
+        },
+        { 
+            "speaker": "Kiana", 
+            "text": "People infected and mutated by the Houkai... They've lost their feelings and consciousness. Just like walking dead, such pitiful creatures.",
+            "sprite_left": "Kiana 1.png"
+        },
+        { 
+            "speaker": "Zombie", 
+            "text": "Grraaah!!",
+            "sprite_left": "Kiana 1.png"
+        },
+        { 
+            "speaker": "Kiana", 
+            "text": "Sorry, even so, this lady won't show mercy. At least as compensation, rest in peace.",
+            "sprite_left": "Kiana 1.png"
+        },
+        { 
+            "text": "Bang! Bang! Bang!",
+            "sprite_left": "Kiana 1.png",
+            "dim_override": "left"
+        }
+    ]
+}
