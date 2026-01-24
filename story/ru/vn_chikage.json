@@ -990,165 +990,168 @@
     {
       "speaker": "Хакуо",
       "text": "Чикаге... Замолчи!",
-      "sprite_left": "Hakuou.png",
-      "sprite_centre": "Umbrella.png",
+      "sprite_right": "Hakuou.png",
+      "sprite_left": "Kokufuu.png",
       "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
       "text": "Значит, старшая сестра, чтобы спасти меня, добровольно взяла на себя вину и унесла тебя...",
-      "sprite_right": "Kokufuu.png",
-      "sprite_centre": "Umbrella.png",
+      "sprite_right": "Hakuou.png",
+      "sprite_left": "Kokufuu.png",
       "dim_override": "right"
     },
     {
       "speaker": "Кокуфу",
       "text": "Из-за меня она провела долгие годы в этом мрачном Проклятом лесу...",
-      "sprite_right": "Kokufuu.png",
-      "sprite_centre": "Umbrella.png",
+      "sprite_right": "Hakuou.png",
+      "sprite_left": "Kokufuu.png",
       "dim_override": "right"
     },
     {
       "speaker": "Кокуфу",
       "text": "Почему... Почему так получилось!! Это я погубила старшую сестру!!",
-      "sprite_right": "Kokufuu.png",
-      "sprite_centre": "Umbrella.png",
+      "sprite_right": "Hakuou.png",
+      "sprite_left": "Kokufuu.png",
       "dim_override": "right"
     },
     {
       "speaker": "Кокуфу",
       "text": "А-а-а-а-а-а!!!",
-      "sprite_right": "Kokufuu.png",
-      "sprite_centre": "Umbrella.png",
+      "sprite_right": "Hakuou.png",
+      "sprite_left": "Kokufuu.png",
       "dim_override": "right"
     },
     {
       "speaker": "Хакуо",
       "text": "Сестрёнка!! Ух!!! Демоническая сила снова усиливается! Печать... А-а-а-а-а!!!",
-      "sprite_left": "Hakuou.png",
-      "sprite_right": "Kokufuu.png",
+      "sprite_right": "Hakuou.png",
+      "sprite_left": "Kokufuu.png",
       "dim_override": "left"
     },
     {
       "speaker": "Чикаге",
       "text": "Ху-ху-ху!! Ха-ха-ха!! Сила, сковывавшая меня, наконец исчезла!",
-      "sprite_centre": "Umbrella.png"
+      "sprite_left": "Umbrella.png",
+      "sprite_right": "Hakuou.png",
+      "dim_override": "right"
     },
     {
       "speaker": "Чикаге",
       "text": "Кокуфу, Хакуо! В конце концов, вы обе стали моей пищей!",
-      "sprite_centre": "Umbrella.png"
+      "sprite_left": "Umbrella.png",
+      "sprite_right": "Hakuou.png",
+      "dim_override": "right"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Чёрт! Демоническая аура уже поглотила их обеих, они превратились в марионеток?..",
-      "sprite_right": "Hokushin Mei 1.png"
-    },
-    {
-      "speaker": "Хокусин Мэй",
-      "text": "Что ж, неважно, кто встанет у меня на пути...",
-      "sprite_right": "Hokushin Mei 1.png"
-    },
-    {
-      "speaker": "Хокусин Мэй",
-      "text": "Есть лишь один путь — разрубить!!",
-      "sprite_right": "Hokushin Mei 1.png"
-    },
-    {
-      "speaker": "Чикаге",
-      "text": "Глупый ронин, стань же первой жертвой моего возрождения!!",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Hokushin Mei 1.png",
       "dim_override": "left"
     },
     {
-      "text": "Лязг!",
+      "speaker": "Хокусин Мэй",
+      "text": "Что ж, неважно, кто встанет у меня на пути...",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Hokushin Mei 1.png",
-      "dim_override": "left, right",
+      "dim_override": "left"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Есть лишь один путь — разрубить!!",
+      "sprite_left": "Umbrella.png",
+      "sprite_right": "Hokushin Mei 1.png",
+      "dim_override": "left"
+    },
+    {
+      "speaker": "Чикаге",
+      "text": "Глупый ронин, стань же первой жертвой моего возрождения!!",
+      "sprite_centre": "Umbrella.png",
+      "sprite_right": "Hokushin Mei 1.png"
+    },
+    {
+      "text": "Лязг!",
       "audio": "Whisper.ogg"
     },
     {
-      "text": "Вжик—лязг!",
-      "sprite_left": "Umbrella.png",
-      "sprite_right": "Hokushin Mei 1.png",
-      "dim_override": "left, right"
+      "text": "Вжик—лязг!"
     },
     {
       "speaker": "Чикаге",
       "text": "Не думала, что ты сможешь сражаться со мной на равных, это редкость.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Чикаге",
       "text": "Такой воин, как ты, обладающий выдающимся мастерством, должно быть, имеет великие амбиции.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Чикаге",
       "text": "Жаль, что ты всего лишь смертная и не избежишь судьбы смерти.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "...",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Чикаге",
       "text": "У меня есть предложение: если ты отдашь своё тело мне, то обретёшь бессмертную жизнь, как у меня.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Чикаге",
       "text": "Тогда не то что бросать вызов героям мира, всю Японию можно будет завоевать. Ну как? Хорошая сделка, не так ли?",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "...Если я отдам тебе своё тело, что будет с этими сёстрами?",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Чикаге",
       "text": "Хакуо уже истощила свои силы, запечатывая меня, а Кокуфу была тяжело ранена, пытаясь спасти сестру.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Чикаге",
       "text": "Эти два тела уже не имеют смысла, конечно, их следует отбросить.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Уже не имеют смысла...",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Жизнь и смерть мгновенны. Человеческий век не достигает и ста лет, полон болезней и напастей, тревог и несчастных случаев.",
       "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Umbrella.png",
+      "sprite_right": "Kokufuu.png",
       "dim_override": "left",
       "background": "forest3.jpg"
     },
@@ -1156,22 +1159,20 @@
       "speaker": "Хокусин Мэй",
       "text": "А люди ещё и сами себя унижают, воюют с себе подобными, сами идут к гибели. Какой смысл в такой жизни?",
       "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Umbrella.png",
-      "dim_override": "left"
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "right"
     },
     {
-      "speaker": "Хокусин Мэй",
+      "speaker": "Кокуфу",
       "text": "Разве твоя собственная жизнь тоже не имеет смысла!?",
       "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Umbrella.png",
+      "sprite_right": "Kokufuu.png",
       "dim_override": "left"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Смысл моей жизни... Возможно, на этот раз я действительно получу то, чего желаю...",
       "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Umbrella.png",
-      "dim_override": "left",
       "background": "forest4.jpg"
     },
     {
@@ -1179,28 +1180,28 @@
       "text": "Что думаешь о моём предложении?",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Хорошо, если моё тело может быть так полезно, забирай его.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Чикаге",
       "text": "Хм-хм, отлично...",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Чикаге",
       "text": "Стань же счастливой новой марионеткой!!",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -1214,63 +1215,63 @@
       "text": "Ха-ха-ха!! Какое прекрасное тело! Сильное и мощное! Действительно в сто раз лучше, чем у той больной девчонки!",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Чикаге",
       "text": "Позволь мне использовать это тело, чтобы превратить всю Японию в ад!!",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "А-а-а-а-а-а-а!!!",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Кокуфу",
       "text": "Старшая сестра...",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хакуо",
       "text": "Ох... Кокуфу... это ты? Почему контроль Чикаге исчез?..",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хакуо",
       "text": "Это... Мисс Мэй!?",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
       "text": "Неужели Чикаге хочет занять тело этого ронина?",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хакуо",
       "text": "Верно... Но что-то не так! Чёрная аура, исходящая из тела мисс Мэй... это не демоническая сила Чикаге, а нечто более ужасное...!",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хакуо",
       "text": "Мэй...",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Чикаге",
@@ -1284,55 +1285,52 @@
       "text": "Отступи!!",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Чикаге",
       "text": "Это...! Что происходит, почему в тебе скрывается нечто подобное!!",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "???",
       "text": "Кто ты? Почему нарушаешь мой сон...",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Чикаге",
       "text": "Это... это не может быть сила, подвластная человеку...",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Чикаге",
       "text": "Не подходи! Не подходи!! Я ещё не могу умереть здесь!! Не подходи!!",
-      "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "sprite_centre": "Hokushin Mei 1.png",
+      "sprite_right": "Umbrella.png"
     },
     {
       "speaker": "Чикаге",
       "text": "А-а-а-а-а-а!!!",
-      "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Umbrella.png",
-      "dim_override": "right"
+      "sprite_centre": "Hokushin Mei 1.png",
+      "sprite_right": "Umbrella.png"
     },
     {
       "text": "Хруст!",
       "sprite_left": "Kokufuu.png",
-      "sprite_right": "Hakuou.png",
-      "dim_override": "left, right"
+      "sprite_right": "Hakuou.png"
     },
     {
       "speaker": "Кокуфу",
       "text": "Чикаге... сломалась...",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -1344,22 +1342,22 @@
       "text": "Мисс Мэй!",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
       "text": "Если так пойдёт и дальше, её поглотит этот чёрный туман!",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
-      "speaker": "???",
+      "speaker": "Хокусин Мэй",
       "text": "Прочь с дороги, души! Я не проиграю вам!",
       "sprite_centre": "Hokushin Mei 1.png"
     },
     {
-      "speaker": "???",
+      "speaker": "Хокусин Мэй",
       "text": "Моё фехтование непобедимо!! Смиритесь и умрите от моего меча!!",
       "sprite_centre": "Hokushin Mei 1.png"
     },
@@ -1368,56 +1366,56 @@
       "text": "Сестрёнка...",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хакуо",
       "text": "Давай используем последние силы, чтобы запечатать эту силу...",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
       "text": "Хорошо.",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хакуо",
       "text": "Боюсь, на этот раз разлука снова будет долгой...",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
       "text": "Ничего, пока я с сестрой, мне нечего бояться...",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хакуо",
       "text": "Кокуфу... Спасибо.",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
       "text": "Сестра, начнём.",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хакуо",
       "text": "Хорошо!",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
