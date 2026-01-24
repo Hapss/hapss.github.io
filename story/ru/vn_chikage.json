@@ -671,7 +671,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right, center"
     },
     {
       "speaker": "Кокуфу",
@@ -679,7 +679,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left, center"
     },
     {
       "speaker": "Кокуфу",
@@ -687,7 +687,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left, center"
     },
     {
       "speaker": "Хакуо",
@@ -695,7 +695,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "center"
+      "dim_override": "right, left"
     },
     {
       "speaker": "Кокуфу",
@@ -703,14 +703,14 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left, center"
     },
     {
       "text": "Лязг!",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "center, right"
+      "dim_override": "center, right, left"
     },
     {
       "speaker": "Кокуфу",
@@ -718,7 +718,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left, center"
     },
     {
       "speaker": "Хакуо",
@@ -726,7 +726,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "center"
+      "dim_override": "left, right"
     },
     {
       "speaker": "Хакуо",
@@ -734,7 +734,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "center"
+      "dim_override": "left, right"
     },
     {
       "speaker": "Кокуфу",
@@ -742,7 +742,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left, center"
     },
     {
       "speaker": "Кокуфу",
@@ -750,7 +750,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left, center"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -758,7 +758,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right, center"
     },
     {
       "speaker": "Кокуфу",
@@ -766,7 +766,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left, center"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -774,7 +774,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right, center"
     },
     {
       "speaker": "Кокуфу",
@@ -782,7 +782,7 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left, center"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -790,28 +790,28 @@
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Kokufuu.png",
       "sprite_centre": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right, center"
     },
     {
       "speaker": "Хакуо",
       "text": "И Вы тоже пришли за Тикагэ?",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Для меня неважно, кто мой противник.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Я просто ищу того, кто сможет меня убить.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хакуо",
