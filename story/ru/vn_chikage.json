@@ -818,7 +818,7 @@
       "text": "Тогда не вините меня в неучтивости.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "text": "Лязг!",
@@ -831,63 +831,63 @@
       "text": "Не думала, что в мире ещё остались такие мастера, как Вы...",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хакуо",
       "text": "Вы хоть и выглядите хрупкой, но сильнее тех, кто зовётся мастерами, в сто раз.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хакуо",
       "text": "Прошу, назовите своё имя...",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Я Хокусин Мэй.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хакуо",
       "text": "Мисс Мэй, у меня к Вам одна просьба. Убейте меня здесь, позвольте мне запечатать демона-зонтика своей душой, чтобы она больше не могла вредить людям.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хакуо",
       "text": "Я несколько лет была с демоном-зонтиком Тикагэ, используя свою внутреннюю силу, чтобы запечатать её демоническую силу в этом лесу.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хакуо",
       "text": "Теперь мои силы почти иссякли, и, боюсь, скоро она полностью поглотит меня и превратит в свою марионетку...",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Хакуо",
       "text": "Прошу, убейте меня вместе с этим демон-зонтиком, чтобы она не могла больше причинять зло.",
       "sprite_left": "Hokushin Mei 1.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
       "text": "Хорошо, тогда позволь младшей сестре помочь тебе...",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "text": "Щёлк!!",
@@ -900,14 +900,14 @@
       "text": "Кокуфу!? Ух... Это...",
       "sprite_left": "Kokufuu.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Тикагэ",
       "text": "Хм-хм~ Хакуо, ты правда думала, что я позволю тебе добиться своего?",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -919,63 +919,63 @@
       "text": "Тикагэ! Неужели ты...",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Тикагэ",
       "text": "Хакуо! Не забывай! В тот год это я пошла на уступки и согласилась спасти твою сестру, иначе сейчас она была бы уже мёртвой!",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Тикагэ",
       "text": "Ты думала, я так просто отпущу твою сестру? Когда она украла меня, я уже поселила в её теле семя бедствия! И ждала лишь сегодняшнего дня, чтобы оно проросло и принесло плоды!",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Хакуо",
       "text": "Ты, демон-зонтик... нарушила своё слово...",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Тикагэ",
       "text": "Принцесса Хакуо, ты действительно наивна и добра, раз могла поверить словам демона.",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Hakuou.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Тикагэ",
       "text": "Кокуфу! Позволь мне исполнить твоё желание! Позволь тебе и сестре вновь воссоединиться!",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Kokufuu.png",
-      "dim_override": "left"
+      "dim_override": "right"
     },
     {
       "speaker": "Кокуфу",
       "text": "Старшая... сестра...",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Kokufuu.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
       "text": "Ох... Что происходит!?",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Kokufuu.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Кокуфу",
       "text": "Той ночью... это я украла демона-зонтика из святилища...",
       "sprite_left": "Umbrella.png",
       "sprite_right": "Kokufuu.png",
-      "dim_override": "right"
+      "dim_override": "left"
     },
     {
       "speaker": "Тикагэ",
