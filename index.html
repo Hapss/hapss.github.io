@@ -103,10 +103,13 @@
             background-color: var(--color-accent-primary); 
         }
 
-        /* === Адаптивный диалоговый блок === */
+        /* === Адаптивный диалоговый блок (ОБНОВЛЕНО) === */
         #dialogueWrapper {
             width: 95%;
             max-width: 95%; 
+            transition: transform 0.3s ease, bottom 0.3s ease, width 0.3s ease;
+            /* Обеспечиваем привязку к низу, чтобы scale работал от низа */
+            transform-origin: bottom center; 
         }
 
         @media (min-width: 1024px) {
@@ -116,14 +119,50 @@
             }
         }
 
-        #dialogueContentBox { 
-            height: 150px; 
-            padding: 1rem;
+        /* Стили для Fullscreen на PC (Увеличение на 30%) */
+        @media screen and (min-width: 1024px) {
+            #vnViewer:fullscreen #dialogueWrapper,
+            #vnViewer:-webkit-full-screen #dialogueWrapper {
+                transform: scale(1.3) translateY(-20px); /* Увеличиваем и немного приподнимаем */
+                margin-bottom: 2rem;
+            }
         }
+
+        #dialogueContentBox { 
+            /* Изменено с height на min-height для адаптивности */
+            min-height: 150px; 
+            height: auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
         @media (min-width: 768px) {
             #dialogueContentBox {
-                height: 200px; 
+                min-height: 200px; 
                 padding: 2rem;
+            }
+        }
+
+        /* Стили для мобильных в портрете (Увеличение высоты) */
+        @media (max-width: 768px) and (orientation: portrait) {
+            #dialogueWrapper {
+                width: 98%; /* Максимальная ширина */
+                bottom: 10px;
+            }
+            #dialogueContentBox {
+                min-height: 28vh; /* Занимаем около 30% высоты экрана */
+                max-height: 40vh; /* Ограничение, чтобы не закрыть спрайт полностью */
+                padding: 1rem 0.8rem;
+                overflow-y: auto; /* Скролл для очень длинного текста */
+            }
+            #currentText {
+                font-size: 1.05rem; /* Чуть меньше для мобильных, но читаемо */
+                line-height: 1.4;
+            }
+            #speakerNameContainer {
+                margin-left: 0.5rem; /* Корректировка отступа имени */
             }
         }
 
@@ -136,7 +175,7 @@
             }
         }
         
-        /* === Полноэкранный диалоговый блок === */
+        /* === Полноэкранный диалоговый блок (Лог/Весь текст) === */
         #fullDialogueBox {
             position: absolute;
             top: 0;
