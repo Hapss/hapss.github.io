@@ -2543,34 +2543,34 @@
     {
       "speaker": "Хокуо",
       "text": "Леди Мэй...",
-      "sprite_right": "Hokuou.png"
+      "sprite_right": "Hakuou.png"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Что? Я думала вы мертвы.",
       "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Hokuou.png",
+      "sprite_right": "Hakuou.png",
       "dim_override": "right"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Насколько я помню, тогда вы помогли мне убить демона-зонтика. А потом, когда в тебе пробудился Хоукай, ты, рискуя жизнью, подавила эту силу.",
       "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Hokuou.png",
+      "sprite_right": "Hakuou.png",
       "dim_override": "rught"
     },
     {
       "speaker": "Хокуо",
       "text": "Как ты помнишь, я теперь всего лишь мимолетное видение, которое может исчезнуть в любой момент.",
       "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Hokuou.png",
+      "sprite_right": "Hakuou.png",
       "dim_override": "left"
     },
     {
       "speaker": "Хокуо",
       "text": "Другими словами, я — сикигами, которая привязалась к вам и следит за тем, чтобы магический контур в твоём теле продолжал работать.",
       "sprite_left": "Hokushin Mei 1.png",
-      "sprite_right": "Hokuou.png",
+      "sprite_right": "Hakuou.png",
       "dim_override": "left"
     },
     {
