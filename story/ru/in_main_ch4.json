@@ -2187,27 +2187,27 @@
     {
       "speaker": "Хокусин Мэй",
       "text": "Ух, попалась.",
-      "sprite_left": "Hokushin Mei 2.png"
+      "sprite_centre": "Hokushin Mei 2.png"
     },
     {
       "text": "Схватить её!",
-      "sprite_left": "Hokushin Mei 2.png",
+      "sprite_centre": "Hokushin Mei 2.png",
       "dim_override": "center"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Вот же надоеды!",
-      "sprite_left": "Hokushin Mei 2.png"
+      "sprite_centre": "Hokushin Mei 2.png"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Я занята поисками, у меня нет на вас времени. Стиль одного меча: Полярная звезда—",
-      "sprite_left": "Hokushin Mei 2.png"
+      "sprite_centre": "Hokushin Mei 2.png"
     },
     {
       "text": "Цзинь!",
       "sprite_centre": "Hokushin Mei 2.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -2217,7 +2217,7 @@
     {
       "text": "Она инстинктивно взмахнула мечом, но ощущения были не те, что раньше, и она промахнулась.",
       "sprite_centre": "Hokushin Mei 2.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -2227,7 +2227,7 @@
     {
       "text": "Бум!",
       "sprite_centre": "Hokushin Mei 1.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -2237,12 +2237,12 @@
     {
       "text": "Солдат воспользовался возможностью и нанес мощный удар в живот Хокусин Мэй.",
       "sprite_centre": "Hokushin Mei 1.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "Она в розыске, взять её под стражу!",
       "sprite_centre": "Hokushin Mei 1.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -2257,7 +2257,7 @@
     {
       "text": "Сбив солдата с ног, Хокусин Мэй убежала вглубь переулка.",
       "sprite_centre": "Hokushin Mei 1.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "...",
@@ -2342,52 +2342,52 @@
     {
       "text": "«Когда я была совсем маленькой, мне постоянно слышались странные звуки: шорохи, как будто в темноте прячутся злые духи».",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "«Всякий раз, когда я рассказывала об этом родителям, я видела только их застывшие от страха лица».",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "«Значит это была ты, призрачная тень. Или же злобная сущность?..»",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "«А может ты сам Хоукай».",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "«Ещё с тех пор ты был во мне».",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "......",
-      "sprite_left": "Hokushin Mei 4.png"
+      "sprite_centre": "Hokushin Mei 4.png"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "И сейчас ведь ты наверняка задаёшься вопросом: что же такое Хоукай?",
-      "sprite_left": "Hokushin Mei 4.png"
+      "sprite_centre": "Hokushin Mei 4.png"
     },
     {
       "text": "«Я не Бессмертная, мне не интересен Хоукай».",
-      "sprite_left": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "sprite_centre": "Hokushin Mei 4.png",
+      "dim_override": "center"
     },
     {
       "text": "«Просто...»",
-      "sprite_left": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "sprite_centre": "Hokushin Mei 4.png",
+      "dim_override": "center"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Ты чувствуешь исходящую силу от него.",
-      "sprite_left": "Hokushin Mei 4.png"
+      "sprite_centre": "Hokushin Mei 4.png"
     },
     {
       "text": "Её голос звучал маняще.",
@@ -2397,62 +2397,62 @@
       "text": "И всё потому, что от неё действительно исходила сила.",
       "background": "CG10301.png",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "Будучи дочерью сёгуна, она не нуждалась в насилии. Даже если бы она в совершенстве овладела искусством владения мечом, вряд ли она когда-нибудь открыла бы школу, чтобы учить других.",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "Но в эпоху хаоса и потрясений ничто не вечно.",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "После смерти родителей, когда в её дом ворвались мародеры и ей оставалось лишь бежать, она испытывала только ужас перед смертью.",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "Затем, следуя указаниям этого голоса, она нашла проклятый клинок глубоко в горах.",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "«Благодаря тебе я ни разу не дрогнула, обнажая свой клинок, и именно поэтому дожила до сегодняшнего дня».",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "«В конце концов, Полярная звезда — это всего лишь стиль владения мечом, призванный сохранить мне жизнь. Ни о какой славе и речи идти не могло».",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Ты хочешь вернуться в дни, когда была непобедимой.",
-      "sprite_left": "Hokushin Mei 4.png"
+      "sprite_centre": "Hokushin Mei 4.png"
     },
     {
       "text": "«Я...»",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "«Верно».",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "Я потянулась к этой зловещей тени. Чем ближе, тем сильнее ощущала, как во мне нарастает сила.",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "text": "Но......",
       "sprite_centre": "Hokushin Mei 4.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "speaker": "???",
@@ -2479,17 +2479,17 @@
     {
       "text": "Ха-ха, эй, азиаточка, уже так поздно. Не хочешь вернуться к нам и повеселиться?",
       "sprite_centre": "Hokushin Mei 1.png",
-      "dim_override": "centre"
+      "dim_override": "center"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Вот же мусор, воспользовались моей бедой. Я, Хокусин Мэй, поверить не могу, что до меня домогались.",
-      "sprite_left": "Hokushin Mei 2.png"
+      "sprite_centre": "Hokushin Mei 2.png"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Потеряйтесь, оба!",
-      "sprite_left": "Hokushin Mei 2.png"
+      "sprite_centre": "Hokushin Mei 2.png"
     }
   ]
 }
