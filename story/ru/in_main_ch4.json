@@ -2490,6 +2490,156 @@
       "speaker": "Хокусин Мэй",
       "text": "Потеряйтесь, оба!",
       "sprite_centre": "Hokushin Mei 2.png"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Фух...",
+      "sprite_centre": "Hokushin Mei 1.png"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Даже без меча я могу управиться с вами, бандитами, голыми руками.",
+      "sprite_centre": "Hokushin Mei 1.png"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Вот так вот. Правда если встречусь со стражниками, то мне опять придётся бежать.",
+      "sprite_centre": "Hokushin Mei 1.png"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Хулиганы, которые издеваются над слабыми... Похоже, моему пути странствующего мечника пришёл конец.",
+      "sprite_centre": "Hokushin Mei 1.png"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "...",
+      "sprite_centre": "Hokushin Mei 1.png"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Неважно. Сейчас важнее всего найти леди Каллен.",
+      "sprite_centre": "Hokushin Mei 1.png"
+    },
+    {
+      "speaker": "???",
+      "text": "Если ты этого хочешь, то я могу направить тебя..."
+    },
+    {
+      "speaker": "???",
+      "text": "Но в твоём текущем состоянии это будет равноценно суициду."
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Опять этот голос. Да что происходит?",
+      "sprite_centre": "Hokushin Mei 1.png"
+    },
+    {
+      "speaker": "Кокуфу",
+      "text": "Давно не виделись, дурной ронин.",
+      "sprite_right": "Kokufuu.png",
+      "audio": "BGM_131_Loop.ogg"
+    },
+    {
+      "speaker": "Хокуо",
+      "text": "Леди Мэй...",
+      "sprite_right": "Hokuou.png"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Что? Я думала вы мертвы.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Hokuou.png",
+      "dim_override": "right"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Насколько я помню, тогда вы помогли мне убить демона-зонтика. А потом, когда в тебе пробудился Хоукай, ты, рискуя жизнью, подавила эту силу.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Hokuou.png",
+      "dim_override": "rught"
+    },
+    {
+      "speaker": "Хокуо",
+      "text": "Как ты помнишь, я теперь всего лишь мимолетное видение, которое может исчезнуть в любой момент.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Hokuou.png",
+      "dim_override": "left"
+    },
+    {
+      "speaker": "Хокуо",
+      "text": "Другими словами, я — сикигами, которая привязалась к вам и следит за тем, чтобы магический контур в твоём теле продолжал работать.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Hokuou.png",
+      "dim_override": "left"
+    },
+    {
+      "speaker": "Кокуфу",
+      "text": "Сверхъестественная энергия в этом месте настолько сильна, что её ощущаем даже мы.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "left"
+    },
+    {
+      "speaker": "Кокуфу",
+      "text": "Конечно, самое главное, что сила внутри тебя, дурной ронин, пробуждается слишком быстро. Мне очень трудно держать её под контролем.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "left"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Ха-ха-ха-ха!",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "right"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Звучит ужасно, но снова увидеть вас — это просто чудо.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "right"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Ты права. Сейчас я никак не смогу справиться с этой дамочкой, которая яростно размахивает своим механическим оружием.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "right"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Но я, Хокусин Мэй, из тех, кто платит добром за добро и местью за месть. Я с радостью отдам свою жизнь за доброту, которую проявила ко мне леди Каллен, приютив меня.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "right"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Я должна идти.",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "right"
+    },
+    {
+      "text": "Я что-то слышал. Поторопись и проверь, это близко!",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "left, right"
+    },
+    {
+      "speaker": "Хокусин Мэй",
+      "text": "Тц, неужели весь этот шум привлёк стражей? Когда же закончится этот бесконечный бег?",
+      "sprite_left": "Hokushin Mei 1.png",
+      "sprite_right": "Kokufuu.png",
+      "dim_override": "right",
+      "anim_left": "exit-right"
+    },
+    {
+      "speaker": "Кокуфу",
+      "text": "Ты нас совсем не слушаешь. Мы же сказали, что внутри тебя...",
+      "sprite_centre": "Kokufuu.png"
     }
   ]
 }
