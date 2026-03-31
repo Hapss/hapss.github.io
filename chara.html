@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Персонажи Houkai Gakuen 2</title>
+    <link rel="icon" type="image/ico" href="images/favico.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+        :root {
+            --color-bg-darkest: #171c26;
+            --color-bg-main: #1f2937;
+            --color-bg-medium: #374151;
+            --color-accent-primary: #0891b2;
+            --color-accent-ring: #22d3ee;
+            --color-text-primary: #e5e7eb;
+            --color-text-secondary: #d1d5db;
+        }
+
+        .light-theme {
+            --color-bg-darkest: #D7DDEA;
+            --color-bg-main: #F2F4F8;
+            --color-bg-medium: #E4E8F1;
+            --color-text-primary: #1f2937;
+            --color-text-secondary: #6b7280;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg-main);
+            color: var(--color-text-primary);
+            transition: background-color 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .book-container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            aspect-ratio: 16/9;
+            background-color: rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .book-page {
+            flex: 1;
+            background-image: url('images/book.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 10px 50px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            gap: 10px;
+        }
+
+        .book-page.right {
+            transform: scaleX(-1);
+        }
+
+        #iconGrid, #charContentScroll {
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+        }
+
+        #iconGrid::-webkit-scrollbar, #charContentScroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        #iconGrid::-webkit-scrollbar-track, #charContentScroll::-webkit-scrollbar-track {
+            background: transparent;
+            margin: 20px 0;
+        }
+        #iconGrid::-webkit-scrollbar-thumb, #charContentScroll::-webkit-scrollbar-thumb {
+            background-color: rgba(156, 163, 175, 0.5);
+            border-radius: 10px;
+        }
+
+        .book-content-right {
+            transform: scaleX(-1);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+        }
+
+        #charContentScroll {
+            flex-grow: 1;
+            padding-right: 10px;
+        }
+
+        .char-icon-wrapper {
+            position: relative;
+            width: 115px;
+            height: 135px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .char-frame {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+
+        .frame-normal { 
+            background-image: url('images/frame02_normal.png'); 
+        }
+        
+        .frame-click { 
+            background-image: url('images/frame02_click.png'); 
+            transform: scale(1.28);
+            z-index: 6;
+        }
+
+        .char-photo {
+            position: absolute;
+            top: 7px;
+            bottom: 7px;
+            left: 7px;
+            right: 7px;
+            background-size: 100%;
+            border-radius: 18px;
+        }
+
+        #charBio {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .nav-link {
+            transition: all 0.2s ease;
+            color: var(--color-text-primary);
+        }
+
+        .nav-link:hover {
+            background-color: var(--color-bg-medium);
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <header class="fixed top-0 left-0 right-0 z-50 p-4" style="background-color: var(--color-bg-darkest);">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <nav class="flex space-x-4">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold">Главная</a>
+                <a href="vn.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold">История</a>
+                <a href="partners.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold">Узы</a>
+                <a href="chara.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold ring-2 ring-white/20">Персонажи</a>
+                <a href="wonderland.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold">Страна чудес</a>
+            </nav>
+            
+            <button onclick="toggleTheme()" class="px-4 py-2 rounded-full text-sm" style="background-color: var(--color-bg-medium);">
+                <span id="themeIcon">🌙</span> <span id="themeText">Тёмная</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-24 px-4 pb-12">
+        <div class="book-container shadow-2xl">
+            <div class="book-page left" id="iconGrid">
+                <div class="char-icon-wrapper" onclick="selectCharacter('kiana', this)">
+                    <div class="char-photo" style="background-image: url('images/library/001.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('mei', this)">
+                    <div class="char-photo" style="background-image: url('images/library/002.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('bronya', this)">
+                    <div class="char-photo" style="background-image: url('images/library/003.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('himeko', this)">
+                    <div class="char-photo" style="background-image: url('images/library/004.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('theresa', this)">
+                    <div class="char-photo" style="background-image: url('images/library/005.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('seele', this)">
+                    <div class="char-photo" style="background-image: url('images/library/006.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('sin', this)">
+                    <div class="char-photo" style="background-image: url('images/library/007.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('kyuusyou', this)">
+                    <div class="char-photo" style="background-image: url('images/library/008.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('iserin', this)">
+                    <div class="char-photo" style="background-image: url('images/library/009.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('fuhua', this)">
+                    <div class="char-photo" style="background-image: url('images/library/010.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('kika', this)">
+                    <div class="char-photo" style="background-image: url('images/library/011.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('sirin', this)">
+                    <div class="char-photo" style="background-image: url('images/library/012.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('rita', this)">
+                    <div class="char-photo" style="background-image: url('images/library/013.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('ninti', this)">
+                    <div class="char-photo" style="background-image: url('images/library/014.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('jyahnar', this)">
+                    <div class="char-photo" style="background-image: url('images/library/015.png.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('fran', this)">
+                    <div class="char-photo" style="background-image: url('images/library/016.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('femirins', this)">
+                    <div class="char-photo" style="background-image: url('images/library/017.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('shion', this)">
+                    <div class="char-photo" style="background-image: url('images/library/018.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+                <div class="char-icon-wrapper" onclick="selectCharacter('kiana_mei', this)">
+                    <div class="char-photo" style="background-image: url('images/library/019.png')"></div>
+                    <div class="char-frame frame-normal"></div>
+                </div>
+            </div>
+
+            <div class="book-page right">
+                <div class="book-content-right text-gray-800">
+                    <h2 id="charName" class="text-3xl font-black mb-4 text-700" style="color: #B54D4A; text-decoration: underline #B54D4A; text-underline-position: under; text-decoration-thickness: 1px;">Выберите персонажа</h2>
+                    
+                    <div id="charContentScroll" class="hidden">
+                        <div class="space-y-4">
+                            <div>
+                                <span class="font-bold text-xl leading-relaxed" style="color: #B54D4A">Возраст</span>
+                                <p id="charAge" class="font-bold text-sm uppercase tracking-widest text-500" style="color: #B54D4A"></p>
+                            </div>
+                            <div>
+                                <span class="font-bold text-xl leading-relaxed" style="color: #B54D4A">День рождения</span>
+                                <p id="charBirthday" class="font-bold text-sm uppercase tracking-widest text-pink-500" style="color: #B54D4A"></p>
+                            </div>
+                            <div style="outline: dashed #B54D4A 2px;"></div>
+                            <div class="mt-4">
+                                <span class="font-bold text-xl tracking-widest"  style="color: #947563">Мини описание</span>
+                                <p id="charBio" class="text-500 leading-relaxed font-semibold mt-2" style="color: #947563"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const characters = {
+            'kiana': { name: "Киана Каслана", age: "16 лет", birthday: "7 декабря", bio: "Наследница 69-го поколения рода Каслана, потомок Избранной, воительница, постигшая природу Хоукая. Киана унаследовала от рода Каслана невероятную невосприимчивость к силе Хоукая; большинство искажающих полей Хоукая практически не оказывают влияния на наследников рода Каслана." },
+            'mei': { name: "Райдэн Мэй", age: "17 лет", birthday: "13 апреля", bio: "Отец был президентом известной корпорации. Накануне выброса Хоукая компания пострадала от финансового кризиса, а отец оказался втянут в преступление, из-за чего практически всё его состояние было заморожено. Это событие сильно повлияло на Мэй: её прежде жизнерадостный характер стал несколько замкнутым и странным." },
+            'bronya': { name: "Броня Зайчик", age: "14 лет", birthday: "18 августа", bio: "Приёмная дочь председателя совета директоров российского семейного предприятия тяжёлой промышленности, подопытный проект боевого человекоподобного оружия следующего поколения этой корпорации. В ходе эксперимента у Брони были стёрты личность и характер, чтобы обеспечить лучшую совместимость с нейрокомпьютерным интерфейсом и достичь слияния человеческой природы и механизма." },
+            'himeko': { name: "Химеко Мурата", age: "27 лет", birthday: "11 июня", bio: "Состоит в рядах подразделения по борьбе с Хоукаем Академии Святой Фрейи, имеет звание майора. Благодаря проекту «Валькирия» прошла физическую модификацию и обрела способность противостоять Хоукаю. Обладая исключительными командными качествами на поле боя, стала незаменимым кадром в борьбе с Хоукаем." },
+            'theresa': { name: "Тереза Апокалипсис", age: "Секрет!", birthday: "28 марта", bio: "Командир Дальневосточного филиала Шиксала. Отвечает за руководство местным отрядом Валькирий в борьбе с кризисами, вызванными Хоукаем. Несмотря на юный возраст, обладает выдающимися способностями к суждению и командованию. Во время встречи с Яэ Сакурой обрела удивительные способности…" },
+            'seele': { name: "Зеле Фёлерай", age: "14 лет", birthday: "18 октября", bio: "С ранних лет Зеле жила в приюте Коколии, где они с Броней стали сёстрами по духу. Однако во время одного из неудачных экспериментов Анти-Энтропии Зеле обратилась в квантовое состояние и исчезла. После долгих скитаний и ожидания она наконец пробудилась вновь благодаря спасению Брони." },
+            'sin': { name: "Син Мал", age: "14 лет", birthday: "9 сентября", bio: "Син раньше была русской аристократкой, но из-за череды необъяснимых бедствий потеряла свою семью. Теперь Син — член элитного боевого отряда Брони в составе Анти-Энтропии. На поле боя её беспощадность повергает в ужас всех врагов." },
+            'kyuusyou': { name: "Кюсё Хорайдзи", age: "16 лет", birthday: "24 декабря", bio: "Учится в академии Чиба, происходит из обычной семьи. Часто называет себя избранной. После того как она самостоятельно создала игру «Приключения Хому», привлекла внимание Шиксала и Анти-Энтропии, став предметом ожесточённой борьбы между несколькими силами, хотя сама, кажется, об этом не подозревает. Обладает способностью к предвидению: может предсказывать некоторые события, но иногда её прогнозы оказываются совершенно неверными." },
+            'iserin': { name: "Иссерин", age: "16 лет", birthday: "8 января", bio: "Один из исполнителей Анти-Энтропии, оперативный псевдоним — Доктор. Отвечает за научно-технические исследования в организации. Несмотря на молодость, в совершенстве владеет знаниями в различных областях, её называют гением «звезды столетия». Обладает способностью мыслить рационально с любой точки зрения, но при этом очень пуглива: при возникновении опасности всегда первой прячется." },
+            'fuhua': { name: "Фука", age: "???", birthday: "9 февраля", bio: "Женщина с изящным телосложением, внешне выглядящая на двадцать с небольшим лет. Обладает сильно развитым чувством справедливости, в её манерах и речи чувствуется оттенок старины. В совершенстве владеет традиционными боевыми искусствами, передаваемыми из поколения в поколение, и весьма уверена в себе в ближнем бою. Несёт обязанность защищать людей от Хоукая. Однажды, почувствовав признаки Хоукая вдали, отправилась в путь на Дальний Восток." },
+            'kika': { name: "Кика Мушоку", age: "16 лет", birthday: "2 мая", bio: "Валькирия Шиксала S ранга. Оператор системы «Нексус». Специализируется на ведении дистанционного боя с использованием внешнего боевого модуля «Сабайон». В бою на ближней дистанции крайне уязвима. Обладает большой страстью к сладостям. Эксплуатация системы «Нексус» значительно истощает её жизненные силы, поэтому придерживается убеждения, что в отпущенный ей короткий срок следует наслаждаться радостями жизни." },
+            'sirin': { name: "Сирин", age: "13 лет", birthday: "23 июня", bio: "Сирин была слепой девочкой, жившей в бедном городке. Они с матерью существовали лишь друг у друга, и Сирин жила в мире прекрасных грёз, которыми делилась с ней мать. Когда начался Второй Выброс, Сирин стала Херршером и обрела зрение. Однако горечь и безобразие реального мира потрясли её душу, а сила Херршера толкнула к безумию. В конце концов она была повержена отрядом Валькирий. Спустя много лет её тело воссоединилось с ядром Херршера, и Сирин воскресла. Благодаря помощи Кианы и Кюсё она обрела мужество взглянуть в лицо миру и решила собственноручно сделать его лучше." },
+            'rita': { name: "Рита", age: "20 лет", birthday: "1 марта", bio: "Горничная, управляющая цветочным магазином и всегда появляющаяся в элегантном образе. Однако за этим цветущим фасадом, кажется, скрывается множество тайн." },
+            'ninti': { name: "Нинти", age: "13 лет", birthday: "15 ноября", bio: "Нинти — Валькирия ранга S, находящаяся в прямом подчинении Отто Апокалипсиса. Она является хранительницей Клятвы Иуды. Обладая огромной силой, Нинти действует на поле боя как специальное оружие против Херршеров. Она участвовала в уничтожении Четвёртого Херршера в Новой Зеландии и совершила множество выдающихся военных подвигов\n\nВ Шиксале Нинти считается одним из эталонов среди Валькирий и пользуется большим уважением. Однако за этим стоит иная правда: Нинти была тщательно спланированной пешкой, которую Отто использовал, чтобы завербовать Коколию. Она является клоном, созданным на основе генов дочери Коколии, Наташи\n\nС момента своего рождения Нинти редко соприкасалась с обычной жизнью простых людей, поэтому её понимание ценностей было крайне скудным. После череды потрясений — предательства Коколии и падения Шиксала — Нинти, подобная чистому листу бумаги, постепенно начала задумываться о смысле своего существования." },
+            'jyahnar': { name: "Джана", age: "Неизвестно", birthday: "19 сентября", bio: "Планетарный зверь Хоукая, пришедший по велению Воли Хоукая. В древней эпохе она уничтожила человеческую цивилизацию, однако заключила с Кианой соглашение: поддерживать и защищать Терминал Стигмат. Джана считает людей всего лишь муравьями, но под влиянием Кианы этот ничтожный вид тоже пробудил в ней интерес\n\nВ обычном состоянии Джана использует тело, подобное человеческому, и движима любопытством к миру людей. В боевой форме она раскрывает разрушительную мощь властительного уровня, не ведая пощады\n\nПосле поражения в битве у монастыря, Киана влила ядро Джаны в единственный оставшийся фрагмент её существа. Джана сохранила жизнь, но погрузилась в состояние спячки. Однако появление Божественного Оружия подняло уровень энергии Хоукая на беспрецедентную высоту, и Джана, подвергшись влиянию этого, пробудилась вновь. И поныне она продолжает ждать — ждать, чтобы увидеть своими глазами будущее, в которое верит Киана." },
+            'fran': { name: "Фран", age: "Неизвестно", birthday: "26 июля", bio: "Директор фабрики фамильяров в Стране чудес, босс логистики. Мечтает построить идеальную бизнес-империю с помощью конгломерата. Её безмерные амбиции и алчность когда-то привели Страну чудес к великой смуте, а саму Фран отвергли другие фамильяры. Однако её непоколебимая вера в свою великую мечту позволила Фран остаться собой во время кризиса, когда тёмные силы наводнили Страну чудес, и сыграла ключевую роль в том, чтобы фамильяры смогли дать отпор злу\n\nБудучи фамильяром, Фран практически лишена боевой мощи — это результат отбора, проведённого Духом Древнего Древа. Такова особенность, сопровождающая её рождение как фамильяра, в котором переплелись свет и тьма. Но это не останавливает Фран: она продолжает сражаться не силой, а умом и знаниями. Будь то светлая или тёмная сторона, она всегда будет двигаться вперёд к своей заветной мечте." },
+            'femirins': { name: "Фемиринс", age: "Неизвестно", birthday: "6 июля", bio: "Высший искусственный интеллект, разработанный учёным из древней эпохи — Иссерин Ливтрут. Обладает мощными способностями к самообучению и модулем эмоций. Постепенно эволюционируя, Фемиринс обрела человечность. Иссерин вложила в неё много личных чувств, не только создав для её развития систему Авалон, способную симулировать реальный мир, но и встроив в неё защитный протокол, чтобы уберечь от вреда в будущем\n\nОднако для борьбы с Хоукаем Фемиринс и система Авалон были реквизированы доктором МЭЙ и размещены в антарктическом исследовательском институте Мёбиус. Фемиринс также лишилась данных памяти о своём рождении\n\nВосемьдесят четыре тысячи лет спустя Иссерин Ливтрут, вновь рождённая под воздействием механизма Стигмат, прибыла к руинам Мёбиуса, нашла и восстановила терминал Авалон и вновь встретилась с Фемиринс. Двое, расставшиеся на закате мира, воссоединились, чтобы спасти его." },
+            'shion': { name: "Сион", age: "Неизвестно", birthday: "21 апреля", bio: "Белая лиса, унаследовавшая имя Сион. Даже если её физическое тело истлело под гнётом времени, она всё равно продолжает следовать своему убеждению собственным путём\n\nПосле смерти была отправлена в пространство Стигмат Зеле как скиталица. Там она помогла Зеле обрести решимость и обрела свой собственный приют. Однако в ней непрестанно конфликтовали человеческая сущность и внутренняя звериная природа, что в итоге привело к уничтожению иллюзорного сада, созданного в пространстве Стигмат. Затем, пройдя через три истории, она осознала свои истинные намерения. Ценой повторной жертвы своей жизнью она навечно запечатала проклятого зверя желаний, рождённого из союза её звериной природы и искажённого желания. Благодаря жертвоприношению девы души — Сион — она вновь обрела жизнь и в конечном итоге вошла в Стигмату Зеле." },
+            'kiana_mei': { name: "Киана и Мэй", age: "Неизвестно", birthday: "Неизвестно", bio: "Реальный мир и мир душ — точка пересечения молитв и ответов\n\nПрошлое и будущее, мир явленный и мир духовный — всё стягивается сюда\n\nЧудо нисходит в мир —\n\nПтицы с переплетёнными крыльями, чьи души связаны звёздами\n\nОни здесь." }
+        };
+
+        function selectCharacter(id, element) {
+            document.querySelectorAll('.char-frame').forEach(f => {
+                f.classList.remove('frame-click');
+                f.classList.add('frame-normal');
+            });
+
+            const frame = element.querySelector('.char-frame');
+            frame.classList.remove('frame-normal');
+            frame.classList.add('frame-click');
+
+            const char = characters[id];
+            if (char) {
+                document.getElementById('charName').textContent = char.name;
+                document.getElementById('charAge').textContent = char.age;
+                document.getElementById('charBirthday').textContent = char.birthday;
+                document.getElementById('charBio').textContent = char.bio;
+                
+                const scrollContainer = document.getElementById('charContentScroll');
+                scrollContainer.classList.remove('hidden');
+                scrollContainer.scrollTop = 0;
+            }
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const isDark = body.classList.contains('dark-theme');
+            if (isDark) {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                document.getElementById('themeIcon').textContent = '☀️';
+                document.getElementById('themeText').textContent = 'Светлая';
+            } else {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                document.getElementById('themeIcon').textContent = '🌙';
+                document.getElementById('themeText').textContent = 'Тёмная';
+            }
+        }
+    </script>
+</body>
+</html>

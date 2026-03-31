@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Узы Houkai Gakuen 2</title>
+    <link rel="icon" type="image/ico" href="images/favico.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="partners.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+        
+        :root, .dark-theme {
+            --color-bg-darkest: #171c26;
+            --color-bg-main: #1f2937;
+            --color-bg-medium: #374151;
+            --color-accent-primary: #0891b2; 
+            --color-text-primary: #e5e7eb; 
+            --color-text-secondary: #9ca3af; 
+            --nav-bg: rgba(23, 28, 38, 0.8);
+        }
+
+        .light-theme {
+            --color-bg-darkest: #D7DDEA;  
+            --color-bg-main: #F2F4F8;    
+            --color-bg-medium: #E4E8F1;   
+            --color-accent-primary: #2563eb; 
+            --color-text-primary: #1f2937; 
+            --color-text-secondary: #4b5563; 
+            --nav-bg: rgba(215, 221, 234, 0.8);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg-main);
+            color: var(--color-text-primary);
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .top-nav {
+            background-color: var(--nav-bg);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-link {
+            color: var(--color-text-primary);
+            transition: all 0.2s;
+            background: rgba(255,255,255,0.05);
+        }
+        .nav-link:hover {
+            background: var(--color-accent-primary);
+            color: white;
+        }
+        .nav-link.active-page {
+            background: var(--color-accent-primary);
+            color: white;
+            box-shadow: 0 0 15px var(--color-accent-primary);
+        }
+
+        .partner-frame {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .partner-frame:hover { transform: scale(1.1); z-index: 10; }
+
+        body, .partner-frame, .char-full-bg, .modal-bg-layer {
+            user-select: none;
+            -webkit-user-select: none; 
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -user-drag: none;
+            -webkit-user-drag: none;
+        }
+        
+        .frame-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .char-icon {
+            position: absolute;
+            inset: 10px;
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
+            object-fit: cover;
+            z-index: 2;
+        }
+
+        #detailView {
+            position: fixed;
+            inset: 0;
+            z-index: 60;
+            background-color: var(--color-bg-darkest);
+            display: none;
+            overflow: hidden;
+        }
+
+        .modal-bg-layer {
+            position: absolute;
+            inset: 0;
+            background-position: center;
+            background-size: cover;
+            z-index: 0;
+        }
+
+        .char-full-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 70%;
+            object-fit: contain;
+            object-position: center;
+            z-index: 1;
+            pointer-events: auto;
+            cursor: pointer;
+            transition: filter 0.3s ease;
+        }
+
+        .dialogue-bubble {
+            position: absolute;
+            left: 28%;
+            top: 55%;
+            width: fit-content;
+            max-width: 380px;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 1.5rem 0 1.5rem 1.5rem;
+            color: #fff;
+            font-size: 1.05rem;
+            line-height: 1.4;
+            z-index: 50;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(20px) scale(0.95);
+        }
+
+        .dialogue-bubble.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .content-overlay {
+            position: absolute; 
+            right: 0;
+            top: 0;
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            background-color: rgb(9 20 34 / 92%);
+            padding: 80px 40px 100px;
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+        }
+
+        .param-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .param-label {
+            color: #3b82f6; 
+            background: #000; 
+            padding: 2px 10px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            min-width: 150px;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+
+        .param-value {
+            color: #fff;
+            border-bottom: 1px solid #4b5563; 
+            margin-left: 10px;
+            flex-grow: 1;
+            font-size: 0.9rem;
+            padding-bottom: 2px;
+        }
+
+        .scroll-area {
+            max-height: 380px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--color-accent-primary) transparent;
+            white-space: pre-wrap;
+        }
+
+        .scroll-area::-webkit-scrollbar { width: 4px; }
+        .scroll-area::-webkit-scrollbar-thumb { background: var(--color-accent-primary); }
+
+        .tab-btn {
+            cursor: pointer;
+            padding: 12px 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(255,255,255,0.5);
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        .tab-btn.active {
+            color: #fff;
+            border-bottom-color: var(--color-accent-primary);
+        }
+
+        .back-btn-container {
+            position: fixed;
+            bottom: 2.5rem;
+            left: 2.5rem;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+    <header class="fixed top-0 left-0 right-0 z-50 p-4" style="background-color: var(--color-bg-darkest);">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <nav class="flex space-x-4">
+                <a href="index.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold">Главная</a>
+                <a href="vn.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold">История</a>
+                <a href="partners.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold ring-2 ring-white/20">Узы</a>
+                <a href="chara.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold">Персонажи</a>
+                <a href="wonderland.html" class="nav-link px-3 py-2 rounded-lg text-sm font-bold">Страна чудес</a>
+            </nav>
+
+            <button id="themeToggle" class="px-4 py-2 rounded-full text-sm" style="background-color: var(--color-bg-medium);">
+                <span id="themeIcon">🌙</span> <span id="themeText"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="listView" class="max-w-7xl mx-auto px-6 py-32">
+        <div id="partnersGrid" class="flex flex-wrap gap-4 justify-center"></div>
+    </main>
+
+    <div id="detailView">
+        <div id="modal-bg-image" class="modal-bg-layer"></div>
+
+        <div class="back-btn-container">
+            <button onclick="showList()" class="hover:scale-110 transition active:scale-95">
+                <img src="images/partners/btnBack.png" alt="Назад" class="h-14 drop-shadow-2xl">
+            </button>
+        </div>
+
+        <img id="detailLargeImg" src="" alt="" class="char-full-bg" onclick="triggerRandomDialogue()">
+        
+        <div id="characterDialogue" class="dialogue-bubble">
+            <p id="characterDialogueText" class="italic font-semibold drop-shadow-md text-white/95"></p>
+        </div>
+        
+        <div class="content-overlay">
+            <h2 id="charName" class="text-3xl font-black mb-10 text-white drop-shadow-[0_4px_10px_rgba(0,0,0,1)] uppercase italic" style="text-align: center;">Имя</h2>
+
+            <div id="profileTab" class="space-y-2"> 
+                <div class="param-row"><span id="lblHeight" class="param-label uppercase">Рост</span><span id="charHeight" class="param-value"></span></div>
+                <div class="param-row"><span id="lblSizes" class="param-label uppercase">Три размера</span><span id="charSizes" class="param-value"></span></div>
+                <div class="param-row"><span id="lblBday" class="param-label uppercase">День рождения</span><span id="charBday" class="param-value"></span></div>
+                <div class="param-row"><span id="lblHobby" class="param-label uppercase">Нравится</span><span id="charHobby" class="param-value"></span></div>
+                
+                <div class="mt-8 pt-4">
+                    <div id="flavorText" class="scroll-area text-white text-sm leading-relaxed p-5 bg-black/60 rounded-xl border border-white/5 shadow-inner"></div>
+                </div>
+            </div>
+
+            <div id="storyTab" class="hidden space-y-6">
+                <div class="scroll-area h-[480px] bg-black/60 p-5 rounded-xl border border-white/5 shadow-inner">
+                    <h4 id="storyTitle1" class="text-blue-400 font-black mb-2 text-xl uppercase tracking-tighter"></h4>
+                    <p id="storyText1" class="text-white/90 text-sm mb-10 leading-relaxed"></p>
+                    <h4 id="storyTitle2" class="text-blue-400 font-black mb-2 text-xl uppercase tracking-tighter"></h4>
+                    <p id="storyText2" class="text-white/90 text-sm leading-relaxed"></p>
+                </div>
+            </div>
+
+            <div class="mt-auto pt-8 flex justify-around items-center border-t border-white/10">
+                <button onclick="switchTab('profile')" id="btnTabProfile" class="tab-btn active">Профиль</button>
+                <button onclick="switchTab('story')" id="btnTabStory" class="tab-btn">История</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentPartner = null;
+        let lastDialogue = "";
+        let dialogueTimeout = null;
+
+        function getBackgroundImage(partnerId) {
+            if (typeof backgroundGroups === 'undefined') return '';
+            for (const [path, ids] of Object.entries(backgroundGroups)) {
+                if (ids.map(String).includes(String(partnerId))) {
+                    return path;
+                }
+            }
+            return '';
+        }
+        
+        const grid = document.getElementById('partnersGrid');
+        const listView = document.getElementById('listView');
+        const detailView = document.getElementById('detailView');
+
+        function initLabels() {
+            if (typeof labels === 'undefined') return;
+            document.getElementById('lblHeight').innerText = labels.height || 'Рост';
+            document.getElementById('lblSizes').innerText = labels.sizes || 'Три размера';
+            document.getElementById('lblBday').innerText = labels.bday || 'День рождения';
+            document.getElementById('lblHobby').innerText = labels.hobby || 'Хобби';
+            document.getElementById('btnTabProfile').innerText = labels.tabProfile || 'Профиль';
+            document.getElementById('btnTabStory').innerText = labels.tabStory || 'Сюжет';
+        }
+
+        function renderList() {
+            if (typeof partnersData === 'undefined') return;
+            grid.innerHTML = '';
+            partnersData.forEach(char => {
+                const div = document.createElement('div');
+                div.className = 'partner-frame';
+                div.onclick = () => showDetail(char.id);
+                div.innerHTML = `
+                    <img src="images/partners/frame04.png" class="frame-img">
+                    <img src="${char.icon}" class="char-icon">
+                `;
+                grid.appendChild(div);
+            });
+        }
+
+        function showDetail(id) {
+            const char = partnersData.find(c => c.id === id);
+            if (!char) return;
+            currentPartner = char;
+            lastDialogue = "";
+
+            document.getElementById('detailLargeImg').src = char.fullImg;
+            
+            const bgLayer = document.getElementById('modal-bg-image');
+            const bgImage = getBackgroundImage(id);
+            bgLayer.style.backgroundImage = bgImage ? `url('${bgImage}')` : 'none';
+
+            document.getElementById('charName').innerText = char.name;
+            
+            const params = char.params || {};
+            document.getElementById('charHeight').innerText = params.height || '-';
+            document.getElementById('charSizes').innerText = params.sizes || '-';
+            document.getElementById('charBday').innerText = params.bday || '-';
+            document.getElementById('charHobby').innerText = params.hobby || '-';
+            document.getElementById('flavorText').innerText = char.flavor || '';
+            
+            const btnTabStory = document.getElementById('btnTabStory');
+            const hasStory = char.story && (char.story.t1 || char.story.s1 || char.story.t2 || char.story.s2);
+
+            if (hasStory) {
+                btnTabStory.style.display = 'inline-block';
+                document.getElementById('storyTitle1').innerText = char.story.t1 || '';
+                document.getElementById('storyText1').innerText = char.story.s1 || '';
+                document.getElementById('storyTitle2').innerText = char.story.t2 || '';
+                document.getElementById('storyText2').innerText = char.story.s2 || '';
+            } else {
+                btnTabStory.style.display = 'none';
+            }
+
+            listView.classList.add('hidden');
+            detailView.style.display = 'block';
+            
+            switchTab('profile'); 
+            window.scrollTo(0,0);
+
+            if (char.FirstSightDialogue) {
+                showDialogue(char.FirstSightDialogue);
+            } else {
+                hideDialogue();
+            }
+        }
+
+        function showDialogue(text) {
+            if (!text) return;
+            const bubble = document.getElementById('characterDialogue');
+            const bubbleText = document.getElementById('characterDialogueText');
+            
+            bubbleText.innerText = text.replace(/#n/g, '\n');
+            bubble.classList.add('show');
+
+            if (dialogueTimeout) clearTimeout(dialogueTimeout);
+            dialogueTimeout = setTimeout(hideDialogue, 10000);
+        }
+
+        function hideDialogue() {
+            document.getElementById('characterDialogue').classList.remove('show');
+        }
+
+        function triggerRandomDialogue() {
+            if (!currentPartner || !currentPartner.dialogues || currentPartner.dialogues.length === 0) return;
+
+            let available = currentPartner.dialogues;
+            if (available.length > 1) {
+                available = available.filter(t => t !== lastDialogue);
+            }
+
+            const randomIndex = Math.floor(Math.random() * available.length);
+            const selectedText = available[randomIndex];
+            
+            lastDialogue = selectedText;
+            showDialogue(selectedText);
+        }
+
+        function showList() {
+            hideDialogue();
+            detailView.style.display = 'none';
+            listView.classList.remove('hidden');
+            currentPartner = null;
+        }
+
+        function switchTab(type) {
+            const pTab = document.getElementById('profileTab');
+            const sTab = document.getElementById('storyTab');
+            const btnP = document.getElementById('btnTabProfile');
+            const btnS = document.getElementById('btnTabStory');
+
+            if (type === 'profile') {
+                pTab.classList.remove('hidden');
+                sTab.classList.add('hidden');
+                btnP.classList.add('active');
+                btnS.classList.remove('active');
+            } else {
+                pTab.classList.add('hidden');
+                sTab.classList.remove('hidden');
+                btnP.classList.remove('active');
+                btnS.classList.add('active');
+            }
+        }
+
+        function applyTheme(isDark) {
+                 if (isDark) {
+                  document.body.classList.remove('light-theme');
+                  document.body.classList.add('dark-theme', 'relative');
+                  } else {
+                document.body.classList.remove('dark-theme');
+                document.body.classList.add('light-theme', 'relative');
+     }
+        const themeIcon = document.getElementById('themeIcon');
+                 if (themeIcon) {
+                  themeIcon.textContent = isDark ? '🌙 Тёмная' : '☀️ Светлая';
+        }
+    }
+
+        let isDark = localStorage.getItem('vn_theme') !== 'light';
+        applyTheme(isDark);
+
+        const themeToggle = document.getElementById('themeToggle');
+        if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+        isDark = !isDark;
+        applyTheme(isDark);
+        localStorage.setItem('vn_theme', isDark ? 'dark' : 'light');
+    });
+}
+
+        window.onload = () => {
+    if (typeof initLabels === 'function') initLabels();
+    if (typeof renderList === 'function') renderList();
+};
+    </script>
+</body>
+</html>

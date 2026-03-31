@@ -6,15 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Архив сюжета Houkai Gakuen 2</title>
     <link rel="icon" type="image/ico" href="images/favico.ico">
-    <!-- 
-        Примечание: Tailwind CSS подключен через CDN для удобства использования в одном файле.
-        В консоли может появляться предупреждение "should not be used in production" - это нормально для данного формата.
-    -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         
-        /* === Цветовые переменные (Dark Theme - по умолчанию) === */
         :root, .dark-theme {
             --color-bg-darkest: #171c26;
             --color-bg-main: #1f2937;
@@ -31,7 +26,6 @@
             --color-speaker-name: #ca7cfe; 
         }
 
-        /* === Цветовые переменные (Light Theme) === */
         .light-theme {
             --color-bg-darkest: #D7DDEA;  
             --color-bg-main: #F2F4F8;    
@@ -48,7 +42,6 @@
             --color-speaker-name: #ca7cfe; 
         }
 
-        /* === Общие стили === */
         body, #vnViewer, .sprite-image {
             user-select: none;
             -webkit-user-select: none; 
@@ -102,13 +95,10 @@
         .warning-button:hover {
             background-color: var(--color-accent-primary); 
         }
-
-        /* === Адаптивный диалоговый блок (ОБНОВЛЕНО) === */
         #dialogueWrapper {
             width: 95%;
             max-width: 95%; 
             transition: transform 0.3s ease, bottom 0.3s ease, width 0.3s ease;
-            /* Обеспечиваем привязку к низу, чтобы scale работал от низа */
             transform-origin: bottom center; 
         }
 
@@ -119,7 +109,6 @@
             }
         }
 
-        /* Стили для Fullscreen на PC (Увеличение на 30%) */
         @media screen and (min-width: 1024px) {
             #vnViewer:fullscreen #dialogueWrapper,
             #vnViewer:-webkit-full-screen #dialogueWrapper {
@@ -130,7 +119,6 @@
         }
 
         #dialogueContentBox { 
-            /* Изменено с height на min-height для адаптивности */
             min-height: 150px; 
             height: auto;
             padding: 1rem;
@@ -146,24 +134,23 @@
             }
         }
 
-        /* Стили для мобильных в портрете (Увеличение высоты) */
         @media (max-width: 768px) and (orientation: portrait) {
             #dialogueWrapper {
-                width: 98%; /* Максимальная ширина */
+                width: 98%;
                 bottom: 10px;
             }
             #dialogueContentBox {
-                min-height: 28vh; /* Занимаем около 30% высоты экрана */
-                max-height: 40vh; /* Ограничение, чтобы не закрыть спрайт полностью */
+                min-height: 28vh;
+                max-height: 40vh;
                 padding: 1rem 0.8rem;
-                overflow-y: auto; /* Скролл для очень длинного текста */
+                overflow-y: auto;
             }
             #currentText {
-                font-size: 1.05rem; /* Чуть меньше для мобильных, но читаемо */
+                font-size: 1.05rem;
                 line-height: 1.4;
             }
             #speakerNameContainer {
-                margin-left: 0.5rem; /* Корректировка отступа имени */
+                margin-left: 0.5rem;
             }
         }
 
@@ -175,8 +162,7 @@
                 font-size: 1.25rem;
             }
         }
-        
-        /* === Полноэкранный диалоговый блок (Лог/Весь текст) === */
+
         #fullDialogueBox {
             position: absolute;
             top: 0;
@@ -194,10 +180,9 @@
             padding: 2rem;
             color: var(--color-text-vn);
             scrollbar-width: thin;
-            height: 100%; /* Fix text overflow */
+            height: 100%;
         }
 
-        /* Mobile specific adjustments for full dialogue */
         @media (max-width: 768px) {
             #fullDialogueContent {
                 padding: 1.5rem 1rem;
@@ -231,7 +216,6 @@
             text-align: center;
         }
         
-        /* === Спрайты и Фон === */
         .sprite-position {
             position: absolute;
             height: 100%;
@@ -271,26 +255,22 @@
             transform-origin: bottom center;
         }
 
-        /* === Sprite Mobile Adaptation === */
-        /* Landscape Mode */
         @media (orientation: landscape) {
             .sprite-image {
                 object-fit: contain;
             }
         }
 
-        /* Portrait Mode: Increase sprite height usage */
         @media (orientation: portrait) {
             .sprite-position {
-                bottom: -15%; /* Lift sprite higher in portrait */
-                height: 90%;  /* Occupy more vertical space */
+                bottom: -15%;
+                height: 90%;
             }
             .sprite-image {
-                transform: scale(1.1); /* Slightly less scaling than landscape */
-                object-fit: cover; /* Fill height with minimal crop if needed */
+                transform: scale(1.1);
+                object-fit: cover;
                 object-position: top center;
             }
-            /* Adjust widths for portrait to prevent overlap */
             .sprite-position.left, .sprite-position.right { 
                 width: 55%; 
             }
@@ -304,8 +284,6 @@
             opacity: 1 !important; 
         }
 
-        /* === ЭФФЕКТЫ И АНИМАЦИИ === */
-        
         @keyframes shake-anim {
             0%, 100% { transform: translateX(0); }
             10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
@@ -335,7 +313,6 @@
             background-size: cover;
         }
 
-        /* === История диалогов === */
         #historyPanel.open {
             transform: translateX(0); 
         }
@@ -345,7 +322,7 @@
             top: 0;
             transform: translateX(100%); 
             transition: transform 0.3s ease; 
-            z-index: 70; /* Подняли Z-index выше кнопок и тултипов (обычно 50-60) */
+            z-index: 70;
             width: 100%; 
             max-width: 90vw;
             display: flex;
@@ -395,7 +372,6 @@
             border-radius: 50%;
         }
 
-        /* === ПОЛНОЭКРАННЫЙ РЕЖИМ (Стилизация) === */
         #vnViewer:fullscreen {
             width: 100vw;
             height: 100vh;
@@ -416,7 +392,6 @@
             justify-content: flex-end;
         }
 
-        /* Tooltip style */
         .tooltip-text {
             visibility: hidden;
             background-color: var(--color-bg-medium);
@@ -442,28 +417,25 @@
             opacity: 1;
         }
 
-        /* End of story overlay */
         #endStoryOverlay {
             background-color: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(5px);
         }
         
-        /* Warning Title Response text size */
         .warning-title {
-            font-size: 2.25rem; /* 4xl default fallback */
+            font-size: 2.25rem;
         }
         @media (min-width: 768px) {
-            .warning-title { font-size: 4.5rem; } /* 7xl */
+            .warning-title { font-size: 4.5rem; }
         }
         @media (max-width: 400px) {
-            .warning-title { font-size: 1.8rem; } /* Smaller for tiny screens */
+            .warning-title { font-size: 1.8rem; }
         }
 
     </style>
 </head>
 <body class="min-h-screen dark-theme">
     
-    <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 p-3 md:p-4 shadow-xl transition-colors duration-300" style="background-color: var(--color-bg-darkest);">
         <div class="flex flex-wrap justify-between items-center max-w-7xl mx-auto">
             <div class="flex items-center space-x-3">
@@ -472,7 +444,7 @@
             
             <div class="flex items-center space-x-2 md:space-x-4">
                 <button id="historyToggle" onclick="toggleHistory()" class="px-2 py-1 text-xs md:text-sm rounded-full transition duration-150" style="background-color: var(--color-bg-medium); color: var(--color-text-primary);">
-                    <span id="historyText">История</span>
+                    <span id="historyText">Лог главы</span>
                 </button>
                 
                 <button id="themeToggle" onclick="toggleTheme()" class="px-2 py-1 text-xs md:text-sm rounded-full transition duration-150" style="background-color: var(--color-bg-medium); color: var(--color-text-primary);">
@@ -492,14 +464,13 @@
     <!-- Панель Истории -->
     <div id="historyPanel" class="fixed top-0 h-full p-4 pt-20 shadow-2xl transition-transform duration-300" 
          style="background-color: var(--color-bg-darkest); opacity: 0.95;">
-        <h2 id="historyTitle" class="text-xl font-bold mb-4" style="color: var(--color-text-primary);">История диалогов</h2>
+        <h2 id="historyTitle" class="text-xl font-bold mb-4" style="color: var(--color-text-primary);">Лог главы</h2>
         <div id="historyContent" class="space-y-3" style="height: calc(100% - 3.5rem);"></div>
         <button onclick="toggleHistory()" class="absolute top-4 right-4 text-xl p-2 rounded-full hover:bg-gray-700 transition" style="color: var(--color-text-primary);">
             &times;
         </button>
     </div>
 
-    <!-- Main Content -->
     <main id="mainContent" class="pt-[6rem] md:pt-20 pb-4 px-2 md:px-4 max-w-7xl mx-auto min-h-screen">
         
         <div class="control-panel p-4 rounded-xl shadow-lg mb-6 flex flex-wrap gap-3 md:gap-4 items-end transition-colors duration-300" style="background-color: var(--color-bg-medium);">
@@ -523,18 +494,14 @@
             </button>
         </div>
 
-        <!-- Visual Novel Viewer -->
         <div id="vnViewer" class="relative w-full aspect-[16/9] rounded-xl shadow-2xl overflow-hidden flex flex-col justify-end transition-colors duration-500 cursor-pointer" 
              style="min-height: 400px; background-color: var(--color-bg-main);"
              onclick="navigateDialogue(1)"> 
-            
-            <!-- Кнопка Полноэкранного режима (Внутри VNViewer) -->
+
             <button id="fullscreenToggle" onclick="toggleFullscreen(event)" class="tooltip-container absolute top-4 right-4 z-50 p-2 rounded-full transition-colors duration-150 hover:bg-black/50 bg-black/30 text-white backdrop-blur-sm group">
-                <!-- Icon: Expand (Enter Fullscreen) -->
                 <svg id="icon-enter-fullscreen" class="w-6 h-6 block" fill="currentColor" viewBox="0 0 24 24">
                    <path d="M4 8V4H8 M4 4L9 9 M16 4H20V8 M20 4L15 9 M20 16V20H16 M20 20L15 15 M8 20H4V16 M4 20L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <!-- Icon: Collapse (Exit Fullscreen) -->
                 <svg id="icon-exit-fullscreen" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
@@ -558,7 +525,6 @@
                 </div>
             </div>
 
-            <!-- Small Dialogue Wrapper -->
             <div id="dialogueWrapper" class="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 z-20 transition-all duration-300 opacity-100 hidden">
                 <div id="speakerNameContainer" class="text-left mb-0 ml-4 md:ml-8"> 
                     <div id="currentSpeaker" class="speaker-name rounded-t-lg rounded-b-none"></div>
@@ -567,32 +533,27 @@
                     <p id="currentText" class="leading-tight transition-opacity duration-300"></p>
                 </div>
             </div>
-
-            <!-- Full Dialogue Box -->
             <div id="fullDialogueBox" class="hidden">
                 <div id="fullDialogueContent" class="h-full w-full flex flex-col p-4 md:p-8">
                     <p id="fullCurrentText" class="leading-relaxed transition-opacity duration-300"></p>
                 </div>
             </div>
-            
-            <!-- Индикатор загрузки главы -->
+
             <div id="chapter-load-overlay" class="absolute inset-0 z-40 flex flex-col items-center justify-center transition-opacity duration-300 hidden" style="background-color: rgba(23, 28, 38, 0.9);">
                 <div class="w-12 h-12 border-4 border-t-transparent border-cyan-400 rounded-full animate-spin"></div>
                 <p id="chapter-load-progress" class="mt-4 text-white font-mono text-lg"></p>
             </div>
 
-            <!-- End of Story Overlay -->
             <div id="endStoryOverlay" class="absolute inset-0 z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-500">
                 <div class="text-center p-8 rounded-2xl border border-gray-600 bg-gray-900/90 shadow-2xl transform scale-110">
-                    <h3 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">История завершена</h3>
+                    <h3 class="text-2xl md:text-3xl font-bold text-cyan-400 mb-2">Глава завершена</h3>
                     <p class="text-gray-300 text-lg">Вы достигли конца.</p>
                 </div>
             </div>
 
         </div>
     </main>
-    
-    <!-- Предупреждение -->
+
     <div id="warning-overlay" class="fixed inset-0 z-[100] bg-gray-900/95 flex items-center justify-center p-4 md:p-8 transition-opacity duration-500 opacity-100">
         <div id="warning-card" class="p-8 md:p-12 rounded-3xl shadow-2xl max-w-sm lg:max-w-4xl w-full text-center transform scale-100 transition-transform duration-300 border-2" style="background-color: var(--color-warning-bg); border-color: var(--color-warning-accent); color: var(--color-text-primary);">
             <h1 id="warningTitleText" class="warning-title font-extrabold mb-6 select-none tracking-tight break-words" style="color: var(--color-warning-accent);">ПРИМЕЧАНИЕ</h1>
@@ -629,16 +590,11 @@
                 DEFAULT_BG_COLOR: '#1f2937',
             }
         };
-        
-        // === Safe URL Resolution Helper ===
-        // Helps prevent "Failed to parse URL" errors in blobs, iframes, or local files
+
         function resolvePath(relativePath) {
             try {
-                // If we are in a data URI or blob, relative paths can fail.
-                // We attempt to resolve against document.baseURI first.
                 return new URL(relativePath, document.baseURI || window.location.href).href;
             } catch (e) {
-                // Fallback: return the path as is if resolution fails
                 return relativePath;
             }
         }
@@ -679,7 +635,6 @@
         let userVolume = 0.5; 
         let isMuted = false;
         
-        // Web Audio API
         let audioContext = null;
         let sfxGainNode = null; 
         let bgmGainNode = null; 
@@ -703,7 +658,6 @@
 
         let elements = {};
 
-        // === Утилиты ===
         
         function loadImage(url) {
             const resolvedUrl = resolvePath(url);
@@ -752,7 +706,6 @@
             return Promise.all(loadPromises);
         }
 
-        // === Audio System ===
         
         function initAudioContext() {
             if (audioContext && audioContext.state === 'running') return;
@@ -881,7 +834,6 @@ elements.volumeSlider.value = userVolume;
 
             currentAudioUrl = newAudioUrl;
 
-            // Fade in new track
             if (newAudioUrl) {
                 try {
                     const audioBuffer = await preloadAudioBuffer(newAudioUrl);
@@ -942,26 +894,24 @@ elements.volumeSlider.value = userVolume;
             }).catch(e => console.error(`SFX failed: ${sfxUrl}`, e));
         }
 
-        // === FULLSCREEN LOGIC ===
 
         function toggleFullscreen(event) {
-            if(event) event.stopPropagation(); // Prevent viewer click interaction
+            if(event) event.stopPropagation();
             
             const viewer = document.getElementById('vnViewer');
             if (!document.fullscreenElement) {
-                // Пытаемся войти в полноэкранный режим
                 if (viewer.requestFullscreen) {
                     viewer.requestFullscreen().catch(err => {
                         console.warn(`Error attempting to enable fullscreen: ${err.message}`);
                     });
-                } else if (viewer.webkitRequestFullscreen) { /* Safari */
+                } else if (viewer.webkitRequestFullscreen) {
                     viewer.webkitRequestFullscreen();
                 }
             } else {
                 // Выходим
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) { /* Safari */
+                } else if (document.webkitExitFullscreen) {
                     document.webkitExitFullscreen();
                 }
             }
@@ -984,7 +934,6 @@ elements.volumeSlider.value = userVolume;
             }
         }
 
-        // === PROGRESS SAVE/RESTORE SYSTEM ===
 
         function debounce(func, wait) {
             let timeout;
@@ -1065,7 +1014,6 @@ elements.volumeSlider.value = userVolume;
             }
         }
 
-        // === Theme & UX ===
 
         function saveTheme(theme) {
             localStorage.setItem(CONFIG.STORAGE.THEME_KEY, theme);
@@ -1125,7 +1073,6 @@ function toggleTheme() {
             setTimeout(() => { elements.warningOverlay.style.display = 'none'; }, 500); 
         }
 
-        // === DOM Init ===
         
         document.addEventListener('DOMContentLoaded', async () => {
             elements = {
@@ -1193,7 +1140,6 @@ function toggleTheme() {
                 }
             });
 
-            // Fullscreen listener
             document.addEventListener('fullscreenchange', updateFullscreenUI);
             document.addEventListener('webkitfullscreenchange', updateFullscreenUI);
 
@@ -1201,7 +1147,6 @@ function toggleTheme() {
             await restoreProgress(); 
         });
 
-        // === Logic Functions ===
         
         function processTextForBreaks(text) {
             if (text == null) return '';
@@ -1221,7 +1166,6 @@ function toggleTheme() {
                 containerElement.classList.add('hidden');
                 return;
             }
-            // Use resolved path for loading
             const resolvedUrl = resolvePath(url);
             
             const needsReload = imgElement.src !== resolvedUrl;
@@ -1266,7 +1210,6 @@ function toggleTheme() {
         
         async function fetchChapterMetadata() {
             try {
-                // Try resolving path first to handle data/blob URIs
                 const safePath = resolvePath(CONFIG.PATHS.METADATA_FILE);
                 const response = await fetch(safePath); 
                 
@@ -1275,7 +1218,6 @@ function toggleTheme() {
             } catch (error) {
                 console.error("Metadata load error:", error);
                 
-                // Show more helpful error if on file:// protocol
                 if (window.location.protocol === 'file:') {
                      alertMessage("Ошибка: Запуск через file:// не поддерживается современными браузерами. Пожалуйста, используйте локальный сервер (например, VS Code Live Server).");
                 } else {
@@ -1315,11 +1257,9 @@ function toggleTheme() {
 
         function showEndStoryOverlay() {
             elements.endStoryOverlay.classList.remove('hidden');
-            // Trigger reflow
             void elements.endStoryOverlay.offsetWidth;
             elements.endStoryOverlay.classList.remove('opacity-0');
             
-            // Auto hide after 3 seconds or on click
             const hide = () => {
                  elements.endStoryOverlay.classList.add('opacity-0');
                  setTimeout(() => {
