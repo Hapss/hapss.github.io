@@ -3674,7 +3674,8 @@
       "speaker": "Железная Дева",
       "text": "Господин Отто, это последний шанс. Мне нужна Ваша поддержка.",
       "sprite_right": "Iron Maiden 1.png",
-      "pos_right": "width: 60%"
+      "pos_right": "width: 60%",
+      "audio": "BGM_078_KUKULKAN - Kukulkan.ogg"
     },
     {
       "speaker": "Железная Дева",
@@ -3830,7 +3831,8 @@
       "speaker": "Хокусин Мэй",
       "text": "Ронины готовы отплатить за доброту даже своей жизнью.",
       "requires": "help",
-      "sprite_centre": "Hokushin Mei 1.png"
+      "sprite_centre": "Hokushin Mei 1.png",
+      "audio": "BGM_052_Horizon.ogg"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -3875,7 +3877,8 @@
     },
     {
       "text": "Сверкнули мечи.",
-      "background": "black.png"
+      "background": "black.png",
+      "audio": "BGM_079_SALVATION.ogg"
     },
     {
       "text": "Сломанное лезвие ударилось о твёрдую длинную рукоятку."
@@ -3985,7 +3988,8 @@
       "text": "Сверху донёсся голос, в котором слышалась то ли жалость, то ли насмешка."
     },
     {
-      "text": "Казалось, что этот человек смотрит на меня сверху вниз."
+      "text": "Казалось, что этот человек смотрит на меня сверху вниз.",
+      "audio": null
     },
     {
       "text": "Без гнева нет боли."
@@ -4178,7 +4182,8 @@
       "text": "Всё становится единым."
     },
     {
-      "text": "Весь мир охватило пламя."
+      "text": "Весь мир охватило пламя.",
+      "audio": "BGM_052_Horizon.ogg"
     },
     {
       "text": "..."
@@ -4277,7 +4282,8 @@
     },
     {
       "text": "Бум!",
-      "background": "cg10298.png"
+      "background": "cg10298.png",
+      "audio": null
     },
     {
       "speaker": "Железная Дева",
