@@ -567,6 +567,8 @@
                 <div id="bgLayer1" class="absolute inset-0 bg-layer opacity-100"></div>
                 <div id="bgLayer2" class="absolute inset-0 bg-layer opacity-0"></div>
             </div>
+            
+            <video id="bgVideo" class="absolute inset-0 w-full h-full object-cover z-30 hidden pointer-events-none" playsinline></video>
 
             <div id="spriteContainer" class="absolute inset-0 z-10 pointer-events-none flex justify-center items-end p-2 md:p-4">
                 <div id="spriteLeftContainer" class="sprite-position left hidden">
@@ -580,7 +582,7 @@
                 </div>
             </div>
 
-            <div id="dialogueWrapper" class="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 z-20 transition-all duration-300 opacity-100 hidden">
+            <div id="dialogueWrapper" class="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 z-40 transition-all duration-300 opacity-100 hidden">
                 <div id="speakerNameContainer" class="text-left mb-0 ml-4 md:ml-8"> 
                     <div id="currentSpeaker" class="speaker-name rounded-t-lg rounded-b-none"></div>
                 </div>
@@ -589,7 +591,7 @@
                 </div>
             </div>
 
-            <div id="fullDialogueBox" class="hidden">
+            <div id="fullDialogueBox" class="hidden z-40">
                 <div id="fullDialogueContent" class="h-full w-full flex flex-col p-4 md:p-8">
                     <p id="fullCurrentText" class="leading-relaxed transition-opacity duration-300"></p>
                 </div>
@@ -597,7 +599,7 @@
 
             <div id="choicesContainer" class="hidden"></div>
 
-            <div id="chapter-load-overlay" class="absolute inset-0 z-40 flex flex-col items-center justify-center transition-opacity duration-300 hidden" style="background-color: rgba(23, 28, 38, 0.9);">
+            <div id="chapter-load-overlay" class="absolute inset-0 z-50 flex flex-col items-center justify-center transition-opacity duration-300 hidden" style="background-color: rgba(23, 28, 38, 0.9);">
                 <div class="w-12 h-12 border-4 border-t-transparent border-cyan-400 rounded-full animate-spin"></div>
                 <p id="chapter-load-progress" class="mt-4 text-white font-mono text-lg"></p>
             </div>
@@ -617,6 +619,7 @@
                 SPRITE_BASE: 'images/sprites/',
                 BACKGROUND_BASE: 'images/background/',
                 AUDIO_BASE: 'audio/',
+                VIDEO_BASE: 'videos/', 
                 METADATA_FILE: 'story/story_metadata.json', 
                 STORY_BASE: 'story/ru/',
             },
@@ -689,7 +692,7 @@
         let currentBgmSource = null;
 
         let activeFlags = new Set();
-        let isAwaitingChoice = false;
+        let isAwaitingChoice = false; 
 
         const i18n = {
             ru: {
@@ -800,6 +803,10 @@
                 if (Math.abs(currentBgmVal - volumeLevel) < 0.1 || !currentSfxSource) {
                      bgmGainNode.gain.setValueAtTime(volumeLevel, audioContext.currentTime);
                 }
+            }
+
+            if (elements.bgVideo) {
+                elements.bgVideo.volume = volumeLevel;
             }
 
             elements.volumeSlider.value = userVolume;
@@ -1008,7 +1015,7 @@
                 index: currentDialogueIndex,
                 scrollTop: scrollTop,
                 timestamp: Date.now(),
-                activeFlags: Array.from(activeFlags)
+                activeFlags: Array.from(activeFlags) 
             };
 
             localStorage.setItem(CONFIG.STORAGE.PROGRESS_KEY, JSON.stringify(progress));
@@ -1051,7 +1058,7 @@
                     enableLoadButton();
 
                     if (progress.activeFlags) {
-                        activeFlags = new Set(progress.activeFlags);
+                        activeFlags = new Set(progress.activeFlags); 
                     }
                     
                     console.log(`[Restore] Loading chapter ${progress.chapter} at index ${progress.index}`);
@@ -1124,6 +1131,7 @@
                 loadButton: document.getElementById('loadButton'),
                 loadText: document.getElementById('loadText'),
                 vnViewerElement: document.getElementById('vnViewer'),
+                bgVideo: document.getElementById('bgVideo'),
                 dialogueWrapper: document.getElementById('dialogueWrapper'),
                 currentSpeaker: document.getElementById('currentSpeaker'),
                 currentText: document.getElementById('currentText'),
@@ -1131,7 +1139,7 @@
                 fullDialogueBox: document.getElementById('fullDialogueBox'),
                 fullDialogueContent: document.getElementById('fullDialogueContent'),
                 fullCurrentText: document.getElementById('fullCurrentText'),
-                choicesContainer: document.getElementById('choicesContainer'), // Добавлено получение элемента
+                choicesContainer: document.getElementById('choicesContainer'), 
                 spriteLeftContainer: document.getElementById('spriteLeftContainer'),
                 spriteRightContainer: document.getElementById('spriteRightContainer'),
                 spriteCenterContainer: document.getElementById('spriteCenterContainer'),
@@ -1351,6 +1359,7 @@
         function renderDialogueStep() {
             const step = currentDialogue[currentDialogueIndex];
             const isFullText = step.text_style === 'full';
+            const isVideo = !!step.video;
             
             saveProgress();
 
@@ -1366,9 +1375,24 @@
                 }
             }
 
-            elements.dialogueWrapper.classList.toggle('hidden', isFullText);
-            elements.fullDialogueBox.classList.toggle('hidden', !isFullText);
+            elements.dialogueWrapper.classList.toggle('hidden', isFullText || isVideo);
+            elements.fullDialogueBox.classList.toggle('hidden', !isFullText || isVideo);
             
+            if (isVideo) {
+                elements.bgVideo.src = resolvePath(`${CONFIG.PATHS.VIDEO_BASE}${encodeURIComponent(step.video)}`);
+                elements.bgVideo.volume = isMuted ? 0 : userVolume;
+                elements.bgVideo.classList.remove('hidden');
+                elements.bgVideo.play().catch(e => console.error("Ошибка воспроизведения видео:", e));
+                elements.bgVideo.onended = () => {
+                    navigateDialogue(1);
+                };
+            } else {
+                elements.bgVideo.pause();
+                elements.bgVideo.src = '';
+                elements.bgVideo.classList.add('hidden');
+                elements.bgVideo.onended = null;
+            }
+
             if ('background' in step) crossFadeBackground(step.background); 
 
             const { spriteLeftElement, spriteRightElement, spriteCenterElement, 
@@ -1422,7 +1446,7 @@
             let dimTargets = new Set();
             const speakerPos = step.position ? step.position.toLowerCase() : null;
             
-            if (step.dim_override && !isFullText) { 
+            if (step.dim_override && !isFullText && !isVideo) { 
                 const overrideValue = step.dim_override.toLowerCase().replace(/\s/g, '');
                 if (overrideValue === 'auto' && step.speaker && speakerPos) {
                     if (speakerPos === 'left') dimTargets.add('center').add('right');
@@ -1437,7 +1461,7 @@
                 }
             }
 
-            if (!isFullText) {
+            if (!isFullText && !isVideo) {
                 if (dimTargets.has('left')) spriteLeftElement.classList.add('dimmed-sprite');
                 if (dimTargets.has('center')) spriteCenterElement.classList.add('dimmed-sprite');
                 if (dimTargets.has('right')) spriteRightElement.classList.add('dimmed-sprite');
@@ -1449,7 +1473,7 @@
                 elements.fullDialogueContent.classList.remove('align-top-left', 'align-center');
                 elements.fullDialogueContent.classList.add((step.full_text_align || 'top-left') === 'center' ? 'align-center' : 'align-top-left');
                 elements.speakerNameContainer.classList.add('hidden');
-            } else {
+            } else if (!isVideo) {
                 elements.currentSpeaker.textContent = step.speaker || "";
                 elements.speakerNameContainer.classList.toggle('hidden', !step.speaker);
                 elements.currentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
@@ -1552,6 +1576,11 @@
             elements.choicesContainer.classList.add('hidden');
             elements.choicesContainer.innerHTML = '';
             
+            elements.bgVideo.pause();
+            elements.bgVideo.src = '';
+            elements.bgVideo.classList.add('hidden');
+            elements.bgVideo.onended = null;
+
             const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
             elements.bgLayer1.style.backgroundImage = 'none'; elements.bgLayer1.style.backgroundColor = themeBgColor; elements.bgLayer1.style.opacity = '1';
             elements.bgLayer2.style.opacity = '0'; elements.bgLayer2.style.backgroundImage = 'none';
@@ -1706,7 +1735,7 @@
                 const step = currentDialogue[i];
                 
                 if (step.requires && !activeFlags.has(step.requires)) continue;
-                if (!step.text && !step.background && i !== 0) continue; 
+                if (!step.text && !step.background && !step.video && i !== 0) continue; 
                 
                 const isCurrent = (i === currentDialogueIndex);
                 const historyItem = document.createElement('div');
@@ -1731,7 +1760,7 @@
                     toggleHistory(); 
                 };
 
-                if (step.speaker) {
+                if (step.speaker && !step.video) {
                     const speakerName = document.createElement('p');
                     speakerName.className = 'font-bold mb-1';
                     speakerName.style.color = isCurrent ? 'white' : 'var(--color-speaker-name)'; 
@@ -1741,9 +1770,15 @@
 
                 const textContent = document.createElement('p');
                 textContent.className = 'text-sm leading-snug';
-                let displayText = step.text;
-                if (!displayText && i === 0) displayText = i18n.ru.startOfStory;
-                textContent.innerHTML = parseColoredText(processTextForBreaks(displayText || '')); 
+                
+                if (step.video) {
+                    textContent.innerHTML = `<span class="italic opacity-80">[Воспроизведение видео: ${step.video}]</span>`;
+                } else {
+                    let displayText = step.text;
+                    if (!displayText && i === 0) displayText = i18n.ru.startOfStory;
+                    textContent.innerHTML = parseColoredText(processTextForBreaks(displayText || '')); 
+                }
+                
                 historyItem.appendChild(textContent);
                 fragment.appendChild(historyItem);
             }
