@@ -450,6 +450,38 @@
             .warning-title { font-size: 1.8rem; }
         }
 
+        #choicesContainer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 45;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 80%;
+            max-width: 600px;
+            pointer-events: auto;
+        }
+        .choice-button {
+            background-color: var(--color-bg-dialogue);
+            color: var(--color-text-vn);
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 2px solid var(--color-accent-primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .choice-button:hover {
+            background-color: var(--color-accent-primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
     </style>
 </head>
 <body class="min-h-screen dark-theme">
@@ -563,6 +595,8 @@
                 </div>
             </div>
 
+            <div id="choicesContainer" class="hidden"></div>
+
             <div id="chapter-load-overlay" class="absolute inset-0 z-40 flex flex-col items-center justify-center transition-opacity duration-300 hidden" style="background-color: rgba(23, 28, 38, 0.9);">
                 <div class="w-12 h-12 border-4 border-t-transparent border-cyan-400 rounded-full animate-spin"></div>
                 <p id="chapter-load-progress" class="mt-4 text-white font-mono text-lg"></p>
@@ -653,6 +687,9 @@
         let bgmGainNode = null; 
         let currentSfxSource = null;
         let currentBgmSource = null;
+
+        let activeFlags = new Set();
+        let isAwaitingChoice = false;
 
         const i18n = {
             ru: {
@@ -970,7 +1007,8 @@
                 chapter: elements.chapterSelect.value,
                 index: currentDialogueIndex,
                 scrollTop: scrollTop,
-                timestamp: Date.now()
+                timestamp: Date.now(),
+                activeFlags: Array.from(activeFlags)
             };
 
             localStorage.setItem(CONFIG.STORAGE.PROGRESS_KEY, JSON.stringify(progress));
@@ -1011,6 +1049,10 @@
                 if (chapterOption) {
                     elements.chapterSelect.value = progress.chapter;
                     enableLoadButton();
+
+                    if (progress.activeFlags) {
+                        activeFlags = new Set(progress.activeFlags);
+                    }
                     
                     console.log(`[Restore] Loading chapter ${progress.chapter} at index ${progress.index}`);
                     await updateStoryContent(progress.index, progress.scrollTop);
@@ -1089,6 +1131,7 @@
                 fullDialogueBox: document.getElementById('fullDialogueBox'),
                 fullDialogueContent: document.getElementById('fullDialogueContent'),
                 fullCurrentText: document.getElementById('fullCurrentText'),
+                choicesContainer: document.getElementById('choicesContainer'), // Добавлено получение элемента
                 spriteLeftContainer: document.getElementById('spriteLeftContainer'),
                 spriteRightContainer: document.getElementById('spriteRightContainer'),
                 spriteCenterContainer: document.getElementById('spriteCenterContainer'),
@@ -1244,19 +1287,36 @@
         }
 
         function navigateDialogue(direction) {
-            if (isHistoryVisible || isNavigating) return;
+            if (isHistoryVisible || isNavigating || isAwaitingChoice) return;
             isNavigating = true; 
             initAudioContext();
             stopAllSfx(); 
             
             try { 
                 if (!dialogueIsLoaded || currentDialogue.length === 0) return;
-                const newIndex = currentDialogueIndex + direction;
+                
+                let newIndex = currentDialogueIndex + direction;
+
+                while (newIndex >= 0 && newIndex < currentDialogue.length) {
+                    const checkStep = currentDialogue[newIndex];
+                    if (checkStep.requires && !activeFlags.has(checkStep.requires)) {
+                        newIndex += direction;
+                    } else {
+                        break;
+                    }
+                }
 
                 if (newIndex >= 0 && newIndex < currentDialogue.length) {
                     currentDialogueIndex = newIndex;
                     renderDialogueStep();
-                    if (direction > 0) preloadAssets(currentDialogueIndex + 1);
+                    
+                    if (direction > 0) {
+                        let nextValidIndex = currentDialogueIndex + 1;
+                        while(nextValidIndex < currentDialogue.length && currentDialogue[nextValidIndex].requires && !activeFlags.has(currentDialogue[nextValidIndex].requires)) {
+                            nextValidIndex++;
+                        }
+                        preloadAssets(nextValidIndex);
+                    }
                 } else if (newIndex >= currentDialogue.length) {
                     showEndStoryOverlay();
                     currentDialogueIndex = currentDialogue.length - 1;
@@ -1394,6 +1454,29 @@
                 elements.speakerNameContainer.classList.toggle('hidden', !step.speaker);
                 elements.currentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
             }
+
+            elements.choicesContainer.classList.add('hidden');
+            elements.choicesContainer.innerHTML = '';
+            isAwaitingChoice = false;
+
+            if (step.choices && Array.isArray(step.choices) && step.choices.length > 0) {
+                isAwaitingChoice = true;
+                elements.choicesContainer.classList.remove('hidden');
+                
+                step.choices.forEach(choice => {
+                    const btn = document.createElement('button');
+                    btn.className = 'choice-button';
+                    btn.textContent = choice.text;
+                    btn.onclick = (e) => {
+                        e.stopPropagation(); 
+                        if (choice.flag) activeFlags.add(choice.flag);
+                        isAwaitingChoice = false;
+                        elements.choicesContainer.classList.add('hidden');
+                        navigateDialogue(1);
+                    };
+                    elements.choicesContainer.appendChild(btn);
+                });
+            }
             
             if (isHistoryVisible) renderHistory();
         }
@@ -1457,12 +1540,17 @@
             currentDialogueIndex = (startIndex >= 0 && startIndex < currentDialogue.length) ? startIndex : 0;
             dialogueIsLoaded = true;
             
+            activeFlags.clear();
+            isAwaitingChoice = false;
+
             currentBackgroundUrl = null;
             elements.spriteLeftContainer.classList.add('hidden');
             elements.spriteRightContainer.classList.add('hidden');
             elements.spriteCenterContainer.classList.add('hidden'); 
             elements.spriteLeftElement.src = ''; elements.spriteRightElement.src = ''; elements.spriteCenterElement.src = ''; 
             elements.fullDialogueBox.classList.add('hidden'); 
+            elements.choicesContainer.classList.add('hidden');
+            elements.choicesContainer.innerHTML = '';
             
             const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
             elements.bgLayer1.style.backgroundImage = 'none'; elements.bgLayer1.style.backgroundColor = themeBgColor; elements.bgLayer1.style.opacity = '1';
@@ -1616,6 +1704,8 @@
             const fragment = document.createDocumentFragment();
             for (let i = 0; i <= currentDialogueIndex; i++) {
                 const step = currentDialogue[i];
+                
+                if (step.requires && !activeFlags.has(step.requires)) continue;
                 if (!step.text && !step.background && i !== 0) continue; 
                 
                 const isCurrent = (i === currentDialogueIndex);

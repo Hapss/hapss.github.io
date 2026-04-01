@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Архив сюжета Houkai Gakuen 2 (Guns Girl Z) на русском языке." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Архив сюжета Houkai Gakuen 2</title>
+    <title>Архив истории Houkai Gakuen 2</title>
     <link rel="icon" type="image/ico" href="images/favico.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -42,12 +42,29 @@
             --color-speaker-name: #ca7cfe; 
         }
 
+        .top-nav {
+            background-color: var(--nav-bg);
+            transition: background-color 0.4s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            color: var(--nav-text);
+            background-color: transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            background-color: var(--nav-hover);
+            transform: translateY(-1px);
+        }
+
         body, #vnViewer, .sprite-image {
             user-select: none;
             -webkit-user-select: none; 
             -moz-user-select: none;
             -ms-user-select: none;
-            user-drag: none;
+            -user-drag: none;
             -webkit-user-drag: none;
         }
 
@@ -95,6 +112,7 @@
         .warning-button:hover {
             background-color: var(--color-accent-primary); 
         }
+
         #dialogueWrapper {
             width: 95%;
             max-width: 95%; 
@@ -162,7 +180,7 @@
                 font-size: 1.25rem;
             }
         }
-
+        
         #fullDialogueBox {
             position: absolute;
             top: 0;
@@ -215,7 +233,7 @@
             align-items: center;
             text-align: center;
         }
-        
+
         .sprite-position {
             position: absolute;
             height: 100%;
@@ -264,7 +282,7 @@
         @media (orientation: portrait) {
             .sprite-position {
                 bottom: -15%;
-                height: 90%;
+                height: 90%; 
             }
             .sprite-image {
                 transform: scale(1.1);
@@ -283,7 +301,7 @@
             filter: brightness(0.3) grayscale(30%) !important; 
             opacity: 1 !important; 
         }
-
+        
         @keyframes shake-anim {
             0%, 100% { transform: translateX(0); }
             10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
@@ -432,6 +450,38 @@
             .warning-title { font-size: 1.8rem; }
         }
 
+        #choicesContainer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 45;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 80%;
+            max-width: 600px;
+            pointer-events: auto;
+        }
+        .choice-button {
+            background-color: var(--color-bg-dialogue);
+            color: var(--color-text-vn);
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 2px solid var(--color-accent-primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.125rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .choice-button:hover {
+            background-color: var(--color-accent-primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
     </style>
 </head>
 <body class="min-h-screen dark-theme">
@@ -439,12 +489,11 @@
     <header id="header" class="fixed top-0 left-0 right-0 z-50 p-3 md:p-4 shadow-xl transition-colors duration-300" style="background-color: var(--color-bg-darkest);">
         <div class="flex flex-wrap justify-between items-center max-w-7xl mx-auto">
             <div class="flex items-center space-x-3">
-                <h1 id="headerTitle" class="text-lg md:text-xl font-bold tracking-wider mb-2 md:mb-0" style="color: var(--color-text-primary);">Архив сюжета Houkai Gakuen 2</h1>
             </div>
             
             <div class="flex items-center space-x-2 md:space-x-4">
                 <button id="historyToggle" onclick="toggleHistory()" class="px-2 py-1 text-xs md:text-sm rounded-full transition duration-150" style="background-color: var(--color-bg-medium); color: var(--color-text-primary);">
-                    <span id="historyText">Лог главы</span>
+                    <span id="historyText">История</span>
                 </button>
                 
                 <button id="themeToggle" onclick="toggleTheme()" class="px-2 py-1 text-xs md:text-sm rounded-full transition duration-150" style="background-color: var(--color-bg-medium); color: var(--color-text-primary);">
@@ -461,7 +510,6 @@
         </div>
     </header>
     
-    <!-- Панель Истории -->
     <div id="historyPanel" class="fixed top-0 h-full p-4 pt-20 shadow-2xl transition-transform duration-300" 
          style="background-color: var(--color-bg-darkest); opacity: 0.95;">
         <h2 id="historyTitle" class="text-xl font-bold mb-4" style="color: var(--color-text-primary);">Лог главы</h2>
@@ -485,7 +533,7 @@
             </div>
 
             <div class="w-full md:flex-1 md:min-w-[250px]">
-                <label for="chapterSelect" id="labelChapter" class="block text-sm font-medium mb-1" style="color: var(--color-text-secondary);"></label>
+                <label for="chapterSelect" id="labelChapter" class="block text-sm font-medium mb-1" style="color: var(--color-text-secondary);">Глава</label>
                 <select id="chapterSelect" onchange="enableLoadButton()" class="select-field w-full rounded-lg p-2.5 cursor-pointer focus:ring-4 transition text-sm" disabled style="background-color: var(--color-bg-main);"></select>
             </div>
             
@@ -497,7 +545,7 @@
         <div id="vnViewer" class="relative w-full aspect-[16/9] rounded-xl shadow-2xl overflow-hidden flex flex-col justify-end transition-colors duration-500 cursor-pointer" 
              style="min-height: 400px; background-color: var(--color-bg-main);"
              onclick="navigateDialogue(1)"> 
-
+            
             <button id="fullscreenToggle" onclick="toggleFullscreen(event)" class="tooltip-container absolute top-4 right-4 z-50 p-2 rounded-full transition-colors duration-150 hover:bg-black/50 bg-black/30 text-white backdrop-blur-sm group">
                 <svg id="icon-enter-fullscreen" class="w-6 h-6 block" fill="currentColor" viewBox="0 0 24 24">
                    <path d="M4 8V4H8 M4 4L9 9 M16 4H20V8 M20 4L15 9 M20 16V20H16 M20 20L15 15 M8 20H4V16 M4 20L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -533,11 +581,14 @@
                     <p id="currentText" class="leading-tight transition-opacity duration-300"></p>
                 </div>
             </div>
+
             <div id="fullDialogueBox" class="hidden">
                 <div id="fullDialogueContent" class="h-full w-full flex flex-col p-4 md:p-8">
                     <p id="fullCurrentText" class="leading-relaxed transition-opacity duration-300"></p>
                 </div>
             </div>
+
+            <div id="choicesContainer" class="hidden"></div>
 
             <div id="chapter-load-overlay" class="absolute inset-0 z-40 flex flex-col items-center justify-center transition-opacity duration-300 hidden" style="background-color: rgba(23, 28, 38, 0.9);">
                 <div class="w-12 h-12 border-4 border-t-transparent border-cyan-400 rounded-full animate-spin"></div>
@@ -553,17 +604,6 @@
 
         </div>
     </main>
-
-    <div id="warning-overlay" class="fixed inset-0 z-[100] bg-gray-900/95 flex items-center justify-center p-4 md:p-8 transition-opacity duration-500 opacity-100">
-        <div id="warning-card" class="p-8 md:p-12 rounded-3xl shadow-2xl max-w-sm lg:max-w-4xl w-full text-center transform scale-100 transition-transform duration-300 border-2" style="background-color: var(--color-warning-bg); border-color: var(--color-warning-accent); color: var(--color-text-primary);">
-            <h1 id="warningTitleText" class="warning-title font-extrabold mb-6 select-none tracking-tight break-words" style="color: var(--color-warning-accent);">ПРИМЕЧАНИЕ</h1>
-            <p class="text-base md:text-xl mb-3 font-medium leading-relaxed" style="color: var(--color-text-secondary);">Это фанатский архив сюжета Guns Girl Z (Honkai Gakuen 2). Все права принадлежат miHoYo.</p>
-            <p class="text-sm md:text-base mb-1 font-medium" style="color: var(--color-text-secondary);">Перевод выполнен Haps.</p>
-            <p class="text-sm md:text-base mb-8 font-medium" style="color: var(--color-text-secondary);">Сайт разработан с помощью Gemini.</p>
-            <button id="close-warning-button" class="warning-button font-bold py-3 px-8 text-base md:text-lg rounded-full transition duration-200 ease-in-out shadow-xl hover:shadow-2xl focus:outline-none focus:ring-4" style="background-color: var(--color-warning-accent);">Закрыть</button>
-        </div>
-    </div>
-
 <script>
         const CONFIG = {
             PATHS: {
@@ -590,7 +630,7 @@
                 DEFAULT_BG_COLOR: '#1f2937',
             }
         };
-
+        
         function resolvePath(relativePath) {
             try {
                 return new URL(relativePath, document.baseURI || window.location.href).href;
@@ -634,12 +674,15 @@
         let currentAudioUrl = null;
         let userVolume = 0.5; 
         let isMuted = false;
-        
+
         let audioContext = null;
         let sfxGainNode = null; 
         let bgmGainNode = null; 
         let currentSfxSource = null;
         let currentBgmSource = null;
+
+        let activeFlags = new Set();
+        let isAwaitingChoice = false;
 
         const i18n = {
             ru: {
@@ -752,7 +795,7 @@
                 }
             }
 
-elements.volumeSlider.value = userVolume;
+            elements.volumeSlider.value = userVolume;
             updateVolumeIcon();
 
             if (save) localStorage.setItem(CONFIG.STORAGE.VOLUME_KEY, userVolume.toString());
@@ -824,7 +867,6 @@ elements.volumeSlider.value = userVolume;
             const newAudioUrl = audioFile ? resolvePath(`${CONFIG.PATHS.AUDIO_BASE}${encodeURIComponent(audioFile)}`) : null;
             if (newAudioUrl === currentAudioUrl) return;
 
-            // Fade out
             if (currentBgmSource) {
                 await fadeAudioNode(bgmGainNode, 0, 500);
                 try { currentBgmSource.stop(0); currentBgmSource.disconnect(); } catch (e) {}
@@ -908,7 +950,6 @@ elements.volumeSlider.value = userVolume;
                     viewer.webkitRequestFullscreen();
                 }
             } else {
-                // Выходим
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
                 } else if (document.webkitExitFullscreen) {
@@ -959,7 +1000,8 @@ elements.volumeSlider.value = userVolume;
                 chapter: elements.chapterSelect.value,
                 index: currentDialogueIndex,
                 scrollTop: scrollTop,
-                timestamp: Date.now()
+                timestamp: Date.now(),
+                activeFlags: Array.from(activeFlags)
             };
 
             localStorage.setItem(CONFIG.STORAGE.PROGRESS_KEY, JSON.stringify(progress));
@@ -1000,6 +1042,10 @@ elements.volumeSlider.value = userVolume;
                 if (chapterOption) {
                     elements.chapterSelect.value = progress.chapter;
                     enableLoadButton();
+
+                    if (progress.activeFlags) {
+                        activeFlags = new Set(progress.activeFlags);
+                    }
                     
                     console.log(`[Restore] Loading chapter ${progress.chapter} at index ${progress.index}`);
                     await updateStoryContent(progress.index, progress.scrollTop);
@@ -1028,20 +1074,6 @@ elements.volumeSlider.value = userVolume;
                 elements.themeIcon.textContent = isDark ? '🌙' : '☀️';
                 elements.themeText.textContent = isDark ? i18n.ru.themeDark : i18n.ru.themeLight;
             }
-            const card = document.getElementById('warning-card');
-            if (card) {
-                const style = getComputedStyle(document.body);
-                card.style.backgroundColor = style.getPropertyValue('--color-warning-bg').trim();
-                card.style.borderColor = style.getPropertyValue('--color-warning-accent').trim();
-                const title = document.getElementById('warningTitleText');
-                if (title) title.style.color = style.getPropertyValue('--color-warning-accent').trim();
-                document.getElementById('warning-overlay').style.backgroundColor = isDark ? 'rgba(15, 23, 42, 0.95)' : 'rgba(241, 245, 249, 0.95)';
-                const btn = card.querySelector('#close-warning-button');
-                if(btn) {
-                    btn.style.backgroundColor = style.getPropertyValue('--color-warning-accent').trim();
-                    btn.style.color = 'white';
-                }
-            }
             if (currentBackgroundUrl === CONFIG.PLACEHOLDERS.DEFAULT_BG_COLOR) {
                  const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
                  elements.bgLayer1.style.backgroundColor = themeBgColor;
@@ -1049,7 +1081,7 @@ elements.volumeSlider.value = userVolume;
             }
         }
 
-function toggleTheme() {
+        function toggleTheme() {
             const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
             saveTheme(currentTheme === 'dark' ? 'light' : 'dark');
         }
@@ -1061,7 +1093,7 @@ function toggleTheme() {
         
         function handleWarningModalState() {
             const isDismissed = localStorage.getItem(CONFIG.STORAGE.WARNING_KEY) === 'true';
-            if (isDismissed) {
+            if (isDismissed && elements.warningOverlay) {
                 elements.warningOverlay.style.display = 'none';
             }
         }
@@ -1069,8 +1101,10 @@ function toggleTheme() {
         function dismissWarningModal() {
             initAudioContext();
             localStorage.setItem(CONFIG.STORAGE.WARNING_KEY, 'true');
-            elements.warningOverlay.style.opacity = '0';
-            setTimeout(() => { elements.warningOverlay.style.display = 'none'; }, 500); 
+            if (elements.warningOverlay) {
+                elements.warningOverlay.style.opacity = '0';
+                setTimeout(() => { elements.warningOverlay.style.display = 'none'; }, 500); 
+            }
         }
 
         
@@ -1090,6 +1124,7 @@ function toggleTheme() {
                 fullDialogueBox: document.getElementById('fullDialogueBox'),
                 fullDialogueContent: document.getElementById('fullDialogueContent'),
                 fullCurrentText: document.getElementById('fullCurrentText'),
+                choicesContainer: document.getElementById('choicesContainer'), // Добавлено получение элемента
                 spriteLeftContainer: document.getElementById('spriteLeftContainer'),
                 spriteRightContainer: document.getElementById('spriteRightContainer'),
                 spriteCenterContainer: document.getElementById('spriteCenterContainer'),
@@ -1135,7 +1170,7 @@ function toggleTheme() {
             }
 
             document.addEventListener('click', (event) => {
-                if (isHistoryVisible && !elements.historyPanel.contains(event.target) && !elements.historyButton.contains(event.target)) {
+                if (isHistoryVisible && elements.historyPanel && !elements.historyPanel.contains(event.target) && !elements.historyButton.contains(event.target)) {
                     toggleHistory(); 
                 }
             });
@@ -1143,9 +1178,25 @@ function toggleTheme() {
             document.addEventListener('fullscreenchange', updateFullscreenUI);
             document.addEventListener('webkitfullscreenchange', updateFullscreenUI);
 
+            populateStoryTypes();
+
             await fetchChapterMetadata();
             await restoreProgress(); 
         });
+
+        function populateStoryTypes() {
+            const typeSelect = elements.storyTypeSelect;
+            if (!typeSelect) return;
+            const currentVal = typeSelect.value;
+            typeSelect.innerHTML = '';
+            for (const key in STORY_GROUPS) {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = STORY_GROUPS[key].ru;
+                if (key === currentVal) option.selected = true;
+                typeSelect.appendChild(option);
+            }
+        }
 
         
         function processTextForBreaks(text) {
@@ -1215,6 +1266,8 @@ function toggleTheme() {
                 
                 if (!response.ok) throw new Error(response.statusText);
                 window.storyMetadata = await response.json();
+                
+                updateArcAndChapterUI(); 
             } catch (error) {
                 console.error("Metadata load error:", error);
                 
@@ -1227,19 +1280,36 @@ function toggleTheme() {
         }
 
         function navigateDialogue(direction) {
-            if (isHistoryVisible || isNavigating) return;
+            if (isHistoryVisible || isNavigating || isAwaitingChoice) return;
             isNavigating = true; 
             initAudioContext();
             stopAllSfx(); 
             
             try { 
                 if (!dialogueIsLoaded || currentDialogue.length === 0) return;
-                const newIndex = currentDialogueIndex + direction;
+                
+                let newIndex = currentDialogueIndex + direction;
+
+                while (newIndex >= 0 && newIndex < currentDialogue.length) {
+                    const checkStep = currentDialogue[newIndex];
+                    if (checkStep.requires && !activeFlags.has(checkStep.requires)) {
+                        newIndex += direction;
+                    } else {
+                        break;
+                    }
+                }
 
                 if (newIndex >= 0 && newIndex < currentDialogue.length) {
                     currentDialogueIndex = newIndex;
                     renderDialogueStep();
-                    if (direction > 0) preloadAssets(currentDialogueIndex + 1);
+                    
+                    if (direction > 0) {
+                        let nextValidIndex = currentDialogueIndex + 1;
+                        while(nextValidIndex < currentDialogue.length && currentDialogue[nextValidIndex].requires && !activeFlags.has(currentDialogue[nextValidIndex].requires)) {
+                            nextValidIndex++;
+                        }
+                        preloadAssets(nextValidIndex);
+                    }
                 } else if (newIndex >= currentDialogue.length) {
                     showEndStoryOverlay();
                     currentDialogueIndex = currentDialogue.length - 1;
@@ -1322,9 +1392,6 @@ function toggleTheme() {
             if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
             if (step.anim_right) spriteRightContainer.classList.add(step.anim_right);
             if (step.anim_center) spriteCenterContainer.classList.add(step.anim_center);
-if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
-            if (step.anim_right) spriteRightContainer.classList.add(step.anim_right);
-            if (step.anim_center) spriteCenterContainer.classList.add(step.anim_center);
 
             vnViewerElement.classList.remove('shake');
             if (step.effect === 'shake') {
@@ -1379,6 +1446,29 @@ if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
                 elements.currentSpeaker.textContent = step.speaker || "";
                 elements.speakerNameContainer.classList.toggle('hidden', !step.speaker);
                 elements.currentText.innerHTML = parseColoredText(processTextForBreaks(step.text));
+            }
+
+            elements.choicesContainer.classList.add('hidden');
+            elements.choicesContainer.innerHTML = '';
+            isAwaitingChoice = false;
+
+            if (step.choices && Array.isArray(step.choices) && step.choices.length > 0) {
+                isAwaitingChoice = true;
+                elements.choicesContainer.classList.remove('hidden');
+                
+                step.choices.forEach(choice => {
+                    const btn = document.createElement('button');
+                    btn.className = 'choice-button';
+                    btn.textContent = choice.text;
+                    btn.onclick = (e) => {
+                        e.stopPropagation(); 
+                        if (choice.flag) activeFlags.add(choice.flag);
+                        isAwaitingChoice = false;
+                        elements.choicesContainer.classList.add('hidden');
+                        navigateDialogue(1);
+                    };
+                    elements.choicesContainer.appendChild(btn);
+                });
             }
             
             if (isHistoryVisible) renderHistory();
@@ -1443,12 +1533,17 @@ if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
             currentDialogueIndex = (startIndex >= 0 && startIndex < currentDialogue.length) ? startIndex : 0;
             dialogueIsLoaded = true;
             
+            activeFlags.clear();
+            isAwaitingChoice = false;
+
             currentBackgroundUrl = null;
             elements.spriteLeftContainer.classList.add('hidden');
             elements.spriteRightContainer.classList.add('hidden');
             elements.spriteCenterContainer.classList.add('hidden'); 
             elements.spriteLeftElement.src = ''; elements.spriteRightElement.src = ''; elements.spriteCenterElement.src = ''; 
             elements.fullDialogueBox.classList.add('hidden'); 
+            elements.choicesContainer.classList.add('hidden');
+            elements.choicesContainer.innerHTML = '';
             
             const themeBgColor = getComputedStyle(document.body).getPropertyValue('--color-bg-main').trim();
             elements.bgLayer1.style.backgroundImage = 'none'; elements.bgLayer1.style.backgroundColor = themeBgColor; elements.bgLayer1.style.opacity = '1';
@@ -1497,25 +1592,21 @@ if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
 
         function updateI18nStrings() {
             const text = i18n.ru;
-            document.getElementById('headerTitle').textContent = text.headerTitle;
-            document.getElementById('labelStoryType').textContent = text.labelStoryType;
-            document.getElementById('labelArc').textContent = text.labelArc; 
-            document.getElementById('labelChapter').textContent = text.labelChapter;
-            elements.loadText.textContent = text.loadText;
-            elements.historyText.textContent = text.historyButton;
-            elements.historyTitle.textContent = text.historyTitle;
+            const headerTitle = document.getElementById('headerTitle');
+            if (headerTitle) headerTitle.textContent = text.headerTitle;
+            const labelStoryType = document.getElementById('labelStoryType');
+            if (labelStoryType) labelStoryType.textContent = text.labelStoryType;
+            const labelArc = document.getElementById('labelArc');
+            if (labelArc) labelArc.textContent = text.labelArc; 
+            const labelChapter = document.getElementById('labelChapter');
+            if (labelChapter) labelChapter.textContent = text.labelChapter;
+            
+            if (elements.loadText) elements.loadText.textContent = text.loadText;
+            if (elements.historyText) elements.historyText.textContent = text.historyButton;
+            if (elements.historyTitle) elements.historyTitle.textContent = text.historyTitle;
+            
             const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-            elements.themeText.textContent = currentTheme === 'dark' ? text.themeDark : text.themeLight;
-            const typeSelect = elements.storyTypeSelect;
-            const currentType = typeSelect.value;
-            typeSelect.innerHTML = '';
-            for (const key in STORY_GROUPS) {
-                const option = document.createElement('option');
-                option.value = key; option.textContent = STORY_GROUPS[key].ru; 
-                if (key === currentType) option.selected = true;
-                typeSelect.appendChild(option);
-            }
-            if (!currentType && typeSelect.options.length > 0) typeSelect.selectedIndex = 0;
+            if (elements.themeText) elements.themeText.textContent = currentTheme === 'dark' ? text.themeDark : text.themeLight;
         }
         
         function updateArcAndChapterUI() {
@@ -1523,26 +1614,21 @@ if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
             const typeKey = elements.storyTypeSelect.value;
             const arcSelect = elements.arcSelect;
             const arcContainer = elements.arcSelectContainer;
-            const currentArcKey = arcSelect.value; 
             
-            arcSelect.innerHTML = ''; arcSelect.disabled = true;
-            if (typeKey !== 'main') arcSelect.value = ""; 
-
+            arcSelect.innerHTML = '';
+            
             if (typeKey === 'main') {
                 arcContainer.classList.remove('hidden');
-                let arcFound = false;
                 for (const key in MAIN_STORY_ARCS) {
                     const option = document.createElement('option');
-                    option.value = key; option.textContent = MAIN_STORY_ARCS[key].ru;
-                    if (key === currentArcKey) option.selected = true;
+                    option.value = key; 
+                    option.textContent = MAIN_STORY_ARCS[key].ru;
                     arcSelect.appendChild(option);
-                    arcFound = true;
                 }
-                arcSelect.disabled = !arcFound;
-                if (!currentArcKey && arcSelect.options.length > 0) arcSelect.selectedIndex = 0;
+                arcSelect.disabled = false;
             } else {
                 arcContainer.classList.add('hidden');
-                arcSelect.value = ""; 
+                arcSelect.disabled = true;
             }
             updateChapterSelect();
         }
@@ -1551,40 +1637,46 @@ if (step.anim_left) spriteLeftContainer.classList.add(step.anim_left);
             const typeKey = elements.storyTypeSelect.value;
             const arcKey = elements.arcSelect.value;       
             const select = elements.chapterSelect;
-            const currentChapterKey = select.value;
-            select.innerHTML = ''; select.disabled = true; select.value = ""; 
             
-            if (!window.storyMetadata || !typeKey || (typeKey === 'main' && !arcKey)) { enableLoadButton(); return; }
-const storyGroup = STORY_GROUPS[typeKey];
-            if (!storyGroup) { enableLoadButton(); return; }
+            select.innerHTML = '';
+            select.disabled = true;
+            
+            if (!window.storyMetadata) return;
+            
+            const storyGroup = STORY_GROUPS[typeKey];
+            if (!storyGroup) return;
             
             let targetPrefix = (typeKey === 'main') ? `${arcKey}_main_` : storyGroup.prefix; 
-            let chapterFound = false;
-            for (const fullChapterKey in window.storyMetadata) {
-                if (fullChapterKey.startsWith(targetPrefix)) {
-                    const name = window.storyMetadata[fullChapterKey].ru;
-                    if (name) {
-                        const option = document.createElement('option');
-                        option.value = fullChapterKey; option.textContent = name; 
-                        if (fullChapterKey === currentChapterKey) option.selected = true;
-                        select.appendChild(option);
-                        chapterFound = true;
-                    }
+            
+            let found = false;
+            for (const key in window.storyMetadata) {
+                if (key.startsWith(targetPrefix)) {
+                    const option = document.createElement('option');
+                    option.value = key;
+                    option.textContent = window.storyMetadata[key].ru || key;
+                    select.appendChild(option);
+                    found = true;
                 }
             }
-            select.disabled = !chapterFound;
-            if (!currentChapterKey && select.options.length > 0) select.selectedIndex = 0;
+            
+            if (found) {
+                select.disabled = false;
+            }
+            
             enableLoadButton();
         }
         
         function initializeOrUpdateUI() {
+             populateStoryTypes();
              updateArcAndChapterUI(); 
              applyTheme(document.body.classList.contains('dark-theme') ? 'dark' : 'light');
              enableLoadButton();
         }
 
         function enableLoadButton() {
-            elements.loadButton.disabled = !elements.chapterSelect.value; 
+            if (elements.loadButton) {
+                elements.loadButton.disabled = !elements.chapterSelect.value; 
+            }
         }
 
         function toggleHistory() {
@@ -1605,6 +1697,8 @@ const storyGroup = STORY_GROUPS[typeKey];
             const fragment = document.createDocumentFragment();
             for (let i = 0; i <= currentDialogueIndex; i++) {
                 const step = currentDialogue[i];
+                
+                if (step.requires && !activeFlags.has(step.requires)) continue;
                 if (!step.text && !step.background && i !== 0) continue; 
                 
                 const isCurrent = (i === currentDialogueIndex);
