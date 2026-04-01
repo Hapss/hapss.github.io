@@ -2159,7 +2159,7 @@
     {
       "speaker": "Каллен",
       "text": "...Хмпф!",
-      "sprite_centre": "Kallen5.png",
+      "sprite_centre": "Kallen 5.png",
       "audio": "BGM_078_KUKULKAN - Kukulkan.ogg"
     },
     {
@@ -2172,26 +2172,26 @@
     {
       "speaker": "Каллен",
       "text": "Ху...",
-      "sprite_centre": "Kallen5.png"
+      "sprite_centre": "Kallen 5.png"
     },
     {
       "speaker": "Каллен",
       "text": "Я всё дальше и дальше от убежища.",
-      "sprite_centre": "Kallen5.png"
+      "sprite_centre": "Kallen 5.png"
     },
     {
       "speaker": "Каллен",
       "text": "Не успела я этого осознать, как они загнали меня в это место.",
-      "sprite_centre": "Kallen5.png"
+      "sprite_centre": "Kallen 5.png"
     },
     {
       "speaker": "Каллен",
       "text": "Они постоянно нападали по пути. Учитывая их силу, я давно должна быть мертва... Так почему же они постоянно позволяют мне уходить от них?",
-      "sprite_centre": "Kallen5.png"
+      "sprite_centre": "Kallen 5.png"
     },
     {
       "text": "Звяк!",
-      "sprite_centre": "Kallen5.png",
+      "sprite_centre": "Kallen 5.png",
       "dim_override": "center",
       "sfx": "clang.ogg"
     },
@@ -2206,17 +2206,17 @@
     {
       "speaker": "Каллен",
       "text": "Они всё сильнее смыкают строй.",
-      "sprite_centre": "Kallen5.png"
+      "sprite_centre": "Kallen 5.png"
     },
     {
       "speaker": "Каллен",
       "text": "Но до сих пор не пытаются меня убить, словно пытаются заманить куда-то.",
-      "sprite_centre": "Kallen5.png"
+      "sprite_centre": "Kallen 5.png"
     },
     {
       "speaker": "Каллен",
       "text": "...Остаётся только действовать по обстоятельствам.",
-      "sprite_centre": "Kallen5.png"
+      "sprite_centre": "Kallen 5.png"
     },
     {
       "text": "...",
@@ -2225,23 +2225,23 @@
     {
       "speaker": "Каллен",
       "text": "Здесь?",
-      "sprite_centre": "Kallen4.png",
+      "sprite_centre": "Kallen 4.png",
       "background": "CG10301.png"
     },
     {
       "speaker": "Каллен",
       "text": "Это самое людное место в столице, а потому ярко освещено.",
-      "sprite_centre": "Kallen4.png"
+      "sprite_centre": "Kallen 4.png"
     },
     {
       "speaker": "Каллен",
       "text": "Возможно, я смогу этим воспользоваться и устранить их по одному.",
-      "sprite_centre": "Kallen4.png"
+      "sprite_centre": "Kallen 4.png"
     },
     {
       "speaker": "Каллен",
       "text": "И—",
-      "sprite_centre": "Kallen4.png",
+      "sprite_centre": "Kallen 4.png",
       "audio": null
     },
     {
@@ -2251,124 +2251,124 @@
     {
       "speaker": "Каллен",
       "text": "А ты что здесь делаешь, Отто!?",
-      "sprite_left": "Kallen9.png"
+      "sprite_left": "Kallen 9.png"
     },
     {
       "speaker": "Отто",
       "text": "Сегодня вечером в доме герцогини Железной Девы состоится бал. От моего информатора поступили сведения, что на балу появится человек, связанный с церковью.",
-      "sprite_left": "Kallen9.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 9.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "left"
     },
     {
       "speaker": "Отто",
       "text": "Очень важно понять какие силы стоят за всем этим.",
-      "sprite_left": "Kallen9.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 9.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "left"
     },
     {
       "speaker": "Каллен",
       "text": "Не время для разговоров, здесь опасно! Люди Шиксала обнаружили безопасный дом, они преследуют меня.",
-      "sprite_left": "Kallen8.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 8.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "right"
     },
     {
       "speaker": "Отто",
       "text": "Только я не заметил ни одного солдата Шиксала, не говоря уже об ассасинах, охотящихся за тобой.",
-      "sprite_left": "Kallen8.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 8.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "left"
     },
     {
       "speaker": "Отто",
       "text": "Однако, раз уж ты говоришь иначе, значит тому есть причины. Пошли, спрячемся в доме герцогини вместе.",
-      "sprite_left": "Kallen8.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 8.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "left"
     },
     {
       "speaker": "Каллен",
       "text": "Но...",
-      "sprite_left": "Kallen8.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 8.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "right"
     },
     {
       "speaker": "Отто",
       "text": "Не волнуйся, у церкви связи с сильными людьми и они не будут действовать необдуманно. Просто притворись гостем на балу, и твои преследователи уже не смогут так свободно действовать.",
-      "sprite_left": "Kallen8.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 8.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "left"
     },
     {
       "speaker": "Каллен",
       "text": "Поняла.",
-      "sprite_left": "Kallen5.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 5.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "right"
     },
     {
       "speaker": "Каллен",
       "text": "Однако они явно пытались загнать меня в определённое место. У меня плохое предчувствие.",
-      "sprite_left": "Kallen5.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 5.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "right"
     },
     {
       "speaker": "Отто",
       "text": "Расслабься, это особняк Железной Девы. Она самая любимая благородная дама моего отца, и весьма популярная особа в высшем обществе столицы.",
-      "sprite_left": "Kallen5.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 5.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "left"
     },
     {
       "speaker": "Отто",
       "text": "И она просто светский человек и не интересуется церковными делами, не говоря уже о тебе.",
-      "sprite_left": "Kallen5.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 5.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "left"
     },
     {
       "speaker": "Отто",
       "text": "Герцогиня Железная Дева, я Отто Апокалипсис, прибыл на бал по приглашению...",
-      "sprite_left": "Kallen5.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 5.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "left"
     },
     {
       "speaker": "Отто",
       "text": "...",
-      "sprite_left": "Kallen5.png",
-      "sprite_right": "Otto3.png",
+      "sprite_left": "Kallen 5.png",
+      "sprite_right": "Otto 3.png",
       "dim_override": "left"
     },
     {
       "speaker": "Каллен",
       "text": "Не отвечает.",
-      "sprite_centre": "Kallen4.png"
+      "sprite_centre": "Kallen 4.png"
     },
     {
       "speaker": "Каллен",
       "text": "О, Отто, дверь не закрыта.",
-      "sprite_centre": "Kallen4.png"
+      "sprite_centre": "Kallen 4.png"
     },
     {
       "speaker": "Отто",
       "text": "Но никто не встречает.",
-      "sprite_centre": "Otto3.png"
+      "sprite_centre": "Otto 3.png"
     },
     {
       "speaker": "Каллен",
       "text": "Ну и странное местечко. Я войду и проверю сначала.",
-      "sprite_centre": "Kallen4.png",
+      "sprite_centre": "Kallen 4.png",
       "anim_center": "exit-left"
     },
     {
       "speaker": "Отто",
       "text": "Каллен—",
-      "sprite_centre": "Kallen4.png",
+      "sprite_centre": "Kallen 4.png",
       "dim_override": "center"
     },
     {
