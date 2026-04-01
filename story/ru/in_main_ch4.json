@@ -2865,56 +2865,64 @@
       "text": "Объясню заранее.",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Kallen 5.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Это цитадель Рыцарей Смерти. Если я казню вас, никто ничего не узнает, даже епископ.",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Kallen 5.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Отто",
       "text": "Я не волнуюсь.",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Otto 2.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Отто",
       "text": "Если ты действительно лелеешь мечту изменить Шиксал, то я — твой важнейший союзник, и ты никогда меня не убьёшь. Но если ты всё же решишься на это, то докажешь, что ты не такая праведная и благородная, как утверждаешь, и смерть для тебя ничего не значит.",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Otto 2.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Ну хорошо—",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Otto 2.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Но это не так просто, как может показаться на первый взгляд.",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Otto 2.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Я получу рычаги давления, которые заставят вас сотрудничать со мной.",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Otto 2.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Отто",
       "text": "Каллен, будь осторожна!",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Otto 3.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "text": "......",
@@ -3665,12 +3673,14 @@
     {
       "speaker": "Железная Дева",
       "text": "Господин Отто, это последний шанс. Мне нужна Ваша поддержка.",
-      "sprite_right": "Iron Maiden 1.png"
+      "sprite_right": "Iron Maiden 1.png",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Я должна это сделать во имя Шиксала.",
-      "sprite_right": "Iron Maiden 1.png"
+      "sprite_right": "Iron Maiden 1.png",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -3776,7 +3786,8 @@
     {
       "speaker": "Железная Дева",
       "text": "А, так то была неудачливая ронин... И впрямь, совсем нет манер.",
-      "sprite_centre": "Iron Maiden 2.png"
+      "sprite_centre": "Iron Maiden 2.png",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
@@ -3786,17 +3797,20 @@
     {
       "speaker": "Железная Дева",
       "text": "Как нелепо... Даже когда клинок не был сломан, ты мне не ровня. А теперь и подавно.",
-      "sprite_centre": "Iron Maiden 2.png"
+      "sprite_centre": "Iron Maiden 2.png",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "...Возможно ты права.",
-      "sprite_centre": "Hokushin Mei 1.png"
+      "sprite_centre": "Hokushin Mei 1.png",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "И даже так у меня есть причины обнажить клинок.",
-      "sprite_centre": "Hokushin Mei 1.png"
+      "sprite_centre": "Hokushin Mei 1.png",
+      "pos_center": "width: 60%"
     },
     {
       "text": "За что ты хочешь сражаться?",
@@ -3826,29 +3840,33 @@
     },
     {
       "speaker": "Хокусин Мэй",
-      "text": "Но что бы ни случилось, я буду искать возможности, леди Карен, мистер Отто, будьте готовы сбежать в любой момент!",
+      "text": "Но что бы ни случилось, я буду искать возможности, леди Каллен, мистер Отто, будьте готовы сбежать в любой момент!",
       "sprite_centre": "Hokushin Mei 1.png"
     },
     {
       "speaker": "Жлезеная Дева",
       "text": "Жалкий и невежественный заблудший ягнёнок.",
-      "sprite_centre": "Iron Maiden 4.png"
+      "sprite_centre": "Iron Maiden 4.png",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Жлезеная Дева",
       "text": "Ну раз уж так, давай сразимся.",
-      "sprite_centre": "Iron Maiden 4.png"
+      "sprite_centre": "Iron Maiden 4.png",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Жлезеная Дева",
       "text": "Да завершится суд, что был прекращён—",
-      "sprite_centre": "Iron Maiden 4.png"
+      "sprite_centre": "Iron Maiden 4.png",
+      "pos_center": "width: 60%"
     },
     {
       "text": "Звяк, звяк!",
       "sprite_centre": "Iron Maiden 4.png",
       "dim_override": "center",
-      "sfx": "clang.ogg"
+      "sfx": "clang.ogg",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Каллен",
@@ -3886,22 +3904,26 @@
     {
       "speaker": "Железная Дева",
       "text": "И это всё?",
-      "sprite_centre": "Iron Maiden 2.png"
+      "sprite_centre": "Iron Maiden 2.png",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Таков твой предел со сломанным мечом.",
-      "sprite_centre": "Iron Maiden 2.png"
+      "sprite_centre": "Iron Maiden 2.png",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Ты позволила Хоукаю разъедать твою душу, постепенно теряя себя в бою; твои грехи уже не смыть.",
-      "sprite_centre": "Iron Maiden 2.png"
+      "sprite_centre": "Iron Maiden 2.png",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Покайся в этом гробу, специально изготовленном для тебя.",
-      "sprite_centre": "Iron Maiden 2.png"
+      "sprite_centre": "Iron Maiden 2.png",
+      "pos_center": "width: 60%"
     },
     {
       "speaker": "Каллен",
@@ -3956,7 +3978,8 @@
     {
       "speaker": "Железная Дева",
       "text": "Какая жалость.",
-      "sprite_centre": "Iron Maiden 2.png"
+      "sprite_centre": "Iron Maiden 2.png",
+      "pos_center": "width: 60%"
     },
     {
       "text": "Сверху донёсся голос, в котором слышалась то ли жалость, то ли насмешка."
@@ -4097,7 +4120,8 @@
     {
       "speaker": "Железная Дева",
       "text": "Я... упокою тебя.",
-      "sprite_centre": "Iron Maiden 2.png"
+      "sprite_centre": "Iron Maiden 2.png",
+      "pos_center": "width: 60%"
     },
     {
       "text": "Кажется я услышала сожаление."
@@ -4215,17 +4239,20 @@
     {
       "speaker": "Железная Дева",
       "text": "...Ха!",
-      "sprite_left": "Iron Maiden 1.png"
+      "sprite_left": "Iron Maiden 1.png",
+      "pos_left": "width: 60%"
     },
     {
       "text": "Лезвие вспыхнуло пламенем, и из него вырвалась огромная сила.",
       "sprite_left": "Iron Maiden 1.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_left": "width: 60%"
     },
     {
       "text": "В одно мгновение их оружие столкнулось—",
       "sprite_left": "Iron Maiden 1.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_left": "width: 60%"
     },
     {
       "text": "Лязг!",
@@ -4255,165 +4282,189 @@
     {
       "speaker": "Железная Дева",
       "text": "А!",
-      "sprite_right": "Iron Maiden 1.png"
+      "sprite_right": "Iron Maiden 1.png",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Железная Дева.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 5.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "...",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 5.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "У тебя явно остались ещё силы для сражения, так от чего ты убираешь оружие?",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 5.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "...Мне просто интересно, сколько ты продержишься, если позволила эрозии Хоукая дойти до такого состояния?",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Hokushin Mei 5.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Более того, когда ты уже не сможешь сдерживаться, ты превратишься в монстра, с которым придётся иметь дело Рыцарям Шиксала. В тебе не останется ни добра, ни зла, ни убеждений.",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Hokushin Mei 5.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "В таком случае это может стать лакмусовой бумажкой для Ордена.",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Hokushin Mei 5.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "...Хм.",
       "sprite_right": "Iron Maiden 2.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Рыцарь смерти",
       "text": "Госпожа Железная Дева, из церкви пришло письмо.",
       "sprite_right": "Iron Maiden 1.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Из церкви?.. Поняла.",
-      "sprite_right": "Iron Maiden 1.png"
+      "sprite_right": "Iron Maiden 1.png",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
-      "text": "Церковь? Это ж Небожительница—",
+      "text": "Церковь? Небожительница же—",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "На сегодня всё, госпожа Каллен и господин Отто. Если передумаете, не стесняйтесь обращаться ко мне в любое время.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Ладно, я временно дам тебе свободу.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Стоять—",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Мы все просто боремся за то, во что верим, даже если за это нужно заплатить жизнью.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Я так рада, что ты, некогда заблудшая, нашла свой истинный путь.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Просто чтобы внести ясность: это моя территория.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Если ты всё же попытаешься меня остановить, я не смогу гарантировать безопасность остальных—",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "Ты пытаешься использовать Каллен, чтобы запугать меня?",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Это совсем не угроза.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Я просто указала на рычаги давления, которыми обладает каждая из сторон.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 6.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Хокусин Мэй",
       "text": "...Хм.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 5.png",
-      "dim_override": "right"
+      "dim_override": "right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "И наконец, позвольте мне ещё раз напомнить Вам, господин Отто.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 5.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Железная Дева",
       "text": "Орден Апокалипсиса готовится к беспрецедентной операции. Когда придёт время, я надеюсь, господин сделает правильный выбор.",
       "sprite_right": "Iron Maiden 1.png",
       "sprite_left": "Hokushin Mei 5.png",
-      "dim_override": "left"
+      "dim_override": "left",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Отто",
@@ -4424,7 +4475,8 @@
       "speaker": "Железная Дева",
       "text": "Я верю, что Шиксал сможет вернуть себе былую славу.",
       "sprite_right": "Iron Maiden 2.png",
-      "anim_right": "exit-right"
+      "anim_right": "exit-right",
+      "pos_right": "width: 60%"
     },
     {
       "speaker": "Каллен",
