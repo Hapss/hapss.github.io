@@ -619,7 +619,7 @@
                 SPRITE_BASE: 'images/sprites/',
                 BACKGROUND_BASE: 'images/background/',
                 AUDIO_BASE: 'audio/',
-                VIDEO_BASE: 'videos/', 
+                VIDEO_BASE: 'video/', 
                 METADATA_FILE: 'story/story_metadata.json', 
                 STORY_BASE: 'story/ru/',
             },
@@ -1294,6 +1294,15 @@
             }
         }
 
+        function checkRequirements(requiresObj) {
+            if (!requiresObj) return true;
+            if (Array.isArray(requiresObj)) {
+                return requiresObj.every(flag => activeFlags.has(flag));
+            } else {
+                return activeFlags.has(requiresObj);
+            }
+        }
+
         function navigateDialogue(direction) {
             if (isHistoryVisible || isNavigating || isAwaitingChoice) return;
             isNavigating = true; 
@@ -1307,7 +1316,7 @@
 
                 while (newIndex >= 0 && newIndex < currentDialogue.length) {
                     const checkStep = currentDialogue[newIndex];
-                    if (checkStep.requires && !activeFlags.has(checkStep.requires)) {
+                    if (checkStep.requires && !checkRequirements(checkStep.requires)) {
                         newIndex += direction;
                     } else {
                         break;
@@ -1320,7 +1329,11 @@
                     
                     if (direction > 0) {
                         let nextValidIndex = currentDialogueIndex + 1;
-                        while(nextValidIndex < currentDialogue.length && currentDialogue[nextValidIndex].requires && !activeFlags.has(currentDialogue[nextValidIndex].requires)) {
+                        while(nextValidIndex < currentDialogue.length) {
+                            let nStep = currentDialogue[nextValidIndex];
+                            if (!nStep.requires || checkRequirements(nStep.requires)) {
+                                break;
+                            }
                             nextValidIndex++;
                         }
                         preloadAssets(nextValidIndex);
@@ -1493,7 +1506,19 @@
                     btn.textContent = choice.text;
                     btn.onclick = (e) => {
                         e.stopPropagation(); 
+                        
+                        // Защита от двойных нажатий
+                        if (!isAwaitingChoice) return; 
+
+                        // ОЧИСТКА ВЕТОК: Удаляем ВСЕ флаги, которые есть в этом блоке выбора
+                        // Это спасает от наслоения, если вы вернулись по истории и выбрали другой вариант
+                        step.choices.forEach(c => {
+                            if (c.flag) activeFlags.delete(c.flag);
+                        });
+
+                        // Добавляем флаг именно того выбора, на который нажали
                         if (choice.flag) activeFlags.add(choice.flag);
+
                         isAwaitingChoice = false;
                         elements.choicesContainer.classList.add('hidden');
                         navigateDialogue(1);
@@ -1734,7 +1759,7 @@
             for (let i = 0; i <= currentDialogueIndex; i++) {
                 const step = currentDialogue[i];
                 
-                if (step.requires && !activeFlags.has(step.requires)) continue;
+                if (step.requires && !checkRequirements(step.requires)) continue;
                 if (!step.text && !step.background && !step.video && i !== 0) continue; 
                 
                 const isCurrent = (i === currentDialogueIndex);
