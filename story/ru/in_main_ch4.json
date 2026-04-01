@@ -4244,21 +4244,13 @@
     },
     {
       "speaker": "Железная Дева",
-      "text": "...Ха!",
-      "sprite_left": "Iron Maiden 1.png",
-      "pos_left": "width: 60%"
+      "text": "...Ха!"
     },
     {
-      "text": "Лезвие вспыхнуло пламенем, и из него вырвалась огромная сила.",
-      "sprite_left": "Iron Maiden 1.png",
-      "dim_override": "left",
-      "pos_left": "width: 60%"
+      "text": "Лезвие вспыхнуло пламенем, и из него вырвалась огромная сила."
     },
     {
-      "text": "В одно мгновение их оружие столкнулось—",
-      "sprite_left": "Iron Maiden 1.png",
-      "dim_override": "left",
-      "pos_left": "width: 60%"
+      "text": "В одно мгновение их оружие столкнулось—"
     },
     {
       "text": "Лязг!",
@@ -4344,7 +4336,7 @@
       "speaker": "Хокусин Мэй",
       "text": "...Хм.",
       "sprite_right": "Iron Maiden 2.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "right",
       "pos_right": "width: 60%"
     },
@@ -4365,7 +4357,7 @@
       "speaker": "Хокусин Мэй",
       "text": "Церковь? Небожительница же—",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "right",
       "pos_right": "width: 60%"
     },
@@ -4373,7 +4365,7 @@
       "speaker": "Железная Дева",
       "text": "На сегодня всё, госпожа Каллен и господин Отто. Если передумаете, не стесняйтесь обращаться ко мне в любое время.",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "left",
       "pos_right": "width: 60%"
     },
@@ -4381,7 +4373,7 @@
       "speaker": "Железная Дева",
       "text": "Ладно, я временно дам тебе свободу.",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "left",
       "pos_right": "width: 60%"
     },
@@ -4389,7 +4381,7 @@
       "speaker": "Хокусин Мэй",
       "text": "Стоять—",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "right",
       "pos_right": "width: 60%"
     },
@@ -4397,7 +4389,7 @@
       "speaker": "Железная Дева",
       "text": "Мы все просто боремся за то, во что верим, даже если за это нужно заплатить жизнью.",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "left",
       "pos_right": "width: 60%"
     },
@@ -4405,7 +4397,7 @@
       "speaker": "Железная Дева",
       "text": "Я так рада, что ты, некогда заблудшая, нашла свой истинный путь.",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "left",
       "pos_right": "width: 60%"
     },
@@ -4413,7 +4405,7 @@
       "speaker": "Железная Дева",
       "text": "Просто чтобы внести ясность: это моя территория.",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "left",
       "pos_right": "width: 60%"
     },
@@ -4421,7 +4413,7 @@
       "speaker": "Железная Дева",
       "text": "Если ты всё же попытаешься меня остановить, я не смогу гарантировать безопасность остальных—",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "left",
       "pos_right": "width: 60%"
     },
@@ -4429,7 +4421,7 @@
       "speaker": "Хокусин Мэй",
       "text": "Ты пытаешься использовать Каллен, чтобы запугать меня?",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "right",
       "pos_right": "width: 60%"
     },
@@ -4437,7 +4429,7 @@
       "speaker": "Железная Дева",
       "text": "Это совсем не угроза.",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "left",
       "pos_right": "width: 60%"
     },
@@ -4445,7 +4437,7 @@
       "speaker": "Железная Дева",
       "text": "Я просто указала на рычаги давления, которыми обладает каждая из сторон.",
       "sprite_right": "Iron Maiden 1.png",
-      "sprite_left": "Hokushin Mei 6.png",
+      "sprite_left": "Hokushin Mei 7.png",
       "dim_override": "left",
       "pos_right": "width: 60%"
     },
