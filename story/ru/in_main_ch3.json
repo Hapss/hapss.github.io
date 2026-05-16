@@ -25,7 +25,7 @@
     "sprite_left": "Hokushin Mei 2.png"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Наконец-то проснулась? Я не могла тебя побеспокоить, потому что ты так сладко спала.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 6.png",
@@ -46,7 +46,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Поскольку это решение, принятое человеческим обществом, я, естественно, должна соблюдать их законы.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 3.png",
@@ -100,7 +100,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Зачем так торопиться? Если Шиксал действительно является законной организацией, борющейся с Хоукаем, то в конечном счёте она очистит наши имена от подозрений. Если ты будешь действовать безрассудно, то мы окажемся в ситуации, когда не сможем доказать свою невиновность.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 3.png",
@@ -114,14 +114,14 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Хоукай на Дальнем Востоке действительно был вызван божественной коробкой, но именно поэтому я должна тщательно изучить происхождение всего этого.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 6.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Поскольку местонахождение божественной коробки на данный момент неизвестно, нам следует избегать дальнейших осложнений, чтобы не насторожить противника раньше времени.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 6.png",
@@ -135,14 +135,14 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Моя миссия — защищать человечество от Хоукая, а не противостоять Шиксалу.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 6.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Пока Хоукай не порождает новые бедствия, у меня нет причин вмешиваться в действия Шиксала. Не путай средства с целями.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 6.png",
@@ -170,7 +170,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Человеческими вопросами будут заниматься ответственные лица. Если ты не прислушаешься к моему совету, я не буду больше тратить на тебя время.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 3.png",
@@ -599,12 +599,12 @@
     "text": "......"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Хм...",
     "sprite_left": "Fuka 3.png"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Энергия земли здесь действительно немного странная...",
     "sprite_left": "Fuka 6.png"
   },
@@ -616,21 +616,21 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Цзинвэй, и ты заметил?",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Jingwei.png",
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Хотя я почувствовала неладное, как только вошла, я и представить себе не могла, что под полом этой камеры будет такая мощная реакция энергии Хоукая.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Jingwei.png",
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Кажется, это необходимо расследовать...",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Jingwei.png",
@@ -643,14 +643,14 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Что это за запах!?",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Jingwei.png",
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Пошли, Цзинвэй. Кажется, божественная коробка где-то здесь.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Jingwei.png",
@@ -664,7 +664,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Хокусин Мэй...",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Jingwei.png",
@@ -1136,14 +1136,14 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Божественная коробка... Вы так жестоко расправляетесь с Хоукаем. Неудивительно, что тела этих людей так сильно изуродованы.",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Rvy 2.png",
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Мы не имеем никакого отношения к Каллен. Немедленно отпусти этого ронина.",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Rvy 2.png",
@@ -1164,7 +1164,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Боюсь, я не могу пойти тебе навстречу.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Rvy 3.png",
@@ -1185,7 +1185,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Стиль Небожительницы: Ласточка Сезонов",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Rvy 5.png",
@@ -1205,7 +1205,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Цзинвэй, давай!",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Rvy 7.png",
@@ -1226,7 +1226,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Хокусин Мэй, ты в порядке?",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Rvy 7.png",
@@ -1247,14 +1247,14 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
-    "text": "Гора Тайсюань. Фука.",
+    "speaker": "Фу Хуа",
+    "text": "Гора Тайсюань. Фу Хуа.",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Rvy 7.png",
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Отдай мне божественную коробку, и я не причиню тебе вреда.",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Rvy 7.png",
@@ -1282,7 +1282,7 @@
     "background": "inbg_stage3.png"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Это... труп, превращённый в зомби?",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Rvy 7.png",
@@ -1301,12 +1301,12 @@
     "sprite_left": "Hokishin Mei 1.png"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Хокусин Мэй!?",
     "sprite_left": "Fuka 2.png"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "О нет, в тебе пробуждается Хоукай... Не двигайся. Я сейчас тебя вылечу.",
     "sprite_left": "Fuka 6.png"
   },
@@ -1737,7 +1737,7 @@
   },
   {
     "speaker": "Каллен",
-    "text": "Хотя это ещё нельзя утверждать наверняка... весьма вероятно, что преступница, о которой они говорят, никто иная, как мисс Фука.",
+    "text": "Хотя это ещё нельзя утверждать наверняка... весьма вероятно, что преступница, о которой они говорят, никто иная, как мисс Фу Хуа.",
     "sprite_left": "Kallen 5.png",
     "sprite_right": "Otto 4.png",
     "dim_override": "right"
@@ -1779,7 +1779,7 @@
     "sprite_left": "Hokushin Mei 1.png"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "У тебя серьёзные травмы. Не пытайся сейчас геройствовать. Просто оставайся на спине Цзинвэя.",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Fuka 6.png",
@@ -1793,7 +1793,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Я, конечно, соблюдаю законы человеческого общества, но вопросы, связанные с Хоукаем, это совсем другая история.",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Fuka 6.png",
@@ -1807,21 +1807,21 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "...",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Fuka 6.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Хоукай в это подземелье — действительно серьёзная проблема. Я и представить себе не могла, что участие Шиксала в проблеме Хоукая превзойдёт все мои ожидания.",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Если я не ошибаюсь, эта божественная коробка рано или поздно снова навлечёт беду...",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Fuka 5.png",
@@ -1835,7 +1835,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Нет, хотя я бы хотела провести расследование как можно скорее, твои травмы требуют срочного лечения. Сначала нам нужно покинуть это место, а план мы составим позже.",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Fuka 2.png",
@@ -1849,7 +1849,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Именно.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 6.png",
@@ -1863,14 +1863,14 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Не геройствуй. Эта божественная коробка всё равно, что твой заклятый враг. Она может пробудить в тебе Хоукай, которого я подавила, поглотив его, поэтому ты так сильно ранен.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 5.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Хоть я и спасла тебя в этот раз, я не могу гарантировать, что смогу спасти тебя и во второй раз.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 5.png",
@@ -1884,7 +1884,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Я не хочу тратить на тебя время. Если ты не прислушаешься к моему предупреждению, я тебя вырублю.",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 6.png",
@@ -1904,14 +1904,14 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "!",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 2.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Цзинвэй, опусти ронина!",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 2.png",
@@ -1932,7 +1932,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Нет, Хокусин Мэй, они догнали нас...",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Fuka 6.png",
@@ -1968,14 +1968,14 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "...",
     "sprite_left": "Fuka 3.png",
     "sprite_right": "Rvy 3.png",
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Цзинвэй, присмотри за этим ронином и убедись, что она не отходит от меня.",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Rvy 3.png",
@@ -2052,7 +2052,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Ты о божественной коробке?",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Rvy 3.png",
@@ -2066,14 +2066,14 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Божественная коробка служит лишь вместилищем для Хоукая, не решая при этом никаких глубинных проблем. Когда концентрация Хоукая превысит критический порог, это приведёт к катастрофическим последствиям, подобным тем, что наблюдались на Дальнем Востоке.",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Rvy 3.png",
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Люди не могут легко контролировать Хоукай. Я советую вам сдаться, пока не поздно.",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Rvy 3.png",
@@ -2094,7 +2094,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Мне жаль, но моя миссия — защищать человечество от Хоукая. Я не могу оправдать ваши действия.",
     "sprite_left": "Fuka 3.png",
     "sprite_right": "Rvy 3.png",
@@ -2122,7 +2122,7 @@
     "sfx": "roar.ogg"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Звери Хоукая? Какого чёрта ты...",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Rvy 4.png",
@@ -2162,7 +2162,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Это конец. Удар в один цунь: Просвет———",
     "sprite_left": "Fuka 3.png",
     "sprite_right": "Rvy 7.png",
@@ -2176,7 +2176,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Человек!?",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Rvy 7.png",
@@ -2190,7 +2190,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Ересь... Что именно вы натворили?",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Rvy 4.png",
@@ -2204,7 +2204,7 @@
   },
   {
     "speaker": "Хокусин Мэй",
-    "text": "Эй! Фука, ты чего медлишь? Эти ребята уже не люди!",
+    "text": "Эй! Фу Хуа, ты чего медлишь? Эти ребята уже не люди!",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Rvy 4.png",
     "dim_override": "right"
@@ -2226,7 +2226,7 @@
   },
   {
     "speaker": "???",
-    "text": "Мисс Фука!",
+    "text": "Мисс Фу Хуа!",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Rvy 5.png",
     "dim_override": "both"
@@ -2238,7 +2238,7 @@
     "dim_override": "both"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Каллен?",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Rvy 5.png",
@@ -2301,7 +2301,7 @@
   },
   {
     "speaker": "Хокусин Мэй",
-    "text": "Такое количество... Эй, Фука! Если ты не собираешься драться, то просто уйди с дороги... Кха!!",
+    "text": "Такое количество... Эй, Фу Хуа! Если ты не собираешься драться, то просто уйди с дороги... Кха!!",
     "sprite_left": "Hokushin Mei 2.png",
     "sprite_right": "Rvy 4.png",
     "dim_override": "right"
@@ -2321,14 +2321,14 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Цзинвэй, хватай её.",
     "sprite_left": "Fuka 3.png",
     "sprite_right": "Rvy 4.png",
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Удар в один цунь: Просветление!",
     "sprite_left": "Fuka 2.png"
   },
@@ -2339,7 +2339,7 @@
     "sfx": "boom.ogg"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Каллен, ты знаешь, как отсюда выбраться?",
     "sprite_left": "Fuka 6.png"
   },
@@ -2379,13 +2379,13 @@
   },
   {
     "speaker": "Каллен",
-    "text": "Мисс Фука, что именно...",
+    "text": "Мисс Фу Хуа, что именно...",
     "sprite_left": "Hokushin Mei 1.png",
     "sprite_right": "Kallen 1.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Хоукай в её теле, привлечённый божественной коробкой, теперь проявляет признаки возрождения. Хотя я подавила его ради неё, похоже, ей нужно отдохнуть несколько дней.",
     "sprite_left": "Fuka 6.png",
     "sprite_right": "Kallen 1.png",
@@ -2399,21 +2399,21 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
-    "text": "Спасибо за помощь, мистер. Я Фука с горы Тайсюань. Ситуация была критической. Могу я спросить, кто Вы такой?",
+    "speaker": "Фу Хуа",
+    "text": "Спасибо за помощь, мистер. Я Фу Хуа с горы Тайсюань. Ситуация была критической. Могу я спросить, кто Вы такой?",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Otto 1.png",
     "dim_override": "right"
   },
   {
     "speaker": "Отто",
-    "text": "Я Отто Апокалипсис. Мисс Фука, нет нужды в формальностях.",
+    "text": "Я Отто Апокалипсис. Мисс Фу Хуа, нет нужды в формальностях.",
     "sprite_left": "Fuka 2.png",
     "sprite_right": "Otto 1.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Апокалипсис...",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Otto 1.png",
@@ -2427,7 +2427,7 @@
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "...",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Otto 1.png",
@@ -2435,13 +2435,13 @@
   },
   {
     "speaker": "Каллен",
-    "text": "Мисс Фука, пожалуйста, не волнуйся. Отто мой спутник, ты можешь ему доверять.",
+    "text": "Мисс Фу Хуа, пожалуйста, не волнуйся. Отто мой спутник, ты можешь ему доверять.",
     "sprite_left": "Fuka 5.png",
     "sprite_right": "Kallen 1.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Я понимаю, если бы мистер Отто намеревался причинить нам вред, ему не нужно было бы ждать до сих пор. Я просто немного удивлена. Похоже, идеалы фракции Шиксала не так уж единообразны.",
     "sprite_left": "Fuka 3.png",
     "sprite_right": "Kallen 1.png",
@@ -2476,7 +2476,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Понятно. Ситуация в Европе действительно превзошла мои ожидания. Похоже, эта работа не так проста, как я думала.",
     "sprite_left": "Kallen 1.png",
     "sprite_right": "Fuka 5.png",
@@ -2484,7 +2484,7 @@
   },
   {
     "speaker": "Отто",
-    "text": "Нет, мисс Фука, пожалуйста, выслушай меня. Я знаю, что ты пришла за божественной коробкой, но она является краеугольным камнем нынешнего проекта Шиксала. Вдвоём вы не сможете изменить его ход.",
+    "text": "Нет, мисс Фу Хуа, пожалуйста, выслушай меня. Я знаю, что ты пришла за божественной коробкой, но она является краеугольным камнем нынешнего проекта Шиксала. Вдвоём вы не сможете изменить его ход.",
     "sprite_left": "Otto 3.png",
     "sprite_right": "Fuka 5.png",
     "dim_override": "right"
@@ -2504,21 +2504,21 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Я понимаю, что ты имеешь ввиду, мистер Отто.",
     "sprite_left": "Otto 4.png",
     "sprite_right": "Fuka 3.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Но поскольку это касается Хоукая, это входит в мою компетенцию.",
     "sprite_left": "Otto 4.png",
     "sprite_right": "Fuka 2.png",
     "dim_override": "left"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Божественная коробка — это угроза, которую невозможно контролировать. Если её не остановить, она неизбежно приведёт к новым бедствиям. Я вынуждена отклонить твоё предложение.",
     "sprite_left": "Otto 4.png",
     "sprite_right": "Fuka 5.png",
@@ -2532,7 +2532,7 @@
     "dim_override": "right"
   },
   {
-    "speaker": "Фука",
+    "speaker": "Фу Хуа",
     "text": "Мне жаль, но это моя миссия и моя ответственность.",
     "sprite_left": "Otto 3.png",
     "sprite_right": "Fuka 2.png",
